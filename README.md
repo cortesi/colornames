@@ -9,9 +9,15 @@ Name matching is case and whitespace insensitive.
 ```rust
 use colornames::*;
 
-assert_eq!(Color::from_name("Red"), Some(Color::Red));
-assert_eq!(Color::Red.rgb(), Some((255, 0, 0)));
-assert_eq!(Color::Red.rgb_hex(), Some("#FF0000".to_string()));
+let c = Color::from_name("PinkLemonade").unwrap();
+assert_eq!(c, Color::PinkLemonade);
+
+let c = Color::from_name("pink lemonade").unwrap();
+assert_eq!(c, Color::PinkLemonade);
+
+assert_eq!(c.rgb(), Some((228, 40, 124)));
+assert_eq!(c.rgb_hex(), Some("#E4287C".to_string()));
+assert_eq!(c.name(), "PinkLemonade");
 ```
 
 # Supported Colors
