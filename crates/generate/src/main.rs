@@ -107,6 +107,13 @@ fn main() {
                             let (r, g, b) = self.rgb()?;
                             Some(format!("#{:02X}{:02X}{:02X}", r, g, b))
                         }
+
+                        /// Get the name of the color as a string
+                        pub fn name(&self) -> &'static str {
+                            match self {
+                                #(Self::#color_idents => stringify!(#color_idents),)*
+                            }
+                        }
                     }
                 }
             };
