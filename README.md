@@ -1,8 +1,7 @@
 # colornames
 
-This crate does one thing only: it provides an enum of colors names. Variants
-can be constructed from a name string, and converted to the matching RGB
-values.
+This crate does one thing only: it provides an enum of color names. Color
+variants can be constructed by name, and converted to the matching RGB values.
 
 Name matching is case and whitespace insensitive.
 
