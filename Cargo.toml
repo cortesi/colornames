@@ -1,6 +1,6 @@
 
 [workspace.package]
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 authors = ["Aldo Cortesi <aldo@corte.si>"]
 description = "Conversion from named colors to RGB"
