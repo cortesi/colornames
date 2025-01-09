@@ -14,8 +14,8 @@ assert_eq!(c, Color::PinkLemonade);
 let c = Color::from_name("pink lemonade").unwrap();
 assert_eq!(c, Color::PinkLemonade);
 
-assert_eq!(c.rgb(), Some((228, 40, 124)));
-assert_eq!(c.rgb_hex(), Some("#E4287C".to_string()));
+assert_eq!(c.rgb(), (228, 40, 124));
+assert_eq!(c.rgb_hex(), "#E4287C".to_string());
 assert_eq!(c.name(), "PinkLemonade");
 ```
 
