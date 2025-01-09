@@ -525,7 +525,7 @@ pub static COLOR_DATA: &[(&str, &str)] = &[
     ("Plum Velvet", "#7D0552"),
     ("Dark Raspberry", "#872657"),
     ("Velvet Maroon", "#7E354D"),
-    ("Rosy-Finch", "#7F4E52"),
+    ("Rosy Finch", "#7F4E52"),
     ("Dull Purple", "#7F525D"),
     ("Puce", "#7F5A58"),
     ("Rose Dust", "#997070"),

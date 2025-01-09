@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cargo run -- generate  > ./crates/colornames/src/colors.rs
+cargo fmt
