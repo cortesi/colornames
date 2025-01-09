@@ -1,6 +1,6 @@
 use clap::{Parser, Subcommand};
 use image_builder::{Image, Rect};
-use std::{fs, io::Write, path::Path};
+use std::{io::Write, path::Path};
 use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 
 mod colors;
@@ -27,15 +27,38 @@ enum Commands {
         /// Directory to write swatch files
         directory: String,
     },
+    /// Generate HTML with remote swatch images
+    Readme,
 }
+
+const COLUMNS: usize = 3;
 
 fn main() {
     let cli = Cli::parse();
 
     match cli.command {
+        Commands::Readme => {
+            println!("<table style='border-collapse: collapse;'>");
+            let mut color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
+            color_data.sort_by_key(|(name, _)| *name);
+
+            for chunk in color_data.chunks(COLUMNS) {
+                println!("<tr>");
+                for (name, _hex) in chunk {
+                    let swatch_name = name.replace(" ", "_").to_lowercase();
+                    let swatch_url = format!(
+                        "https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/{}.png",
+                        swatch_name
+                    );
+                    println!("<td style='padding: 5px;'><img src=\"{}\" width=\"50\" height=\"20\"></td>", swatch_url);
+                    println!("<td style='padding: 5px;'>{}</td>", name);
+                }
+                println!("</tr>");
+            }
+            println!("</table>");
+        }
         Commands::List { html } => {
             if html {
-                const COLUMNS: usize = 3;
                 println!("<table style='border-collapse: collapse;'>");
                 let color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
 
