@@ -144,21 +144,22 @@ fn main() {
                         }
 
                         /// Get the RGB values of a color
-                        pub fn rgb(&self) -> Option<(u8, u8, u8)> {
+                        pub fn rgb(&self) -> (u8, u8, u8) {
                             let hex = match self {
                                 #(Self::#color_idents => #color_hexes,)*
                             };
-                            Some((
-                                u8::from_str_radix(&hex[1..3], 16).ok()?,
-                                u8::from_str_radix(&hex[3..5], 16).ok()?,
-                                u8::from_str_radix(&hex[5..7], 16).ok()?
-                            ))
+                            (
+                                // Unwraps can't fail because the hex values are hardcoded
+                                u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                                u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                                u8::from_str_radix(&hex[5..7], 16).unwrap()
+                            )
                         }
 
                         /// Get the hex value of a color
-                        pub fn rgb_hex(&self) -> Option<String> {
-                            let (r, g, b) = self.rgb()?;
-                            Some(format!("#{:02X}{:02X}{:02X}", r, g, b))
+                        pub fn rgb_hex(&self) -> String {
+                            let (r, g, b) = self.rgb();
+                            format!("#{:02X}{:02X}{:02X}", r, g, b)
                         }
 
                         /// Get the name of the color as a string
