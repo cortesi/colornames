@@ -1,5 +1,6 @@
 use clap::{Parser, Subcommand};
-use std::io::Write;
+use image_builder::{Image, Rect};
+use std::{fs, io::Write, path::Path};
 use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 
 mod colors;
@@ -21,6 +22,11 @@ enum Commands {
     },
     /// Generate color files
     Generate,
+    /// Generate PNG swatches for all colors
+    Swatches {
+        /// Directory to write swatch files
+        directory: String,
+    },
 }
 
 fn main() {
@@ -56,6 +62,31 @@ fn main() {
                     stdout.reset().unwrap();
                     println!(" {}", name);
                 }
+            }
+        }
+        Commands::Swatches { directory } => {
+            let dir_path = Path::new(&directory);
+            if !dir_path.is_dir() {
+                eprintln!("Error: {} is not a directory", directory);
+                std::process::exit(1);
+            }
+
+            for (name, hex) in colors::COLOR_DATA {
+                let r = u8::from_str_radix(&hex[1..3], 16).unwrap();
+                let g = u8::from_str_radix(&hex[3..5], 16).unwrap();
+                let b = u8::from_str_radix(&hex[5..7], 16).unwrap();
+
+                let mut image = Image::new(20, 20, [255, 255, 255, 255]);
+                image.add_rect(
+                    Rect::new()
+                        .size(20, 20)
+                        .position(0, 0)
+                        .color([r, g, b, 255]),
+                );
+
+                let filename = format!("{}.png", name.replace(" ", "_").to_lowercase());
+                let path = dir_path.join(filename);
+                image.save(path.to_str().unwrap());
             }
         }
         Commands::Generate => {
