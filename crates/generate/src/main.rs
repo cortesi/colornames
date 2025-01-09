@@ -40,7 +40,10 @@ fn main() {
         }
         Commands::Generate => {
             let enum_tokens = {
-                let color_idents: Vec<_> = colors::COLOR_DATA
+                let mut color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
+                color_data.sort_by_key(|(name, _)| *name);
+
+                let color_idents: Vec<_> = color_data
                     .iter()
                     .map(|(name, _hex)| {
                         let ident = name.replace(" ", "");
@@ -48,7 +51,7 @@ fn main() {
                     })
                     .collect();
 
-                let color_hexes: Vec<_> = colors::COLOR_DATA.iter().map(|(_, hex)| hex).collect();
+                let color_hexes: Vec<_> = color_data.iter().map(|(_, hex)| hex).collect();
 
                 quote::quote! {
                     /// A list of named colors
