@@ -14,7 +14,11 @@ struct Cli {
 #[derive(Subcommand)]
 enum Commands {
     /// List all available colors
-    List,
+    List {
+        /// Output as HTML table
+        #[arg(long)]
+        html: bool,
+    },
     /// Generate color files
     Generate,
 }
@@ -23,19 +27,35 @@ fn main() {
     let cli = Cli::parse();
 
     match cli.command {
-        Commands::List => {
-            let mut stdout = StandardStream::stdout(ColorChoice::Always);
-            for (name, hex) in colors::COLOR_DATA {
-                let r = u8::from_str_radix(&hex[1..3], 16).unwrap();
-                let g = u8::from_str_radix(&hex[3..5], 16).unwrap();
-                let b = u8::from_str_radix(&hex[5..7], 16).unwrap();
+        Commands::List { html } => {
+            if html {
+                const COLUMNS: usize = 3;
+                println!("<table style='border-collapse: collapse;'>");
+                let color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
 
-                stdout
-                    .set_color(ColorSpec::new().set_bg(Some(Color::Rgb(r, g, b))))
-                    .unwrap();
-                write!(&mut stdout, "       ").unwrap();
-                stdout.reset().unwrap();
-                println!(" {}", name);
+                for chunk in color_data.chunks(COLUMNS) {
+                    println!("<tr>");
+                    for (name, hex) in chunk {
+                        println!("<td style='padding: 5px;'><div style='width: 50px; height: 20px; background-color: {}'></div></td>", hex);
+                        println!("<td style='padding: 5px;'>{}</td>", name);
+                    }
+                    println!("</tr>");
+                }
+                println!("</table>");
+            } else {
+                let mut stdout = StandardStream::stdout(ColorChoice::Always);
+                for (name, hex) in colors::COLOR_DATA {
+                    let r = u8::from_str_radix(&hex[1..3], 16).unwrap();
+                    let g = u8::from_str_radix(&hex[3..5], 16).unwrap();
+                    let b = u8::from_str_radix(&hex[5..7], 16).unwrap();
+
+                    stdout
+                        .set_color(ColorSpec::new().set_bg(Some(Color::Rgb(r, g, b))))
+                        .unwrap();
+                    write!(&mut stdout, "       ").unwrap();
+                    stdout.reset().unwrap();
+                    println!(" {}", name);
+                }
             }
         }
         Commands::Generate => {
