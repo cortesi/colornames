@@ -39,8 +39,7 @@ fn main() {
     match cli.command {
         Commands::Readme => {
             println!("<table style='border-collapse: collapse;'>");
-            let mut color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
-            color_data.sort_by_key(|(name, _)| *name);
+            let color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
 
             for chunk in color_data.chunks(COLUMNS) {
                 println!("<tr>");
