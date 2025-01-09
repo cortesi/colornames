@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-static COLOR_DATA: &[(&str, &str)] = &[
+pub static COLOR_DATA: &[(&str, &str)] = &[
     ("Black", "#000000"),
     ("Black Blue", "#040720"),
     ("Night", "#0C090A"),
