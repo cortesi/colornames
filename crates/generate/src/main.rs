@@ -51,12 +51,14 @@ fn main() {
                 let color_hexes: Vec<_> = colors::COLOR_DATA.iter().map(|(_, hex)| hex).collect();
 
                 quote::quote! {
+                    /// A list of named colors
                     #[derive(Debug, Clone, Copy, PartialEq, Eq)]
                     pub enum Color {
                         #(#color_idents),*
                     }
 
                     impl Color {
+                        /// Convert a color name to a `Color` variant
                         pub fn from_name(name: &str) -> Option<Self> {
                             let normalized = name.replace(" ", "").to_lowercase();
                             match normalized.as_str() {
@@ -65,6 +67,7 @@ fn main() {
                             }
                         }
 
+                        /// Get the RGB values of a color
                         pub fn rgb(&self) -> Option<(u8, u8, u8)> {
                             let hex = match self {
                                 #(Self::#color_idents => #color_hexes,)*
@@ -74,6 +77,12 @@ fn main() {
                                 u8::from_str_radix(&hex[3..5], 16).ok()?,
                                 u8::from_str_radix(&hex[5..7], 16).ok()?
                             ))
+                        }
+
+                        /// Get the hex value of a color
+                        pub fn rgb_hex(&self) -> Option<String> {
+                            let (r, g, b) = self.rgb()?;
+                            Some(format!("#{:02X}{:02X}{:02X}", r, g, b))
                         }
                     }
                 }

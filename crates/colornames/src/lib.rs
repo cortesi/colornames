@@ -1,14 +1,15 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+mod colors;
+
+pub use colors::*;
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn test_color_data() {
+        assert_eq!(Color::from_name("Red"), Some(Color::Red));
+        assert_eq!(Color::Red.rgb(), Some((255, 0, 0)));
+        assert_eq!(Color::Red.rgb_hex(), Some("#FF0000".to_string()));
     }
 }
