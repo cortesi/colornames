@@ -1,6 +1,6 @@
 
 [workspace.package]
-version = "0.0.4"
+version = "0.0.5"
 edition = "2021"
 authors = ["Aldo Cortesi <aldo@corte.si>"]
 description = "An enum of color names, with a catchall RGB variant"
