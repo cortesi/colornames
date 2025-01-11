@@ -2263,12 +2263,12 @@ impl Color {
         }
     }
     #[doc = r" Get the name of the color as a string"]
-    pub fn name(&self) -> String {
+    pub fn name(&self) -> Option<String> {
         match self {
-            Self::Rgb(r, g, b) => format!("rgb({}, {}, {})", r, g, b),
+            Self::Rgb(_, _, _) => None,
             _ => {
                 if let Some(idx) = self.offset() {
-                    COLORS[idx].0.to_string()
+                    Some(COLORS[idx].0.to_string())
                 } else {
                     unreachable!()
                 }

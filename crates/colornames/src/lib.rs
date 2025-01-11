@@ -25,11 +25,16 @@ mod tests {
         // We support short hex codes
         assert_eq!("#fff".try_into(), Ok(Color::White));
 
-        // Color variants can be converted to names, hex codes, and RGB values
+        // Colors can be converted to names, hex codes, and RGB values
         let c: Color = Color::PinkLemonade;
-        assert_eq!(c.name(), "Pink Lemonade");
+        assert_eq!(c.name(), Some("Pink Lemonade".to_string()));
         assert_eq!(c.rgb_hex(), "#E4287C".to_string());
         assert_eq!(c.rgb(), (228, 40, 124));
+
+        let c: Color = Color::Rgb(0, 0, 17);
+        assert_eq!(c.name(), None);
+        assert_eq!(c.rgb_hex(), "#000011".to_string());
+        assert_eq!(c.rgb(), (0, 0, 17));
 
         Ok(())
     }
