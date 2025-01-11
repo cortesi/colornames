@@ -4,8 +4,8 @@ This crate does one thing only: it provides an enum of color names, with a
 catchall RGB variant for un-named colors. Color variants can be constructed by
 name or by hex value.
 
-On first use, the crate generates lookup tables for color names and hex values.
-There are 728 named colors, so this incurs a small startup cost.
+The crate lazily generates lookup tables for color names and hex values. There
+are 728 named colors, so this incurs a startup cost on first use.
 
 Name matching is case and whitespace insensitive.
 

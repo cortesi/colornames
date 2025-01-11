@@ -1,13 +1,17 @@
 
 [workspace.package]
-version = "0.0.2"
+version = "0.0.3"
 edition = "2021"
 authors = ["Aldo Cortesi <aldo@corte.si>"]
-description = "Conversion from named colors to RGB"
+description = "An enum of color names, with a catchall RGB variant"
 license = "MIT"
 repository = "https://github.com/cortesi/colornames"
-keywords = ["color", "colornames"]
+keywords = ["color", "colornames", "color-names", "rgb", "colors"]
+categories = ["graphics"]
 readme = "README.md"
+documentation = "https://docs.rs/colornames"
+homepage = "https://github.com/cortesi/colornames"
+
 
 [workspace]
 resolver = "2"
