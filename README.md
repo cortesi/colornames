@@ -1,22 +1,38 @@
 # colornames
 
-This crate does one thing only: it provides an enum of color names. Color
-variants can be constructed by name, and converted to the matching RGB values.
+This crate does one thing only: it provides an enum of color names, with a
+catchall RGB variant for un-named colors. Color variants can be constructed by
+name or by hex value.
+
+On first use, the crate generates lookup tables for color names and hex values.
+There are 728 named colors, so this incurs a small startup cost.
 
 Name matching is case and whitespace insensitive.
 
 ```rust
 use colornames::*;
 
-let c = Color::from_name("PinkLemonade").unwrap();
-assert_eq!(c, Color::PinkLemonade);
 
-let c = Color::from_name("pink lemonade").unwrap();
-assert_eq!(c, Color::PinkLemonade);
+// We implment TryFrom<_> for string types
+assert_eq!("PinkLemonade".try_into(), Ok(Color::PinkLemonade));
 
-assert_eq!(c.rgb(), (228, 40, 124));
+// Conversion from color names is case and whitespace insensitive
+assert_eq!("pink lemonade".try_into(), Ok(Color::PinkLemonade));
+assert_eq!("pinklemonade".try_into(), Ok(Color::PinkLemonade));
+
+// Conversion from hex codes maps to the named color if possible
+assert_eq!(("#E4287C").try_into(), Ok(Color::PinkLemonade));
+assert_eq!(("#e4287c").try_into(), Ok(Color::PinkLemonade));
+// ... and a catch-all Rgb variant if not
+assert_eq!(("#000011").try_into(), Ok(Color::Rgb(0, 0, 17)));
+// We support short hex codes
+assert_eq!("#fff".try_into(), Ok(Color::White));
+
+// Color variants can be converted to names, hex codes, and RGB values
+let c: Color = Color::PinkLemonade;
+assert_eq!(c.name(), "Pink Lemonade");
 assert_eq!(c.rgb_hex(), "#E4287C".to_string());
-assert_eq!(c.name(), "PinkLemonade");
+assert_eq!(c.rgb(), (228, 40, 124));
 ```
 
 # Supported Colors
