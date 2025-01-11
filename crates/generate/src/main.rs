@@ -155,23 +155,15 @@ fn main() {
                                     }
                                     _ => return None
                                 };
-                                // Check if this RGB value matches any named color
-                                match (r, g, b) {
-                                    #((r, g, b) if (#color_hexes, r, g, b) == {
-                                        let hex = #color_hexes;
-                                        (
-                                            hex,
-                                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
-                                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
-                                            u8::from_str_radix(&hex[5..7], 16).unwrap()
-                                        )
-                                    } => Some(Color::#color_idents),)*
+                                let hex = format!("#{:02X}{:02X}{:02X}", r, g, b);
+                                match hex.as_str() {
+                                    #(x if x == #color_hexes => Some(Color::#color_idents),)*
                                     _ => Some(Color::Rgb(r, g, b))
                                 }
                             } else {
-                                let normalized = name.replace(" ", "").to_lowercase();
-                                match normalized.as_str() {
-                                    #(s if s == stringify!(#color_idents).to_lowercase() => Some(Color::#color_idents),)*
+                                // Handle color names
+                                match name.replace(" ", "").to_lowercase() {
+                                    #(x if x == stringify!(#color_idents).to_lowercase() => Some(Color::#color_idents),)*
                                     _ => None
                                 }
                             }
@@ -191,17 +183,17 @@ fn main() {
                         /// Get the hex value of a color
                         pub fn rgb_hex(&self) -> String {
                             match self {
-                                #(Self::#color_idents => #color_hexes.to_string(),)*
-                                Self::Rgb(r, g, b) => format!("#{:02x}{:02x}{:02x}", r, g, b)
-                            }
+                                #(Self::#color_idents => #color_hexes,)*
+                                Self::Rgb(r, g, b) => return format!("#{:02X}{:02X}{:02X}", r, g, b)
+                            }.to_string()
                         }
 
                         /// Get the name of the color as a string
                         pub fn name(&self) -> String {
                             match self {
-                                #(Self::#color_idents => stringify!(#color_idents).to_string(),)*
-                                Self::Rgb(r, g, b) => format!("rgb({}, {}, {})", r, g, b)
-                            }
+                                #(Self::#color_idents => stringify!(#color_idents),)*
+                                Self::Rgb(r, g, b) => return format!("rgb({}, {}, {})", r, g, b)
+                            }.to_string()
                         }
                     }
                 }
