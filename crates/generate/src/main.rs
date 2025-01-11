@@ -122,7 +122,9 @@ fn main() {
                     })
                     .collect();
 
-                let color_indices: Vec<_> = (0..color_data.len()).collect();
+                let color_indices: Vec<_> = (0..color_data.len())
+                    .map(|i| syn::LitInt::new(&i.to_string(), proc_macro2::Span::call_site()))
+                    .collect();
                 let color_idents: Vec<_> = color_data
                     .iter()
                     .map(|(name, _hex)| {
@@ -242,10 +244,10 @@ fn main() {
 
                         /// Get the offset of this color in the COLORS array
                         fn offset(&self) -> Option<usize> {
-                            match self {
-                                #(Self::#color_idents => Some(#color_indices),)*
-                                Self::Rgb(_, _, _) => None,
-                            }
+                            Some(match self {
+                                #(Self::#color_idents => #color_indices,)*
+                                Self::Rgb(_, _, _) => return None,
+                            })
                         }
                     }
 

@@ -1482,735 +1482,735 @@ pub static VARIANTS: &[Color] = &[
 #[doc = r" Maps hex codes to array indices"]
 static RGB_MAP: Lazy<HashMap<&'static str, usize>> = Lazy::new(|| {
     let mut m = HashMap::new();
-    m.insert("#000000", 0usize);
-    m.insert("#040720", 1usize);
-    m.insert("#0C090A", 2usize);
-    m.insert("#34282C", 3usize);
-    m.insert("#3B3131", 4usize);
-    m.insert("#3A3B3C", 5usize);
-    m.insert("#454545", 6usize);
-    m.insert("#4D4D4F", 7usize);
-    m.insert("#413839", 8usize);
-    m.insert("#3D3C3A", 9usize);
-    m.insert("#463E3F", 10usize);
-    m.insert("#4C4646", 11usize);
-    m.insert("#504A4B", 12usize);
-    m.insert("#565051", 13usize);
-    m.insert("#52595D", 14usize);
-    m.insert("#5C5858", 15usize);
-    m.insert("#625D5D", 16usize);
-    m.insert("#666362", 17usize);
-    m.insert("#696969", 18usize);
-    m.insert("#696969", 19usize);
-    m.insert("#686A6C", 20usize);
-    m.insert("#6D6968", 21usize);
-    m.insert("#726E6D", 22usize);
-    m.insert("#736F6E", 23usize);
-    m.insert("#757575", 24usize);
-    m.insert("#797979", 25usize);
-    m.insert("#837E7C", 26usize);
-    m.insert("#808080", 27usize);
-    m.insert("#808080", 28usize);
-    m.insert("#848482", 29usize);
-    m.insert("#888B90", 30usize);
-    m.insert("#8C8C8C", 31usize);
-    m.insert("#8D918D", 32usize);
-    m.insert("#9B9A96", 33usize);
-    m.insert("#99A3A3", 34usize);
-    m.insert("#A9A9A9", 35usize);
-    m.insert("#A9A9A9", 36usize);
-    m.insert("#A8A9AD", 37usize);
-    m.insert("#B6B6B4", 38usize);
-    m.insert("#B6B6B6", 39usize);
-    m.insert("#C0C0C0", 40usize);
-    m.insert("#C9C1C1", 41usize);
-    m.insert("#C9C0BB", 42usize);
-    m.insert("#C0C6C7", 43usize);
-    m.insert("#D1D0CE", 44usize);
-    m.insert("#CECECE", 45usize);
-    m.insert("#D3D3D3", 46usize);
-    m.insert("#D3D3D3", 47usize);
-    m.insert("#DADBDD", 48usize);
-    m.insert("#DCDCDC", 49usize);
-    m.insert("#E0E5E5", 50usize);
-    m.insert("#F5F5F5", 51usize);
-    m.insert("#EEEEEE", 52usize);
-    m.insert("#E5E4E2", 53usize);
-    m.insert("#BCC6CC", 54usize);
-    m.insert("#98AFC7", 55usize);
-    m.insert("#838996", 56usize);
-    m.insert("#778899", 57usize);
-    m.insert("#778899", 58usize);
-    m.insert("#708090", 59usize);
-    m.insert("#708090", 60usize);
-    m.insert("#6D7B8D", 61usize);
-    m.insert("#657383", 62usize);
-    m.insert("#616D7E", 63usize);
-    m.insert("#646D7E", 64usize);
-    m.insert("#71797E", 65usize);
-    m.insert("#566D7E", 66usize);
-    m.insert("#737CA1", 67usize);
-    m.insert("#728FCE", 68usize);
-    m.insert("#4863A0", 69usize);
-    m.insert("#2F539B", 70usize);
-    m.insert("#2B547E", 71usize);
-    m.insert("#36454F", 72usize);
-    m.insert("#29465B", 73usize);
-    m.insert("#2B3856", 74usize);
-    m.insert("#123456", 75usize);
-    m.insert("#151B54", 76usize);
-    m.insert("#191970", 77usize);
-    m.insert("#000080", 78usize);
-    m.insert("#151B8D", 79usize);
-    m.insert("#00008B", 80usize);
-    m.insert("#15317E", 81usize);
-    m.insert("#0000A0", 82usize);
-    m.insert("#0000A5", 83usize);
-    m.insert("#0020C2", 84usize);
-    m.insert("#0000CD", 85usize);
-    m.insert("#0041C2", 86usize);
-    m.insert("#2916F5", 87usize);
-    m.insert("#0000FF", 88usize);
-    m.insert("#0002FF", 89usize);
-    m.insert("#0909FF", 90usize);
-    m.insert("#1F45FC", 91usize);
-    m.insert("#2554C7", 92usize);
-    m.insert("#1569C7", 93usize);
-    m.insert("#1974D2", 94usize);
-    m.insert("#2B60DE", 95usize);
-    m.insert("#4169E1", 96usize);
-    m.insert("#2B65EC", 97usize);
-    m.insert("#0059FF", 98usize);
-    m.insert("#306EFF", 99usize);
-    m.insert("#157DEC", 100usize);
-    m.insert("#1589FF", 101usize);
-    m.insert("#1E90FF", 102usize);
-    m.insert("#368BC1", 103usize);
-    m.insert("#4682B4", 104usize);
-    m.insert("#488AC7", 105usize);
-    m.insert("#357EC7", 106usize);
-    m.insert("#3090C7", 107usize);
-    m.insert("#14A3C7", 108usize);
-    m.insert("#659EC7", 109usize);
-    m.insert("#87AFC7", 110usize);
-    m.insert("#95B9C7", 111usize);
-    m.insert("#6495ED", 112usize);
-    m.insert("#6698FF", 113usize);
-    m.insert("#56A5EC", 114usize);
-    m.insert("#38ACEC", 115usize);
-    m.insert("#00BFFF", 116usize);
-    m.insert("#3BB9FF", 117usize);
-    m.insert("#5CB3FF", 118usize);
-    m.insert("#79BAEC", 119usize);
-    m.insert("#82CAFF", 120usize);
-    m.insert("#87CEFA", 121usize);
-    m.insert("#87CEEB", 122usize);
-    m.insert("#A0CFEC", 123usize);
-    m.insert("#B7CEEC", 124usize);
-    m.insert("#B4CFEC", 125usize);
-    m.insert("#ADDFFF", 126usize);
-    m.insert("#C2DFFF", 127usize);
-    m.insert("#C6DEFF", 128usize);
-    m.insert("#BDEDFF", 129usize);
-    m.insert("#B0E0E6", 130usize);
-    m.insert("#AFDCEC", 131usize);
-    m.insert("#ADD8E6", 132usize);
-    m.insert("#B0CFDE", 133usize);
-    m.insert("#C9DFEC", 134usize);
-    m.insert("#D5D6EA", 135usize);
-    m.insert("#E3E4FA", 136usize);
-    m.insert("#DBE9FA", 137usize);
-    m.insert("#E6E6FA", 138usize);
-    m.insert("#EBF4FA", 139usize);
-    m.insert("#F0F8FF", 140usize);
-    m.insert("#F8F8FF", 141usize);
-    m.insert("#F0FFFF", 142usize);
-    m.insert("#E0FFFF", 143usize);
-    m.insert("#CCFFFF", 144usize);
-    m.insert("#9AFEFF", 145usize);
-    m.insert("#7DFDFE", 146usize);
-    m.insert("#57FEFF", 147usize);
-    m.insert("#00FFFF", 148usize);
-    m.insert("#00FFFF", 149usize);
-    m.insert("#0AFFFF", 150usize);
-    m.insert("#50EBEC", 151usize);
-    m.insert("#4EE2EC", 152usize);
-    m.insert("#16E2F5", 153usize);
-    m.insert("#8EEBEC", 154usize);
-    m.insert("#AFEEEE", 155usize);
-    m.insert("#CFECEC", 156usize);
-    m.insert("#B3D9D9", 157usize);
-    m.insert("#81D8D0", 158usize);
-    m.insert("#77BFC7", 159usize);
-    m.insert("#92C7C7", 160usize);
-    m.insert("#78C7C7", 161usize);
-    m.insert("#7BCCB5", 162usize);
-    m.insert("#66CDAA", 163usize);
-    m.insert("#93E9BE", 164usize);
-    m.insert("#AAF0D1", 165usize);
-    m.insert("#93FFE8", 166usize);
-    m.insert("#7FFFD4", 167usize);
-    m.insert("#01F9C6", 168usize);
-    m.insert("#40E0D0", 169usize);
-    m.insert("#48D1CC", 170usize);
-    m.insert("#48CCCD", 171usize);
-    m.insert("#46C7C7", 172usize);
-    m.insert("#43C6DB", 173usize);
-    m.insert("#00CED1", 174usize);
-    m.insert("#43BFC7", 175usize);
-    m.insert("#20B2AA", 176usize);
-    m.insert("#3EA99F", 177usize);
-    m.insert("#5F9EA0", 178usize);
-    m.insert("#3B9C9C", 179usize);
-    m.insert("#008B8B", 180usize);
-    m.insert("#00827F", 181usize);
-    m.insert("#008080", 182usize);
-    m.insert("#007C80", 183usize);
-    m.insert("#045F5F", 184usize);
-    m.insert("#045D5D", 185usize);
-    m.insert("#033E3E", 186usize);
-    m.insert("#25383C", 187usize);
-    m.insert("#25383C", 188usize);
-    m.insert("#2C3539", 189usize);
-    m.insert("#3C565B", 190usize);
-    m.insert("#4C787E", 191usize);
-    m.insert("#5E7D7E", 192usize);
-    m.insert("#307D7E", 193usize);
-    m.insert("#348781", 194usize);
-    m.insert("#438D80", 195usize);
-    m.insert("#4E8975", 196usize);
-    m.insert("#1F6357", 197usize);
-    m.insert("#306754", 198usize);
-    m.insert("#006A4E", 199usize);
-    m.insert("#2E8B57", 200usize);
-    m.insert("#1B8A6B", 201usize);
-    m.insert("#31906E", 202usize);
-    m.insert("#00A36C", 203usize);
-    m.insert("#34A56F", 204usize);
-    m.insert("#1AA260", 205usize);
-    m.insert("#3EB489", 206usize);
-    m.insert("#50C878", 207usize);
-    m.insert("#22CE83", 208usize);
-    m.insert("#3CB371", 209usize);
-    m.insert("#7C9D8E", 210usize);
-    m.insert("#78866B", 211usize);
-    m.insert("#848B79", 212usize);
-    m.insert("#617C58", 213usize);
-    m.insert("#728C00", 214usize);
-    m.insert("#6B8E23", 215usize);
-    m.insert("#808000", 216usize);
-    m.insert("#555D50", 217usize);
-    m.insert("#556B2F", 218usize);
-    m.insert("#4E5B31", 219usize);
-    m.insert("#3A5F0B", 220usize);
-    m.insert("#4B5320", 221usize);
-    m.insert("#667C26", 222usize);
-    m.insert("#4E9258", 223usize);
-    m.insert("#08A04B", 224usize);
-    m.insert("#387C44", 225usize);
-    m.insert("#347235", 226usize);
-    m.insert("#27742C", 227usize);
-    m.insert("#347C2C", 228usize);
-    m.insert("#227442", 229usize);
-    m.insert("#228B22", 230usize);
-    m.insert("#008000", 231usize);
-    m.insert("#006400", 232usize);
-    m.insert("#056608", 233usize);
-    m.insert("#046307", 234usize);
-    m.insert("#355E3B", 235usize);
-    m.insert("#254117", 236usize);
-    m.insert("#004225", 237usize);
-    m.insert("#026C3D", 238usize);
-    m.insert("#437C17", 239usize);
-    m.insert("#347C17", 240usize);
-    m.insert("#6AA121", 241usize);
-    m.insert("#8A9A5B", 242usize);
-    m.insert("#3F9B0B", 243usize);
-    m.insert("#4AA02C", 244usize);
-    m.insert("#41A317", 245usize);
-    m.insert("#12AD2B", 246usize);
-    m.insert("#3EA055", 247usize);
-    m.insert("#73A16C", 248usize);
-    m.insert("#6CBB3C", 249usize);
-    m.insert("#6CC417", 250usize);
-    m.insert("#4CC417", 251usize);
-    m.insert("#32CD32", 252usize);
-    m.insert("#52D017", 253usize);
-    m.insert("#4CC552", 254usize);
-    m.insert("#54C571", 255usize);
-    m.insert("#89C35C", 256usize);
-    m.insert("#85BB65", 257usize);
-    m.insert("#99C68E", 258usize);
-    m.insert("#A0D6B4", 259usize);
-    m.insert("#8FBC8F", 260usize);
-    m.insert("#829F82", 261usize);
-    m.insert("#A2AD9C", 262usize);
-    m.insert("#B8BC86", 263usize);
-    m.insert("#9CB071", 264usize);
-    m.insert("#8FB31D", 265usize);
-    m.insert("#B0BF1A", 266usize);
-    m.insert("#B2C248", 267usize);
-    m.insert("#9DC209", 268usize);
-    m.insert("#A1C935", 269usize);
-    m.insert("#9ACD32", 270usize);
-    m.insert("#77DD77", 271usize);
-    m.insert("#7FE817", 272usize);
-    m.insert("#59E817", 273usize);
-    m.insert("#57E964", 274usize);
-    m.insert("#16F529", 275usize);
-    m.insert("#5EFB6E", 276usize);
-    m.insert("#00FF7F", 277usize);
-    m.insert("#00FF80", 278usize);
-    m.insert("#36F57F", 279usize);
-    m.insert("#00FA9A", 280usize);
-    m.insert("#12E193", 281usize);
-    m.insert("#5FFB17", 282usize);
-    m.insert("#00FF00", 283usize);
-    m.insert("#7CFC00", 284usize);
-    m.insert("#66FF00", 285usize);
-    m.insert("#7FFF00", 286usize);
-    m.insert("#87F717", 287usize);
-    m.insert("#98F516", 288usize);
-    m.insert("#B1FB17", 289usize);
-    m.insert("#ADF802", 290usize);
-    m.insert("#ADFF2F", 291usize);
-    m.insert("#BDF516", 292usize);
-    m.insert("#DAEE01", 293usize);
-    m.insert("#E2F516", 294usize);
-    m.insert("#CCFB5D", 295usize);
-    m.insert("#BCE954", 296usize);
-    m.insert("#64E986", 297usize);
-    m.insert("#90EE90", 298usize);
-    m.insert("#6AFB92", 299usize);
-    m.insert("#98FB98", 300usize);
-    m.insert("#98FF98", 301usize);
-    m.insert("#B5EAAA", 302usize);
-    m.insert("#E3F9A6", 303usize);
-    m.insert("#C3FDB8", 304usize);
-    m.insert("#C2E5D3", 305usize);
-    m.insert("#DBF9DB", 306usize);
-    m.insert("#E8F1D4", 307usize);
-    m.insert("#F0FFF0", 308usize);
-    m.insert("#F5FFFA", 309usize);
-    m.insert("#FFFACD", 310usize);
-    m.insert("#FFFFC2", 311usize);
-    m.insert("#FFFFCC", 312usize);
-    m.insert("#FFFDD0", 313usize);
-    m.insert("#FAFAD2", 314usize);
-    m.insert("#FFFFE0", 315usize);
-    m.insert("#F5F5DC", 316usize);
-    m.insert("#F2F0DF", 317usize);
-    m.insert("#FFF8DC", 318usize);
-    m.insert("#FBF6D9", 319usize);
-    m.insert("#FAEBD7", 320usize);
-    m.insert("#FFF0DB", 321usize);
-    m.insert("#FFEFD5", 322usize);
-    m.insert("#F7E7CE", 323usize);
-    m.insert("#FFEBCD", 324usize);
-    m.insert("#FFE4C4", 325usize);
-    m.insert("#F5DEB3", 326usize);
-    m.insert("#FFE4B5", 327usize);
-    m.insert("#FFE5B4", 328usize);
-    m.insert("#FED8B1", 329usize);
-    m.insert("#FFDAB9", 330usize);
-    m.insert("#FBD5AB", 331usize);
-    m.insert("#FFDEAD", 332usize);
-    m.insert("#FBE7A1", 333usize);
-    m.insert("#F3E3C3", 334usize);
-    m.insert("#F0E2B6", 335usize);
-    m.insert("#F1E5AC", 336usize);
-    m.insert("#F3E5AB", 337usize);
-    m.insert("#ECE5B6", 338usize);
-    m.insert("#E8E4C9", 339usize);
-    m.insert("#EEE8AA", 340usize);
-    m.insert("#F0E68C", 341usize);
-    m.insert("#EDDA74", 342usize);
-    m.insert("#EDE275", 343usize);
-    m.insert("#FFE87C", 344usize);
-    m.insert("#FFF380", 345usize);
-    m.insert("#FAF884", 346usize);
-    m.insert("#FFFF33", 347usize);
-    m.insert("#FFFF00", 348usize);
-    m.insert("#FEF250", 349usize);
-    m.insert("#FFEF00", 350usize);
-    m.insert("#F5E216", 351usize);
-    m.insert("#FFDB58", 352usize);
-    m.insert("#FFDF00", 353usize);
-    m.insert("#F9DB24", 354usize);
-    m.insert("#EED202", 355usize);
-    m.insert("#FFD801", 356usize);
-    m.insert("#FFD700", 357usize);
-    m.insert("#FDD017", 358usize);
-    m.insert("#FFCE44", 359usize);
-    m.insert("#EAC117", 360usize);
-    m.insert("#F6BE00", 361usize);
-    m.insert("#F2BB66", 362usize);
-    m.insert("#FFBF00", 363usize);
-    m.insert("#FBB917", 364usize);
-    m.insert("#FDBD01", 365usize);
-    m.insert("#FBB117", 366usize);
-    m.insert("#FFAE42", 367usize);
-    m.insert("#FFAE42", 368usize);
-    m.insert("#FFA62F", 369usize);
-    m.insert("#FFA600", 370usize);
-    m.insert("#FFA500", 371usize);
-    m.insert("#EE9A4D", 372usize);
-    m.insert("#F4A460", 373usize);
-    m.insert("#E2A76F", 374usize);
-    m.insert("#C19A6B", 375usize);
-    m.insert("#E6BF83", 376usize);
-    m.insert("#DEB887", 377usize);
-    m.insert("#D2B48C", 378usize);
-    m.insert("#C8AD7F", 379usize);
-    m.insert("#C2B280", 380usize);
-    m.insert("#C6BA8B", 381usize);
-    m.insert("#BCB88A", 382usize);
-    m.insert("#C8B560", 383usize);
-    m.insert("#C9BE62", 384usize);
-    m.insert("#C9AE5D", 385usize);
-    m.insert("#BDB76B", 386usize);
-    m.insert("#BAB86C", 387usize);
-    m.insert("#B5A642", 388usize);
-    m.insert("#C7A317", 389usize);
-    m.insert("#D4AF37", 390usize);
-    m.insert("#E1AD01", 391usize);
-    m.insert("#E9AB17", 392usize);
-    m.insert("#E8A317", 393usize);
-    m.insert("#DAA520", 394usize);
-    m.insert("#D4A017", 395usize);
-    m.insert("#C68E17", 396usize);
-    m.insert("#B8860B", 397usize);
-    m.insert("#C58917", 398usize);
-    m.insert("#CD853F", 399usize);
-    m.insert("#CD7F32", 400usize);
-    m.insert("#CA762B", 401usize);
-    m.insert("#C88141", 402usize);
-    m.insert("#B87333", 403usize);
-    m.insert("#AA6C39", 404usize);
-    m.insert("#A97142", 405usize);
-    m.insert("#AB784E", 406usize);
-    m.insert("#966F33", 407usize);
-    m.insert("#906E3E", 408usize);
-    m.insert("#806517", 409usize);
-    m.insert("#665D1E", 410usize);
-    m.insert("#8E7618", 411usize);
-    m.insert("#8B8000", 412usize);
-    m.insert("#827839", 413usize);
-    m.insert("#8A865D", 414usize);
-    m.insert("#93917C", 415usize);
-    m.insert("#9F8C76", 416usize);
-    m.insert("#AF9B60", 417usize);
-    m.insert("#827B60", 418usize);
-    m.insert("#786D5F", 419usize);
-    m.insert("#483C32", 420usize);
-    m.insert("#4A412A", 421usize);
-    m.insert("#473810", 422usize);
-    m.insert("#493D26", 423usize);
-    m.insert("#513B1C", 424usize);
-    m.insert("#3D3635", 425usize);
-    m.insert("#3B2F2F", 426usize);
-    m.insert("#49413F", 427usize);
-    m.insert("#43302E", 428usize);
-    m.insert("#622F22", 429usize);
-    m.insert("#5C3317", 430usize);
-    m.insert("#644117", 431usize);
-    m.insert("#654321", 432usize);
-    m.insert("#704214", 433usize);
-    m.insert("#804A00", 434usize);
-    m.insert("#6F4E37", 435usize);
-    m.insert("#835C3B", 436usize);
-    m.insert("#7F5217", 437usize);
-    m.insert("#7F462C", 438usize);
-    m.insert("#A0522D", 439usize);
-    m.insert("#8B4513", 440usize);
-    m.insert("#8A4117", 441usize);
-    m.insert("#7E3817", 442usize);
-    m.insert("#7E3517", 443usize);
-    m.insert("#954535", 444usize);
-    m.insert("#9E4638", 445usize);
-    m.insert("#A05544", 446usize);
-    m.insert("#C34A2C", 447usize);
-    m.insert("#B83C08", 448usize);
-    m.insert("#C04000", 449usize);
-    m.insert("#EB5406", 450usize);
-    m.insert("#C35817", 451usize);
-    m.insert("#B86500", 452usize);
-    m.insert("#B5651D", 453usize);
-    m.insert("#B76734", 454usize);
-    m.insert("#A55D35", 455usize);
-    m.insert("#C36241", 456usize);
-    m.insert("#CB6D51", 457usize);
-    m.insert("#C47451", 458usize);
-    m.insert("#D2691E", 459usize);
-    m.insert("#CC6600", 460usize);
-    m.insert("#E56717", 461usize);
-    m.insert("#E66C2C", 462usize);
-    m.insert("#FF6700", 463usize);
-    m.insert("#FF5F1F", 464usize);
-    m.insert("#FE632A", 465usize);
-    m.insert("#F87217", 466usize);
-    m.insert("#FF7900", 467usize);
-    m.insert("#F88017", 468usize);
-    m.insert("#FF8C00", 469usize);
-    m.insert("#F87431", 470usize);
-    m.insert("#FF7722", 471usize);
-    m.insert("#E67451", 472usize);
-    m.insert("#FF8040", 473usize);
-    m.insert("#FF7F50", 474usize);
-    m.insert("#F88158", 475usize);
-    m.insert("#F9966B", 476usize);
-    m.insert("#FFA07A", 477usize);
-    m.insert("#F89880", 478usize);
-    m.insert("#E9967A", 479usize);
-    m.insert("#E78A61", 480usize);
-    m.insert("#DA8A67", 481usize);
-    m.insert("#FF8674", 482usize);
-    m.insert("#FA8072", 483usize);
-    m.insert("#F98B88", 484usize);
-    m.insert("#F08080", 485usize);
-    m.insert("#F67280", 486usize);
-    m.insert("#E77471", 487usize);
-    m.insert("#F75D59", 488usize);
-    m.insert("#E55451", 489usize);
-    m.insert("#CD5C5C", 490usize);
-    m.insert("#FF6347", 491usize);
-    m.insert("#E55B3C", 492usize);
-    m.insert("#FF4500", 493usize);
-    m.insert("#FF0000", 494usize);
-    m.insert("#FD1C03", 495usize);
-    m.insert("#FF2400", 496usize);
-    m.insert("#F62217", 497usize);
-    m.insert("#F70D1A", 498usize);
-    m.insert("#F62817", 499usize);
-    m.insert("#E42217", 500usize);
-    m.insert("#E41B17", 501usize);
-    m.insert("#DC381F", 502usize);
-    m.insert("#C83F49", 503usize);
-    m.insert("#C24641", 504usize);
-    m.insert("#C11B17", 505usize);
-    m.insert("#B22222", 506usize);
-    m.insert("#B21807", 507usize);
-    m.insert("#A52A2A", 508usize);
-    m.insert("#A70D2A", 509usize);
-    m.insert("#9F000F", 510usize);
-    m.insert("#931314", 511usize);
-    m.insert("#990000", 512usize);
-    m.insert("#990012", 513usize);
-    m.insert("#990012", 514usize);
-    m.insert("#8B0000", 515usize);
-    m.insert("#8F0B0B", 516usize);
-    m.insert("#800000", 517usize);
-    m.insert("#8C001A", 518usize);
-    m.insert("#7E191B", 519usize);
-    m.insert("#800517", 520usize);
-    m.insert("#733635", 521usize);
-    m.insert("#660000", 522usize);
-    m.insert("#551606", 523usize);
-    m.insert("#560319", 524usize);
-    m.insert("#3F000F", 525usize);
-    m.insert("#3D0C02", 526usize);
-    m.insert("#2F0909", 527usize);
-    m.insert("#2B1B17", 528usize);
-    m.insert("#550A35", 529usize);
-    m.insert("#810541", 530usize);
-    m.insert("#7D0541", 531usize);
-    m.insert("#7D0552", 532usize);
-    m.insert("#872657", 533usize);
-    m.insert("#7E354D", 534usize);
-    m.insert("#7F4E52", 535usize);
-    m.insert("#7F525D", 536usize);
-    m.insert("#7F5A58", 537usize);
-    m.insert("#997070", 538usize);
-    m.insert("#B1907F", 539usize);
-    m.insert("#B38481", 540usize);
-    m.insert("#BC8F8F", 541usize);
-    m.insert("#C5908E", 542usize);
-    m.insert("#C48793", 543usize);
-    m.insert("#CC7A8B", 544usize);
-    m.insert("#C48189", 545usize);
-    m.insert("#C08081", 546usize);
-    m.insert("#D58A94", 547usize);
-    m.insert("#E799A3", 548usize);
-    m.insert("#E8ADAA", 549usize);
-    m.insert("#C9A9A6", 550usize);
-    m.insert("#C4AEAD", 551usize);
-    m.insert("#E6C7C2", 552usize);
-    m.insert("#ECC5C0", 553usize);
-    m.insert("#FFCBA4", 554usize);
-    m.insert("#F8B88B", 555usize);
-    m.insert("#EDC9AF", 556usize);
-    m.insert("#FFDDCA", 557usize);
-    m.insert("#FDD7E4", 558usize);
-    m.insert("#F2D4D7", 559usize);
-    m.insert("#FFE6E8", 560usize);
-    m.insert("#FFE4E1", 561usize);
-    m.insert("#FFDFDD", 562usize);
-    m.insert("#FBCFCD", 563usize);
-    m.insert("#FFCCCB", 564usize);
-    m.insert("#F7CAC9", 565usize);
-    m.insert("#F6C6BD", 566usize);
-    m.insert("#FBBBB9", 567usize);
-    m.insert("#FFC0CB", 568usize);
-    m.insert("#FFB6C1", 569usize);
-    m.insert("#FFB8BF", 570usize);
-    m.insert("#FFB2D0", 571usize);
-    m.insert("#FAAFBE", 572usize);
-    m.insert("#FAAFBA", 573usize);
-    m.insert("#F9A7B0", 574usize);
-    m.insert("#FEA3AA", 575usize);
-    m.insert("#E7A1B0", 576usize);
-    m.insert("#E38AAE", 577usize);
-    m.insert("#F778A1", 578usize);
-    m.insert("#E5788F", 579usize);
-    m.insert("#E56E94", 580usize);
-    m.insert("#DB7093", 581usize);
-    m.insert("#D16587", 582usize);
-    m.insert("#C25A7C", 583usize);
-    m.insert("#C25283", 584usize);
-    m.insert("#E75480", 585usize);
-    m.insert("#F660AB", 586usize);
-    m.insert("#FF69B4", 587usize);
-    m.insert("#FC6C85", 588usize);
-    m.insert("#F6358A", 589usize);
-    m.insert("#F52887", 590usize);
-    m.insert("#FF007F", 591usize);
-    m.insert("#FF0080", 592usize);
-    m.insert("#FF1493", 593usize);
-    m.insert("#F535AA", 594usize);
-    m.insert("#FF33AA", 595usize);
-    m.insert("#FD349C", 596usize);
-    m.insert("#E45E9D", 597usize);
-    m.insert("#E759AC", 598usize);
-    m.insert("#E3319D", 599usize);
-    m.insert("#DA1884", 600usize);
-    m.insert("#E4287C", 601usize);
-    m.insert("#FA2A55", 602usize);
-    m.insert("#E30B5D", 603usize);
-    m.insert("#DC143C", 604usize);
-    m.insert("#C32148", 605usize);
-    m.insert("#C21E56", 606usize);
-    m.insert("#C12869", 607usize);
-    m.insert("#C12267", 608usize);
-    m.insert("#CA226B", 609usize);
-    m.insert("#CC338B", 610usize);
-    m.insert("#C71585", 611usize);
-    m.insert("#C12283", 612usize);
-    m.insert("#B3446C", 613usize);
-    m.insert("#B93B8F", 614usize);
-    m.insert("#DA70D6", 615usize);
-    m.insert("#DF73D4", 616usize);
-    m.insert("#EE82EE", 617usize);
-    m.insert("#FF77FF", 618usize);
-    m.insert("#F433FF", 619usize);
-    m.insert("#FF00FF", 620usize);
-    m.insert("#FF00FF", 621usize);
-    m.insert("#E238EC", 622usize);
-    m.insert("#D462FF", 623usize);
-    m.insert("#C45AEC", 624usize);
-    m.insert("#BA55D3", 625usize);
-    m.insert("#A74AC7", 626usize);
-    m.insert("#B048B5", 627usize);
-    m.insert("#B666D2", 628usize);
-    m.insert("#D291BC", 629usize);
-    m.insert("#A17188", 630usize);
-    m.insert("#915F6D", 631usize);
-    m.insert("#7E587E", 632usize);
-    m.insert("#614051", 633usize);
-    m.insert("#583759", 634usize);
-    m.insert("#5E5A80", 635usize);
-    m.insert("#4E5180", 636usize);
-    m.insert("#6A5ACD", 637usize);
-    m.insert("#6960EC", 638usize);
-    m.insert("#5865F2", 639usize);
-    m.insert("#736AFF", 640usize);
-    m.insert("#7B68EE", 641usize);
-    m.insert("#7575CF", 642usize);
-    m.insert("#6667AB", 643usize);
-    m.insert("#6F2DA8", 644usize);
-    m.insert("#6A0DAD", 645usize);
-    m.insert("#6C2DC7", 646usize);
-    m.insert("#822EFF", 647usize);
-    m.insert("#5539CC", 648usize);
-    m.insert("#5453A6", 649usize);
-    m.insert("#483D8B", 650usize);
-    m.insert("#4E387E", 651usize);
-    m.insert("#571B7E", 652usize);
-    m.insert("#4B0150", 653usize);
-    m.insert("#36013F", 654usize);
-    m.insert("#2E1A47", 655usize);
-    m.insert("#461B7E", 656usize);
-    m.insert("#4B0082", 657usize);
-    m.insert("#342D7E", 658usize);
-    m.insert("#663399", 659usize);
-    m.insert("#6A287E", 660usize);
-    m.insert("#8B008B", 661usize);
-    m.insert("#800080", 662usize);
-    m.insert("#86608E", 663usize);
-    m.insert("#9932CC", 664usize);
-    m.insert("#9400D3", 665usize);
-    m.insert("#8D38C9", 666usize);
-    m.insert("#A23BEC", 667usize);
-    m.insert("#B041FF", 668usize);
-    m.insert("#842DCE", 669usize);
-    m.insert("#8A2BE2", 670usize);
-    m.insert("#7A5DC7", 671usize);
-    m.insert("#7F38EC", 672usize);
-    m.insert("#9D00FF", 673usize);
-    m.insert("#8E35EF", 674usize);
-    m.insert("#893BFF", 675usize);
-    m.insert("#9370DB", 676usize);
-    m.insert("#8467D7", 677usize);
-    m.insert("#9172EC", 678usize);
-    m.insert("#9E7BFF", 679usize);
-    m.insert("#8686AF", 680usize);
-    m.insert("#967BB6", 681usize);
-    m.insert("#B09FCA", 682usize);
-    m.insert("#C8C4DF", 683usize);
-    m.insert("#CCCCFF", 684usize);
-    m.insert("#DCD0FF", 685usize);
-    m.insert("#C8A2C8", 686usize);
-    m.insert("#E0B0FF", 687usize);
-    m.insert("#D891EF", 688usize);
-    m.insert("#C38EC7", 689usize);
-    m.insert("#DDA0DD", 690usize);
-    m.insert("#E6A9EC", 691usize);
-    m.insert("#F2A2E8", 692usize);
-    m.insert("#F9B7FF", 693usize);
-    m.insert("#C6AEC7", 694usize);
-    m.insert("#D2B9D3", 695usize);
-    m.insert("#D8BFD8", 696usize);
-    m.insert("#DFD3E3", 697usize);
-    m.insert("#E9CFEC", 698usize);
-    m.insert("#FCDFFF", 699usize);
-    m.insert("#EBDDE2", 700usize);
-    m.insert("#E1D9D1", 701usize);
-    m.insert("#E9E4D4", 702usize);
-    m.insert("#EFEBD8", 703usize);
-    m.insert("#EDE6D6", 704usize);
-    m.insert("#F0E9D6", 705usize);
-    m.insert("#F8F0E3", 706usize);
-    m.insert("#FAF0DD", 707usize);
-    m.insert("#FFF8E7", 708usize);
-    m.insert("#F8F6F0", 709usize);
-    m.insert("#F3E8EA", 710usize);
-    m.insert("#FFF0F5", 711usize);
-    m.insert("#FDEEF4", 712usize);
-    m.insert("#FFF9E3", 713usize);
-    m.insert("#FEF0E3", 714usize);
-    m.insert("#EAEEE9", 715usize);
-    m.insert("#FAF0E6", 716usize);
-    m.insert("#FFF5EE", 717usize);
-    m.insert("#F9F6EE", 718usize);
-    m.insert("#FAF5EF", 719usize);
-    m.insert("#FFFAF0", 720usize);
-    m.insert("#FFFFF0", 721usize);
-    m.insert("#FFFFF4", 722usize);
-    m.insert("#FFFFF7", 723usize);
-    m.insert("#FBFBF9", 724usize);
-    m.insert("#FFFAFA", 725usize);
-    m.insert("#FEFCFF", 726usize);
-    m.insert("#FFFEFA", 727usize);
-    m.insert("#FFFFFF", 728usize);
+    m.insert("#000000", 0);
+    m.insert("#040720", 1);
+    m.insert("#0C090A", 2);
+    m.insert("#34282C", 3);
+    m.insert("#3B3131", 4);
+    m.insert("#3A3B3C", 5);
+    m.insert("#454545", 6);
+    m.insert("#4D4D4F", 7);
+    m.insert("#413839", 8);
+    m.insert("#3D3C3A", 9);
+    m.insert("#463E3F", 10);
+    m.insert("#4C4646", 11);
+    m.insert("#504A4B", 12);
+    m.insert("#565051", 13);
+    m.insert("#52595D", 14);
+    m.insert("#5C5858", 15);
+    m.insert("#625D5D", 16);
+    m.insert("#666362", 17);
+    m.insert("#696969", 18);
+    m.insert("#696969", 19);
+    m.insert("#686A6C", 20);
+    m.insert("#6D6968", 21);
+    m.insert("#726E6D", 22);
+    m.insert("#736F6E", 23);
+    m.insert("#757575", 24);
+    m.insert("#797979", 25);
+    m.insert("#837E7C", 26);
+    m.insert("#808080", 27);
+    m.insert("#808080", 28);
+    m.insert("#848482", 29);
+    m.insert("#888B90", 30);
+    m.insert("#8C8C8C", 31);
+    m.insert("#8D918D", 32);
+    m.insert("#9B9A96", 33);
+    m.insert("#99A3A3", 34);
+    m.insert("#A9A9A9", 35);
+    m.insert("#A9A9A9", 36);
+    m.insert("#A8A9AD", 37);
+    m.insert("#B6B6B4", 38);
+    m.insert("#B6B6B6", 39);
+    m.insert("#C0C0C0", 40);
+    m.insert("#C9C1C1", 41);
+    m.insert("#C9C0BB", 42);
+    m.insert("#C0C6C7", 43);
+    m.insert("#D1D0CE", 44);
+    m.insert("#CECECE", 45);
+    m.insert("#D3D3D3", 46);
+    m.insert("#D3D3D3", 47);
+    m.insert("#DADBDD", 48);
+    m.insert("#DCDCDC", 49);
+    m.insert("#E0E5E5", 50);
+    m.insert("#F5F5F5", 51);
+    m.insert("#EEEEEE", 52);
+    m.insert("#E5E4E2", 53);
+    m.insert("#BCC6CC", 54);
+    m.insert("#98AFC7", 55);
+    m.insert("#838996", 56);
+    m.insert("#778899", 57);
+    m.insert("#778899", 58);
+    m.insert("#708090", 59);
+    m.insert("#708090", 60);
+    m.insert("#6D7B8D", 61);
+    m.insert("#657383", 62);
+    m.insert("#616D7E", 63);
+    m.insert("#646D7E", 64);
+    m.insert("#71797E", 65);
+    m.insert("#566D7E", 66);
+    m.insert("#737CA1", 67);
+    m.insert("#728FCE", 68);
+    m.insert("#4863A0", 69);
+    m.insert("#2F539B", 70);
+    m.insert("#2B547E", 71);
+    m.insert("#36454F", 72);
+    m.insert("#29465B", 73);
+    m.insert("#2B3856", 74);
+    m.insert("#123456", 75);
+    m.insert("#151B54", 76);
+    m.insert("#191970", 77);
+    m.insert("#000080", 78);
+    m.insert("#151B8D", 79);
+    m.insert("#00008B", 80);
+    m.insert("#15317E", 81);
+    m.insert("#0000A0", 82);
+    m.insert("#0000A5", 83);
+    m.insert("#0020C2", 84);
+    m.insert("#0000CD", 85);
+    m.insert("#0041C2", 86);
+    m.insert("#2916F5", 87);
+    m.insert("#0000FF", 88);
+    m.insert("#0002FF", 89);
+    m.insert("#0909FF", 90);
+    m.insert("#1F45FC", 91);
+    m.insert("#2554C7", 92);
+    m.insert("#1569C7", 93);
+    m.insert("#1974D2", 94);
+    m.insert("#2B60DE", 95);
+    m.insert("#4169E1", 96);
+    m.insert("#2B65EC", 97);
+    m.insert("#0059FF", 98);
+    m.insert("#306EFF", 99);
+    m.insert("#157DEC", 100);
+    m.insert("#1589FF", 101);
+    m.insert("#1E90FF", 102);
+    m.insert("#368BC1", 103);
+    m.insert("#4682B4", 104);
+    m.insert("#488AC7", 105);
+    m.insert("#357EC7", 106);
+    m.insert("#3090C7", 107);
+    m.insert("#14A3C7", 108);
+    m.insert("#659EC7", 109);
+    m.insert("#87AFC7", 110);
+    m.insert("#95B9C7", 111);
+    m.insert("#6495ED", 112);
+    m.insert("#6698FF", 113);
+    m.insert("#56A5EC", 114);
+    m.insert("#38ACEC", 115);
+    m.insert("#00BFFF", 116);
+    m.insert("#3BB9FF", 117);
+    m.insert("#5CB3FF", 118);
+    m.insert("#79BAEC", 119);
+    m.insert("#82CAFF", 120);
+    m.insert("#87CEFA", 121);
+    m.insert("#87CEEB", 122);
+    m.insert("#A0CFEC", 123);
+    m.insert("#B7CEEC", 124);
+    m.insert("#B4CFEC", 125);
+    m.insert("#ADDFFF", 126);
+    m.insert("#C2DFFF", 127);
+    m.insert("#C6DEFF", 128);
+    m.insert("#BDEDFF", 129);
+    m.insert("#B0E0E6", 130);
+    m.insert("#AFDCEC", 131);
+    m.insert("#ADD8E6", 132);
+    m.insert("#B0CFDE", 133);
+    m.insert("#C9DFEC", 134);
+    m.insert("#D5D6EA", 135);
+    m.insert("#E3E4FA", 136);
+    m.insert("#DBE9FA", 137);
+    m.insert("#E6E6FA", 138);
+    m.insert("#EBF4FA", 139);
+    m.insert("#F0F8FF", 140);
+    m.insert("#F8F8FF", 141);
+    m.insert("#F0FFFF", 142);
+    m.insert("#E0FFFF", 143);
+    m.insert("#CCFFFF", 144);
+    m.insert("#9AFEFF", 145);
+    m.insert("#7DFDFE", 146);
+    m.insert("#57FEFF", 147);
+    m.insert("#00FFFF", 148);
+    m.insert("#00FFFF", 149);
+    m.insert("#0AFFFF", 150);
+    m.insert("#50EBEC", 151);
+    m.insert("#4EE2EC", 152);
+    m.insert("#16E2F5", 153);
+    m.insert("#8EEBEC", 154);
+    m.insert("#AFEEEE", 155);
+    m.insert("#CFECEC", 156);
+    m.insert("#B3D9D9", 157);
+    m.insert("#81D8D0", 158);
+    m.insert("#77BFC7", 159);
+    m.insert("#92C7C7", 160);
+    m.insert("#78C7C7", 161);
+    m.insert("#7BCCB5", 162);
+    m.insert("#66CDAA", 163);
+    m.insert("#93E9BE", 164);
+    m.insert("#AAF0D1", 165);
+    m.insert("#93FFE8", 166);
+    m.insert("#7FFFD4", 167);
+    m.insert("#01F9C6", 168);
+    m.insert("#40E0D0", 169);
+    m.insert("#48D1CC", 170);
+    m.insert("#48CCCD", 171);
+    m.insert("#46C7C7", 172);
+    m.insert("#43C6DB", 173);
+    m.insert("#00CED1", 174);
+    m.insert("#43BFC7", 175);
+    m.insert("#20B2AA", 176);
+    m.insert("#3EA99F", 177);
+    m.insert("#5F9EA0", 178);
+    m.insert("#3B9C9C", 179);
+    m.insert("#008B8B", 180);
+    m.insert("#00827F", 181);
+    m.insert("#008080", 182);
+    m.insert("#007C80", 183);
+    m.insert("#045F5F", 184);
+    m.insert("#045D5D", 185);
+    m.insert("#033E3E", 186);
+    m.insert("#25383C", 187);
+    m.insert("#25383C", 188);
+    m.insert("#2C3539", 189);
+    m.insert("#3C565B", 190);
+    m.insert("#4C787E", 191);
+    m.insert("#5E7D7E", 192);
+    m.insert("#307D7E", 193);
+    m.insert("#348781", 194);
+    m.insert("#438D80", 195);
+    m.insert("#4E8975", 196);
+    m.insert("#1F6357", 197);
+    m.insert("#306754", 198);
+    m.insert("#006A4E", 199);
+    m.insert("#2E8B57", 200);
+    m.insert("#1B8A6B", 201);
+    m.insert("#31906E", 202);
+    m.insert("#00A36C", 203);
+    m.insert("#34A56F", 204);
+    m.insert("#1AA260", 205);
+    m.insert("#3EB489", 206);
+    m.insert("#50C878", 207);
+    m.insert("#22CE83", 208);
+    m.insert("#3CB371", 209);
+    m.insert("#7C9D8E", 210);
+    m.insert("#78866B", 211);
+    m.insert("#848B79", 212);
+    m.insert("#617C58", 213);
+    m.insert("#728C00", 214);
+    m.insert("#6B8E23", 215);
+    m.insert("#808000", 216);
+    m.insert("#555D50", 217);
+    m.insert("#556B2F", 218);
+    m.insert("#4E5B31", 219);
+    m.insert("#3A5F0B", 220);
+    m.insert("#4B5320", 221);
+    m.insert("#667C26", 222);
+    m.insert("#4E9258", 223);
+    m.insert("#08A04B", 224);
+    m.insert("#387C44", 225);
+    m.insert("#347235", 226);
+    m.insert("#27742C", 227);
+    m.insert("#347C2C", 228);
+    m.insert("#227442", 229);
+    m.insert("#228B22", 230);
+    m.insert("#008000", 231);
+    m.insert("#006400", 232);
+    m.insert("#056608", 233);
+    m.insert("#046307", 234);
+    m.insert("#355E3B", 235);
+    m.insert("#254117", 236);
+    m.insert("#004225", 237);
+    m.insert("#026C3D", 238);
+    m.insert("#437C17", 239);
+    m.insert("#347C17", 240);
+    m.insert("#6AA121", 241);
+    m.insert("#8A9A5B", 242);
+    m.insert("#3F9B0B", 243);
+    m.insert("#4AA02C", 244);
+    m.insert("#41A317", 245);
+    m.insert("#12AD2B", 246);
+    m.insert("#3EA055", 247);
+    m.insert("#73A16C", 248);
+    m.insert("#6CBB3C", 249);
+    m.insert("#6CC417", 250);
+    m.insert("#4CC417", 251);
+    m.insert("#32CD32", 252);
+    m.insert("#52D017", 253);
+    m.insert("#4CC552", 254);
+    m.insert("#54C571", 255);
+    m.insert("#89C35C", 256);
+    m.insert("#85BB65", 257);
+    m.insert("#99C68E", 258);
+    m.insert("#A0D6B4", 259);
+    m.insert("#8FBC8F", 260);
+    m.insert("#829F82", 261);
+    m.insert("#A2AD9C", 262);
+    m.insert("#B8BC86", 263);
+    m.insert("#9CB071", 264);
+    m.insert("#8FB31D", 265);
+    m.insert("#B0BF1A", 266);
+    m.insert("#B2C248", 267);
+    m.insert("#9DC209", 268);
+    m.insert("#A1C935", 269);
+    m.insert("#9ACD32", 270);
+    m.insert("#77DD77", 271);
+    m.insert("#7FE817", 272);
+    m.insert("#59E817", 273);
+    m.insert("#57E964", 274);
+    m.insert("#16F529", 275);
+    m.insert("#5EFB6E", 276);
+    m.insert("#00FF7F", 277);
+    m.insert("#00FF80", 278);
+    m.insert("#36F57F", 279);
+    m.insert("#00FA9A", 280);
+    m.insert("#12E193", 281);
+    m.insert("#5FFB17", 282);
+    m.insert("#00FF00", 283);
+    m.insert("#7CFC00", 284);
+    m.insert("#66FF00", 285);
+    m.insert("#7FFF00", 286);
+    m.insert("#87F717", 287);
+    m.insert("#98F516", 288);
+    m.insert("#B1FB17", 289);
+    m.insert("#ADF802", 290);
+    m.insert("#ADFF2F", 291);
+    m.insert("#BDF516", 292);
+    m.insert("#DAEE01", 293);
+    m.insert("#E2F516", 294);
+    m.insert("#CCFB5D", 295);
+    m.insert("#BCE954", 296);
+    m.insert("#64E986", 297);
+    m.insert("#90EE90", 298);
+    m.insert("#6AFB92", 299);
+    m.insert("#98FB98", 300);
+    m.insert("#98FF98", 301);
+    m.insert("#B5EAAA", 302);
+    m.insert("#E3F9A6", 303);
+    m.insert("#C3FDB8", 304);
+    m.insert("#C2E5D3", 305);
+    m.insert("#DBF9DB", 306);
+    m.insert("#E8F1D4", 307);
+    m.insert("#F0FFF0", 308);
+    m.insert("#F5FFFA", 309);
+    m.insert("#FFFACD", 310);
+    m.insert("#FFFFC2", 311);
+    m.insert("#FFFFCC", 312);
+    m.insert("#FFFDD0", 313);
+    m.insert("#FAFAD2", 314);
+    m.insert("#FFFFE0", 315);
+    m.insert("#F5F5DC", 316);
+    m.insert("#F2F0DF", 317);
+    m.insert("#FFF8DC", 318);
+    m.insert("#FBF6D9", 319);
+    m.insert("#FAEBD7", 320);
+    m.insert("#FFF0DB", 321);
+    m.insert("#FFEFD5", 322);
+    m.insert("#F7E7CE", 323);
+    m.insert("#FFEBCD", 324);
+    m.insert("#FFE4C4", 325);
+    m.insert("#F5DEB3", 326);
+    m.insert("#FFE4B5", 327);
+    m.insert("#FFE5B4", 328);
+    m.insert("#FED8B1", 329);
+    m.insert("#FFDAB9", 330);
+    m.insert("#FBD5AB", 331);
+    m.insert("#FFDEAD", 332);
+    m.insert("#FBE7A1", 333);
+    m.insert("#F3E3C3", 334);
+    m.insert("#F0E2B6", 335);
+    m.insert("#F1E5AC", 336);
+    m.insert("#F3E5AB", 337);
+    m.insert("#ECE5B6", 338);
+    m.insert("#E8E4C9", 339);
+    m.insert("#EEE8AA", 340);
+    m.insert("#F0E68C", 341);
+    m.insert("#EDDA74", 342);
+    m.insert("#EDE275", 343);
+    m.insert("#FFE87C", 344);
+    m.insert("#FFF380", 345);
+    m.insert("#FAF884", 346);
+    m.insert("#FFFF33", 347);
+    m.insert("#FFFF00", 348);
+    m.insert("#FEF250", 349);
+    m.insert("#FFEF00", 350);
+    m.insert("#F5E216", 351);
+    m.insert("#FFDB58", 352);
+    m.insert("#FFDF00", 353);
+    m.insert("#F9DB24", 354);
+    m.insert("#EED202", 355);
+    m.insert("#FFD801", 356);
+    m.insert("#FFD700", 357);
+    m.insert("#FDD017", 358);
+    m.insert("#FFCE44", 359);
+    m.insert("#EAC117", 360);
+    m.insert("#F6BE00", 361);
+    m.insert("#F2BB66", 362);
+    m.insert("#FFBF00", 363);
+    m.insert("#FBB917", 364);
+    m.insert("#FDBD01", 365);
+    m.insert("#FBB117", 366);
+    m.insert("#FFAE42", 367);
+    m.insert("#FFAE42", 368);
+    m.insert("#FFA62F", 369);
+    m.insert("#FFA600", 370);
+    m.insert("#FFA500", 371);
+    m.insert("#EE9A4D", 372);
+    m.insert("#F4A460", 373);
+    m.insert("#E2A76F", 374);
+    m.insert("#C19A6B", 375);
+    m.insert("#E6BF83", 376);
+    m.insert("#DEB887", 377);
+    m.insert("#D2B48C", 378);
+    m.insert("#C8AD7F", 379);
+    m.insert("#C2B280", 380);
+    m.insert("#C6BA8B", 381);
+    m.insert("#BCB88A", 382);
+    m.insert("#C8B560", 383);
+    m.insert("#C9BE62", 384);
+    m.insert("#C9AE5D", 385);
+    m.insert("#BDB76B", 386);
+    m.insert("#BAB86C", 387);
+    m.insert("#B5A642", 388);
+    m.insert("#C7A317", 389);
+    m.insert("#D4AF37", 390);
+    m.insert("#E1AD01", 391);
+    m.insert("#E9AB17", 392);
+    m.insert("#E8A317", 393);
+    m.insert("#DAA520", 394);
+    m.insert("#D4A017", 395);
+    m.insert("#C68E17", 396);
+    m.insert("#B8860B", 397);
+    m.insert("#C58917", 398);
+    m.insert("#CD853F", 399);
+    m.insert("#CD7F32", 400);
+    m.insert("#CA762B", 401);
+    m.insert("#C88141", 402);
+    m.insert("#B87333", 403);
+    m.insert("#AA6C39", 404);
+    m.insert("#A97142", 405);
+    m.insert("#AB784E", 406);
+    m.insert("#966F33", 407);
+    m.insert("#906E3E", 408);
+    m.insert("#806517", 409);
+    m.insert("#665D1E", 410);
+    m.insert("#8E7618", 411);
+    m.insert("#8B8000", 412);
+    m.insert("#827839", 413);
+    m.insert("#8A865D", 414);
+    m.insert("#93917C", 415);
+    m.insert("#9F8C76", 416);
+    m.insert("#AF9B60", 417);
+    m.insert("#827B60", 418);
+    m.insert("#786D5F", 419);
+    m.insert("#483C32", 420);
+    m.insert("#4A412A", 421);
+    m.insert("#473810", 422);
+    m.insert("#493D26", 423);
+    m.insert("#513B1C", 424);
+    m.insert("#3D3635", 425);
+    m.insert("#3B2F2F", 426);
+    m.insert("#49413F", 427);
+    m.insert("#43302E", 428);
+    m.insert("#622F22", 429);
+    m.insert("#5C3317", 430);
+    m.insert("#644117", 431);
+    m.insert("#654321", 432);
+    m.insert("#704214", 433);
+    m.insert("#804A00", 434);
+    m.insert("#6F4E37", 435);
+    m.insert("#835C3B", 436);
+    m.insert("#7F5217", 437);
+    m.insert("#7F462C", 438);
+    m.insert("#A0522D", 439);
+    m.insert("#8B4513", 440);
+    m.insert("#8A4117", 441);
+    m.insert("#7E3817", 442);
+    m.insert("#7E3517", 443);
+    m.insert("#954535", 444);
+    m.insert("#9E4638", 445);
+    m.insert("#A05544", 446);
+    m.insert("#C34A2C", 447);
+    m.insert("#B83C08", 448);
+    m.insert("#C04000", 449);
+    m.insert("#EB5406", 450);
+    m.insert("#C35817", 451);
+    m.insert("#B86500", 452);
+    m.insert("#B5651D", 453);
+    m.insert("#B76734", 454);
+    m.insert("#A55D35", 455);
+    m.insert("#C36241", 456);
+    m.insert("#CB6D51", 457);
+    m.insert("#C47451", 458);
+    m.insert("#D2691E", 459);
+    m.insert("#CC6600", 460);
+    m.insert("#E56717", 461);
+    m.insert("#E66C2C", 462);
+    m.insert("#FF6700", 463);
+    m.insert("#FF5F1F", 464);
+    m.insert("#FE632A", 465);
+    m.insert("#F87217", 466);
+    m.insert("#FF7900", 467);
+    m.insert("#F88017", 468);
+    m.insert("#FF8C00", 469);
+    m.insert("#F87431", 470);
+    m.insert("#FF7722", 471);
+    m.insert("#E67451", 472);
+    m.insert("#FF8040", 473);
+    m.insert("#FF7F50", 474);
+    m.insert("#F88158", 475);
+    m.insert("#F9966B", 476);
+    m.insert("#FFA07A", 477);
+    m.insert("#F89880", 478);
+    m.insert("#E9967A", 479);
+    m.insert("#E78A61", 480);
+    m.insert("#DA8A67", 481);
+    m.insert("#FF8674", 482);
+    m.insert("#FA8072", 483);
+    m.insert("#F98B88", 484);
+    m.insert("#F08080", 485);
+    m.insert("#F67280", 486);
+    m.insert("#E77471", 487);
+    m.insert("#F75D59", 488);
+    m.insert("#E55451", 489);
+    m.insert("#CD5C5C", 490);
+    m.insert("#FF6347", 491);
+    m.insert("#E55B3C", 492);
+    m.insert("#FF4500", 493);
+    m.insert("#FF0000", 494);
+    m.insert("#FD1C03", 495);
+    m.insert("#FF2400", 496);
+    m.insert("#F62217", 497);
+    m.insert("#F70D1A", 498);
+    m.insert("#F62817", 499);
+    m.insert("#E42217", 500);
+    m.insert("#E41B17", 501);
+    m.insert("#DC381F", 502);
+    m.insert("#C83F49", 503);
+    m.insert("#C24641", 504);
+    m.insert("#C11B17", 505);
+    m.insert("#B22222", 506);
+    m.insert("#B21807", 507);
+    m.insert("#A52A2A", 508);
+    m.insert("#A70D2A", 509);
+    m.insert("#9F000F", 510);
+    m.insert("#931314", 511);
+    m.insert("#990000", 512);
+    m.insert("#990012", 513);
+    m.insert("#990012", 514);
+    m.insert("#8B0000", 515);
+    m.insert("#8F0B0B", 516);
+    m.insert("#800000", 517);
+    m.insert("#8C001A", 518);
+    m.insert("#7E191B", 519);
+    m.insert("#800517", 520);
+    m.insert("#733635", 521);
+    m.insert("#660000", 522);
+    m.insert("#551606", 523);
+    m.insert("#560319", 524);
+    m.insert("#3F000F", 525);
+    m.insert("#3D0C02", 526);
+    m.insert("#2F0909", 527);
+    m.insert("#2B1B17", 528);
+    m.insert("#550A35", 529);
+    m.insert("#810541", 530);
+    m.insert("#7D0541", 531);
+    m.insert("#7D0552", 532);
+    m.insert("#872657", 533);
+    m.insert("#7E354D", 534);
+    m.insert("#7F4E52", 535);
+    m.insert("#7F525D", 536);
+    m.insert("#7F5A58", 537);
+    m.insert("#997070", 538);
+    m.insert("#B1907F", 539);
+    m.insert("#B38481", 540);
+    m.insert("#BC8F8F", 541);
+    m.insert("#C5908E", 542);
+    m.insert("#C48793", 543);
+    m.insert("#CC7A8B", 544);
+    m.insert("#C48189", 545);
+    m.insert("#C08081", 546);
+    m.insert("#D58A94", 547);
+    m.insert("#E799A3", 548);
+    m.insert("#E8ADAA", 549);
+    m.insert("#C9A9A6", 550);
+    m.insert("#C4AEAD", 551);
+    m.insert("#E6C7C2", 552);
+    m.insert("#ECC5C0", 553);
+    m.insert("#FFCBA4", 554);
+    m.insert("#F8B88B", 555);
+    m.insert("#EDC9AF", 556);
+    m.insert("#FFDDCA", 557);
+    m.insert("#FDD7E4", 558);
+    m.insert("#F2D4D7", 559);
+    m.insert("#FFE6E8", 560);
+    m.insert("#FFE4E1", 561);
+    m.insert("#FFDFDD", 562);
+    m.insert("#FBCFCD", 563);
+    m.insert("#FFCCCB", 564);
+    m.insert("#F7CAC9", 565);
+    m.insert("#F6C6BD", 566);
+    m.insert("#FBBBB9", 567);
+    m.insert("#FFC0CB", 568);
+    m.insert("#FFB6C1", 569);
+    m.insert("#FFB8BF", 570);
+    m.insert("#FFB2D0", 571);
+    m.insert("#FAAFBE", 572);
+    m.insert("#FAAFBA", 573);
+    m.insert("#F9A7B0", 574);
+    m.insert("#FEA3AA", 575);
+    m.insert("#E7A1B0", 576);
+    m.insert("#E38AAE", 577);
+    m.insert("#F778A1", 578);
+    m.insert("#E5788F", 579);
+    m.insert("#E56E94", 580);
+    m.insert("#DB7093", 581);
+    m.insert("#D16587", 582);
+    m.insert("#C25A7C", 583);
+    m.insert("#C25283", 584);
+    m.insert("#E75480", 585);
+    m.insert("#F660AB", 586);
+    m.insert("#FF69B4", 587);
+    m.insert("#FC6C85", 588);
+    m.insert("#F6358A", 589);
+    m.insert("#F52887", 590);
+    m.insert("#FF007F", 591);
+    m.insert("#FF0080", 592);
+    m.insert("#FF1493", 593);
+    m.insert("#F535AA", 594);
+    m.insert("#FF33AA", 595);
+    m.insert("#FD349C", 596);
+    m.insert("#E45E9D", 597);
+    m.insert("#E759AC", 598);
+    m.insert("#E3319D", 599);
+    m.insert("#DA1884", 600);
+    m.insert("#E4287C", 601);
+    m.insert("#FA2A55", 602);
+    m.insert("#E30B5D", 603);
+    m.insert("#DC143C", 604);
+    m.insert("#C32148", 605);
+    m.insert("#C21E56", 606);
+    m.insert("#C12869", 607);
+    m.insert("#C12267", 608);
+    m.insert("#CA226B", 609);
+    m.insert("#CC338B", 610);
+    m.insert("#C71585", 611);
+    m.insert("#C12283", 612);
+    m.insert("#B3446C", 613);
+    m.insert("#B93B8F", 614);
+    m.insert("#DA70D6", 615);
+    m.insert("#DF73D4", 616);
+    m.insert("#EE82EE", 617);
+    m.insert("#FF77FF", 618);
+    m.insert("#F433FF", 619);
+    m.insert("#FF00FF", 620);
+    m.insert("#FF00FF", 621);
+    m.insert("#E238EC", 622);
+    m.insert("#D462FF", 623);
+    m.insert("#C45AEC", 624);
+    m.insert("#BA55D3", 625);
+    m.insert("#A74AC7", 626);
+    m.insert("#B048B5", 627);
+    m.insert("#B666D2", 628);
+    m.insert("#D291BC", 629);
+    m.insert("#A17188", 630);
+    m.insert("#915F6D", 631);
+    m.insert("#7E587E", 632);
+    m.insert("#614051", 633);
+    m.insert("#583759", 634);
+    m.insert("#5E5A80", 635);
+    m.insert("#4E5180", 636);
+    m.insert("#6A5ACD", 637);
+    m.insert("#6960EC", 638);
+    m.insert("#5865F2", 639);
+    m.insert("#736AFF", 640);
+    m.insert("#7B68EE", 641);
+    m.insert("#7575CF", 642);
+    m.insert("#6667AB", 643);
+    m.insert("#6F2DA8", 644);
+    m.insert("#6A0DAD", 645);
+    m.insert("#6C2DC7", 646);
+    m.insert("#822EFF", 647);
+    m.insert("#5539CC", 648);
+    m.insert("#5453A6", 649);
+    m.insert("#483D8B", 650);
+    m.insert("#4E387E", 651);
+    m.insert("#571B7E", 652);
+    m.insert("#4B0150", 653);
+    m.insert("#36013F", 654);
+    m.insert("#2E1A47", 655);
+    m.insert("#461B7E", 656);
+    m.insert("#4B0082", 657);
+    m.insert("#342D7E", 658);
+    m.insert("#663399", 659);
+    m.insert("#6A287E", 660);
+    m.insert("#8B008B", 661);
+    m.insert("#800080", 662);
+    m.insert("#86608E", 663);
+    m.insert("#9932CC", 664);
+    m.insert("#9400D3", 665);
+    m.insert("#8D38C9", 666);
+    m.insert("#A23BEC", 667);
+    m.insert("#B041FF", 668);
+    m.insert("#842DCE", 669);
+    m.insert("#8A2BE2", 670);
+    m.insert("#7A5DC7", 671);
+    m.insert("#7F38EC", 672);
+    m.insert("#9D00FF", 673);
+    m.insert("#8E35EF", 674);
+    m.insert("#893BFF", 675);
+    m.insert("#9370DB", 676);
+    m.insert("#8467D7", 677);
+    m.insert("#9172EC", 678);
+    m.insert("#9E7BFF", 679);
+    m.insert("#8686AF", 680);
+    m.insert("#967BB6", 681);
+    m.insert("#B09FCA", 682);
+    m.insert("#C8C4DF", 683);
+    m.insert("#CCCCFF", 684);
+    m.insert("#DCD0FF", 685);
+    m.insert("#C8A2C8", 686);
+    m.insert("#E0B0FF", 687);
+    m.insert("#D891EF", 688);
+    m.insert("#C38EC7", 689);
+    m.insert("#DDA0DD", 690);
+    m.insert("#E6A9EC", 691);
+    m.insert("#F2A2E8", 692);
+    m.insert("#F9B7FF", 693);
+    m.insert("#C6AEC7", 694);
+    m.insert("#D2B9D3", 695);
+    m.insert("#D8BFD8", 696);
+    m.insert("#DFD3E3", 697);
+    m.insert("#E9CFEC", 698);
+    m.insert("#FCDFFF", 699);
+    m.insert("#EBDDE2", 700);
+    m.insert("#E1D9D1", 701);
+    m.insert("#E9E4D4", 702);
+    m.insert("#EFEBD8", 703);
+    m.insert("#EDE6D6", 704);
+    m.insert("#F0E9D6", 705);
+    m.insert("#F8F0E3", 706);
+    m.insert("#FAF0DD", 707);
+    m.insert("#FFF8E7", 708);
+    m.insert("#F8F6F0", 709);
+    m.insert("#F3E8EA", 710);
+    m.insert("#FFF0F5", 711);
+    m.insert("#FDEEF4", 712);
+    m.insert("#FFF9E3", 713);
+    m.insert("#FEF0E3", 714);
+    m.insert("#EAEEE9", 715);
+    m.insert("#FAF0E6", 716);
+    m.insert("#FFF5EE", 717);
+    m.insert("#F9F6EE", 718);
+    m.insert("#FAF5EF", 719);
+    m.insert("#FFFAF0", 720);
+    m.insert("#FFFFF0", 721);
+    m.insert("#FFFFF4", 722);
+    m.insert("#FFFFF7", 723);
+    m.insert("#FBFBF9", 724);
+    m.insert("#FFFAFA", 725);
+    m.insert("#FEFCFF", 726);
+    m.insert("#FFFEFA", 727);
+    m.insert("#FFFFFF", 728);
     m
 });
 impl Color {
@@ -2277,738 +2277,738 @@ impl Color {
     }
     #[doc = r" Get the offset of this color in the COLORS array"]
     fn offset(&self) -> Option<usize> {
-        match self {
-            Self::Black => Some(0usize),
-            Self::BlackBlue => Some(1usize),
-            Self::Night => Some(2usize),
-            Self::Charcoal => Some(3usize),
-            Self::Oil => Some(4usize),
-            Self::StormyGray => Some(5usize),
-            Self::LightBlack => Some(6usize),
-            Self::DarkSteampunk => Some(7usize),
-            Self::BlackCat => Some(8usize),
-            Self::Iridium => Some(9usize),
-            Self::BlackEel => Some(10usize),
-            Self::BlackCow => Some(11usize),
-            Self::GrayWolf => Some(12usize),
-            Self::VampireGray => Some(13usize),
-            Self::IronGray => Some(14usize),
-            Self::GrayDolphin => Some(15usize),
-            Self::CarbonGray => Some(16usize),
-            Self::AshGray => Some(17usize),
-            Self::DimGray => Some(18usize),
-            Self::DimGrey => Some(19usize),
-            Self::NardoGray => Some(20usize),
-            Self::CloudyGray => Some(21usize),
-            Self::SmokeyGray => Some(22usize),
-            Self::AlienGray => Some(23usize),
-            Self::SonicSilver => Some(24usize),
-            Self::PlatinumGray => Some(25usize),
-            Self::Granite => Some(26usize),
-            Self::Gray => Some(27usize),
-            Self::Grey => Some(28usize),
-            Self::BattleshipGray => Some(29usize),
-            Self::SheetMetal => Some(30usize),
-            Self::DarkGainsboro => Some(31usize),
-            Self::GunmetalGray => Some(32usize),
-            Self::ColdMetal => Some(33usize),
-            Self::StainlessSteelGray => Some(34usize),
-            Self::DarkGrey => Some(35usize),
-            Self::DarkGray => Some(36usize),
-            Self::ChromeAluminum => Some(37usize),
-            Self::GrayCloud => Some(38usize),
-            Self::Metal => Some(39usize),
-            Self::Silver => Some(40usize),
-            Self::Steampunk => Some(41usize),
-            Self::PaleSilver => Some(42usize),
-            Self::GearSteelGray => Some(43usize),
-            Self::GrayGoose => Some(44usize),
-            Self::PlatinumSilver => Some(45usize),
-            Self::LightGrey => Some(46usize),
-            Self::LightGray => Some(47usize),
-            Self::SilverWhite => Some(48usize),
-            Self::Gainsboro => Some(49usize),
-            Self::LightSteelGray => Some(50usize),
-            Self::WhiteSmoke => Some(51usize),
-            Self::WhiteGray => Some(52usize),
-            Self::Platinum => Some(53usize),
-            Self::MetallicSilver => Some(54usize),
-            Self::BlueGray => Some(55usize),
-            Self::RomanSilver => Some(56usize),
-            Self::LightSlateGrey => Some(57usize),
-            Self::LightSlateGray => Some(58usize),
-            Self::SlateGrey => Some(59usize),
-            Self::SlateGray => Some(60usize),
-            Self::RatGray => Some(61usize),
-            Self::SlateGraniteGray => Some(62usize),
-            Self::JetGray => Some(63usize),
-            Self::MistBlue => Some(64usize),
-            Self::SteelGray => Some(65usize),
-            Self::MarbleBlue => Some(66usize),
-            Self::SlateBlueGray => Some(67usize),
-            Self::LightPurpleBlue => Some(68usize),
-            Self::AzureBlue => Some(69usize),
-            Self::EstorilBlue => Some(70usize),
-            Self::BlueJay => Some(71usize),
-            Self::CharcoalBlue => Some(72usize),
-            Self::DarkBlueGray => Some(73usize),
-            Self::DarkSlate => Some(74usize),
-            Self::DeepSeaBlue => Some(75usize),
-            Self::NightBlue => Some(76usize),
-            Self::MidnightBlue => Some(77usize),
-            Self::Navy => Some(78usize),
-            Self::DenimDarkBlue => Some(79usize),
-            Self::DarkBlue => Some(80usize),
-            Self::LapisBlue => Some(81usize),
-            Self::NewMidnightBlue => Some(82usize),
-            Self::EarthBlue => Some(83usize),
-            Self::CobaltBlue => Some(84usize),
-            Self::MediumBlue => Some(85usize),
-            Self::BlueberryBlue => Some(86usize),
-            Self::CanaryBlue => Some(87usize),
-            Self::Blue => Some(88usize),
-            Self::SamcoBlue => Some(89usize),
-            Self::BrightBlue => Some(90usize),
-            Self::BlueOrchid => Some(91usize),
-            Self::SapphireBlue => Some(92usize),
-            Self::BlueEyes => Some(93usize),
-            Self::BrightNavyBlue => Some(94usize),
-            Self::BalloonBlue => Some(95usize),
-            Self::RoyalBlue => Some(96usize),
-            Self::OceanBlue => Some(97usize),
-            Self::DarkSkyBlue => Some(98usize),
-            Self::BlueRibbon => Some(99usize),
-            Self::BlueDress => Some(100usize),
-            Self::NeonBlue => Some(101usize),
-            Self::DodgerBlue => Some(102usize),
-            Self::GlacialBlueIce => Some(103usize),
-            Self::SteelBlue => Some(104usize),
-            Self::SilkBlue => Some(105usize),
-            Self::WindowsBlue => Some(106usize),
-            Self::BlueIvy => Some(107usize),
-            Self::CyanBlue => Some(108usize),
-            Self::BlueKoi => Some(109usize),
-            Self::ColumbiaBlue => Some(110usize),
-            Self::BabyBlue => Some(111usize),
-            Self::CornflowerBlue => Some(112usize),
-            Self::SkyBlueDress => Some(113usize),
-            Self::Iceberg => Some(114usize),
-            Self::ButterflyBlue => Some(115usize),
-            Self::DeepSkyBlue => Some(116usize),
-            Self::MiddayBlue => Some(117usize),
-            Self::CrystalBlue => Some(118usize),
-            Self::DenimBlue => Some(119usize),
-            Self::DaySkyBlue => Some(120usize),
-            Self::LightSkyBlue => Some(121usize),
-            Self::SkyBlue => Some(122usize),
-            Self::JeansBlue => Some(123usize),
-            Self::BlueAngel => Some(124usize),
-            Self::PastelBlue => Some(125usize),
-            Self::LightDayBlue => Some(126usize),
-            Self::SeaBlue => Some(127usize),
-            Self::HeavenlyBlue => Some(128usize),
-            Self::RobinEggBlue => Some(129usize),
-            Self::PowderBlue => Some(130usize),
-            Self::CoralBlue => Some(131usize),
-            Self::LightBlue => Some(132usize),
-            Self::LightSteelBlue => Some(133usize),
-            Self::GulfBlue => Some(134usize),
-            Self::PastelLightBlue => Some(135usize),
-            Self::LavenderBlue => Some(136usize),
-            Self::WhiteBlue => Some(137usize),
-            Self::Lavender => Some(138usize),
-            Self::Water => Some(139usize),
-            Self::AliceBlue => Some(140usize),
-            Self::GhostWhite => Some(141usize),
-            Self::Azure => Some(142usize),
-            Self::LightCyan => Some(143usize),
-            Self::LightSlate => Some(144usize),
-            Self::ElectricBlue => Some(145usize),
-            Self::TronBlue => Some(146usize),
-            Self::BlueZircon => Some(147usize),
-            Self::Cyan => Some(148usize),
-            Self::Aqua => Some(149usize),
-            Self::BrightCyan => Some(150usize),
-            Self::Celeste => Some(151usize),
-            Self::BlueDiamond => Some(152usize),
-            Self::BrightTurquoise => Some(153usize),
-            Self::BlueLagoon => Some(154usize),
-            Self::PaleTurquoise => Some(155usize),
-            Self::PaleBlueLily => Some(156usize),
-            Self::LightTeal => Some(157usize),
-            Self::TiffanyBlue => Some(158usize),
-            Self::BlueHosta => Some(159usize),
-            Self::CyanOpaque => Some(160usize),
-            Self::NorthernLightsBlue => Some(161usize),
-            Self::BlueGreen => Some(162usize),
-            Self::MediumAquaMarine => Some(163usize),
-            Self::AquaSeafoamGreen => Some(164usize),
-            Self::MagicMint => Some(165usize),
-            Self::LightAquamarine => Some(166usize),
-            Self::Aquamarine => Some(167usize),
-            Self::BrightTeal => Some(168usize),
-            Self::Turquoise => Some(169usize),
-            Self::MediumTurquoise => Some(170usize),
-            Self::DeepTurquoise => Some(171usize),
-            Self::Jellyfish => Some(172usize),
-            Self::BlueTurquoise => Some(173usize),
-            Self::DarkTurquoise => Some(174usize),
-            Self::MacawBlueGreen => Some(175usize),
-            Self::LightSeaGreen => Some(176usize),
-            Self::SeafoamGreen => Some(177usize),
-            Self::CadetBlue => Some(178usize),
-            Self::DeepSea => Some(179usize),
-            Self::DarkCyan => Some(180usize),
-            Self::TealGreen => Some(181usize),
-            Self::Teal => Some(182usize),
-            Self::TealBlue => Some(183usize),
-            Self::MediumTeal => Some(184usize),
-            Self::DarkTeal => Some(185usize),
-            Self::DeepTeal => Some(186usize),
-            Self::DarkSlateGray => Some(187usize),
-            Self::DarkSlateGrey => Some(188usize),
-            Self::Gunmetal => Some(189usize),
-            Self::BlueMossGreen => Some(190usize),
-            Self::BeetleGreen => Some(191usize),
-            Self::GrayishTurquoise => Some(192usize),
-            Self::GreenishBlue => Some(193usize),
-            Self::AquamarineStone => Some(194usize),
-            Self::SeaTurtleGreen => Some(195usize),
-            Self::DullSeaGreen => Some(196usize),
-            Self::DarkGreenBlue => Some(197usize),
-            Self::DeepSeaGreen => Some(198usize),
-            Self::BottleGreen => Some(199usize),
-            Self::SeaGreen => Some(200usize),
-            Self::ElfGreen => Some(201usize),
-            Self::DarkMint => Some(202usize),
-            Self::Jade => Some(203usize),
-            Self::EarthGreen => Some(204usize),
-            Self::ChromeGreen => Some(205usize),
-            Self::Mint => Some(206usize),
-            Self::Emerald => Some(207usize),
-            Self::IsleOfManGreen => Some(208usize),
-            Self::MediumSeaGreen => Some(209usize),
-            Self::MetallicGreen => Some(210usize),
-            Self::CamouflageGreen => Some(211usize),
-            Self::SageGreen => Some(212usize),
-            Self::HazelGreen => Some(213usize),
-            Self::VenomGreen => Some(214usize),
-            Self::OliveDrab => Some(215usize),
-            Self::Olive => Some(216usize),
-            Self::Ebony => Some(217usize),
-            Self::DarkOliveGreen => Some(218usize),
-            Self::MilitaryGreen => Some(219usize),
-            Self::GreenLeaves => Some(220usize),
-            Self::ArmyGreen => Some(221usize),
-            Self::FernGreen => Some(222usize),
-            Self::FallForestGreen => Some(223usize),
-            Self::IrishGreen => Some(224usize),
-            Self::PineGreen => Some(225usize),
-            Self::MediumForestGreen => Some(226usize),
-            Self::RacingGreen => Some(227usize),
-            Self::JungleGreen => Some(228usize),
-            Self::CactusGreen => Some(229usize),
-            Self::ForestGreen => Some(230usize),
-            Self::Green => Some(231usize),
-            Self::DarkGreen => Some(232usize),
-            Self::DeepGreen => Some(233usize),
-            Self::DeepEmeraldGreen => Some(234usize),
-            Self::HunterGreen => Some(235usize),
-            Self::DarkForestGreen => Some(236usize),
-            Self::LotusGreen => Some(237usize),
-            Self::BroccoliGreen => Some(238usize),
-            Self::SeaweedGreen => Some(239usize),
-            Self::ShamrockGreen => Some(240usize),
-            Self::GreenOnion => Some(241usize),
-            Self::MossGreen => Some(242usize),
-            Self::GrassGreen => Some(243usize),
-            Self::GreenPepper => Some(244usize),
-            Self::DarkLimeGreen => Some(245usize),
-            Self::ParrotGreen => Some(246usize),
-            Self::CloverGreen => Some(247usize),
-            Self::DinosaurGreen => Some(248usize),
-            Self::GreenSnake => Some(249usize),
-            Self::AlienGreen => Some(250usize),
-            Self::GreenApple => Some(251usize),
-            Self::LimeGreen => Some(252usize),
-            Self::PeaGreen => Some(253usize),
-            Self::KellyGreen => Some(254usize),
-            Self::ZombieGreen => Some(255usize),
-            Self::GreenPeas => Some(256usize),
-            Self::DollarBillGreen => Some(257usize),
-            Self::FrogGreen => Some(258usize),
-            Self::TurquoiseGreen => Some(259usize),
-            Self::DarkSeaGreen => Some(260usize),
-            Self::BasilGreen => Some(261usize),
-            Self::GrayGreen => Some(262usize),
-            Self::LightOliveGreen => Some(263usize),
-            Self::IguanaGreen => Some(264usize),
-            Self::CitronGreen => Some(265usize),
-            Self::AcidGreen => Some(266usize),
-            Self::AvocadoGreen => Some(267usize),
-            Self::PistachioGreen => Some(268usize),
-            Self::SaladGreen => Some(269usize),
-            Self::YellowGreen => Some(270usize),
-            Self::PastelGreen => Some(271usize),
-            Self::HummingbirdGreen => Some(272usize),
-            Self::NebulaGreen => Some(273usize),
-            Self::StoplightGoGreen => Some(274usize),
-            Self::NeonGreen => Some(275usize),
-            Self::JadeGreen => Some(276usize),
-            Self::SpringGreen => Some(277usize),
-            Self::OceanGreen => Some(278usize),
-            Self::LimeMintGreen => Some(279usize),
-            Self::MediumSpringGreen => Some(280usize),
-            Self::AquaGreen => Some(281usize),
-            Self::EmeraldGreen => Some(282usize),
-            Self::Lime => Some(283usize),
-            Self::LawnGreen => Some(284usize),
-            Self::BrightGreen => Some(285usize),
-            Self::Chartreuse => Some(286usize),
-            Self::YellowLawnGreen => Some(287usize),
-            Self::AloeVeraGreen => Some(288usize),
-            Self::DullGreenYellow => Some(289usize),
-            Self::LemonGreen => Some(290usize),
-            Self::GreenYellow => Some(291usize),
-            Self::ChameleonGreen => Some(292usize),
-            Self::NeonYellowGreen => Some(293usize),
-            Self::YellowGreenGrosbeak => Some(294usize),
-            Self::TeaGreen => Some(295usize),
-            Self::SlimeGreen => Some(296usize),
-            Self::AlgaeGreen => Some(297usize),
-            Self::LightGreen => Some(298usize),
-            Self::DragonGreen => Some(299usize),
-            Self::PaleGreen => Some(300usize),
-            Self::MintGreen => Some(301usize),
-            Self::GreenThumb => Some(302usize),
-            Self::OrganicBrown => Some(303usize),
-            Self::LightJade => Some(304usize),
-            Self::LightMintGreen => Some(305usize),
-            Self::LightRoseGreen => Some(306usize),
-            Self::ChromeWhite => Some(307usize),
-            Self::HoneyDew => Some(308usize),
-            Self::MintCream => Some(309usize),
-            Self::LemonChiffon => Some(310usize),
-            Self::Parchment => Some(311usize),
-            Self::Cream => Some(312usize),
-            Self::CreamWhite => Some(313usize),
-            Self::LightGoldenRodYellow => Some(314usize),
-            Self::LightYellow => Some(315usize),
-            Self::Beige => Some(316usize),
-            Self::WhiteYellow => Some(317usize),
-            Self::Cornsilk => Some(318usize),
-            Self::Blonde => Some(319usize),
-            Self::AntiqueWhite => Some(320usize),
-            Self::LightBeige => Some(321usize),
-            Self::PapayaWhip => Some(322usize),
-            Self::Champagne => Some(323usize),
-            Self::BlanchedAlmond => Some(324usize),
-            Self::Bisque => Some(325usize),
-            Self::Wheat => Some(326usize),
-            Self::Moccasin => Some(327usize),
-            Self::Peach => Some(328usize),
-            Self::LightOrange => Some(329usize),
-            Self::PeachPuff => Some(330usize),
-            Self::CoralPeach => Some(331usize),
-            Self::NavajoWhite => Some(332usize),
-            Self::GoldenBlonde => Some(333usize),
-            Self::GoldenSilk => Some(334usize),
-            Self::DarkBlonde => Some(335usize),
-            Self::LightGold => Some(336usize),
-            Self::Vanilla => Some(337usize),
-            Self::TanBrown => Some(338usize),
-            Self::DirtyWhite => Some(339usize),
-            Self::PaleGoldenRod => Some(340usize),
-            Self::Khaki => Some(341usize),
-            Self::CardboardBrown => Some(342usize),
-            Self::HarvestGold => Some(343usize),
-            Self::SunYellow => Some(344usize),
-            Self::CornYellow => Some(345usize),
-            Self::PastelYellow => Some(346usize),
-            Self::NeonYellow => Some(347usize),
-            Self::Yellow => Some(348usize),
-            Self::LemonYellow => Some(349usize),
-            Self::CanaryYellow => Some(350usize),
-            Self::BananaYellow => Some(351usize),
-            Self::MustardYellow => Some(352usize),
-            Self::GoldenYellow => Some(353usize),
-            Self::BoldYellow => Some(354usize),
-            Self::SafetyYellow => Some(355usize),
-            Self::RubberDuckyYellow => Some(356usize),
-            Self::Gold => Some(357usize),
-            Self::BrightGold => Some(358usize),
-            Self::ChromeGold => Some(359usize),
-            Self::GoldenBrown => Some(360usize),
-            Self::DeepYellow => Some(361usize),
-            Self::MacaroniandCheese => Some(362usize),
-            Self::Amber => Some(363usize),
-            Self::Saffron => Some(364usize),
-            Self::NeonGold => Some(365usize),
-            Self::Beer => Some(366usize),
-            Self::YellowOrange => Some(367usize),
-            Self::OrangeYellow => Some(368usize),
-            Self::Cantaloupe => Some(369usize),
-            Self::CheeseOrange => Some(370usize),
-            Self::Orange => Some(371usize),
-            Self::BrownSand => Some(372usize),
-            Self::SandyBrown => Some(373usize),
-            Self::BrownSugar => Some(374usize),
-            Self::CamelBrown => Some(375usize),
-            Self::DeerBrown => Some(376usize),
-            Self::BurlyWood => Some(377usize),
-            Self::Tan => Some(378usize),
-            Self::LightFrenchBeige => Some(379usize),
-            Self::Sand => Some(380usize),
-            Self::SoftHazel => Some(381usize),
-            Self::Sage => Some(382usize),
-            Self::FallLeafBrown => Some(383usize),
-            Self::GingerBrown => Some(384usize),
-            Self::BronzeGold => Some(385usize),
-            Self::DarkKhaki => Some(386usize),
-            Self::OliveGreen => Some(387usize),
-            Self::Brass => Some(388usize),
-            Self::CookieBrown => Some(389usize),
-            Self::MetallicGold => Some(390usize),
-            Self::Mustard => Some(391usize),
-            Self::BeeYellow => Some(392usize),
-            Self::SchoolBusYellow => Some(393usize),
-            Self::GoldenRod => Some(394usize),
-            Self::OrangeGold => Some(395usize),
-            Self::Caramel => Some(396usize),
-            Self::DarkGoldenRod => Some(397usize),
-            Self::Cinnamon => Some(398usize),
-            Self::Peru => Some(399usize),
-            Self::Bronze => Some(400usize),
-            Self::PumpkinPie => Some(401usize),
-            Self::TigerOrange => Some(402usize),
-            Self::Copper => Some(403usize),
-            Self::DarkGold => Some(404usize),
-            Self::MetallicBronze => Some(405usize),
-            Self::DarkAlmond => Some(406usize),
-            Self::Wood => Some(407usize),
-            Self::KhakiBrown => Some(408usize),
-            Self::OakBrown => Some(409usize),
-            Self::AntiqueBronze => Some(410usize),
-            Self::Hazel => Some(411usize),
-            Self::DarkYellow => Some(412usize),
-            Self::DarkMoccasin => Some(413usize),
-            Self::KhakiGreen => Some(414usize),
-            Self::MillenniumJade => Some(415usize),
-            Self::DarkBeige => Some(416usize),
-            Self::BulletShell => Some(417usize),
-            Self::ArmyBrown => Some(418usize),
-            Self::Sandstone => Some(419usize),
-            Self::Taupe => Some(420usize),
-            Self::DarkGrayishOlive => Some(421usize),
-            Self::DarkHazelBrown => Some(422usize),
-            Self::Mocha => Some(423usize),
-            Self::MilkChocolate => Some(424usize),
-            Self::GrayBrown => Some(425usize),
-            Self::DarkCoffee => Some(426usize),
-            Self::WesternCharcoal => Some(427usize),
-            Self::OldBurgundy => Some(428usize),
-            Self::RedBrown => Some(429usize),
-            Self::BakersBrown => Some(430usize),
-            Self::PullmanBrown => Some(431usize),
-            Self::DarkBrown => Some(432usize),
-            Self::SepiaBrown => Some(433usize),
-            Self::DarkBronze => Some(434usize),
-            Self::Coffee => Some(435usize),
-            Self::BrownBear => Some(436usize),
-            Self::RedDirt => Some(437usize),
-            Self::Sepia => Some(438usize),
-            Self::Sienna => Some(439usize),
-            Self::SaddleBrown => Some(440usize),
-            Self::DarkSienna => Some(441usize),
-            Self::Sangria => Some(442usize),
-            Self::BloodRed => Some(443usize),
-            Self::Chestnut => Some(444usize),
-            Self::CoralBrown => Some(445usize),
-            Self::DeepAmber => Some(446usize),
-            Self::ChestnutRed => Some(447usize),
-            Self::GingerRed => Some(448usize),
-            Self::Mahogany => Some(449usize),
-            Self::RedGold => Some(450usize),
-            Self::RedFox => Some(451usize),
-            Self::DarkBisque => Some(452usize),
-            Self::LightBrown => Some(453usize),
-            Self::PetraGold => Some(454usize),
-            Self::BrownRust => Some(455usize),
-            Self::Rust => Some(456usize),
-            Self::CopperRed => Some(457usize),
-            Self::OrangeSalmon => Some(458usize),
-            Self::Chocolate => Some(459usize),
-            Self::Sedona => Some(460usize),
-            Self::PapayaOrange => Some(461usize),
-            Self::HalloweenOrange => Some(462usize),
-            Self::NeonOrange => Some(463usize),
-            Self::BrightOrange => Some(464usize),
-            Self::FluroOrange => Some(465usize),
-            Self::PumpkinOrange => Some(466usize),
-            Self::SafetyOrange => Some(467usize),
-            Self::CarrotOrange => Some(468usize),
-            Self::DarkOrange => Some(469usize),
-            Self::ConstructionConeOrange => Some(470usize),
-            Self::IndianSaffron => Some(471usize),
-            Self::SunriseOrange => Some(472usize),
-            Self::MangoOrange => Some(473usize),
-            Self::Coral => Some(474usize),
-            Self::BasketBallOrange => Some(475usize),
-            Self::LightSalmonRose => Some(476usize),
-            Self::LightSalmon => Some(477usize),
-            Self::PinkOrange => Some(478usize),
-            Self::DarkSalmon => Some(479usize),
-            Self::Tangerine => Some(480usize),
-            Self::LightCopper => Some(481usize),
-            Self::SalmonPink => Some(482usize),
-            Self::Salmon => Some(483usize),
-            Self::PeachPink => Some(484usize),
-            Self::LightCoral => Some(485usize),
-            Self::PastelRed => Some(486usize),
-            Self::PinkCoral => Some(487usize),
-            Self::BeanRed => Some(488usize),
-            Self::ValentineRed => Some(489usize),
-            Self::IndianRed => Some(490usize),
-            Self::Tomato => Some(491usize),
-            Self::ShockingOrange => Some(492usize),
-            Self::OrangeRed => Some(493usize),
-            Self::Red => Some(494usize),
-            Self::NeonRed => Some(495usize),
-            Self::ScarletRed => Some(496usize),
-            Self::RubyRed => Some(497usize),
-            Self::FerrariRed => Some(498usize),
-            Self::FireEngineRed => Some(499usize),
-            Self::LavaRed => Some(500usize),
-            Self::LoveRed => Some(501usize),
-            Self::Grapefruit => Some(502usize),
-            Self::StrawberryRed => Some(503usize),
-            Self::CherryRed => Some(504usize),
-            Self::ChilliPepper => Some(505usize),
-            Self::FireBrick => Some(506usize),
-            Self::TomatoSauceRed => Some(507usize),
-            Self::Brown => Some(508usize),
-            Self::CarbonRed => Some(509usize),
-            Self::Cranberry => Some(510usize),
-            Self::SaffronRed => Some(511usize),
-            Self::CrimsonRed => Some(512usize),
-            Self::RedWine => Some(513usize),
-            Self::WineRed => Some(514usize),
-            Self::DarkRed => Some(515usize),
-            Self::MaroonRed => Some(516usize),
-            Self::Maroon => Some(517usize),
-            Self::Burgundy => Some(518usize),
-            Self::Vermilion => Some(519usize),
-            Self::DeepRed => Some(520usize),
-            Self::GarnetRed => Some(521usize),
-            Self::RedBlood => Some(522usize),
-            Self::BloodNight => Some(523usize),
-            Self::DarkScarlet => Some(524usize),
-            Self::ChocolateBrown => Some(525usize),
-            Self::BlackBean => Some(526usize),
-            Self::DarkMaroon => Some(527usize),
-            Self::Midnight => Some(528usize),
-            Self::PurpleLily => Some(529usize),
-            Self::PurpleMaroon => Some(530usize),
-            Self::PlumPie => Some(531usize),
-            Self::PlumVelvet => Some(532usize),
-            Self::DarkRaspberry => Some(533usize),
-            Self::VelvetMaroon => Some(534usize),
-            Self::RosyFinch => Some(535usize),
-            Self::DullPurple => Some(536usize),
-            Self::Puce => Some(537usize),
-            Self::RoseDust => Some(538usize),
-            Self::PastelBrown => Some(539usize),
-            Self::RosyPink => Some(540usize),
-            Self::RosyBrown => Some(541usize),
-            Self::KhakiRose => Some(542usize),
-            Self::LipstickPink => Some(543usize),
-            Self::DuskyPink => Some(544usize),
-            Self::PinkBrown => Some(545usize),
-            Self::OldRose => Some(546usize),
-            Self::DustyPink => Some(547usize),
-            Self::PinkDaisy => Some(548usize),
-            Self::Rose => Some(549usize),
-            Self::DustyRose => Some(550usize),
-            Self::SilverPink => Some(551usize),
-            Self::GoldPink => Some(552usize),
-            Self::RoseGold => Some(553usize),
-            Self::DeepPeach => Some(554usize),
-            Self::PastelOrange => Some(555usize),
-            Self::DesertSand => Some(556usize),
-            Self::UnbleachedSilk => Some(557usize),
-            Self::PigPink => Some(558usize),
-            Self::PalePink => Some(559usize),
-            Self::Blush => Some(560usize),
-            Self::MistyRose => Some(561usize),
-            Self::PinkBubbleGum => Some(562usize),
-            Self::LightRose => Some(563usize),
-            Self::LightRed => Some(564usize),
-            Self::RoseQuartz => Some(565usize),
-            Self::WarmPink => Some(566usize),
-            Self::DeepRose => Some(567usize),
-            Self::Pink => Some(568usize),
-            Self::LightPink => Some(569usize),
-            Self::SoftPink => Some(570usize),
-            Self::PowderPink => Some(571usize),
-            Self::DonutPink => Some(572usize),
-            Self::BabyPink => Some(573usize),
-            Self::FlamingoPink => Some(574usize),
-            Self::PastelPink => Some(575usize),
-            Self::RosePink => Some(576usize),
-            Self::CadillacPink => Some(577usize),
-            Self::CarnationPink => Some(578usize),
-            Self::PastelRose => Some(579usize),
-            Self::BlushRed => Some(580usize),
-            Self::PaleVioletRed => Some(581usize),
-            Self::PurplePink => Some(582usize),
-            Self::TulipPink => Some(583usize),
-            Self::BashfulPink => Some(584usize),
-            Self::DarkPink => Some(585usize),
-            Self::DarkHotPink => Some(586usize),
-            Self::HotPink => Some(587usize),
-            Self::WatermelonPink => Some(588usize),
-            Self::VioletRed => Some(589usize),
-            Self::HotDeepPink => Some(590usize),
-            Self::BrightPink => Some(591usize),
-            Self::RedMagenta => Some(592usize),
-            Self::DeepPink => Some(593usize),
-            Self::NeonPink => Some(594usize),
-            Self::ChromePink => Some(595usize),
-            Self::NeonHotPink => Some(596usize),
-            Self::PinkCupcake => Some(597usize),
-            Self::RoyalPink => Some(598usize),
-            Self::DimorphothecaMagenta => Some(599usize),
-            Self::BarbiePink => Some(600usize),
-            Self::PinkLemonade => Some(601usize),
-            Self::RedPink => Some(602usize),
-            Self::Raspberry => Some(603usize),
-            Self::Crimson => Some(604usize),
-            Self::BrightMaroon => Some(605usize),
-            Self::RoseRed => Some(606usize),
-            Self::RoguePink => Some(607usize),
-            Self::BurntPink => Some(608usize),
-            Self::PinkViolet => Some(609usize),
-            Self::MagentaPink => Some(610usize),
-            Self::MediumVioletRed => Some(611usize),
-            Self::DarkCarnationPink => Some(612usize),
-            Self::RaspberryPurple => Some(613usize),
-            Self::PinkPlum => Some(614usize),
-            Self::Orchid => Some(615usize),
-            Self::DeepMauve => Some(616usize),
-            Self::Violet => Some(617usize),
-            Self::FuchsiaPink => Some(618usize),
-            Self::BrightNeonPink => Some(619usize),
-            Self::Magenta => Some(620usize),
-            Self::Fuchsia => Some(621usize),
-            Self::CrimsonPurple => Some(622usize),
-            Self::HeliotropePurple => Some(623usize),
-            Self::TyrianPurple => Some(624usize),
-            Self::MediumOrchid => Some(625usize),
-            Self::PurpleFlower => Some(626usize),
-            Self::OrchidPurple => Some(627usize),
-            Self::RichLilac => Some(628usize),
-            Self::PastelViolet => Some(629usize),
-            Self::Rosy => Some(630usize),
-            Self::MauveTaupe => Some(631usize),
-            Self::ViolaPurple => Some(632usize),
-            Self::Eggplant => Some(633usize),
-            Self::PlumPurple => Some(634usize),
-            Self::Grape => Some(635usize),
-            Self::PurpleNavy => Some(636usize),
-            Self::SlateBlue => Some(637usize),
-            Self::BlueLotus => Some(638usize),
-            Self::Blurple => Some(639usize),
-            Self::LightSlateBlue => Some(640usize),
-            Self::MediumSlateBlue => Some(641usize),
-            Self::PeriwinklePurple => Some(642usize),
-            Self::VeryPeri => Some(643usize),
-            Self::BrightGrape => Some(644usize),
-            Self::BrightPurple => Some(645usize),
-            Self::PurpleAmethyst => Some(646usize),
-            Self::BlueMagenta => Some(647usize),
-            Self::DarkBlurple => Some(648usize),
-            Self::DeepPeriwinkle => Some(649usize),
-            Self::DarkSlateBlue => Some(650usize),
-            Self::PurpleHaze => Some(651usize),
-            Self::PurpleIris => Some(652usize),
-            Self::DarkPurple => Some(653usize),
-            Self::DeepPurple => Some(654usize),
-            Self::MidnightPurple => Some(655usize),
-            Self::PurpleMonster => Some(656usize),
-            Self::Indigo => Some(657usize),
-            Self::BlueWhale => Some(658usize),
-            Self::RebeccaPurple => Some(659usize),
-            Self::PurpleJam => Some(660usize),
-            Self::DarkMagenta => Some(661usize),
-            Self::Purple => Some(662usize),
-            Self::FrenchLilac => Some(663usize),
-            Self::DarkOrchid => Some(664usize),
-            Self::DarkViolet => Some(665usize),
-            Self::PurpleViolet => Some(666usize),
-            Self::JasminePurple => Some(667usize),
-            Self::PurpleDaffodil => Some(668usize),
-            Self::ClematisViolet => Some(669usize),
-            Self::BlueViolet => Some(670usize),
-            Self::PurpleSageBush => Some(671usize),
-            Self::LovelyPurple => Some(672usize),
-            Self::NeonPurple => Some(673usize),
-            Self::PurplePlum => Some(674usize),
-            Self::AztechPurple => Some(675usize),
-            Self::MediumPurple => Some(676usize),
-            Self::LightPurple => Some(677usize),
-            Self::CrocusPurple => Some(678usize),
-            Self::PurpleMimosa => Some(679usize),
-            Self::PastelIndigo => Some(680usize),
-            Self::LavenderPurple => Some(681usize),
-            Self::RosePurple => Some(682usize),
-            Self::Viola => Some(683usize),
-            Self::Periwinkle => Some(684usize),
-            Self::PaleLilac => Some(685usize),
-            Self::Lilac => Some(686usize),
-            Self::Mauve => Some(687usize),
-            Self::BrightLilac => Some(688usize),
-            Self::PurpleDragon => Some(689usize),
-            Self::Plum => Some(690usize),
-            Self::BlushPink => Some(691usize),
-            Self::PastelPurple => Some(692usize),
-            Self::BlossomPink => Some(693usize),
-            Self::WisteriaPurple => Some(694usize),
-            Self::PurpleThistle => Some(695usize),
-            Self::Thistle => Some(696usize),
-            Self::PurpleWhite => Some(697usize),
-            Self::PeriwinklePink => Some(698usize),
-            Self::CottonCandy => Some(699usize),
-            Self::LavenderPinocchio => Some(700usize),
-            Self::DarkWhite => Some(701usize),
-            Self::AshWhite => Some(702usize),
-            Self::WarmWhite => Some(703usize),
-            Self::WhiteChocolate => Some(704usize),
-            Self::CreamyWhite => Some(705usize),
-            Self::OffWhite => Some(706usize),
-            Self::SoftIvory => Some(707usize),
-            Self::CosmicLatte => Some(708usize),
-            Self::PearlWhite => Some(709usize),
-            Self::RedWhite => Some(710usize),
-            Self::LavenderBlush => Some(711usize),
-            Self::Pearl => Some(712usize),
-            Self::EggShell => Some(713usize),
-            Self::OldLace => Some(714usize),
-            Self::WhiteIce => Some(715usize),
-            Self::Linen => Some(716usize),
-            Self::SeaShell => Some(717usize),
-            Self::BoneWhite => Some(718usize),
-            Self::Rice => Some(719usize),
-            Self::FloralWhite => Some(720usize),
-            Self::Ivory => Some(721usize),
-            Self::WhiteGold => Some(722usize),
-            Self::LightWhite => Some(723usize),
-            Self::Cotton => Some(724usize),
-            Self::Snow => Some(725usize),
-            Self::MilkWhite => Some(726usize),
-            Self::HalfWhite => Some(727usize),
-            Self::White => Some(728usize),
-            Self::Rgb(_, _, _) => None,
-        }
+        Some(match self {
+            Self::Black => 0,
+            Self::BlackBlue => 1,
+            Self::Night => 2,
+            Self::Charcoal => 3,
+            Self::Oil => 4,
+            Self::StormyGray => 5,
+            Self::LightBlack => 6,
+            Self::DarkSteampunk => 7,
+            Self::BlackCat => 8,
+            Self::Iridium => 9,
+            Self::BlackEel => 10,
+            Self::BlackCow => 11,
+            Self::GrayWolf => 12,
+            Self::VampireGray => 13,
+            Self::IronGray => 14,
+            Self::GrayDolphin => 15,
+            Self::CarbonGray => 16,
+            Self::AshGray => 17,
+            Self::DimGray => 18,
+            Self::DimGrey => 19,
+            Self::NardoGray => 20,
+            Self::CloudyGray => 21,
+            Self::SmokeyGray => 22,
+            Self::AlienGray => 23,
+            Self::SonicSilver => 24,
+            Self::PlatinumGray => 25,
+            Self::Granite => 26,
+            Self::Gray => 27,
+            Self::Grey => 28,
+            Self::BattleshipGray => 29,
+            Self::SheetMetal => 30,
+            Self::DarkGainsboro => 31,
+            Self::GunmetalGray => 32,
+            Self::ColdMetal => 33,
+            Self::StainlessSteelGray => 34,
+            Self::DarkGrey => 35,
+            Self::DarkGray => 36,
+            Self::ChromeAluminum => 37,
+            Self::GrayCloud => 38,
+            Self::Metal => 39,
+            Self::Silver => 40,
+            Self::Steampunk => 41,
+            Self::PaleSilver => 42,
+            Self::GearSteelGray => 43,
+            Self::GrayGoose => 44,
+            Self::PlatinumSilver => 45,
+            Self::LightGrey => 46,
+            Self::LightGray => 47,
+            Self::SilverWhite => 48,
+            Self::Gainsboro => 49,
+            Self::LightSteelGray => 50,
+            Self::WhiteSmoke => 51,
+            Self::WhiteGray => 52,
+            Self::Platinum => 53,
+            Self::MetallicSilver => 54,
+            Self::BlueGray => 55,
+            Self::RomanSilver => 56,
+            Self::LightSlateGrey => 57,
+            Self::LightSlateGray => 58,
+            Self::SlateGrey => 59,
+            Self::SlateGray => 60,
+            Self::RatGray => 61,
+            Self::SlateGraniteGray => 62,
+            Self::JetGray => 63,
+            Self::MistBlue => 64,
+            Self::SteelGray => 65,
+            Self::MarbleBlue => 66,
+            Self::SlateBlueGray => 67,
+            Self::LightPurpleBlue => 68,
+            Self::AzureBlue => 69,
+            Self::EstorilBlue => 70,
+            Self::BlueJay => 71,
+            Self::CharcoalBlue => 72,
+            Self::DarkBlueGray => 73,
+            Self::DarkSlate => 74,
+            Self::DeepSeaBlue => 75,
+            Self::NightBlue => 76,
+            Self::MidnightBlue => 77,
+            Self::Navy => 78,
+            Self::DenimDarkBlue => 79,
+            Self::DarkBlue => 80,
+            Self::LapisBlue => 81,
+            Self::NewMidnightBlue => 82,
+            Self::EarthBlue => 83,
+            Self::CobaltBlue => 84,
+            Self::MediumBlue => 85,
+            Self::BlueberryBlue => 86,
+            Self::CanaryBlue => 87,
+            Self::Blue => 88,
+            Self::SamcoBlue => 89,
+            Self::BrightBlue => 90,
+            Self::BlueOrchid => 91,
+            Self::SapphireBlue => 92,
+            Self::BlueEyes => 93,
+            Self::BrightNavyBlue => 94,
+            Self::BalloonBlue => 95,
+            Self::RoyalBlue => 96,
+            Self::OceanBlue => 97,
+            Self::DarkSkyBlue => 98,
+            Self::BlueRibbon => 99,
+            Self::BlueDress => 100,
+            Self::NeonBlue => 101,
+            Self::DodgerBlue => 102,
+            Self::GlacialBlueIce => 103,
+            Self::SteelBlue => 104,
+            Self::SilkBlue => 105,
+            Self::WindowsBlue => 106,
+            Self::BlueIvy => 107,
+            Self::CyanBlue => 108,
+            Self::BlueKoi => 109,
+            Self::ColumbiaBlue => 110,
+            Self::BabyBlue => 111,
+            Self::CornflowerBlue => 112,
+            Self::SkyBlueDress => 113,
+            Self::Iceberg => 114,
+            Self::ButterflyBlue => 115,
+            Self::DeepSkyBlue => 116,
+            Self::MiddayBlue => 117,
+            Self::CrystalBlue => 118,
+            Self::DenimBlue => 119,
+            Self::DaySkyBlue => 120,
+            Self::LightSkyBlue => 121,
+            Self::SkyBlue => 122,
+            Self::JeansBlue => 123,
+            Self::BlueAngel => 124,
+            Self::PastelBlue => 125,
+            Self::LightDayBlue => 126,
+            Self::SeaBlue => 127,
+            Self::HeavenlyBlue => 128,
+            Self::RobinEggBlue => 129,
+            Self::PowderBlue => 130,
+            Self::CoralBlue => 131,
+            Self::LightBlue => 132,
+            Self::LightSteelBlue => 133,
+            Self::GulfBlue => 134,
+            Self::PastelLightBlue => 135,
+            Self::LavenderBlue => 136,
+            Self::WhiteBlue => 137,
+            Self::Lavender => 138,
+            Self::Water => 139,
+            Self::AliceBlue => 140,
+            Self::GhostWhite => 141,
+            Self::Azure => 142,
+            Self::LightCyan => 143,
+            Self::LightSlate => 144,
+            Self::ElectricBlue => 145,
+            Self::TronBlue => 146,
+            Self::BlueZircon => 147,
+            Self::Cyan => 148,
+            Self::Aqua => 149,
+            Self::BrightCyan => 150,
+            Self::Celeste => 151,
+            Self::BlueDiamond => 152,
+            Self::BrightTurquoise => 153,
+            Self::BlueLagoon => 154,
+            Self::PaleTurquoise => 155,
+            Self::PaleBlueLily => 156,
+            Self::LightTeal => 157,
+            Self::TiffanyBlue => 158,
+            Self::BlueHosta => 159,
+            Self::CyanOpaque => 160,
+            Self::NorthernLightsBlue => 161,
+            Self::BlueGreen => 162,
+            Self::MediumAquaMarine => 163,
+            Self::AquaSeafoamGreen => 164,
+            Self::MagicMint => 165,
+            Self::LightAquamarine => 166,
+            Self::Aquamarine => 167,
+            Self::BrightTeal => 168,
+            Self::Turquoise => 169,
+            Self::MediumTurquoise => 170,
+            Self::DeepTurquoise => 171,
+            Self::Jellyfish => 172,
+            Self::BlueTurquoise => 173,
+            Self::DarkTurquoise => 174,
+            Self::MacawBlueGreen => 175,
+            Self::LightSeaGreen => 176,
+            Self::SeafoamGreen => 177,
+            Self::CadetBlue => 178,
+            Self::DeepSea => 179,
+            Self::DarkCyan => 180,
+            Self::TealGreen => 181,
+            Self::Teal => 182,
+            Self::TealBlue => 183,
+            Self::MediumTeal => 184,
+            Self::DarkTeal => 185,
+            Self::DeepTeal => 186,
+            Self::DarkSlateGray => 187,
+            Self::DarkSlateGrey => 188,
+            Self::Gunmetal => 189,
+            Self::BlueMossGreen => 190,
+            Self::BeetleGreen => 191,
+            Self::GrayishTurquoise => 192,
+            Self::GreenishBlue => 193,
+            Self::AquamarineStone => 194,
+            Self::SeaTurtleGreen => 195,
+            Self::DullSeaGreen => 196,
+            Self::DarkGreenBlue => 197,
+            Self::DeepSeaGreen => 198,
+            Self::BottleGreen => 199,
+            Self::SeaGreen => 200,
+            Self::ElfGreen => 201,
+            Self::DarkMint => 202,
+            Self::Jade => 203,
+            Self::EarthGreen => 204,
+            Self::ChromeGreen => 205,
+            Self::Mint => 206,
+            Self::Emerald => 207,
+            Self::IsleOfManGreen => 208,
+            Self::MediumSeaGreen => 209,
+            Self::MetallicGreen => 210,
+            Self::CamouflageGreen => 211,
+            Self::SageGreen => 212,
+            Self::HazelGreen => 213,
+            Self::VenomGreen => 214,
+            Self::OliveDrab => 215,
+            Self::Olive => 216,
+            Self::Ebony => 217,
+            Self::DarkOliveGreen => 218,
+            Self::MilitaryGreen => 219,
+            Self::GreenLeaves => 220,
+            Self::ArmyGreen => 221,
+            Self::FernGreen => 222,
+            Self::FallForestGreen => 223,
+            Self::IrishGreen => 224,
+            Self::PineGreen => 225,
+            Self::MediumForestGreen => 226,
+            Self::RacingGreen => 227,
+            Self::JungleGreen => 228,
+            Self::CactusGreen => 229,
+            Self::ForestGreen => 230,
+            Self::Green => 231,
+            Self::DarkGreen => 232,
+            Self::DeepGreen => 233,
+            Self::DeepEmeraldGreen => 234,
+            Self::HunterGreen => 235,
+            Self::DarkForestGreen => 236,
+            Self::LotusGreen => 237,
+            Self::BroccoliGreen => 238,
+            Self::SeaweedGreen => 239,
+            Self::ShamrockGreen => 240,
+            Self::GreenOnion => 241,
+            Self::MossGreen => 242,
+            Self::GrassGreen => 243,
+            Self::GreenPepper => 244,
+            Self::DarkLimeGreen => 245,
+            Self::ParrotGreen => 246,
+            Self::CloverGreen => 247,
+            Self::DinosaurGreen => 248,
+            Self::GreenSnake => 249,
+            Self::AlienGreen => 250,
+            Self::GreenApple => 251,
+            Self::LimeGreen => 252,
+            Self::PeaGreen => 253,
+            Self::KellyGreen => 254,
+            Self::ZombieGreen => 255,
+            Self::GreenPeas => 256,
+            Self::DollarBillGreen => 257,
+            Self::FrogGreen => 258,
+            Self::TurquoiseGreen => 259,
+            Self::DarkSeaGreen => 260,
+            Self::BasilGreen => 261,
+            Self::GrayGreen => 262,
+            Self::LightOliveGreen => 263,
+            Self::IguanaGreen => 264,
+            Self::CitronGreen => 265,
+            Self::AcidGreen => 266,
+            Self::AvocadoGreen => 267,
+            Self::PistachioGreen => 268,
+            Self::SaladGreen => 269,
+            Self::YellowGreen => 270,
+            Self::PastelGreen => 271,
+            Self::HummingbirdGreen => 272,
+            Self::NebulaGreen => 273,
+            Self::StoplightGoGreen => 274,
+            Self::NeonGreen => 275,
+            Self::JadeGreen => 276,
+            Self::SpringGreen => 277,
+            Self::OceanGreen => 278,
+            Self::LimeMintGreen => 279,
+            Self::MediumSpringGreen => 280,
+            Self::AquaGreen => 281,
+            Self::EmeraldGreen => 282,
+            Self::Lime => 283,
+            Self::LawnGreen => 284,
+            Self::BrightGreen => 285,
+            Self::Chartreuse => 286,
+            Self::YellowLawnGreen => 287,
+            Self::AloeVeraGreen => 288,
+            Self::DullGreenYellow => 289,
+            Self::LemonGreen => 290,
+            Self::GreenYellow => 291,
+            Self::ChameleonGreen => 292,
+            Self::NeonYellowGreen => 293,
+            Self::YellowGreenGrosbeak => 294,
+            Self::TeaGreen => 295,
+            Self::SlimeGreen => 296,
+            Self::AlgaeGreen => 297,
+            Self::LightGreen => 298,
+            Self::DragonGreen => 299,
+            Self::PaleGreen => 300,
+            Self::MintGreen => 301,
+            Self::GreenThumb => 302,
+            Self::OrganicBrown => 303,
+            Self::LightJade => 304,
+            Self::LightMintGreen => 305,
+            Self::LightRoseGreen => 306,
+            Self::ChromeWhite => 307,
+            Self::HoneyDew => 308,
+            Self::MintCream => 309,
+            Self::LemonChiffon => 310,
+            Self::Parchment => 311,
+            Self::Cream => 312,
+            Self::CreamWhite => 313,
+            Self::LightGoldenRodYellow => 314,
+            Self::LightYellow => 315,
+            Self::Beige => 316,
+            Self::WhiteYellow => 317,
+            Self::Cornsilk => 318,
+            Self::Blonde => 319,
+            Self::AntiqueWhite => 320,
+            Self::LightBeige => 321,
+            Self::PapayaWhip => 322,
+            Self::Champagne => 323,
+            Self::BlanchedAlmond => 324,
+            Self::Bisque => 325,
+            Self::Wheat => 326,
+            Self::Moccasin => 327,
+            Self::Peach => 328,
+            Self::LightOrange => 329,
+            Self::PeachPuff => 330,
+            Self::CoralPeach => 331,
+            Self::NavajoWhite => 332,
+            Self::GoldenBlonde => 333,
+            Self::GoldenSilk => 334,
+            Self::DarkBlonde => 335,
+            Self::LightGold => 336,
+            Self::Vanilla => 337,
+            Self::TanBrown => 338,
+            Self::DirtyWhite => 339,
+            Self::PaleGoldenRod => 340,
+            Self::Khaki => 341,
+            Self::CardboardBrown => 342,
+            Self::HarvestGold => 343,
+            Self::SunYellow => 344,
+            Self::CornYellow => 345,
+            Self::PastelYellow => 346,
+            Self::NeonYellow => 347,
+            Self::Yellow => 348,
+            Self::LemonYellow => 349,
+            Self::CanaryYellow => 350,
+            Self::BananaYellow => 351,
+            Self::MustardYellow => 352,
+            Self::GoldenYellow => 353,
+            Self::BoldYellow => 354,
+            Self::SafetyYellow => 355,
+            Self::RubberDuckyYellow => 356,
+            Self::Gold => 357,
+            Self::BrightGold => 358,
+            Self::ChromeGold => 359,
+            Self::GoldenBrown => 360,
+            Self::DeepYellow => 361,
+            Self::MacaroniandCheese => 362,
+            Self::Amber => 363,
+            Self::Saffron => 364,
+            Self::NeonGold => 365,
+            Self::Beer => 366,
+            Self::YellowOrange => 367,
+            Self::OrangeYellow => 368,
+            Self::Cantaloupe => 369,
+            Self::CheeseOrange => 370,
+            Self::Orange => 371,
+            Self::BrownSand => 372,
+            Self::SandyBrown => 373,
+            Self::BrownSugar => 374,
+            Self::CamelBrown => 375,
+            Self::DeerBrown => 376,
+            Self::BurlyWood => 377,
+            Self::Tan => 378,
+            Self::LightFrenchBeige => 379,
+            Self::Sand => 380,
+            Self::SoftHazel => 381,
+            Self::Sage => 382,
+            Self::FallLeafBrown => 383,
+            Self::GingerBrown => 384,
+            Self::BronzeGold => 385,
+            Self::DarkKhaki => 386,
+            Self::OliveGreen => 387,
+            Self::Brass => 388,
+            Self::CookieBrown => 389,
+            Self::MetallicGold => 390,
+            Self::Mustard => 391,
+            Self::BeeYellow => 392,
+            Self::SchoolBusYellow => 393,
+            Self::GoldenRod => 394,
+            Self::OrangeGold => 395,
+            Self::Caramel => 396,
+            Self::DarkGoldenRod => 397,
+            Self::Cinnamon => 398,
+            Self::Peru => 399,
+            Self::Bronze => 400,
+            Self::PumpkinPie => 401,
+            Self::TigerOrange => 402,
+            Self::Copper => 403,
+            Self::DarkGold => 404,
+            Self::MetallicBronze => 405,
+            Self::DarkAlmond => 406,
+            Self::Wood => 407,
+            Self::KhakiBrown => 408,
+            Self::OakBrown => 409,
+            Self::AntiqueBronze => 410,
+            Self::Hazel => 411,
+            Self::DarkYellow => 412,
+            Self::DarkMoccasin => 413,
+            Self::KhakiGreen => 414,
+            Self::MillenniumJade => 415,
+            Self::DarkBeige => 416,
+            Self::BulletShell => 417,
+            Self::ArmyBrown => 418,
+            Self::Sandstone => 419,
+            Self::Taupe => 420,
+            Self::DarkGrayishOlive => 421,
+            Self::DarkHazelBrown => 422,
+            Self::Mocha => 423,
+            Self::MilkChocolate => 424,
+            Self::GrayBrown => 425,
+            Self::DarkCoffee => 426,
+            Self::WesternCharcoal => 427,
+            Self::OldBurgundy => 428,
+            Self::RedBrown => 429,
+            Self::BakersBrown => 430,
+            Self::PullmanBrown => 431,
+            Self::DarkBrown => 432,
+            Self::SepiaBrown => 433,
+            Self::DarkBronze => 434,
+            Self::Coffee => 435,
+            Self::BrownBear => 436,
+            Self::RedDirt => 437,
+            Self::Sepia => 438,
+            Self::Sienna => 439,
+            Self::SaddleBrown => 440,
+            Self::DarkSienna => 441,
+            Self::Sangria => 442,
+            Self::BloodRed => 443,
+            Self::Chestnut => 444,
+            Self::CoralBrown => 445,
+            Self::DeepAmber => 446,
+            Self::ChestnutRed => 447,
+            Self::GingerRed => 448,
+            Self::Mahogany => 449,
+            Self::RedGold => 450,
+            Self::RedFox => 451,
+            Self::DarkBisque => 452,
+            Self::LightBrown => 453,
+            Self::PetraGold => 454,
+            Self::BrownRust => 455,
+            Self::Rust => 456,
+            Self::CopperRed => 457,
+            Self::OrangeSalmon => 458,
+            Self::Chocolate => 459,
+            Self::Sedona => 460,
+            Self::PapayaOrange => 461,
+            Self::HalloweenOrange => 462,
+            Self::NeonOrange => 463,
+            Self::BrightOrange => 464,
+            Self::FluroOrange => 465,
+            Self::PumpkinOrange => 466,
+            Self::SafetyOrange => 467,
+            Self::CarrotOrange => 468,
+            Self::DarkOrange => 469,
+            Self::ConstructionConeOrange => 470,
+            Self::IndianSaffron => 471,
+            Self::SunriseOrange => 472,
+            Self::MangoOrange => 473,
+            Self::Coral => 474,
+            Self::BasketBallOrange => 475,
+            Self::LightSalmonRose => 476,
+            Self::LightSalmon => 477,
+            Self::PinkOrange => 478,
+            Self::DarkSalmon => 479,
+            Self::Tangerine => 480,
+            Self::LightCopper => 481,
+            Self::SalmonPink => 482,
+            Self::Salmon => 483,
+            Self::PeachPink => 484,
+            Self::LightCoral => 485,
+            Self::PastelRed => 486,
+            Self::PinkCoral => 487,
+            Self::BeanRed => 488,
+            Self::ValentineRed => 489,
+            Self::IndianRed => 490,
+            Self::Tomato => 491,
+            Self::ShockingOrange => 492,
+            Self::OrangeRed => 493,
+            Self::Red => 494,
+            Self::NeonRed => 495,
+            Self::ScarletRed => 496,
+            Self::RubyRed => 497,
+            Self::FerrariRed => 498,
+            Self::FireEngineRed => 499,
+            Self::LavaRed => 500,
+            Self::LoveRed => 501,
+            Self::Grapefruit => 502,
+            Self::StrawberryRed => 503,
+            Self::CherryRed => 504,
+            Self::ChilliPepper => 505,
+            Self::FireBrick => 506,
+            Self::TomatoSauceRed => 507,
+            Self::Brown => 508,
+            Self::CarbonRed => 509,
+            Self::Cranberry => 510,
+            Self::SaffronRed => 511,
+            Self::CrimsonRed => 512,
+            Self::RedWine => 513,
+            Self::WineRed => 514,
+            Self::DarkRed => 515,
+            Self::MaroonRed => 516,
+            Self::Maroon => 517,
+            Self::Burgundy => 518,
+            Self::Vermilion => 519,
+            Self::DeepRed => 520,
+            Self::GarnetRed => 521,
+            Self::RedBlood => 522,
+            Self::BloodNight => 523,
+            Self::DarkScarlet => 524,
+            Self::ChocolateBrown => 525,
+            Self::BlackBean => 526,
+            Self::DarkMaroon => 527,
+            Self::Midnight => 528,
+            Self::PurpleLily => 529,
+            Self::PurpleMaroon => 530,
+            Self::PlumPie => 531,
+            Self::PlumVelvet => 532,
+            Self::DarkRaspberry => 533,
+            Self::VelvetMaroon => 534,
+            Self::RosyFinch => 535,
+            Self::DullPurple => 536,
+            Self::Puce => 537,
+            Self::RoseDust => 538,
+            Self::PastelBrown => 539,
+            Self::RosyPink => 540,
+            Self::RosyBrown => 541,
+            Self::KhakiRose => 542,
+            Self::LipstickPink => 543,
+            Self::DuskyPink => 544,
+            Self::PinkBrown => 545,
+            Self::OldRose => 546,
+            Self::DustyPink => 547,
+            Self::PinkDaisy => 548,
+            Self::Rose => 549,
+            Self::DustyRose => 550,
+            Self::SilverPink => 551,
+            Self::GoldPink => 552,
+            Self::RoseGold => 553,
+            Self::DeepPeach => 554,
+            Self::PastelOrange => 555,
+            Self::DesertSand => 556,
+            Self::UnbleachedSilk => 557,
+            Self::PigPink => 558,
+            Self::PalePink => 559,
+            Self::Blush => 560,
+            Self::MistyRose => 561,
+            Self::PinkBubbleGum => 562,
+            Self::LightRose => 563,
+            Self::LightRed => 564,
+            Self::RoseQuartz => 565,
+            Self::WarmPink => 566,
+            Self::DeepRose => 567,
+            Self::Pink => 568,
+            Self::LightPink => 569,
+            Self::SoftPink => 570,
+            Self::PowderPink => 571,
+            Self::DonutPink => 572,
+            Self::BabyPink => 573,
+            Self::FlamingoPink => 574,
+            Self::PastelPink => 575,
+            Self::RosePink => 576,
+            Self::CadillacPink => 577,
+            Self::CarnationPink => 578,
+            Self::PastelRose => 579,
+            Self::BlushRed => 580,
+            Self::PaleVioletRed => 581,
+            Self::PurplePink => 582,
+            Self::TulipPink => 583,
+            Self::BashfulPink => 584,
+            Self::DarkPink => 585,
+            Self::DarkHotPink => 586,
+            Self::HotPink => 587,
+            Self::WatermelonPink => 588,
+            Self::VioletRed => 589,
+            Self::HotDeepPink => 590,
+            Self::BrightPink => 591,
+            Self::RedMagenta => 592,
+            Self::DeepPink => 593,
+            Self::NeonPink => 594,
+            Self::ChromePink => 595,
+            Self::NeonHotPink => 596,
+            Self::PinkCupcake => 597,
+            Self::RoyalPink => 598,
+            Self::DimorphothecaMagenta => 599,
+            Self::BarbiePink => 600,
+            Self::PinkLemonade => 601,
+            Self::RedPink => 602,
+            Self::Raspberry => 603,
+            Self::Crimson => 604,
+            Self::BrightMaroon => 605,
+            Self::RoseRed => 606,
+            Self::RoguePink => 607,
+            Self::BurntPink => 608,
+            Self::PinkViolet => 609,
+            Self::MagentaPink => 610,
+            Self::MediumVioletRed => 611,
+            Self::DarkCarnationPink => 612,
+            Self::RaspberryPurple => 613,
+            Self::PinkPlum => 614,
+            Self::Orchid => 615,
+            Self::DeepMauve => 616,
+            Self::Violet => 617,
+            Self::FuchsiaPink => 618,
+            Self::BrightNeonPink => 619,
+            Self::Magenta => 620,
+            Self::Fuchsia => 621,
+            Self::CrimsonPurple => 622,
+            Self::HeliotropePurple => 623,
+            Self::TyrianPurple => 624,
+            Self::MediumOrchid => 625,
+            Self::PurpleFlower => 626,
+            Self::OrchidPurple => 627,
+            Self::RichLilac => 628,
+            Self::PastelViolet => 629,
+            Self::Rosy => 630,
+            Self::MauveTaupe => 631,
+            Self::ViolaPurple => 632,
+            Self::Eggplant => 633,
+            Self::PlumPurple => 634,
+            Self::Grape => 635,
+            Self::PurpleNavy => 636,
+            Self::SlateBlue => 637,
+            Self::BlueLotus => 638,
+            Self::Blurple => 639,
+            Self::LightSlateBlue => 640,
+            Self::MediumSlateBlue => 641,
+            Self::PeriwinklePurple => 642,
+            Self::VeryPeri => 643,
+            Self::BrightGrape => 644,
+            Self::BrightPurple => 645,
+            Self::PurpleAmethyst => 646,
+            Self::BlueMagenta => 647,
+            Self::DarkBlurple => 648,
+            Self::DeepPeriwinkle => 649,
+            Self::DarkSlateBlue => 650,
+            Self::PurpleHaze => 651,
+            Self::PurpleIris => 652,
+            Self::DarkPurple => 653,
+            Self::DeepPurple => 654,
+            Self::MidnightPurple => 655,
+            Self::PurpleMonster => 656,
+            Self::Indigo => 657,
+            Self::BlueWhale => 658,
+            Self::RebeccaPurple => 659,
+            Self::PurpleJam => 660,
+            Self::DarkMagenta => 661,
+            Self::Purple => 662,
+            Self::FrenchLilac => 663,
+            Self::DarkOrchid => 664,
+            Self::DarkViolet => 665,
+            Self::PurpleViolet => 666,
+            Self::JasminePurple => 667,
+            Self::PurpleDaffodil => 668,
+            Self::ClematisViolet => 669,
+            Self::BlueViolet => 670,
+            Self::PurpleSageBush => 671,
+            Self::LovelyPurple => 672,
+            Self::NeonPurple => 673,
+            Self::PurplePlum => 674,
+            Self::AztechPurple => 675,
+            Self::MediumPurple => 676,
+            Self::LightPurple => 677,
+            Self::CrocusPurple => 678,
+            Self::PurpleMimosa => 679,
+            Self::PastelIndigo => 680,
+            Self::LavenderPurple => 681,
+            Self::RosePurple => 682,
+            Self::Viola => 683,
+            Self::Periwinkle => 684,
+            Self::PaleLilac => 685,
+            Self::Lilac => 686,
+            Self::Mauve => 687,
+            Self::BrightLilac => 688,
+            Self::PurpleDragon => 689,
+            Self::Plum => 690,
+            Self::BlushPink => 691,
+            Self::PastelPurple => 692,
+            Self::BlossomPink => 693,
+            Self::WisteriaPurple => 694,
+            Self::PurpleThistle => 695,
+            Self::Thistle => 696,
+            Self::PurpleWhite => 697,
+            Self::PeriwinklePink => 698,
+            Self::CottonCandy => 699,
+            Self::LavenderPinocchio => 700,
+            Self::DarkWhite => 701,
+            Self::AshWhite => 702,
+            Self::WarmWhite => 703,
+            Self::WhiteChocolate => 704,
+            Self::CreamyWhite => 705,
+            Self::OffWhite => 706,
+            Self::SoftIvory => 707,
+            Self::CosmicLatte => 708,
+            Self::PearlWhite => 709,
+            Self::RedWhite => 710,
+            Self::LavenderBlush => 711,
+            Self::Pearl => 712,
+            Self::EggShell => 713,
+            Self::OldLace => 714,
+            Self::WhiteIce => 715,
+            Self::Linen => 716,
+            Self::SeaShell => 717,
+            Self::BoneWhite => 718,
+            Self::Rice => 719,
+            Self::FloralWhite => 720,
+            Self::Ivory => 721,
+            Self::WhiteGold => 722,
+            Self::LightWhite => 723,
+            Self::Cotton => 724,
+            Self::Snow => 725,
+            Self::MilkWhite => 726,
+            Self::HalfWhite => 727,
+            Self::White => 728,
+            Self::Rgb(_, _, _) => return None,
+        })
     }
 }
 impl TryFrom<&str> for Color {
