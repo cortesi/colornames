@@ -145,7 +145,7 @@ fn main() {
                         name.replace(" ", "").to_lowercase()
                     }
 
-                    /// A list of named colors
+                    /// An enum of named colors, with a catch-all Rgb variant
                     #[derive(Debug, Clone, Copy, PartialEq, Eq)]
                     pub enum Color {
                         #(#color_idents),*,
@@ -162,7 +162,7 @@ fn main() {
                     });
 
                     /// Array of color variants matching the order of COLORS array
-                    pub static VARIANTS: &[Color] = &[
+                    static VARIANTS: &[Color] = &[
                         #(Color::#variant_array),*
                     ];
 
@@ -248,6 +248,15 @@ fn main() {
                                 #(Self::#color_idents => #color_indices,)*
                                 Self::Rgb(_, _, _) => return None,
                             })
+                        }
+                    }
+
+                    impl std::fmt::Display for Color {
+                        fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                            match self.name() {
+                                Some(color_name) => write!(f, "{}", color_name.replace(" ", "")),
+                                None => write!(f, "{}", self.rgb_hex()),
+                            }
                         }
                     }
 

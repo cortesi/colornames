@@ -5,7 +5,7 @@ use std::collections::HashMap;
 fn norm_name(name: &str) -> String {
     name.replace(" ", "").to_lowercase()
 }
-#[doc = r" A list of named colors"]
+#[doc = r" An enum of named colors, with a catch-all Rgb variant"]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Color {
     Black,
@@ -748,7 +748,7 @@ static NAME_MAP: Lazy<HashMap<String, usize>> = Lazy::new(|| {
     m
 });
 #[doc = r" Array of color variants matching the order of COLORS array"]
-pub static VARIANTS: &[Color] = &[
+static VARIANTS: &[Color] = &[
     Color::Black,
     Color::BlackBlue,
     Color::Night,
@@ -3009,6 +3009,14 @@ impl Color {
             Self::White => 728,
             Self::Rgb(_, _, _) => return None,
         })
+    }
+}
+impl std::fmt::Display for Color {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self.name() {
+            Some(color_name) => write!(f, "{}", color_name.replace(" ", "")),
+            None => write!(f, "{}", self.rgb_hex()),
+        }
     }
 }
 impl TryFrom<&str> for Color {
