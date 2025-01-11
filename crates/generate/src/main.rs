@@ -131,12 +131,26 @@ fn main() {
 
                     use crate::COLORS;
 
+                    /// Normalize a color name by lowercasing and removing whitespace
+                    fn norm_name(name: &str) -> String {
+                        name.replace(" ", "").to_lowercase()
+                    }
+
                     /// A list of named colors
                     #[derive(Debug, Clone, Copy, PartialEq, Eq)]
                     pub enum Color {
                         #(#color_idents),*,
                         Rgb(u8, u8, u8)
                     }
+
+                    /// Maps normalized color names to array offsets
+                    static NAME_MAP: Lazy<HashMap<String, usize>> = Lazy::new(|| {
+                        let mut m = HashMap::new();
+                        for (idx, (name, _)) in COLORS.iter().enumerate() {
+                            m.insert(norm_name(name), idx);
+                        }
+                        m
+                    });
 
                     /// Convert a hex color string to a `Color` variant
                     static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
@@ -169,10 +183,9 @@ fn main() {
                                 RGB_MAP.get(hex.as_str()).copied().or(Some(Color::Rgb(r, g, b)))
                             } else {
                                 // Handle color names
-                                match name.replace(" ", "").to_lowercase() {
-                                    #(x if x == stringify!(#color_idents).to_lowercase() => Some(Color::#color_idents),)*
-                                    _ => None
-                                }
+                                NAME_MAP.get(&norm_name(name)).and_then(|&idx| {
+                                    #(if idx == #color_indices { Some(Color::#color_idents) } else)* { None }
+                                })
                             }
                         }
 

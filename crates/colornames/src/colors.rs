@@ -1,6 +1,12 @@
 use crate::COLORS;
 use once_cell::sync::Lazy;
 use std::collections::HashMap;
+
+#[doc = r" Normalize a color name by lowercasing and removing whitespace"]
+fn norm_name(name: &str) -> String {
+    name.replace(" ", "").to_lowercase()
+}
+
 #[doc = r" A list of named colors"]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Color {
@@ -735,6 +741,14 @@ pub enum Color {
     White,
     Rgb(u8, u8, u8),
 }
+#[doc = r" Maps normalized color names to array offsets"]
+static NAME_MAP: Lazy<HashMap<String, usize>> = Lazy::new(|| {
+    let mut m = HashMap::new();
+    for (idx, (name, _)) in COLORS.iter().enumerate() {
+        m.insert(norm_name(name), idx);
+    }
+    m
+});
 #[doc = r" Convert a hex color string to a `Color` variant"]
 static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
     let mut m = HashMap::new();
@@ -1493,830 +1507,1469 @@ impl Color {
                 .copied()
                 .or(Some(Color::Rgb(r, g, b)))
         } else {
-            match name.replace(" ", "").to_lowercase() {
-                x if x == stringify!(Black).to_lowercase() => Some(Color::Black),
-                x if x == stringify!(BlackBlue).to_lowercase() => Some(Color::BlackBlue),
-                x if x == stringify!(Night).to_lowercase() => Some(Color::Night),
-                x if x == stringify!(Charcoal).to_lowercase() => Some(Color::Charcoal),
-                x if x == stringify!(Oil).to_lowercase() => Some(Color::Oil),
-                x if x == stringify!(StormyGray).to_lowercase() => Some(Color::StormyGray),
-                x if x == stringify!(LightBlack).to_lowercase() => Some(Color::LightBlack),
-                x if x == stringify!(DarkSteampunk).to_lowercase() => Some(Color::DarkSteampunk),
-                x if x == stringify!(BlackCat).to_lowercase() => Some(Color::BlackCat),
-                x if x == stringify!(Iridium).to_lowercase() => Some(Color::Iridium),
-                x if x == stringify!(BlackEel).to_lowercase() => Some(Color::BlackEel),
-                x if x == stringify!(BlackCow).to_lowercase() => Some(Color::BlackCow),
-                x if x == stringify!(GrayWolf).to_lowercase() => Some(Color::GrayWolf),
-                x if x == stringify!(VampireGray).to_lowercase() => Some(Color::VampireGray),
-                x if x == stringify!(IronGray).to_lowercase() => Some(Color::IronGray),
-                x if x == stringify!(GrayDolphin).to_lowercase() => Some(Color::GrayDolphin),
-                x if x == stringify!(CarbonGray).to_lowercase() => Some(Color::CarbonGray),
-                x if x == stringify!(AshGray).to_lowercase() => Some(Color::AshGray),
-                x if x == stringify!(DimGray).to_lowercase() => Some(Color::DimGray),
-                x if x == stringify!(DimGrey).to_lowercase() => Some(Color::DimGrey),
-                x if x == stringify!(NardoGray).to_lowercase() => Some(Color::NardoGray),
-                x if x == stringify!(CloudyGray).to_lowercase() => Some(Color::CloudyGray),
-                x if x == stringify!(SmokeyGray).to_lowercase() => Some(Color::SmokeyGray),
-                x if x == stringify!(AlienGray).to_lowercase() => Some(Color::AlienGray),
-                x if x == stringify!(SonicSilver).to_lowercase() => Some(Color::SonicSilver),
-                x if x == stringify!(PlatinumGray).to_lowercase() => Some(Color::PlatinumGray),
-                x if x == stringify!(Granite).to_lowercase() => Some(Color::Granite),
-                x if x == stringify!(Gray).to_lowercase() => Some(Color::Gray),
-                x if x == stringify!(Grey).to_lowercase() => Some(Color::Grey),
-                x if x == stringify!(BattleshipGray).to_lowercase() => Some(Color::BattleshipGray),
-                x if x == stringify!(SheetMetal).to_lowercase() => Some(Color::SheetMetal),
-                x if x == stringify!(DarkGainsboro).to_lowercase() => Some(Color::DarkGainsboro),
-                x if x == stringify!(GunmetalGray).to_lowercase() => Some(Color::GunmetalGray),
-                x if x == stringify!(ColdMetal).to_lowercase() => Some(Color::ColdMetal),
-                x if x == stringify!(StainlessSteelGray).to_lowercase() => {
+            NAME_MAP.get(&norm_name(name)).and_then(|&idx| {
+                if idx == 0usize {
+                    Some(Color::Black)
+                } else if idx == 1usize {
+                    Some(Color::BlackBlue)
+                } else if idx == 2usize {
+                    Some(Color::Night)
+                } else if idx == 3usize {
+                    Some(Color::Charcoal)
+                } else if idx == 4usize {
+                    Some(Color::Oil)
+                } else if idx == 5usize {
+                    Some(Color::StormyGray)
+                } else if idx == 6usize {
+                    Some(Color::LightBlack)
+                } else if idx == 7usize {
+                    Some(Color::DarkSteampunk)
+                } else if idx == 8usize {
+                    Some(Color::BlackCat)
+                } else if idx == 9usize {
+                    Some(Color::Iridium)
+                } else if idx == 10usize {
+                    Some(Color::BlackEel)
+                } else if idx == 11usize {
+                    Some(Color::BlackCow)
+                } else if idx == 12usize {
+                    Some(Color::GrayWolf)
+                } else if idx == 13usize {
+                    Some(Color::VampireGray)
+                } else if idx == 14usize {
+                    Some(Color::IronGray)
+                } else if idx == 15usize {
+                    Some(Color::GrayDolphin)
+                } else if idx == 16usize {
+                    Some(Color::CarbonGray)
+                } else if idx == 17usize {
+                    Some(Color::AshGray)
+                } else if idx == 18usize {
+                    Some(Color::DimGray)
+                } else if idx == 19usize {
+                    Some(Color::DimGrey)
+                } else if idx == 20usize {
+                    Some(Color::NardoGray)
+                } else if idx == 21usize {
+                    Some(Color::CloudyGray)
+                } else if idx == 22usize {
+                    Some(Color::SmokeyGray)
+                } else if idx == 23usize {
+                    Some(Color::AlienGray)
+                } else if idx == 24usize {
+                    Some(Color::SonicSilver)
+                } else if idx == 25usize {
+                    Some(Color::PlatinumGray)
+                } else if idx == 26usize {
+                    Some(Color::Granite)
+                } else if idx == 27usize {
+                    Some(Color::Gray)
+                } else if idx == 28usize {
+                    Some(Color::Grey)
+                } else if idx == 29usize {
+                    Some(Color::BattleshipGray)
+                } else if idx == 30usize {
+                    Some(Color::SheetMetal)
+                } else if idx == 31usize {
+                    Some(Color::DarkGainsboro)
+                } else if idx == 32usize {
+                    Some(Color::GunmetalGray)
+                } else if idx == 33usize {
+                    Some(Color::ColdMetal)
+                } else if idx == 34usize {
                     Some(Color::StainlessSteelGray)
-                }
-                x if x == stringify!(DarkGrey).to_lowercase() => Some(Color::DarkGrey),
-                x if x == stringify!(DarkGray).to_lowercase() => Some(Color::DarkGray),
-                x if x == stringify!(ChromeAluminum).to_lowercase() => Some(Color::ChromeAluminum),
-                x if x == stringify!(GrayCloud).to_lowercase() => Some(Color::GrayCloud),
-                x if x == stringify!(Metal).to_lowercase() => Some(Color::Metal),
-                x if x == stringify!(Silver).to_lowercase() => Some(Color::Silver),
-                x if x == stringify!(Steampunk).to_lowercase() => Some(Color::Steampunk),
-                x if x == stringify!(PaleSilver).to_lowercase() => Some(Color::PaleSilver),
-                x if x == stringify!(GearSteelGray).to_lowercase() => Some(Color::GearSteelGray),
-                x if x == stringify!(GrayGoose).to_lowercase() => Some(Color::GrayGoose),
-                x if x == stringify!(PlatinumSilver).to_lowercase() => Some(Color::PlatinumSilver),
-                x if x == stringify!(LightGrey).to_lowercase() => Some(Color::LightGrey),
-                x if x == stringify!(LightGray).to_lowercase() => Some(Color::LightGray),
-                x if x == stringify!(SilverWhite).to_lowercase() => Some(Color::SilverWhite),
-                x if x == stringify!(Gainsboro).to_lowercase() => Some(Color::Gainsboro),
-                x if x == stringify!(LightSteelGray).to_lowercase() => Some(Color::LightSteelGray),
-                x if x == stringify!(WhiteSmoke).to_lowercase() => Some(Color::WhiteSmoke),
-                x if x == stringify!(WhiteGray).to_lowercase() => Some(Color::WhiteGray),
-                x if x == stringify!(Platinum).to_lowercase() => Some(Color::Platinum),
-                x if x == stringify!(MetallicSilver).to_lowercase() => Some(Color::MetallicSilver),
-                x if x == stringify!(BlueGray).to_lowercase() => Some(Color::BlueGray),
-                x if x == stringify!(RomanSilver).to_lowercase() => Some(Color::RomanSilver),
-                x if x == stringify!(LightSlateGrey).to_lowercase() => Some(Color::LightSlateGrey),
-                x if x == stringify!(LightSlateGray).to_lowercase() => Some(Color::LightSlateGray),
-                x if x == stringify!(SlateGrey).to_lowercase() => Some(Color::SlateGrey),
-                x if x == stringify!(SlateGray).to_lowercase() => Some(Color::SlateGray),
-                x if x == stringify!(RatGray).to_lowercase() => Some(Color::RatGray),
-                x if x == stringify!(SlateGraniteGray).to_lowercase() => {
+                } else if idx == 35usize {
+                    Some(Color::DarkGrey)
+                } else if idx == 36usize {
+                    Some(Color::DarkGray)
+                } else if idx == 37usize {
+                    Some(Color::ChromeAluminum)
+                } else if idx == 38usize {
+                    Some(Color::GrayCloud)
+                } else if idx == 39usize {
+                    Some(Color::Metal)
+                } else if idx == 40usize {
+                    Some(Color::Silver)
+                } else if idx == 41usize {
+                    Some(Color::Steampunk)
+                } else if idx == 42usize {
+                    Some(Color::PaleSilver)
+                } else if idx == 43usize {
+                    Some(Color::GearSteelGray)
+                } else if idx == 44usize {
+                    Some(Color::GrayGoose)
+                } else if idx == 45usize {
+                    Some(Color::PlatinumSilver)
+                } else if idx == 46usize {
+                    Some(Color::LightGrey)
+                } else if idx == 47usize {
+                    Some(Color::LightGray)
+                } else if idx == 48usize {
+                    Some(Color::SilverWhite)
+                } else if idx == 49usize {
+                    Some(Color::Gainsboro)
+                } else if idx == 50usize {
+                    Some(Color::LightSteelGray)
+                } else if idx == 51usize {
+                    Some(Color::WhiteSmoke)
+                } else if idx == 52usize {
+                    Some(Color::WhiteGray)
+                } else if idx == 53usize {
+                    Some(Color::Platinum)
+                } else if idx == 54usize {
+                    Some(Color::MetallicSilver)
+                } else if idx == 55usize {
+                    Some(Color::BlueGray)
+                } else if idx == 56usize {
+                    Some(Color::RomanSilver)
+                } else if idx == 57usize {
+                    Some(Color::LightSlateGrey)
+                } else if idx == 58usize {
+                    Some(Color::LightSlateGray)
+                } else if idx == 59usize {
+                    Some(Color::SlateGrey)
+                } else if idx == 60usize {
+                    Some(Color::SlateGray)
+                } else if idx == 61usize {
+                    Some(Color::RatGray)
+                } else if idx == 62usize {
                     Some(Color::SlateGraniteGray)
-                }
-                x if x == stringify!(JetGray).to_lowercase() => Some(Color::JetGray),
-                x if x == stringify!(MistBlue).to_lowercase() => Some(Color::MistBlue),
-                x if x == stringify!(SteelGray).to_lowercase() => Some(Color::SteelGray),
-                x if x == stringify!(MarbleBlue).to_lowercase() => Some(Color::MarbleBlue),
-                x if x == stringify!(SlateBlueGray).to_lowercase() => Some(Color::SlateBlueGray),
-                x if x == stringify!(LightPurpleBlue).to_lowercase() => {
+                } else if idx == 63usize {
+                    Some(Color::JetGray)
+                } else if idx == 64usize {
+                    Some(Color::MistBlue)
+                } else if idx == 65usize {
+                    Some(Color::SteelGray)
+                } else if idx == 66usize {
+                    Some(Color::MarbleBlue)
+                } else if idx == 67usize {
+                    Some(Color::SlateBlueGray)
+                } else if idx == 68usize {
                     Some(Color::LightPurpleBlue)
-                }
-                x if x == stringify!(AzureBlue).to_lowercase() => Some(Color::AzureBlue),
-                x if x == stringify!(EstorilBlue).to_lowercase() => Some(Color::EstorilBlue),
-                x if x == stringify!(BlueJay).to_lowercase() => Some(Color::BlueJay),
-                x if x == stringify!(CharcoalBlue).to_lowercase() => Some(Color::CharcoalBlue),
-                x if x == stringify!(DarkBlueGray).to_lowercase() => Some(Color::DarkBlueGray),
-                x if x == stringify!(DarkSlate).to_lowercase() => Some(Color::DarkSlate),
-                x if x == stringify!(DeepSeaBlue).to_lowercase() => Some(Color::DeepSeaBlue),
-                x if x == stringify!(NightBlue).to_lowercase() => Some(Color::NightBlue),
-                x if x == stringify!(MidnightBlue).to_lowercase() => Some(Color::MidnightBlue),
-                x if x == stringify!(Navy).to_lowercase() => Some(Color::Navy),
-                x if x == stringify!(DenimDarkBlue).to_lowercase() => Some(Color::DenimDarkBlue),
-                x if x == stringify!(DarkBlue).to_lowercase() => Some(Color::DarkBlue),
-                x if x == stringify!(LapisBlue).to_lowercase() => Some(Color::LapisBlue),
-                x if x == stringify!(NewMidnightBlue).to_lowercase() => {
+                } else if idx == 69usize {
+                    Some(Color::AzureBlue)
+                } else if idx == 70usize {
+                    Some(Color::EstorilBlue)
+                } else if idx == 71usize {
+                    Some(Color::BlueJay)
+                } else if idx == 72usize {
+                    Some(Color::CharcoalBlue)
+                } else if idx == 73usize {
+                    Some(Color::DarkBlueGray)
+                } else if idx == 74usize {
+                    Some(Color::DarkSlate)
+                } else if idx == 75usize {
+                    Some(Color::DeepSeaBlue)
+                } else if idx == 76usize {
+                    Some(Color::NightBlue)
+                } else if idx == 77usize {
+                    Some(Color::MidnightBlue)
+                } else if idx == 78usize {
+                    Some(Color::Navy)
+                } else if idx == 79usize {
+                    Some(Color::DenimDarkBlue)
+                } else if idx == 80usize {
+                    Some(Color::DarkBlue)
+                } else if idx == 81usize {
+                    Some(Color::LapisBlue)
+                } else if idx == 82usize {
                     Some(Color::NewMidnightBlue)
-                }
-                x if x == stringify!(EarthBlue).to_lowercase() => Some(Color::EarthBlue),
-                x if x == stringify!(CobaltBlue).to_lowercase() => Some(Color::CobaltBlue),
-                x if x == stringify!(MediumBlue).to_lowercase() => Some(Color::MediumBlue),
-                x if x == stringify!(BlueberryBlue).to_lowercase() => Some(Color::BlueberryBlue),
-                x if x == stringify!(CanaryBlue).to_lowercase() => Some(Color::CanaryBlue),
-                x if x == stringify!(Blue).to_lowercase() => Some(Color::Blue),
-                x if x == stringify!(SamcoBlue).to_lowercase() => Some(Color::SamcoBlue),
-                x if x == stringify!(BrightBlue).to_lowercase() => Some(Color::BrightBlue),
-                x if x == stringify!(BlueOrchid).to_lowercase() => Some(Color::BlueOrchid),
-                x if x == stringify!(SapphireBlue).to_lowercase() => Some(Color::SapphireBlue),
-                x if x == stringify!(BlueEyes).to_lowercase() => Some(Color::BlueEyes),
-                x if x == stringify!(BrightNavyBlue).to_lowercase() => Some(Color::BrightNavyBlue),
-                x if x == stringify!(BalloonBlue).to_lowercase() => Some(Color::BalloonBlue),
-                x if x == stringify!(RoyalBlue).to_lowercase() => Some(Color::RoyalBlue),
-                x if x == stringify!(OceanBlue).to_lowercase() => Some(Color::OceanBlue),
-                x if x == stringify!(DarkSkyBlue).to_lowercase() => Some(Color::DarkSkyBlue),
-                x if x == stringify!(BlueRibbon).to_lowercase() => Some(Color::BlueRibbon),
-                x if x == stringify!(BlueDress).to_lowercase() => Some(Color::BlueDress),
-                x if x == stringify!(NeonBlue).to_lowercase() => Some(Color::NeonBlue),
-                x if x == stringify!(DodgerBlue).to_lowercase() => Some(Color::DodgerBlue),
-                x if x == stringify!(GlacialBlueIce).to_lowercase() => Some(Color::GlacialBlueIce),
-                x if x == stringify!(SteelBlue).to_lowercase() => Some(Color::SteelBlue),
-                x if x == stringify!(SilkBlue).to_lowercase() => Some(Color::SilkBlue),
-                x if x == stringify!(WindowsBlue).to_lowercase() => Some(Color::WindowsBlue),
-                x if x == stringify!(BlueIvy).to_lowercase() => Some(Color::BlueIvy),
-                x if x == stringify!(CyanBlue).to_lowercase() => Some(Color::CyanBlue),
-                x if x == stringify!(BlueKoi).to_lowercase() => Some(Color::BlueKoi),
-                x if x == stringify!(ColumbiaBlue).to_lowercase() => Some(Color::ColumbiaBlue),
-                x if x == stringify!(BabyBlue).to_lowercase() => Some(Color::BabyBlue),
-                x if x == stringify!(CornflowerBlue).to_lowercase() => Some(Color::CornflowerBlue),
-                x if x == stringify!(SkyBlueDress).to_lowercase() => Some(Color::SkyBlueDress),
-                x if x == stringify!(Iceberg).to_lowercase() => Some(Color::Iceberg),
-                x if x == stringify!(ButterflyBlue).to_lowercase() => Some(Color::ButterflyBlue),
-                x if x == stringify!(DeepSkyBlue).to_lowercase() => Some(Color::DeepSkyBlue),
-                x if x == stringify!(MiddayBlue).to_lowercase() => Some(Color::MiddayBlue),
-                x if x == stringify!(CrystalBlue).to_lowercase() => Some(Color::CrystalBlue),
-                x if x == stringify!(DenimBlue).to_lowercase() => Some(Color::DenimBlue),
-                x if x == stringify!(DaySkyBlue).to_lowercase() => Some(Color::DaySkyBlue),
-                x if x == stringify!(LightSkyBlue).to_lowercase() => Some(Color::LightSkyBlue),
-                x if x == stringify!(SkyBlue).to_lowercase() => Some(Color::SkyBlue),
-                x if x == stringify!(JeansBlue).to_lowercase() => Some(Color::JeansBlue),
-                x if x == stringify!(BlueAngel).to_lowercase() => Some(Color::BlueAngel),
-                x if x == stringify!(PastelBlue).to_lowercase() => Some(Color::PastelBlue),
-                x if x == stringify!(LightDayBlue).to_lowercase() => Some(Color::LightDayBlue),
-                x if x == stringify!(SeaBlue).to_lowercase() => Some(Color::SeaBlue),
-                x if x == stringify!(HeavenlyBlue).to_lowercase() => Some(Color::HeavenlyBlue),
-                x if x == stringify!(RobinEggBlue).to_lowercase() => Some(Color::RobinEggBlue),
-                x if x == stringify!(PowderBlue).to_lowercase() => Some(Color::PowderBlue),
-                x if x == stringify!(CoralBlue).to_lowercase() => Some(Color::CoralBlue),
-                x if x == stringify!(LightBlue).to_lowercase() => Some(Color::LightBlue),
-                x if x == stringify!(LightSteelBlue).to_lowercase() => Some(Color::LightSteelBlue),
-                x if x == stringify!(GulfBlue).to_lowercase() => Some(Color::GulfBlue),
-                x if x == stringify!(PastelLightBlue).to_lowercase() => {
+                } else if idx == 83usize {
+                    Some(Color::EarthBlue)
+                } else if idx == 84usize {
+                    Some(Color::CobaltBlue)
+                } else if idx == 85usize {
+                    Some(Color::MediumBlue)
+                } else if idx == 86usize {
+                    Some(Color::BlueberryBlue)
+                } else if idx == 87usize {
+                    Some(Color::CanaryBlue)
+                } else if idx == 88usize {
+                    Some(Color::Blue)
+                } else if idx == 89usize {
+                    Some(Color::SamcoBlue)
+                } else if idx == 90usize {
+                    Some(Color::BrightBlue)
+                } else if idx == 91usize {
+                    Some(Color::BlueOrchid)
+                } else if idx == 92usize {
+                    Some(Color::SapphireBlue)
+                } else if idx == 93usize {
+                    Some(Color::BlueEyes)
+                } else if idx == 94usize {
+                    Some(Color::BrightNavyBlue)
+                } else if idx == 95usize {
+                    Some(Color::BalloonBlue)
+                } else if idx == 96usize {
+                    Some(Color::RoyalBlue)
+                } else if idx == 97usize {
+                    Some(Color::OceanBlue)
+                } else if idx == 98usize {
+                    Some(Color::DarkSkyBlue)
+                } else if idx == 99usize {
+                    Some(Color::BlueRibbon)
+                } else if idx == 100usize {
+                    Some(Color::BlueDress)
+                } else if idx == 101usize {
+                    Some(Color::NeonBlue)
+                } else if idx == 102usize {
+                    Some(Color::DodgerBlue)
+                } else if idx == 103usize {
+                    Some(Color::GlacialBlueIce)
+                } else if idx == 104usize {
+                    Some(Color::SteelBlue)
+                } else if idx == 105usize {
+                    Some(Color::SilkBlue)
+                } else if idx == 106usize {
+                    Some(Color::WindowsBlue)
+                } else if idx == 107usize {
+                    Some(Color::BlueIvy)
+                } else if idx == 108usize {
+                    Some(Color::CyanBlue)
+                } else if idx == 109usize {
+                    Some(Color::BlueKoi)
+                } else if idx == 110usize {
+                    Some(Color::ColumbiaBlue)
+                } else if idx == 111usize {
+                    Some(Color::BabyBlue)
+                } else if idx == 112usize {
+                    Some(Color::CornflowerBlue)
+                } else if idx == 113usize {
+                    Some(Color::SkyBlueDress)
+                } else if idx == 114usize {
+                    Some(Color::Iceberg)
+                } else if idx == 115usize {
+                    Some(Color::ButterflyBlue)
+                } else if idx == 116usize {
+                    Some(Color::DeepSkyBlue)
+                } else if idx == 117usize {
+                    Some(Color::MiddayBlue)
+                } else if idx == 118usize {
+                    Some(Color::CrystalBlue)
+                } else if idx == 119usize {
+                    Some(Color::DenimBlue)
+                } else if idx == 120usize {
+                    Some(Color::DaySkyBlue)
+                } else if idx == 121usize {
+                    Some(Color::LightSkyBlue)
+                } else if idx == 122usize {
+                    Some(Color::SkyBlue)
+                } else if idx == 123usize {
+                    Some(Color::JeansBlue)
+                } else if idx == 124usize {
+                    Some(Color::BlueAngel)
+                } else if idx == 125usize {
+                    Some(Color::PastelBlue)
+                } else if idx == 126usize {
+                    Some(Color::LightDayBlue)
+                } else if idx == 127usize {
+                    Some(Color::SeaBlue)
+                } else if idx == 128usize {
+                    Some(Color::HeavenlyBlue)
+                } else if idx == 129usize {
+                    Some(Color::RobinEggBlue)
+                } else if idx == 130usize {
+                    Some(Color::PowderBlue)
+                } else if idx == 131usize {
+                    Some(Color::CoralBlue)
+                } else if idx == 132usize {
+                    Some(Color::LightBlue)
+                } else if idx == 133usize {
+                    Some(Color::LightSteelBlue)
+                } else if idx == 134usize {
+                    Some(Color::GulfBlue)
+                } else if idx == 135usize {
                     Some(Color::PastelLightBlue)
-                }
-                x if x == stringify!(LavenderBlue).to_lowercase() => Some(Color::LavenderBlue),
-                x if x == stringify!(WhiteBlue).to_lowercase() => Some(Color::WhiteBlue),
-                x if x == stringify!(Lavender).to_lowercase() => Some(Color::Lavender),
-                x if x == stringify!(Water).to_lowercase() => Some(Color::Water),
-                x if x == stringify!(AliceBlue).to_lowercase() => Some(Color::AliceBlue),
-                x if x == stringify!(GhostWhite).to_lowercase() => Some(Color::GhostWhite),
-                x if x == stringify!(Azure).to_lowercase() => Some(Color::Azure),
-                x if x == stringify!(LightCyan).to_lowercase() => Some(Color::LightCyan),
-                x if x == stringify!(LightSlate).to_lowercase() => Some(Color::LightSlate),
-                x if x == stringify!(ElectricBlue).to_lowercase() => Some(Color::ElectricBlue),
-                x if x == stringify!(TronBlue).to_lowercase() => Some(Color::TronBlue),
-                x if x == stringify!(BlueZircon).to_lowercase() => Some(Color::BlueZircon),
-                x if x == stringify!(Cyan).to_lowercase() => Some(Color::Cyan),
-                x if x == stringify!(Aqua).to_lowercase() => Some(Color::Aqua),
-                x if x == stringify!(BrightCyan).to_lowercase() => Some(Color::BrightCyan),
-                x if x == stringify!(Celeste).to_lowercase() => Some(Color::Celeste),
-                x if x == stringify!(BlueDiamond).to_lowercase() => Some(Color::BlueDiamond),
-                x if x == stringify!(BrightTurquoise).to_lowercase() => {
+                } else if idx == 136usize {
+                    Some(Color::LavenderBlue)
+                } else if idx == 137usize {
+                    Some(Color::WhiteBlue)
+                } else if idx == 138usize {
+                    Some(Color::Lavender)
+                } else if idx == 139usize {
+                    Some(Color::Water)
+                } else if idx == 140usize {
+                    Some(Color::AliceBlue)
+                } else if idx == 141usize {
+                    Some(Color::GhostWhite)
+                } else if idx == 142usize {
+                    Some(Color::Azure)
+                } else if idx == 143usize {
+                    Some(Color::LightCyan)
+                } else if idx == 144usize {
+                    Some(Color::LightSlate)
+                } else if idx == 145usize {
+                    Some(Color::ElectricBlue)
+                } else if idx == 146usize {
+                    Some(Color::TronBlue)
+                } else if idx == 147usize {
+                    Some(Color::BlueZircon)
+                } else if idx == 148usize {
+                    Some(Color::Cyan)
+                } else if idx == 149usize {
+                    Some(Color::Aqua)
+                } else if idx == 150usize {
+                    Some(Color::BrightCyan)
+                } else if idx == 151usize {
+                    Some(Color::Celeste)
+                } else if idx == 152usize {
+                    Some(Color::BlueDiamond)
+                } else if idx == 153usize {
                     Some(Color::BrightTurquoise)
-                }
-                x if x == stringify!(BlueLagoon).to_lowercase() => Some(Color::BlueLagoon),
-                x if x == stringify!(PaleTurquoise).to_lowercase() => Some(Color::PaleTurquoise),
-                x if x == stringify!(PaleBlueLily).to_lowercase() => Some(Color::PaleBlueLily),
-                x if x == stringify!(LightTeal).to_lowercase() => Some(Color::LightTeal),
-                x if x == stringify!(TiffanyBlue).to_lowercase() => Some(Color::TiffanyBlue),
-                x if x == stringify!(BlueHosta).to_lowercase() => Some(Color::BlueHosta),
-                x if x == stringify!(CyanOpaque).to_lowercase() => Some(Color::CyanOpaque),
-                x if x == stringify!(NorthernLightsBlue).to_lowercase() => {
+                } else if idx == 154usize {
+                    Some(Color::BlueLagoon)
+                } else if idx == 155usize {
+                    Some(Color::PaleTurquoise)
+                } else if idx == 156usize {
+                    Some(Color::PaleBlueLily)
+                } else if idx == 157usize {
+                    Some(Color::LightTeal)
+                } else if idx == 158usize {
+                    Some(Color::TiffanyBlue)
+                } else if idx == 159usize {
+                    Some(Color::BlueHosta)
+                } else if idx == 160usize {
+                    Some(Color::CyanOpaque)
+                } else if idx == 161usize {
                     Some(Color::NorthernLightsBlue)
-                }
-                x if x == stringify!(BlueGreen).to_lowercase() => Some(Color::BlueGreen),
-                x if x == stringify!(MediumAquaMarine).to_lowercase() => {
+                } else if idx == 162usize {
+                    Some(Color::BlueGreen)
+                } else if idx == 163usize {
                     Some(Color::MediumAquaMarine)
-                }
-                x if x == stringify!(AquaSeafoamGreen).to_lowercase() => {
+                } else if idx == 164usize {
                     Some(Color::AquaSeafoamGreen)
-                }
-                x if x == stringify!(MagicMint).to_lowercase() => Some(Color::MagicMint),
-                x if x == stringify!(LightAquamarine).to_lowercase() => {
+                } else if idx == 165usize {
+                    Some(Color::MagicMint)
+                } else if idx == 166usize {
                     Some(Color::LightAquamarine)
-                }
-                x if x == stringify!(Aquamarine).to_lowercase() => Some(Color::Aquamarine),
-                x if x == stringify!(BrightTeal).to_lowercase() => Some(Color::BrightTeal),
-                x if x == stringify!(Turquoise).to_lowercase() => Some(Color::Turquoise),
-                x if x == stringify!(MediumTurquoise).to_lowercase() => {
+                } else if idx == 167usize {
+                    Some(Color::Aquamarine)
+                } else if idx == 168usize {
+                    Some(Color::BrightTeal)
+                } else if idx == 169usize {
+                    Some(Color::Turquoise)
+                } else if idx == 170usize {
                     Some(Color::MediumTurquoise)
-                }
-                x if x == stringify!(DeepTurquoise).to_lowercase() => Some(Color::DeepTurquoise),
-                x if x == stringify!(Jellyfish).to_lowercase() => Some(Color::Jellyfish),
-                x if x == stringify!(BlueTurquoise).to_lowercase() => Some(Color::BlueTurquoise),
-                x if x == stringify!(DarkTurquoise).to_lowercase() => Some(Color::DarkTurquoise),
-                x if x == stringify!(MacawBlueGreen).to_lowercase() => Some(Color::MacawBlueGreen),
-                x if x == stringify!(LightSeaGreen).to_lowercase() => Some(Color::LightSeaGreen),
-                x if x == stringify!(SeafoamGreen).to_lowercase() => Some(Color::SeafoamGreen),
-                x if x == stringify!(CadetBlue).to_lowercase() => Some(Color::CadetBlue),
-                x if x == stringify!(DeepSea).to_lowercase() => Some(Color::DeepSea),
-                x if x == stringify!(DarkCyan).to_lowercase() => Some(Color::DarkCyan),
-                x if x == stringify!(TealGreen).to_lowercase() => Some(Color::TealGreen),
-                x if x == stringify!(Teal).to_lowercase() => Some(Color::Teal),
-                x if x == stringify!(TealBlue).to_lowercase() => Some(Color::TealBlue),
-                x if x == stringify!(MediumTeal).to_lowercase() => Some(Color::MediumTeal),
-                x if x == stringify!(DarkTeal).to_lowercase() => Some(Color::DarkTeal),
-                x if x == stringify!(DeepTeal).to_lowercase() => Some(Color::DeepTeal),
-                x if x == stringify!(DarkSlateGray).to_lowercase() => Some(Color::DarkSlateGray),
-                x if x == stringify!(DarkSlateGrey).to_lowercase() => Some(Color::DarkSlateGrey),
-                x if x == stringify!(Gunmetal).to_lowercase() => Some(Color::Gunmetal),
-                x if x == stringify!(BlueMossGreen).to_lowercase() => Some(Color::BlueMossGreen),
-                x if x == stringify!(BeetleGreen).to_lowercase() => Some(Color::BeetleGreen),
-                x if x == stringify!(GrayishTurquoise).to_lowercase() => {
+                } else if idx == 171usize {
+                    Some(Color::DeepTurquoise)
+                } else if idx == 172usize {
+                    Some(Color::Jellyfish)
+                } else if idx == 173usize {
+                    Some(Color::BlueTurquoise)
+                } else if idx == 174usize {
+                    Some(Color::DarkTurquoise)
+                } else if idx == 175usize {
+                    Some(Color::MacawBlueGreen)
+                } else if idx == 176usize {
+                    Some(Color::LightSeaGreen)
+                } else if idx == 177usize {
+                    Some(Color::SeafoamGreen)
+                } else if idx == 178usize {
+                    Some(Color::CadetBlue)
+                } else if idx == 179usize {
+                    Some(Color::DeepSea)
+                } else if idx == 180usize {
+                    Some(Color::DarkCyan)
+                } else if idx == 181usize {
+                    Some(Color::TealGreen)
+                } else if idx == 182usize {
+                    Some(Color::Teal)
+                } else if idx == 183usize {
+                    Some(Color::TealBlue)
+                } else if idx == 184usize {
+                    Some(Color::MediumTeal)
+                } else if idx == 185usize {
+                    Some(Color::DarkTeal)
+                } else if idx == 186usize {
+                    Some(Color::DeepTeal)
+                } else if idx == 187usize {
+                    Some(Color::DarkSlateGray)
+                } else if idx == 188usize {
+                    Some(Color::DarkSlateGrey)
+                } else if idx == 189usize {
+                    Some(Color::Gunmetal)
+                } else if idx == 190usize {
+                    Some(Color::BlueMossGreen)
+                } else if idx == 191usize {
+                    Some(Color::BeetleGreen)
+                } else if idx == 192usize {
                     Some(Color::GrayishTurquoise)
-                }
-                x if x == stringify!(GreenishBlue).to_lowercase() => Some(Color::GreenishBlue),
-                x if x == stringify!(AquamarineStone).to_lowercase() => {
+                } else if idx == 193usize {
+                    Some(Color::GreenishBlue)
+                } else if idx == 194usize {
                     Some(Color::AquamarineStone)
-                }
-                x if x == stringify!(SeaTurtleGreen).to_lowercase() => Some(Color::SeaTurtleGreen),
-                x if x == stringify!(DullSeaGreen).to_lowercase() => Some(Color::DullSeaGreen),
-                x if x == stringify!(DarkGreenBlue).to_lowercase() => Some(Color::DarkGreenBlue),
-                x if x == stringify!(DeepSeaGreen).to_lowercase() => Some(Color::DeepSeaGreen),
-                x if x == stringify!(BottleGreen).to_lowercase() => Some(Color::BottleGreen),
-                x if x == stringify!(SeaGreen).to_lowercase() => Some(Color::SeaGreen),
-                x if x == stringify!(ElfGreen).to_lowercase() => Some(Color::ElfGreen),
-                x if x == stringify!(DarkMint).to_lowercase() => Some(Color::DarkMint),
-                x if x == stringify!(Jade).to_lowercase() => Some(Color::Jade),
-                x if x == stringify!(EarthGreen).to_lowercase() => Some(Color::EarthGreen),
-                x if x == stringify!(ChromeGreen).to_lowercase() => Some(Color::ChromeGreen),
-                x if x == stringify!(Mint).to_lowercase() => Some(Color::Mint),
-                x if x == stringify!(Emerald).to_lowercase() => Some(Color::Emerald),
-                x if x == stringify!(IsleOfManGreen).to_lowercase() => Some(Color::IsleOfManGreen),
-                x if x == stringify!(MediumSeaGreen).to_lowercase() => Some(Color::MediumSeaGreen),
-                x if x == stringify!(MetallicGreen).to_lowercase() => Some(Color::MetallicGreen),
-                x if x == stringify!(CamouflageGreen).to_lowercase() => {
+                } else if idx == 195usize {
+                    Some(Color::SeaTurtleGreen)
+                } else if idx == 196usize {
+                    Some(Color::DullSeaGreen)
+                } else if idx == 197usize {
+                    Some(Color::DarkGreenBlue)
+                } else if idx == 198usize {
+                    Some(Color::DeepSeaGreen)
+                } else if idx == 199usize {
+                    Some(Color::BottleGreen)
+                } else if idx == 200usize {
+                    Some(Color::SeaGreen)
+                } else if idx == 201usize {
+                    Some(Color::ElfGreen)
+                } else if idx == 202usize {
+                    Some(Color::DarkMint)
+                } else if idx == 203usize {
+                    Some(Color::Jade)
+                } else if idx == 204usize {
+                    Some(Color::EarthGreen)
+                } else if idx == 205usize {
+                    Some(Color::ChromeGreen)
+                } else if idx == 206usize {
+                    Some(Color::Mint)
+                } else if idx == 207usize {
+                    Some(Color::Emerald)
+                } else if idx == 208usize {
+                    Some(Color::IsleOfManGreen)
+                } else if idx == 209usize {
+                    Some(Color::MediumSeaGreen)
+                } else if idx == 210usize {
+                    Some(Color::MetallicGreen)
+                } else if idx == 211usize {
                     Some(Color::CamouflageGreen)
-                }
-                x if x == stringify!(SageGreen).to_lowercase() => Some(Color::SageGreen),
-                x if x == stringify!(HazelGreen).to_lowercase() => Some(Color::HazelGreen),
-                x if x == stringify!(VenomGreen).to_lowercase() => Some(Color::VenomGreen),
-                x if x == stringify!(OliveDrab).to_lowercase() => Some(Color::OliveDrab),
-                x if x == stringify!(Olive).to_lowercase() => Some(Color::Olive),
-                x if x == stringify!(Ebony).to_lowercase() => Some(Color::Ebony),
-                x if x == stringify!(DarkOliveGreen).to_lowercase() => Some(Color::DarkOliveGreen),
-                x if x == stringify!(MilitaryGreen).to_lowercase() => Some(Color::MilitaryGreen),
-                x if x == stringify!(GreenLeaves).to_lowercase() => Some(Color::GreenLeaves),
-                x if x == stringify!(ArmyGreen).to_lowercase() => Some(Color::ArmyGreen),
-                x if x == stringify!(FernGreen).to_lowercase() => Some(Color::FernGreen),
-                x if x == stringify!(FallForestGreen).to_lowercase() => {
+                } else if idx == 212usize {
+                    Some(Color::SageGreen)
+                } else if idx == 213usize {
+                    Some(Color::HazelGreen)
+                } else if idx == 214usize {
+                    Some(Color::VenomGreen)
+                } else if idx == 215usize {
+                    Some(Color::OliveDrab)
+                } else if idx == 216usize {
+                    Some(Color::Olive)
+                } else if idx == 217usize {
+                    Some(Color::Ebony)
+                } else if idx == 218usize {
+                    Some(Color::DarkOliveGreen)
+                } else if idx == 219usize {
+                    Some(Color::MilitaryGreen)
+                } else if idx == 220usize {
+                    Some(Color::GreenLeaves)
+                } else if idx == 221usize {
+                    Some(Color::ArmyGreen)
+                } else if idx == 222usize {
+                    Some(Color::FernGreen)
+                } else if idx == 223usize {
                     Some(Color::FallForestGreen)
-                }
-                x if x == stringify!(IrishGreen).to_lowercase() => Some(Color::IrishGreen),
-                x if x == stringify!(PineGreen).to_lowercase() => Some(Color::PineGreen),
-                x if x == stringify!(MediumForestGreen).to_lowercase() => {
+                } else if idx == 224usize {
+                    Some(Color::IrishGreen)
+                } else if idx == 225usize {
+                    Some(Color::PineGreen)
+                } else if idx == 226usize {
                     Some(Color::MediumForestGreen)
-                }
-                x if x == stringify!(RacingGreen).to_lowercase() => Some(Color::RacingGreen),
-                x if x == stringify!(JungleGreen).to_lowercase() => Some(Color::JungleGreen),
-                x if x == stringify!(CactusGreen).to_lowercase() => Some(Color::CactusGreen),
-                x if x == stringify!(ForestGreen).to_lowercase() => Some(Color::ForestGreen),
-                x if x == stringify!(Green).to_lowercase() => Some(Color::Green),
-                x if x == stringify!(DarkGreen).to_lowercase() => Some(Color::DarkGreen),
-                x if x == stringify!(DeepGreen).to_lowercase() => Some(Color::DeepGreen),
-                x if x == stringify!(DeepEmeraldGreen).to_lowercase() => {
+                } else if idx == 227usize {
+                    Some(Color::RacingGreen)
+                } else if idx == 228usize {
+                    Some(Color::JungleGreen)
+                } else if idx == 229usize {
+                    Some(Color::CactusGreen)
+                } else if idx == 230usize {
+                    Some(Color::ForestGreen)
+                } else if idx == 231usize {
+                    Some(Color::Green)
+                } else if idx == 232usize {
+                    Some(Color::DarkGreen)
+                } else if idx == 233usize {
+                    Some(Color::DeepGreen)
+                } else if idx == 234usize {
                     Some(Color::DeepEmeraldGreen)
-                }
-                x if x == stringify!(HunterGreen).to_lowercase() => Some(Color::HunterGreen),
-                x if x == stringify!(DarkForestGreen).to_lowercase() => {
+                } else if idx == 235usize {
+                    Some(Color::HunterGreen)
+                } else if idx == 236usize {
                     Some(Color::DarkForestGreen)
-                }
-                x if x == stringify!(LotusGreen).to_lowercase() => Some(Color::LotusGreen),
-                x if x == stringify!(BroccoliGreen).to_lowercase() => Some(Color::BroccoliGreen),
-                x if x == stringify!(SeaweedGreen).to_lowercase() => Some(Color::SeaweedGreen),
-                x if x == stringify!(ShamrockGreen).to_lowercase() => Some(Color::ShamrockGreen),
-                x if x == stringify!(GreenOnion).to_lowercase() => Some(Color::GreenOnion),
-                x if x == stringify!(MossGreen).to_lowercase() => Some(Color::MossGreen),
-                x if x == stringify!(GrassGreen).to_lowercase() => Some(Color::GrassGreen),
-                x if x == stringify!(GreenPepper).to_lowercase() => Some(Color::GreenPepper),
-                x if x == stringify!(DarkLimeGreen).to_lowercase() => Some(Color::DarkLimeGreen),
-                x if x == stringify!(ParrotGreen).to_lowercase() => Some(Color::ParrotGreen),
-                x if x == stringify!(CloverGreen).to_lowercase() => Some(Color::CloverGreen),
-                x if x == stringify!(DinosaurGreen).to_lowercase() => Some(Color::DinosaurGreen),
-                x if x == stringify!(GreenSnake).to_lowercase() => Some(Color::GreenSnake),
-                x if x == stringify!(AlienGreen).to_lowercase() => Some(Color::AlienGreen),
-                x if x == stringify!(GreenApple).to_lowercase() => Some(Color::GreenApple),
-                x if x == stringify!(LimeGreen).to_lowercase() => Some(Color::LimeGreen),
-                x if x == stringify!(PeaGreen).to_lowercase() => Some(Color::PeaGreen),
-                x if x == stringify!(KellyGreen).to_lowercase() => Some(Color::KellyGreen),
-                x if x == stringify!(ZombieGreen).to_lowercase() => Some(Color::ZombieGreen),
-                x if x == stringify!(GreenPeas).to_lowercase() => Some(Color::GreenPeas),
-                x if x == stringify!(DollarBillGreen).to_lowercase() => {
+                } else if idx == 237usize {
+                    Some(Color::LotusGreen)
+                } else if idx == 238usize {
+                    Some(Color::BroccoliGreen)
+                } else if idx == 239usize {
+                    Some(Color::SeaweedGreen)
+                } else if idx == 240usize {
+                    Some(Color::ShamrockGreen)
+                } else if idx == 241usize {
+                    Some(Color::GreenOnion)
+                } else if idx == 242usize {
+                    Some(Color::MossGreen)
+                } else if idx == 243usize {
+                    Some(Color::GrassGreen)
+                } else if idx == 244usize {
+                    Some(Color::GreenPepper)
+                } else if idx == 245usize {
+                    Some(Color::DarkLimeGreen)
+                } else if idx == 246usize {
+                    Some(Color::ParrotGreen)
+                } else if idx == 247usize {
+                    Some(Color::CloverGreen)
+                } else if idx == 248usize {
+                    Some(Color::DinosaurGreen)
+                } else if idx == 249usize {
+                    Some(Color::GreenSnake)
+                } else if idx == 250usize {
+                    Some(Color::AlienGreen)
+                } else if idx == 251usize {
+                    Some(Color::GreenApple)
+                } else if idx == 252usize {
+                    Some(Color::LimeGreen)
+                } else if idx == 253usize {
+                    Some(Color::PeaGreen)
+                } else if idx == 254usize {
+                    Some(Color::KellyGreen)
+                } else if idx == 255usize {
+                    Some(Color::ZombieGreen)
+                } else if idx == 256usize {
+                    Some(Color::GreenPeas)
+                } else if idx == 257usize {
                     Some(Color::DollarBillGreen)
-                }
-                x if x == stringify!(FrogGreen).to_lowercase() => Some(Color::FrogGreen),
-                x if x == stringify!(TurquoiseGreen).to_lowercase() => Some(Color::TurquoiseGreen),
-                x if x == stringify!(DarkSeaGreen).to_lowercase() => Some(Color::DarkSeaGreen),
-                x if x == stringify!(BasilGreen).to_lowercase() => Some(Color::BasilGreen),
-                x if x == stringify!(GrayGreen).to_lowercase() => Some(Color::GrayGreen),
-                x if x == stringify!(LightOliveGreen).to_lowercase() => {
+                } else if idx == 258usize {
+                    Some(Color::FrogGreen)
+                } else if idx == 259usize {
+                    Some(Color::TurquoiseGreen)
+                } else if idx == 260usize {
+                    Some(Color::DarkSeaGreen)
+                } else if idx == 261usize {
+                    Some(Color::BasilGreen)
+                } else if idx == 262usize {
+                    Some(Color::GrayGreen)
+                } else if idx == 263usize {
                     Some(Color::LightOliveGreen)
-                }
-                x if x == stringify!(IguanaGreen).to_lowercase() => Some(Color::IguanaGreen),
-                x if x == stringify!(CitronGreen).to_lowercase() => Some(Color::CitronGreen),
-                x if x == stringify!(AcidGreen).to_lowercase() => Some(Color::AcidGreen),
-                x if x == stringify!(AvocadoGreen).to_lowercase() => Some(Color::AvocadoGreen),
-                x if x == stringify!(PistachioGreen).to_lowercase() => Some(Color::PistachioGreen),
-                x if x == stringify!(SaladGreen).to_lowercase() => Some(Color::SaladGreen),
-                x if x == stringify!(YellowGreen).to_lowercase() => Some(Color::YellowGreen),
-                x if x == stringify!(PastelGreen).to_lowercase() => Some(Color::PastelGreen),
-                x if x == stringify!(HummingbirdGreen).to_lowercase() => {
+                } else if idx == 264usize {
+                    Some(Color::IguanaGreen)
+                } else if idx == 265usize {
+                    Some(Color::CitronGreen)
+                } else if idx == 266usize {
+                    Some(Color::AcidGreen)
+                } else if idx == 267usize {
+                    Some(Color::AvocadoGreen)
+                } else if idx == 268usize {
+                    Some(Color::PistachioGreen)
+                } else if idx == 269usize {
+                    Some(Color::SaladGreen)
+                } else if idx == 270usize {
+                    Some(Color::YellowGreen)
+                } else if idx == 271usize {
+                    Some(Color::PastelGreen)
+                } else if idx == 272usize {
                     Some(Color::HummingbirdGreen)
-                }
-                x if x == stringify!(NebulaGreen).to_lowercase() => Some(Color::NebulaGreen),
-                x if x == stringify!(StoplightGoGreen).to_lowercase() => {
+                } else if idx == 273usize {
+                    Some(Color::NebulaGreen)
+                } else if idx == 274usize {
                     Some(Color::StoplightGoGreen)
-                }
-                x if x == stringify!(NeonGreen).to_lowercase() => Some(Color::NeonGreen),
-                x if x == stringify!(JadeGreen).to_lowercase() => Some(Color::JadeGreen),
-                x if x == stringify!(SpringGreen).to_lowercase() => Some(Color::SpringGreen),
-                x if x == stringify!(OceanGreen).to_lowercase() => Some(Color::OceanGreen),
-                x if x == stringify!(LimeMintGreen).to_lowercase() => Some(Color::LimeMintGreen),
-                x if x == stringify!(MediumSpringGreen).to_lowercase() => {
+                } else if idx == 275usize {
+                    Some(Color::NeonGreen)
+                } else if idx == 276usize {
+                    Some(Color::JadeGreen)
+                } else if idx == 277usize {
+                    Some(Color::SpringGreen)
+                } else if idx == 278usize {
+                    Some(Color::OceanGreen)
+                } else if idx == 279usize {
+                    Some(Color::LimeMintGreen)
+                } else if idx == 280usize {
                     Some(Color::MediumSpringGreen)
-                }
-                x if x == stringify!(AquaGreen).to_lowercase() => Some(Color::AquaGreen),
-                x if x == stringify!(EmeraldGreen).to_lowercase() => Some(Color::EmeraldGreen),
-                x if x == stringify!(Lime).to_lowercase() => Some(Color::Lime),
-                x if x == stringify!(LawnGreen).to_lowercase() => Some(Color::LawnGreen),
-                x if x == stringify!(BrightGreen).to_lowercase() => Some(Color::BrightGreen),
-                x if x == stringify!(Chartreuse).to_lowercase() => Some(Color::Chartreuse),
-                x if x == stringify!(YellowLawnGreen).to_lowercase() => {
+                } else if idx == 281usize {
+                    Some(Color::AquaGreen)
+                } else if idx == 282usize {
+                    Some(Color::EmeraldGreen)
+                } else if idx == 283usize {
+                    Some(Color::Lime)
+                } else if idx == 284usize {
+                    Some(Color::LawnGreen)
+                } else if idx == 285usize {
+                    Some(Color::BrightGreen)
+                } else if idx == 286usize {
+                    Some(Color::Chartreuse)
+                } else if idx == 287usize {
                     Some(Color::YellowLawnGreen)
-                }
-                x if x == stringify!(AloeVeraGreen).to_lowercase() => Some(Color::AloeVeraGreen),
-                x if x == stringify!(DullGreenYellow).to_lowercase() => {
+                } else if idx == 288usize {
+                    Some(Color::AloeVeraGreen)
+                } else if idx == 289usize {
                     Some(Color::DullGreenYellow)
-                }
-                x if x == stringify!(LemonGreen).to_lowercase() => Some(Color::LemonGreen),
-                x if x == stringify!(GreenYellow).to_lowercase() => Some(Color::GreenYellow),
-                x if x == stringify!(ChameleonGreen).to_lowercase() => Some(Color::ChameleonGreen),
-                x if x == stringify!(NeonYellowGreen).to_lowercase() => {
+                } else if idx == 290usize {
+                    Some(Color::LemonGreen)
+                } else if idx == 291usize {
+                    Some(Color::GreenYellow)
+                } else if idx == 292usize {
+                    Some(Color::ChameleonGreen)
+                } else if idx == 293usize {
                     Some(Color::NeonYellowGreen)
-                }
-                x if x == stringify!(YellowGreenGrosbeak).to_lowercase() => {
+                } else if idx == 294usize {
                     Some(Color::YellowGreenGrosbeak)
-                }
-                x if x == stringify!(TeaGreen).to_lowercase() => Some(Color::TeaGreen),
-                x if x == stringify!(SlimeGreen).to_lowercase() => Some(Color::SlimeGreen),
-                x if x == stringify!(AlgaeGreen).to_lowercase() => Some(Color::AlgaeGreen),
-                x if x == stringify!(LightGreen).to_lowercase() => Some(Color::LightGreen),
-                x if x == stringify!(DragonGreen).to_lowercase() => Some(Color::DragonGreen),
-                x if x == stringify!(PaleGreen).to_lowercase() => Some(Color::PaleGreen),
-                x if x == stringify!(MintGreen).to_lowercase() => Some(Color::MintGreen),
-                x if x == stringify!(GreenThumb).to_lowercase() => Some(Color::GreenThumb),
-                x if x == stringify!(OrganicBrown).to_lowercase() => Some(Color::OrganicBrown),
-                x if x == stringify!(LightJade).to_lowercase() => Some(Color::LightJade),
-                x if x == stringify!(LightMintGreen).to_lowercase() => Some(Color::LightMintGreen),
-                x if x == stringify!(LightRoseGreen).to_lowercase() => Some(Color::LightRoseGreen),
-                x if x == stringify!(ChromeWhite).to_lowercase() => Some(Color::ChromeWhite),
-                x if x == stringify!(HoneyDew).to_lowercase() => Some(Color::HoneyDew),
-                x if x == stringify!(MintCream).to_lowercase() => Some(Color::MintCream),
-                x if x == stringify!(LemonChiffon).to_lowercase() => Some(Color::LemonChiffon),
-                x if x == stringify!(Parchment).to_lowercase() => Some(Color::Parchment),
-                x if x == stringify!(Cream).to_lowercase() => Some(Color::Cream),
-                x if x == stringify!(CreamWhite).to_lowercase() => Some(Color::CreamWhite),
-                x if x == stringify!(LightGoldenRodYellow).to_lowercase() => {
+                } else if idx == 295usize {
+                    Some(Color::TeaGreen)
+                } else if idx == 296usize {
+                    Some(Color::SlimeGreen)
+                } else if idx == 297usize {
+                    Some(Color::AlgaeGreen)
+                } else if idx == 298usize {
+                    Some(Color::LightGreen)
+                } else if idx == 299usize {
+                    Some(Color::DragonGreen)
+                } else if idx == 300usize {
+                    Some(Color::PaleGreen)
+                } else if idx == 301usize {
+                    Some(Color::MintGreen)
+                } else if idx == 302usize {
+                    Some(Color::GreenThumb)
+                } else if idx == 303usize {
+                    Some(Color::OrganicBrown)
+                } else if idx == 304usize {
+                    Some(Color::LightJade)
+                } else if idx == 305usize {
+                    Some(Color::LightMintGreen)
+                } else if idx == 306usize {
+                    Some(Color::LightRoseGreen)
+                } else if idx == 307usize {
+                    Some(Color::ChromeWhite)
+                } else if idx == 308usize {
+                    Some(Color::HoneyDew)
+                } else if idx == 309usize {
+                    Some(Color::MintCream)
+                } else if idx == 310usize {
+                    Some(Color::LemonChiffon)
+                } else if idx == 311usize {
+                    Some(Color::Parchment)
+                } else if idx == 312usize {
+                    Some(Color::Cream)
+                } else if idx == 313usize {
+                    Some(Color::CreamWhite)
+                } else if idx == 314usize {
                     Some(Color::LightGoldenRodYellow)
-                }
-                x if x == stringify!(LightYellow).to_lowercase() => Some(Color::LightYellow),
-                x if x == stringify!(Beige).to_lowercase() => Some(Color::Beige),
-                x if x == stringify!(WhiteYellow).to_lowercase() => Some(Color::WhiteYellow),
-                x if x == stringify!(Cornsilk).to_lowercase() => Some(Color::Cornsilk),
-                x if x == stringify!(Blonde).to_lowercase() => Some(Color::Blonde),
-                x if x == stringify!(AntiqueWhite).to_lowercase() => Some(Color::AntiqueWhite),
-                x if x == stringify!(LightBeige).to_lowercase() => Some(Color::LightBeige),
-                x if x == stringify!(PapayaWhip).to_lowercase() => Some(Color::PapayaWhip),
-                x if x == stringify!(Champagne).to_lowercase() => Some(Color::Champagne),
-                x if x == stringify!(BlanchedAlmond).to_lowercase() => Some(Color::BlanchedAlmond),
-                x if x == stringify!(Bisque).to_lowercase() => Some(Color::Bisque),
-                x if x == stringify!(Wheat).to_lowercase() => Some(Color::Wheat),
-                x if x == stringify!(Moccasin).to_lowercase() => Some(Color::Moccasin),
-                x if x == stringify!(Peach).to_lowercase() => Some(Color::Peach),
-                x if x == stringify!(LightOrange).to_lowercase() => Some(Color::LightOrange),
-                x if x == stringify!(PeachPuff).to_lowercase() => Some(Color::PeachPuff),
-                x if x == stringify!(CoralPeach).to_lowercase() => Some(Color::CoralPeach),
-                x if x == stringify!(NavajoWhite).to_lowercase() => Some(Color::NavajoWhite),
-                x if x == stringify!(GoldenBlonde).to_lowercase() => Some(Color::GoldenBlonde),
-                x if x == stringify!(GoldenSilk).to_lowercase() => Some(Color::GoldenSilk),
-                x if x == stringify!(DarkBlonde).to_lowercase() => Some(Color::DarkBlonde),
-                x if x == stringify!(LightGold).to_lowercase() => Some(Color::LightGold),
-                x if x == stringify!(Vanilla).to_lowercase() => Some(Color::Vanilla),
-                x if x == stringify!(TanBrown).to_lowercase() => Some(Color::TanBrown),
-                x if x == stringify!(DirtyWhite).to_lowercase() => Some(Color::DirtyWhite),
-                x if x == stringify!(PaleGoldenRod).to_lowercase() => Some(Color::PaleGoldenRod),
-                x if x == stringify!(Khaki).to_lowercase() => Some(Color::Khaki),
-                x if x == stringify!(CardboardBrown).to_lowercase() => Some(Color::CardboardBrown),
-                x if x == stringify!(HarvestGold).to_lowercase() => Some(Color::HarvestGold),
-                x if x == stringify!(SunYellow).to_lowercase() => Some(Color::SunYellow),
-                x if x == stringify!(CornYellow).to_lowercase() => Some(Color::CornYellow),
-                x if x == stringify!(PastelYellow).to_lowercase() => Some(Color::PastelYellow),
-                x if x == stringify!(NeonYellow).to_lowercase() => Some(Color::NeonYellow),
-                x if x == stringify!(Yellow).to_lowercase() => Some(Color::Yellow),
-                x if x == stringify!(LemonYellow).to_lowercase() => Some(Color::LemonYellow),
-                x if x == stringify!(CanaryYellow).to_lowercase() => Some(Color::CanaryYellow),
-                x if x == stringify!(BananaYellow).to_lowercase() => Some(Color::BananaYellow),
-                x if x == stringify!(MustardYellow).to_lowercase() => Some(Color::MustardYellow),
-                x if x == stringify!(GoldenYellow).to_lowercase() => Some(Color::GoldenYellow),
-                x if x == stringify!(BoldYellow).to_lowercase() => Some(Color::BoldYellow),
-                x if x == stringify!(SafetyYellow).to_lowercase() => Some(Color::SafetyYellow),
-                x if x == stringify!(RubberDuckyYellow).to_lowercase() => {
+                } else if idx == 315usize {
+                    Some(Color::LightYellow)
+                } else if idx == 316usize {
+                    Some(Color::Beige)
+                } else if idx == 317usize {
+                    Some(Color::WhiteYellow)
+                } else if idx == 318usize {
+                    Some(Color::Cornsilk)
+                } else if idx == 319usize {
+                    Some(Color::Blonde)
+                } else if idx == 320usize {
+                    Some(Color::AntiqueWhite)
+                } else if idx == 321usize {
+                    Some(Color::LightBeige)
+                } else if idx == 322usize {
+                    Some(Color::PapayaWhip)
+                } else if idx == 323usize {
+                    Some(Color::Champagne)
+                } else if idx == 324usize {
+                    Some(Color::BlanchedAlmond)
+                } else if idx == 325usize {
+                    Some(Color::Bisque)
+                } else if idx == 326usize {
+                    Some(Color::Wheat)
+                } else if idx == 327usize {
+                    Some(Color::Moccasin)
+                } else if idx == 328usize {
+                    Some(Color::Peach)
+                } else if idx == 329usize {
+                    Some(Color::LightOrange)
+                } else if idx == 330usize {
+                    Some(Color::PeachPuff)
+                } else if idx == 331usize {
+                    Some(Color::CoralPeach)
+                } else if idx == 332usize {
+                    Some(Color::NavajoWhite)
+                } else if idx == 333usize {
+                    Some(Color::GoldenBlonde)
+                } else if idx == 334usize {
+                    Some(Color::GoldenSilk)
+                } else if idx == 335usize {
+                    Some(Color::DarkBlonde)
+                } else if idx == 336usize {
+                    Some(Color::LightGold)
+                } else if idx == 337usize {
+                    Some(Color::Vanilla)
+                } else if idx == 338usize {
+                    Some(Color::TanBrown)
+                } else if idx == 339usize {
+                    Some(Color::DirtyWhite)
+                } else if idx == 340usize {
+                    Some(Color::PaleGoldenRod)
+                } else if idx == 341usize {
+                    Some(Color::Khaki)
+                } else if idx == 342usize {
+                    Some(Color::CardboardBrown)
+                } else if idx == 343usize {
+                    Some(Color::HarvestGold)
+                } else if idx == 344usize {
+                    Some(Color::SunYellow)
+                } else if idx == 345usize {
+                    Some(Color::CornYellow)
+                } else if idx == 346usize {
+                    Some(Color::PastelYellow)
+                } else if idx == 347usize {
+                    Some(Color::NeonYellow)
+                } else if idx == 348usize {
+                    Some(Color::Yellow)
+                } else if idx == 349usize {
+                    Some(Color::LemonYellow)
+                } else if idx == 350usize {
+                    Some(Color::CanaryYellow)
+                } else if idx == 351usize {
+                    Some(Color::BananaYellow)
+                } else if idx == 352usize {
+                    Some(Color::MustardYellow)
+                } else if idx == 353usize {
+                    Some(Color::GoldenYellow)
+                } else if idx == 354usize {
+                    Some(Color::BoldYellow)
+                } else if idx == 355usize {
+                    Some(Color::SafetyYellow)
+                } else if idx == 356usize {
                     Some(Color::RubberDuckyYellow)
-                }
-                x if x == stringify!(Gold).to_lowercase() => Some(Color::Gold),
-                x if x == stringify!(BrightGold).to_lowercase() => Some(Color::BrightGold),
-                x if x == stringify!(ChromeGold).to_lowercase() => Some(Color::ChromeGold),
-                x if x == stringify!(GoldenBrown).to_lowercase() => Some(Color::GoldenBrown),
-                x if x == stringify!(DeepYellow).to_lowercase() => Some(Color::DeepYellow),
-                x if x == stringify!(MacaroniandCheese).to_lowercase() => {
+                } else if idx == 357usize {
+                    Some(Color::Gold)
+                } else if idx == 358usize {
+                    Some(Color::BrightGold)
+                } else if idx == 359usize {
+                    Some(Color::ChromeGold)
+                } else if idx == 360usize {
+                    Some(Color::GoldenBrown)
+                } else if idx == 361usize {
+                    Some(Color::DeepYellow)
+                } else if idx == 362usize {
                     Some(Color::MacaroniandCheese)
-                }
-                x if x == stringify!(Amber).to_lowercase() => Some(Color::Amber),
-                x if x == stringify!(Saffron).to_lowercase() => Some(Color::Saffron),
-                x if x == stringify!(NeonGold).to_lowercase() => Some(Color::NeonGold),
-                x if x == stringify!(Beer).to_lowercase() => Some(Color::Beer),
-                x if x == stringify!(YellowOrange).to_lowercase() => Some(Color::YellowOrange),
-                x if x == stringify!(OrangeYellow).to_lowercase() => Some(Color::OrangeYellow),
-                x if x == stringify!(Cantaloupe).to_lowercase() => Some(Color::Cantaloupe),
-                x if x == stringify!(CheeseOrange).to_lowercase() => Some(Color::CheeseOrange),
-                x if x == stringify!(Orange).to_lowercase() => Some(Color::Orange),
-                x if x == stringify!(BrownSand).to_lowercase() => Some(Color::BrownSand),
-                x if x == stringify!(SandyBrown).to_lowercase() => Some(Color::SandyBrown),
-                x if x == stringify!(BrownSugar).to_lowercase() => Some(Color::BrownSugar),
-                x if x == stringify!(CamelBrown).to_lowercase() => Some(Color::CamelBrown),
-                x if x == stringify!(DeerBrown).to_lowercase() => Some(Color::DeerBrown),
-                x if x == stringify!(BurlyWood).to_lowercase() => Some(Color::BurlyWood),
-                x if x == stringify!(Tan).to_lowercase() => Some(Color::Tan),
-                x if x == stringify!(LightFrenchBeige).to_lowercase() => {
+                } else if idx == 363usize {
+                    Some(Color::Amber)
+                } else if idx == 364usize {
+                    Some(Color::Saffron)
+                } else if idx == 365usize {
+                    Some(Color::NeonGold)
+                } else if idx == 366usize {
+                    Some(Color::Beer)
+                } else if idx == 367usize {
+                    Some(Color::YellowOrange)
+                } else if idx == 368usize {
+                    Some(Color::OrangeYellow)
+                } else if idx == 369usize {
+                    Some(Color::Cantaloupe)
+                } else if idx == 370usize {
+                    Some(Color::CheeseOrange)
+                } else if idx == 371usize {
+                    Some(Color::Orange)
+                } else if idx == 372usize {
+                    Some(Color::BrownSand)
+                } else if idx == 373usize {
+                    Some(Color::SandyBrown)
+                } else if idx == 374usize {
+                    Some(Color::BrownSugar)
+                } else if idx == 375usize {
+                    Some(Color::CamelBrown)
+                } else if idx == 376usize {
+                    Some(Color::DeerBrown)
+                } else if idx == 377usize {
+                    Some(Color::BurlyWood)
+                } else if idx == 378usize {
+                    Some(Color::Tan)
+                } else if idx == 379usize {
                     Some(Color::LightFrenchBeige)
-                }
-                x if x == stringify!(Sand).to_lowercase() => Some(Color::Sand),
-                x if x == stringify!(SoftHazel).to_lowercase() => Some(Color::SoftHazel),
-                x if x == stringify!(Sage).to_lowercase() => Some(Color::Sage),
-                x if x == stringify!(FallLeafBrown).to_lowercase() => Some(Color::FallLeafBrown),
-                x if x == stringify!(GingerBrown).to_lowercase() => Some(Color::GingerBrown),
-                x if x == stringify!(BronzeGold).to_lowercase() => Some(Color::BronzeGold),
-                x if x == stringify!(DarkKhaki).to_lowercase() => Some(Color::DarkKhaki),
-                x if x == stringify!(OliveGreen).to_lowercase() => Some(Color::OliveGreen),
-                x if x == stringify!(Brass).to_lowercase() => Some(Color::Brass),
-                x if x == stringify!(CookieBrown).to_lowercase() => Some(Color::CookieBrown),
-                x if x == stringify!(MetallicGold).to_lowercase() => Some(Color::MetallicGold),
-                x if x == stringify!(Mustard).to_lowercase() => Some(Color::Mustard),
-                x if x == stringify!(BeeYellow).to_lowercase() => Some(Color::BeeYellow),
-                x if x == stringify!(SchoolBusYellow).to_lowercase() => {
+                } else if idx == 380usize {
+                    Some(Color::Sand)
+                } else if idx == 381usize {
+                    Some(Color::SoftHazel)
+                } else if idx == 382usize {
+                    Some(Color::Sage)
+                } else if idx == 383usize {
+                    Some(Color::FallLeafBrown)
+                } else if idx == 384usize {
+                    Some(Color::GingerBrown)
+                } else if idx == 385usize {
+                    Some(Color::BronzeGold)
+                } else if idx == 386usize {
+                    Some(Color::DarkKhaki)
+                } else if idx == 387usize {
+                    Some(Color::OliveGreen)
+                } else if idx == 388usize {
+                    Some(Color::Brass)
+                } else if idx == 389usize {
+                    Some(Color::CookieBrown)
+                } else if idx == 390usize {
+                    Some(Color::MetallicGold)
+                } else if idx == 391usize {
+                    Some(Color::Mustard)
+                } else if idx == 392usize {
+                    Some(Color::BeeYellow)
+                } else if idx == 393usize {
                     Some(Color::SchoolBusYellow)
-                }
-                x if x == stringify!(GoldenRod).to_lowercase() => Some(Color::GoldenRod),
-                x if x == stringify!(OrangeGold).to_lowercase() => Some(Color::OrangeGold),
-                x if x == stringify!(Caramel).to_lowercase() => Some(Color::Caramel),
-                x if x == stringify!(DarkGoldenRod).to_lowercase() => Some(Color::DarkGoldenRod),
-                x if x == stringify!(Cinnamon).to_lowercase() => Some(Color::Cinnamon),
-                x if x == stringify!(Peru).to_lowercase() => Some(Color::Peru),
-                x if x == stringify!(Bronze).to_lowercase() => Some(Color::Bronze),
-                x if x == stringify!(PumpkinPie).to_lowercase() => Some(Color::PumpkinPie),
-                x if x == stringify!(TigerOrange).to_lowercase() => Some(Color::TigerOrange),
-                x if x == stringify!(Copper).to_lowercase() => Some(Color::Copper),
-                x if x == stringify!(DarkGold).to_lowercase() => Some(Color::DarkGold),
-                x if x == stringify!(MetallicBronze).to_lowercase() => Some(Color::MetallicBronze),
-                x if x == stringify!(DarkAlmond).to_lowercase() => Some(Color::DarkAlmond),
-                x if x == stringify!(Wood).to_lowercase() => Some(Color::Wood),
-                x if x == stringify!(KhakiBrown).to_lowercase() => Some(Color::KhakiBrown),
-                x if x == stringify!(OakBrown).to_lowercase() => Some(Color::OakBrown),
-                x if x == stringify!(AntiqueBronze).to_lowercase() => Some(Color::AntiqueBronze),
-                x if x == stringify!(Hazel).to_lowercase() => Some(Color::Hazel),
-                x if x == stringify!(DarkYellow).to_lowercase() => Some(Color::DarkYellow),
-                x if x == stringify!(DarkMoccasin).to_lowercase() => Some(Color::DarkMoccasin),
-                x if x == stringify!(KhakiGreen).to_lowercase() => Some(Color::KhakiGreen),
-                x if x == stringify!(MillenniumJade).to_lowercase() => Some(Color::MillenniumJade),
-                x if x == stringify!(DarkBeige).to_lowercase() => Some(Color::DarkBeige),
-                x if x == stringify!(BulletShell).to_lowercase() => Some(Color::BulletShell),
-                x if x == stringify!(ArmyBrown).to_lowercase() => Some(Color::ArmyBrown),
-                x if x == stringify!(Sandstone).to_lowercase() => Some(Color::Sandstone),
-                x if x == stringify!(Taupe).to_lowercase() => Some(Color::Taupe),
-                x if x == stringify!(DarkGrayishOlive).to_lowercase() => {
+                } else if idx == 394usize {
+                    Some(Color::GoldenRod)
+                } else if idx == 395usize {
+                    Some(Color::OrangeGold)
+                } else if idx == 396usize {
+                    Some(Color::Caramel)
+                } else if idx == 397usize {
+                    Some(Color::DarkGoldenRod)
+                } else if idx == 398usize {
+                    Some(Color::Cinnamon)
+                } else if idx == 399usize {
+                    Some(Color::Peru)
+                } else if idx == 400usize {
+                    Some(Color::Bronze)
+                } else if idx == 401usize {
+                    Some(Color::PumpkinPie)
+                } else if idx == 402usize {
+                    Some(Color::TigerOrange)
+                } else if idx == 403usize {
+                    Some(Color::Copper)
+                } else if idx == 404usize {
+                    Some(Color::DarkGold)
+                } else if idx == 405usize {
+                    Some(Color::MetallicBronze)
+                } else if idx == 406usize {
+                    Some(Color::DarkAlmond)
+                } else if idx == 407usize {
+                    Some(Color::Wood)
+                } else if idx == 408usize {
+                    Some(Color::KhakiBrown)
+                } else if idx == 409usize {
+                    Some(Color::OakBrown)
+                } else if idx == 410usize {
+                    Some(Color::AntiqueBronze)
+                } else if idx == 411usize {
+                    Some(Color::Hazel)
+                } else if idx == 412usize {
+                    Some(Color::DarkYellow)
+                } else if idx == 413usize {
+                    Some(Color::DarkMoccasin)
+                } else if idx == 414usize {
+                    Some(Color::KhakiGreen)
+                } else if idx == 415usize {
+                    Some(Color::MillenniumJade)
+                } else if idx == 416usize {
+                    Some(Color::DarkBeige)
+                } else if idx == 417usize {
+                    Some(Color::BulletShell)
+                } else if idx == 418usize {
+                    Some(Color::ArmyBrown)
+                } else if idx == 419usize {
+                    Some(Color::Sandstone)
+                } else if idx == 420usize {
+                    Some(Color::Taupe)
+                } else if idx == 421usize {
                     Some(Color::DarkGrayishOlive)
-                }
-                x if x == stringify!(DarkHazelBrown).to_lowercase() => Some(Color::DarkHazelBrown),
-                x if x == stringify!(Mocha).to_lowercase() => Some(Color::Mocha),
-                x if x == stringify!(MilkChocolate).to_lowercase() => Some(Color::MilkChocolate),
-                x if x == stringify!(GrayBrown).to_lowercase() => Some(Color::GrayBrown),
-                x if x == stringify!(DarkCoffee).to_lowercase() => Some(Color::DarkCoffee),
-                x if x == stringify!(WesternCharcoal).to_lowercase() => {
+                } else if idx == 422usize {
+                    Some(Color::DarkHazelBrown)
+                } else if idx == 423usize {
+                    Some(Color::Mocha)
+                } else if idx == 424usize {
+                    Some(Color::MilkChocolate)
+                } else if idx == 425usize {
+                    Some(Color::GrayBrown)
+                } else if idx == 426usize {
+                    Some(Color::DarkCoffee)
+                } else if idx == 427usize {
                     Some(Color::WesternCharcoal)
-                }
-                x if x == stringify!(OldBurgundy).to_lowercase() => Some(Color::OldBurgundy),
-                x if x == stringify!(RedBrown).to_lowercase() => Some(Color::RedBrown),
-                x if x == stringify!(BakersBrown).to_lowercase() => Some(Color::BakersBrown),
-                x if x == stringify!(PullmanBrown).to_lowercase() => Some(Color::PullmanBrown),
-                x if x == stringify!(DarkBrown).to_lowercase() => Some(Color::DarkBrown),
-                x if x == stringify!(SepiaBrown).to_lowercase() => Some(Color::SepiaBrown),
-                x if x == stringify!(DarkBronze).to_lowercase() => Some(Color::DarkBronze),
-                x if x == stringify!(Coffee).to_lowercase() => Some(Color::Coffee),
-                x if x == stringify!(BrownBear).to_lowercase() => Some(Color::BrownBear),
-                x if x == stringify!(RedDirt).to_lowercase() => Some(Color::RedDirt),
-                x if x == stringify!(Sepia).to_lowercase() => Some(Color::Sepia),
-                x if x == stringify!(Sienna).to_lowercase() => Some(Color::Sienna),
-                x if x == stringify!(SaddleBrown).to_lowercase() => Some(Color::SaddleBrown),
-                x if x == stringify!(DarkSienna).to_lowercase() => Some(Color::DarkSienna),
-                x if x == stringify!(Sangria).to_lowercase() => Some(Color::Sangria),
-                x if x == stringify!(BloodRed).to_lowercase() => Some(Color::BloodRed),
-                x if x == stringify!(Chestnut).to_lowercase() => Some(Color::Chestnut),
-                x if x == stringify!(CoralBrown).to_lowercase() => Some(Color::CoralBrown),
-                x if x == stringify!(DeepAmber).to_lowercase() => Some(Color::DeepAmber),
-                x if x == stringify!(ChestnutRed).to_lowercase() => Some(Color::ChestnutRed),
-                x if x == stringify!(GingerRed).to_lowercase() => Some(Color::GingerRed),
-                x if x == stringify!(Mahogany).to_lowercase() => Some(Color::Mahogany),
-                x if x == stringify!(RedGold).to_lowercase() => Some(Color::RedGold),
-                x if x == stringify!(RedFox).to_lowercase() => Some(Color::RedFox),
-                x if x == stringify!(DarkBisque).to_lowercase() => Some(Color::DarkBisque),
-                x if x == stringify!(LightBrown).to_lowercase() => Some(Color::LightBrown),
-                x if x == stringify!(PetraGold).to_lowercase() => Some(Color::PetraGold),
-                x if x == stringify!(BrownRust).to_lowercase() => Some(Color::BrownRust),
-                x if x == stringify!(Rust).to_lowercase() => Some(Color::Rust),
-                x if x == stringify!(CopperRed).to_lowercase() => Some(Color::CopperRed),
-                x if x == stringify!(OrangeSalmon).to_lowercase() => Some(Color::OrangeSalmon),
-                x if x == stringify!(Chocolate).to_lowercase() => Some(Color::Chocolate),
-                x if x == stringify!(Sedona).to_lowercase() => Some(Color::Sedona),
-                x if x == stringify!(PapayaOrange).to_lowercase() => Some(Color::PapayaOrange),
-                x if x == stringify!(HalloweenOrange).to_lowercase() => {
+                } else if idx == 428usize {
+                    Some(Color::OldBurgundy)
+                } else if idx == 429usize {
+                    Some(Color::RedBrown)
+                } else if idx == 430usize {
+                    Some(Color::BakersBrown)
+                } else if idx == 431usize {
+                    Some(Color::PullmanBrown)
+                } else if idx == 432usize {
+                    Some(Color::DarkBrown)
+                } else if idx == 433usize {
+                    Some(Color::SepiaBrown)
+                } else if idx == 434usize {
+                    Some(Color::DarkBronze)
+                } else if idx == 435usize {
+                    Some(Color::Coffee)
+                } else if idx == 436usize {
+                    Some(Color::BrownBear)
+                } else if idx == 437usize {
+                    Some(Color::RedDirt)
+                } else if idx == 438usize {
+                    Some(Color::Sepia)
+                } else if idx == 439usize {
+                    Some(Color::Sienna)
+                } else if idx == 440usize {
+                    Some(Color::SaddleBrown)
+                } else if idx == 441usize {
+                    Some(Color::DarkSienna)
+                } else if idx == 442usize {
+                    Some(Color::Sangria)
+                } else if idx == 443usize {
+                    Some(Color::BloodRed)
+                } else if idx == 444usize {
+                    Some(Color::Chestnut)
+                } else if idx == 445usize {
+                    Some(Color::CoralBrown)
+                } else if idx == 446usize {
+                    Some(Color::DeepAmber)
+                } else if idx == 447usize {
+                    Some(Color::ChestnutRed)
+                } else if idx == 448usize {
+                    Some(Color::GingerRed)
+                } else if idx == 449usize {
+                    Some(Color::Mahogany)
+                } else if idx == 450usize {
+                    Some(Color::RedGold)
+                } else if idx == 451usize {
+                    Some(Color::RedFox)
+                } else if idx == 452usize {
+                    Some(Color::DarkBisque)
+                } else if idx == 453usize {
+                    Some(Color::LightBrown)
+                } else if idx == 454usize {
+                    Some(Color::PetraGold)
+                } else if idx == 455usize {
+                    Some(Color::BrownRust)
+                } else if idx == 456usize {
+                    Some(Color::Rust)
+                } else if idx == 457usize {
+                    Some(Color::CopperRed)
+                } else if idx == 458usize {
+                    Some(Color::OrangeSalmon)
+                } else if idx == 459usize {
+                    Some(Color::Chocolate)
+                } else if idx == 460usize {
+                    Some(Color::Sedona)
+                } else if idx == 461usize {
+                    Some(Color::PapayaOrange)
+                } else if idx == 462usize {
                     Some(Color::HalloweenOrange)
-                }
-                x if x == stringify!(NeonOrange).to_lowercase() => Some(Color::NeonOrange),
-                x if x == stringify!(BrightOrange).to_lowercase() => Some(Color::BrightOrange),
-                x if x == stringify!(FluroOrange).to_lowercase() => Some(Color::FluroOrange),
-                x if x == stringify!(PumpkinOrange).to_lowercase() => Some(Color::PumpkinOrange),
-                x if x == stringify!(SafetyOrange).to_lowercase() => Some(Color::SafetyOrange),
-                x if x == stringify!(CarrotOrange).to_lowercase() => Some(Color::CarrotOrange),
-                x if x == stringify!(DarkOrange).to_lowercase() => Some(Color::DarkOrange),
-                x if x == stringify!(ConstructionConeOrange).to_lowercase() => {
+                } else if idx == 463usize {
+                    Some(Color::NeonOrange)
+                } else if idx == 464usize {
+                    Some(Color::BrightOrange)
+                } else if idx == 465usize {
+                    Some(Color::FluroOrange)
+                } else if idx == 466usize {
+                    Some(Color::PumpkinOrange)
+                } else if idx == 467usize {
+                    Some(Color::SafetyOrange)
+                } else if idx == 468usize {
+                    Some(Color::CarrotOrange)
+                } else if idx == 469usize {
+                    Some(Color::DarkOrange)
+                } else if idx == 470usize {
                     Some(Color::ConstructionConeOrange)
-                }
-                x if x == stringify!(IndianSaffron).to_lowercase() => Some(Color::IndianSaffron),
-                x if x == stringify!(SunriseOrange).to_lowercase() => Some(Color::SunriseOrange),
-                x if x == stringify!(MangoOrange).to_lowercase() => Some(Color::MangoOrange),
-                x if x == stringify!(Coral).to_lowercase() => Some(Color::Coral),
-                x if x == stringify!(BasketBallOrange).to_lowercase() => {
+                } else if idx == 471usize {
+                    Some(Color::IndianSaffron)
+                } else if idx == 472usize {
+                    Some(Color::SunriseOrange)
+                } else if idx == 473usize {
+                    Some(Color::MangoOrange)
+                } else if idx == 474usize {
+                    Some(Color::Coral)
+                } else if idx == 475usize {
                     Some(Color::BasketBallOrange)
-                }
-                x if x == stringify!(LightSalmonRose).to_lowercase() => {
+                } else if idx == 476usize {
                     Some(Color::LightSalmonRose)
-                }
-                x if x == stringify!(LightSalmon).to_lowercase() => Some(Color::LightSalmon),
-                x if x == stringify!(PinkOrange).to_lowercase() => Some(Color::PinkOrange),
-                x if x == stringify!(DarkSalmon).to_lowercase() => Some(Color::DarkSalmon),
-                x if x == stringify!(Tangerine).to_lowercase() => Some(Color::Tangerine),
-                x if x == stringify!(LightCopper).to_lowercase() => Some(Color::LightCopper),
-                x if x == stringify!(SalmonPink).to_lowercase() => Some(Color::SalmonPink),
-                x if x == stringify!(Salmon).to_lowercase() => Some(Color::Salmon),
-                x if x == stringify!(PeachPink).to_lowercase() => Some(Color::PeachPink),
-                x if x == stringify!(LightCoral).to_lowercase() => Some(Color::LightCoral),
-                x if x == stringify!(PastelRed).to_lowercase() => Some(Color::PastelRed),
-                x if x == stringify!(PinkCoral).to_lowercase() => Some(Color::PinkCoral),
-                x if x == stringify!(BeanRed).to_lowercase() => Some(Color::BeanRed),
-                x if x == stringify!(ValentineRed).to_lowercase() => Some(Color::ValentineRed),
-                x if x == stringify!(IndianRed).to_lowercase() => Some(Color::IndianRed),
-                x if x == stringify!(Tomato).to_lowercase() => Some(Color::Tomato),
-                x if x == stringify!(ShockingOrange).to_lowercase() => Some(Color::ShockingOrange),
-                x if x == stringify!(OrangeRed).to_lowercase() => Some(Color::OrangeRed),
-                x if x == stringify!(Red).to_lowercase() => Some(Color::Red),
-                x if x == stringify!(NeonRed).to_lowercase() => Some(Color::NeonRed),
-                x if x == stringify!(ScarletRed).to_lowercase() => Some(Color::ScarletRed),
-                x if x == stringify!(RubyRed).to_lowercase() => Some(Color::RubyRed),
-                x if x == stringify!(FerrariRed).to_lowercase() => Some(Color::FerrariRed),
-                x if x == stringify!(FireEngineRed).to_lowercase() => Some(Color::FireEngineRed),
-                x if x == stringify!(LavaRed).to_lowercase() => Some(Color::LavaRed),
-                x if x == stringify!(LoveRed).to_lowercase() => Some(Color::LoveRed),
-                x if x == stringify!(Grapefruit).to_lowercase() => Some(Color::Grapefruit),
-                x if x == stringify!(StrawberryRed).to_lowercase() => Some(Color::StrawberryRed),
-                x if x == stringify!(CherryRed).to_lowercase() => Some(Color::CherryRed),
-                x if x == stringify!(ChilliPepper).to_lowercase() => Some(Color::ChilliPepper),
-                x if x == stringify!(FireBrick).to_lowercase() => Some(Color::FireBrick),
-                x if x == stringify!(TomatoSauceRed).to_lowercase() => Some(Color::TomatoSauceRed),
-                x if x == stringify!(Brown).to_lowercase() => Some(Color::Brown),
-                x if x == stringify!(CarbonRed).to_lowercase() => Some(Color::CarbonRed),
-                x if x == stringify!(Cranberry).to_lowercase() => Some(Color::Cranberry),
-                x if x == stringify!(SaffronRed).to_lowercase() => Some(Color::SaffronRed),
-                x if x == stringify!(CrimsonRed).to_lowercase() => Some(Color::CrimsonRed),
-                x if x == stringify!(RedWine).to_lowercase() => Some(Color::RedWine),
-                x if x == stringify!(WineRed).to_lowercase() => Some(Color::WineRed),
-                x if x == stringify!(DarkRed).to_lowercase() => Some(Color::DarkRed),
-                x if x == stringify!(MaroonRed).to_lowercase() => Some(Color::MaroonRed),
-                x if x == stringify!(Maroon).to_lowercase() => Some(Color::Maroon),
-                x if x == stringify!(Burgundy).to_lowercase() => Some(Color::Burgundy),
-                x if x == stringify!(Vermilion).to_lowercase() => Some(Color::Vermilion),
-                x if x == stringify!(DeepRed).to_lowercase() => Some(Color::DeepRed),
-                x if x == stringify!(GarnetRed).to_lowercase() => Some(Color::GarnetRed),
-                x if x == stringify!(RedBlood).to_lowercase() => Some(Color::RedBlood),
-                x if x == stringify!(BloodNight).to_lowercase() => Some(Color::BloodNight),
-                x if x == stringify!(DarkScarlet).to_lowercase() => Some(Color::DarkScarlet),
-                x if x == stringify!(ChocolateBrown).to_lowercase() => Some(Color::ChocolateBrown),
-                x if x == stringify!(BlackBean).to_lowercase() => Some(Color::BlackBean),
-                x if x == stringify!(DarkMaroon).to_lowercase() => Some(Color::DarkMaroon),
-                x if x == stringify!(Midnight).to_lowercase() => Some(Color::Midnight),
-                x if x == stringify!(PurpleLily).to_lowercase() => Some(Color::PurpleLily),
-                x if x == stringify!(PurpleMaroon).to_lowercase() => Some(Color::PurpleMaroon),
-                x if x == stringify!(PlumPie).to_lowercase() => Some(Color::PlumPie),
-                x if x == stringify!(PlumVelvet).to_lowercase() => Some(Color::PlumVelvet),
-                x if x == stringify!(DarkRaspberry).to_lowercase() => Some(Color::DarkRaspberry),
-                x if x == stringify!(VelvetMaroon).to_lowercase() => Some(Color::VelvetMaroon),
-                x if x == stringify!(RosyFinch).to_lowercase() => Some(Color::RosyFinch),
-                x if x == stringify!(DullPurple).to_lowercase() => Some(Color::DullPurple),
-                x if x == stringify!(Puce).to_lowercase() => Some(Color::Puce),
-                x if x == stringify!(RoseDust).to_lowercase() => Some(Color::RoseDust),
-                x if x == stringify!(PastelBrown).to_lowercase() => Some(Color::PastelBrown),
-                x if x == stringify!(RosyPink).to_lowercase() => Some(Color::RosyPink),
-                x if x == stringify!(RosyBrown).to_lowercase() => Some(Color::RosyBrown),
-                x if x == stringify!(KhakiRose).to_lowercase() => Some(Color::KhakiRose),
-                x if x == stringify!(LipstickPink).to_lowercase() => Some(Color::LipstickPink),
-                x if x == stringify!(DuskyPink).to_lowercase() => Some(Color::DuskyPink),
-                x if x == stringify!(PinkBrown).to_lowercase() => Some(Color::PinkBrown),
-                x if x == stringify!(OldRose).to_lowercase() => Some(Color::OldRose),
-                x if x == stringify!(DustyPink).to_lowercase() => Some(Color::DustyPink),
-                x if x == stringify!(PinkDaisy).to_lowercase() => Some(Color::PinkDaisy),
-                x if x == stringify!(Rose).to_lowercase() => Some(Color::Rose),
-                x if x == stringify!(DustyRose).to_lowercase() => Some(Color::DustyRose),
-                x if x == stringify!(SilverPink).to_lowercase() => Some(Color::SilverPink),
-                x if x == stringify!(GoldPink).to_lowercase() => Some(Color::GoldPink),
-                x if x == stringify!(RoseGold).to_lowercase() => Some(Color::RoseGold),
-                x if x == stringify!(DeepPeach).to_lowercase() => Some(Color::DeepPeach),
-                x if x == stringify!(PastelOrange).to_lowercase() => Some(Color::PastelOrange),
-                x if x == stringify!(DesertSand).to_lowercase() => Some(Color::DesertSand),
-                x if x == stringify!(UnbleachedSilk).to_lowercase() => Some(Color::UnbleachedSilk),
-                x if x == stringify!(PigPink).to_lowercase() => Some(Color::PigPink),
-                x if x == stringify!(PalePink).to_lowercase() => Some(Color::PalePink),
-                x if x == stringify!(Blush).to_lowercase() => Some(Color::Blush),
-                x if x == stringify!(MistyRose).to_lowercase() => Some(Color::MistyRose),
-                x if x == stringify!(PinkBubbleGum).to_lowercase() => Some(Color::PinkBubbleGum),
-                x if x == stringify!(LightRose).to_lowercase() => Some(Color::LightRose),
-                x if x == stringify!(LightRed).to_lowercase() => Some(Color::LightRed),
-                x if x == stringify!(RoseQuartz).to_lowercase() => Some(Color::RoseQuartz),
-                x if x == stringify!(WarmPink).to_lowercase() => Some(Color::WarmPink),
-                x if x == stringify!(DeepRose).to_lowercase() => Some(Color::DeepRose),
-                x if x == stringify!(Pink).to_lowercase() => Some(Color::Pink),
-                x if x == stringify!(LightPink).to_lowercase() => Some(Color::LightPink),
-                x if x == stringify!(SoftPink).to_lowercase() => Some(Color::SoftPink),
-                x if x == stringify!(PowderPink).to_lowercase() => Some(Color::PowderPink),
-                x if x == stringify!(DonutPink).to_lowercase() => Some(Color::DonutPink),
-                x if x == stringify!(BabyPink).to_lowercase() => Some(Color::BabyPink),
-                x if x == stringify!(FlamingoPink).to_lowercase() => Some(Color::FlamingoPink),
-                x if x == stringify!(PastelPink).to_lowercase() => Some(Color::PastelPink),
-                x if x == stringify!(RosePink).to_lowercase() => Some(Color::RosePink),
-                x if x == stringify!(CadillacPink).to_lowercase() => Some(Color::CadillacPink),
-                x if x == stringify!(CarnationPink).to_lowercase() => Some(Color::CarnationPink),
-                x if x == stringify!(PastelRose).to_lowercase() => Some(Color::PastelRose),
-                x if x == stringify!(BlushRed).to_lowercase() => Some(Color::BlushRed),
-                x if x == stringify!(PaleVioletRed).to_lowercase() => Some(Color::PaleVioletRed),
-                x if x == stringify!(PurplePink).to_lowercase() => Some(Color::PurplePink),
-                x if x == stringify!(TulipPink).to_lowercase() => Some(Color::TulipPink),
-                x if x == stringify!(BashfulPink).to_lowercase() => Some(Color::BashfulPink),
-                x if x == stringify!(DarkPink).to_lowercase() => Some(Color::DarkPink),
-                x if x == stringify!(DarkHotPink).to_lowercase() => Some(Color::DarkHotPink),
-                x if x == stringify!(HotPink).to_lowercase() => Some(Color::HotPink),
-                x if x == stringify!(WatermelonPink).to_lowercase() => Some(Color::WatermelonPink),
-                x if x == stringify!(VioletRed).to_lowercase() => Some(Color::VioletRed),
-                x if x == stringify!(HotDeepPink).to_lowercase() => Some(Color::HotDeepPink),
-                x if x == stringify!(BrightPink).to_lowercase() => Some(Color::BrightPink),
-                x if x == stringify!(RedMagenta).to_lowercase() => Some(Color::RedMagenta),
-                x if x == stringify!(DeepPink).to_lowercase() => Some(Color::DeepPink),
-                x if x == stringify!(NeonPink).to_lowercase() => Some(Color::NeonPink),
-                x if x == stringify!(ChromePink).to_lowercase() => Some(Color::ChromePink),
-                x if x == stringify!(NeonHotPink).to_lowercase() => Some(Color::NeonHotPink),
-                x if x == stringify!(PinkCupcake).to_lowercase() => Some(Color::PinkCupcake),
-                x if x == stringify!(RoyalPink).to_lowercase() => Some(Color::RoyalPink),
-                x if x == stringify!(DimorphothecaMagenta).to_lowercase() => {
+                } else if idx == 477usize {
+                    Some(Color::LightSalmon)
+                } else if idx == 478usize {
+                    Some(Color::PinkOrange)
+                } else if idx == 479usize {
+                    Some(Color::DarkSalmon)
+                } else if idx == 480usize {
+                    Some(Color::Tangerine)
+                } else if idx == 481usize {
+                    Some(Color::LightCopper)
+                } else if idx == 482usize {
+                    Some(Color::SalmonPink)
+                } else if idx == 483usize {
+                    Some(Color::Salmon)
+                } else if idx == 484usize {
+                    Some(Color::PeachPink)
+                } else if idx == 485usize {
+                    Some(Color::LightCoral)
+                } else if idx == 486usize {
+                    Some(Color::PastelRed)
+                } else if idx == 487usize {
+                    Some(Color::PinkCoral)
+                } else if idx == 488usize {
+                    Some(Color::BeanRed)
+                } else if idx == 489usize {
+                    Some(Color::ValentineRed)
+                } else if idx == 490usize {
+                    Some(Color::IndianRed)
+                } else if idx == 491usize {
+                    Some(Color::Tomato)
+                } else if idx == 492usize {
+                    Some(Color::ShockingOrange)
+                } else if idx == 493usize {
+                    Some(Color::OrangeRed)
+                } else if idx == 494usize {
+                    Some(Color::Red)
+                } else if idx == 495usize {
+                    Some(Color::NeonRed)
+                } else if idx == 496usize {
+                    Some(Color::ScarletRed)
+                } else if idx == 497usize {
+                    Some(Color::RubyRed)
+                } else if idx == 498usize {
+                    Some(Color::FerrariRed)
+                } else if idx == 499usize {
+                    Some(Color::FireEngineRed)
+                } else if idx == 500usize {
+                    Some(Color::LavaRed)
+                } else if idx == 501usize {
+                    Some(Color::LoveRed)
+                } else if idx == 502usize {
+                    Some(Color::Grapefruit)
+                } else if idx == 503usize {
+                    Some(Color::StrawberryRed)
+                } else if idx == 504usize {
+                    Some(Color::CherryRed)
+                } else if idx == 505usize {
+                    Some(Color::ChilliPepper)
+                } else if idx == 506usize {
+                    Some(Color::FireBrick)
+                } else if idx == 507usize {
+                    Some(Color::TomatoSauceRed)
+                } else if idx == 508usize {
+                    Some(Color::Brown)
+                } else if idx == 509usize {
+                    Some(Color::CarbonRed)
+                } else if idx == 510usize {
+                    Some(Color::Cranberry)
+                } else if idx == 511usize {
+                    Some(Color::SaffronRed)
+                } else if idx == 512usize {
+                    Some(Color::CrimsonRed)
+                } else if idx == 513usize {
+                    Some(Color::RedWine)
+                } else if idx == 514usize {
+                    Some(Color::WineRed)
+                } else if idx == 515usize {
+                    Some(Color::DarkRed)
+                } else if idx == 516usize {
+                    Some(Color::MaroonRed)
+                } else if idx == 517usize {
+                    Some(Color::Maroon)
+                } else if idx == 518usize {
+                    Some(Color::Burgundy)
+                } else if idx == 519usize {
+                    Some(Color::Vermilion)
+                } else if idx == 520usize {
+                    Some(Color::DeepRed)
+                } else if idx == 521usize {
+                    Some(Color::GarnetRed)
+                } else if idx == 522usize {
+                    Some(Color::RedBlood)
+                } else if idx == 523usize {
+                    Some(Color::BloodNight)
+                } else if idx == 524usize {
+                    Some(Color::DarkScarlet)
+                } else if idx == 525usize {
+                    Some(Color::ChocolateBrown)
+                } else if idx == 526usize {
+                    Some(Color::BlackBean)
+                } else if idx == 527usize {
+                    Some(Color::DarkMaroon)
+                } else if idx == 528usize {
+                    Some(Color::Midnight)
+                } else if idx == 529usize {
+                    Some(Color::PurpleLily)
+                } else if idx == 530usize {
+                    Some(Color::PurpleMaroon)
+                } else if idx == 531usize {
+                    Some(Color::PlumPie)
+                } else if idx == 532usize {
+                    Some(Color::PlumVelvet)
+                } else if idx == 533usize {
+                    Some(Color::DarkRaspberry)
+                } else if idx == 534usize {
+                    Some(Color::VelvetMaroon)
+                } else if idx == 535usize {
+                    Some(Color::RosyFinch)
+                } else if idx == 536usize {
+                    Some(Color::DullPurple)
+                } else if idx == 537usize {
+                    Some(Color::Puce)
+                } else if idx == 538usize {
+                    Some(Color::RoseDust)
+                } else if idx == 539usize {
+                    Some(Color::PastelBrown)
+                } else if idx == 540usize {
+                    Some(Color::RosyPink)
+                } else if idx == 541usize {
+                    Some(Color::RosyBrown)
+                } else if idx == 542usize {
+                    Some(Color::KhakiRose)
+                } else if idx == 543usize {
+                    Some(Color::LipstickPink)
+                } else if idx == 544usize {
+                    Some(Color::DuskyPink)
+                } else if idx == 545usize {
+                    Some(Color::PinkBrown)
+                } else if idx == 546usize {
+                    Some(Color::OldRose)
+                } else if idx == 547usize {
+                    Some(Color::DustyPink)
+                } else if idx == 548usize {
+                    Some(Color::PinkDaisy)
+                } else if idx == 549usize {
+                    Some(Color::Rose)
+                } else if idx == 550usize {
+                    Some(Color::DustyRose)
+                } else if idx == 551usize {
+                    Some(Color::SilverPink)
+                } else if idx == 552usize {
+                    Some(Color::GoldPink)
+                } else if idx == 553usize {
+                    Some(Color::RoseGold)
+                } else if idx == 554usize {
+                    Some(Color::DeepPeach)
+                } else if idx == 555usize {
+                    Some(Color::PastelOrange)
+                } else if idx == 556usize {
+                    Some(Color::DesertSand)
+                } else if idx == 557usize {
+                    Some(Color::UnbleachedSilk)
+                } else if idx == 558usize {
+                    Some(Color::PigPink)
+                } else if idx == 559usize {
+                    Some(Color::PalePink)
+                } else if idx == 560usize {
+                    Some(Color::Blush)
+                } else if idx == 561usize {
+                    Some(Color::MistyRose)
+                } else if idx == 562usize {
+                    Some(Color::PinkBubbleGum)
+                } else if idx == 563usize {
+                    Some(Color::LightRose)
+                } else if idx == 564usize {
+                    Some(Color::LightRed)
+                } else if idx == 565usize {
+                    Some(Color::RoseQuartz)
+                } else if idx == 566usize {
+                    Some(Color::WarmPink)
+                } else if idx == 567usize {
+                    Some(Color::DeepRose)
+                } else if idx == 568usize {
+                    Some(Color::Pink)
+                } else if idx == 569usize {
+                    Some(Color::LightPink)
+                } else if idx == 570usize {
+                    Some(Color::SoftPink)
+                } else if idx == 571usize {
+                    Some(Color::PowderPink)
+                } else if idx == 572usize {
+                    Some(Color::DonutPink)
+                } else if idx == 573usize {
+                    Some(Color::BabyPink)
+                } else if idx == 574usize {
+                    Some(Color::FlamingoPink)
+                } else if idx == 575usize {
+                    Some(Color::PastelPink)
+                } else if idx == 576usize {
+                    Some(Color::RosePink)
+                } else if idx == 577usize {
+                    Some(Color::CadillacPink)
+                } else if idx == 578usize {
+                    Some(Color::CarnationPink)
+                } else if idx == 579usize {
+                    Some(Color::PastelRose)
+                } else if idx == 580usize {
+                    Some(Color::BlushRed)
+                } else if idx == 581usize {
+                    Some(Color::PaleVioletRed)
+                } else if idx == 582usize {
+                    Some(Color::PurplePink)
+                } else if idx == 583usize {
+                    Some(Color::TulipPink)
+                } else if idx == 584usize {
+                    Some(Color::BashfulPink)
+                } else if idx == 585usize {
+                    Some(Color::DarkPink)
+                } else if idx == 586usize {
+                    Some(Color::DarkHotPink)
+                } else if idx == 587usize {
+                    Some(Color::HotPink)
+                } else if idx == 588usize {
+                    Some(Color::WatermelonPink)
+                } else if idx == 589usize {
+                    Some(Color::VioletRed)
+                } else if idx == 590usize {
+                    Some(Color::HotDeepPink)
+                } else if idx == 591usize {
+                    Some(Color::BrightPink)
+                } else if idx == 592usize {
+                    Some(Color::RedMagenta)
+                } else if idx == 593usize {
+                    Some(Color::DeepPink)
+                } else if idx == 594usize {
+                    Some(Color::NeonPink)
+                } else if idx == 595usize {
+                    Some(Color::ChromePink)
+                } else if idx == 596usize {
+                    Some(Color::NeonHotPink)
+                } else if idx == 597usize {
+                    Some(Color::PinkCupcake)
+                } else if idx == 598usize {
+                    Some(Color::RoyalPink)
+                } else if idx == 599usize {
                     Some(Color::DimorphothecaMagenta)
-                }
-                x if x == stringify!(BarbiePink).to_lowercase() => Some(Color::BarbiePink),
-                x if x == stringify!(PinkLemonade).to_lowercase() => Some(Color::PinkLemonade),
-                x if x == stringify!(RedPink).to_lowercase() => Some(Color::RedPink),
-                x if x == stringify!(Raspberry).to_lowercase() => Some(Color::Raspberry),
-                x if x == stringify!(Crimson).to_lowercase() => Some(Color::Crimson),
-                x if x == stringify!(BrightMaroon).to_lowercase() => Some(Color::BrightMaroon),
-                x if x == stringify!(RoseRed).to_lowercase() => Some(Color::RoseRed),
-                x if x == stringify!(RoguePink).to_lowercase() => Some(Color::RoguePink),
-                x if x == stringify!(BurntPink).to_lowercase() => Some(Color::BurntPink),
-                x if x == stringify!(PinkViolet).to_lowercase() => Some(Color::PinkViolet),
-                x if x == stringify!(MagentaPink).to_lowercase() => Some(Color::MagentaPink),
-                x if x == stringify!(MediumVioletRed).to_lowercase() => {
+                } else if idx == 600usize {
+                    Some(Color::BarbiePink)
+                } else if idx == 601usize {
+                    Some(Color::PinkLemonade)
+                } else if idx == 602usize {
+                    Some(Color::RedPink)
+                } else if idx == 603usize {
+                    Some(Color::Raspberry)
+                } else if idx == 604usize {
+                    Some(Color::Crimson)
+                } else if idx == 605usize {
+                    Some(Color::BrightMaroon)
+                } else if idx == 606usize {
+                    Some(Color::RoseRed)
+                } else if idx == 607usize {
+                    Some(Color::RoguePink)
+                } else if idx == 608usize {
+                    Some(Color::BurntPink)
+                } else if idx == 609usize {
+                    Some(Color::PinkViolet)
+                } else if idx == 610usize {
+                    Some(Color::MagentaPink)
+                } else if idx == 611usize {
                     Some(Color::MediumVioletRed)
-                }
-                x if x == stringify!(DarkCarnationPink).to_lowercase() => {
+                } else if idx == 612usize {
                     Some(Color::DarkCarnationPink)
-                }
-                x if x == stringify!(RaspberryPurple).to_lowercase() => {
+                } else if idx == 613usize {
                     Some(Color::RaspberryPurple)
-                }
-                x if x == stringify!(PinkPlum).to_lowercase() => Some(Color::PinkPlum),
-                x if x == stringify!(Orchid).to_lowercase() => Some(Color::Orchid),
-                x if x == stringify!(DeepMauve).to_lowercase() => Some(Color::DeepMauve),
-                x if x == stringify!(Violet).to_lowercase() => Some(Color::Violet),
-                x if x == stringify!(FuchsiaPink).to_lowercase() => Some(Color::FuchsiaPink),
-                x if x == stringify!(BrightNeonPink).to_lowercase() => Some(Color::BrightNeonPink),
-                x if x == stringify!(Magenta).to_lowercase() => Some(Color::Magenta),
-                x if x == stringify!(Fuchsia).to_lowercase() => Some(Color::Fuchsia),
-                x if x == stringify!(CrimsonPurple).to_lowercase() => Some(Color::CrimsonPurple),
-                x if x == stringify!(HeliotropePurple).to_lowercase() => {
+                } else if idx == 614usize {
+                    Some(Color::PinkPlum)
+                } else if idx == 615usize {
+                    Some(Color::Orchid)
+                } else if idx == 616usize {
+                    Some(Color::DeepMauve)
+                } else if idx == 617usize {
+                    Some(Color::Violet)
+                } else if idx == 618usize {
+                    Some(Color::FuchsiaPink)
+                } else if idx == 619usize {
+                    Some(Color::BrightNeonPink)
+                } else if idx == 620usize {
+                    Some(Color::Magenta)
+                } else if idx == 621usize {
+                    Some(Color::Fuchsia)
+                } else if idx == 622usize {
+                    Some(Color::CrimsonPurple)
+                } else if idx == 623usize {
                     Some(Color::HeliotropePurple)
-                }
-                x if x == stringify!(TyrianPurple).to_lowercase() => Some(Color::TyrianPurple),
-                x if x == stringify!(MediumOrchid).to_lowercase() => Some(Color::MediumOrchid),
-                x if x == stringify!(PurpleFlower).to_lowercase() => Some(Color::PurpleFlower),
-                x if x == stringify!(OrchidPurple).to_lowercase() => Some(Color::OrchidPurple),
-                x if x == stringify!(RichLilac).to_lowercase() => Some(Color::RichLilac),
-                x if x == stringify!(PastelViolet).to_lowercase() => Some(Color::PastelViolet),
-                x if x == stringify!(Rosy).to_lowercase() => Some(Color::Rosy),
-                x if x == stringify!(MauveTaupe).to_lowercase() => Some(Color::MauveTaupe),
-                x if x == stringify!(ViolaPurple).to_lowercase() => Some(Color::ViolaPurple),
-                x if x == stringify!(Eggplant).to_lowercase() => Some(Color::Eggplant),
-                x if x == stringify!(PlumPurple).to_lowercase() => Some(Color::PlumPurple),
-                x if x == stringify!(Grape).to_lowercase() => Some(Color::Grape),
-                x if x == stringify!(PurpleNavy).to_lowercase() => Some(Color::PurpleNavy),
-                x if x == stringify!(SlateBlue).to_lowercase() => Some(Color::SlateBlue),
-                x if x == stringify!(BlueLotus).to_lowercase() => Some(Color::BlueLotus),
-                x if x == stringify!(Blurple).to_lowercase() => Some(Color::Blurple),
-                x if x == stringify!(LightSlateBlue).to_lowercase() => Some(Color::LightSlateBlue),
-                x if x == stringify!(MediumSlateBlue).to_lowercase() => {
+                } else if idx == 624usize {
+                    Some(Color::TyrianPurple)
+                } else if idx == 625usize {
+                    Some(Color::MediumOrchid)
+                } else if idx == 626usize {
+                    Some(Color::PurpleFlower)
+                } else if idx == 627usize {
+                    Some(Color::OrchidPurple)
+                } else if idx == 628usize {
+                    Some(Color::RichLilac)
+                } else if idx == 629usize {
+                    Some(Color::PastelViolet)
+                } else if idx == 630usize {
+                    Some(Color::Rosy)
+                } else if idx == 631usize {
+                    Some(Color::MauveTaupe)
+                } else if idx == 632usize {
+                    Some(Color::ViolaPurple)
+                } else if idx == 633usize {
+                    Some(Color::Eggplant)
+                } else if idx == 634usize {
+                    Some(Color::PlumPurple)
+                } else if idx == 635usize {
+                    Some(Color::Grape)
+                } else if idx == 636usize {
+                    Some(Color::PurpleNavy)
+                } else if idx == 637usize {
+                    Some(Color::SlateBlue)
+                } else if idx == 638usize {
+                    Some(Color::BlueLotus)
+                } else if idx == 639usize {
+                    Some(Color::Blurple)
+                } else if idx == 640usize {
+                    Some(Color::LightSlateBlue)
+                } else if idx == 641usize {
                     Some(Color::MediumSlateBlue)
-                }
-                x if x == stringify!(PeriwinklePurple).to_lowercase() => {
+                } else if idx == 642usize {
                     Some(Color::PeriwinklePurple)
-                }
-                x if x == stringify!(VeryPeri).to_lowercase() => Some(Color::VeryPeri),
-                x if x == stringify!(BrightGrape).to_lowercase() => Some(Color::BrightGrape),
-                x if x == stringify!(BrightPurple).to_lowercase() => Some(Color::BrightPurple),
-                x if x == stringify!(PurpleAmethyst).to_lowercase() => Some(Color::PurpleAmethyst),
-                x if x == stringify!(BlueMagenta).to_lowercase() => Some(Color::BlueMagenta),
-                x if x == stringify!(DarkBlurple).to_lowercase() => Some(Color::DarkBlurple),
-                x if x == stringify!(DeepPeriwinkle).to_lowercase() => Some(Color::DeepPeriwinkle),
-                x if x == stringify!(DarkSlateBlue).to_lowercase() => Some(Color::DarkSlateBlue),
-                x if x == stringify!(PurpleHaze).to_lowercase() => Some(Color::PurpleHaze),
-                x if x == stringify!(PurpleIris).to_lowercase() => Some(Color::PurpleIris),
-                x if x == stringify!(DarkPurple).to_lowercase() => Some(Color::DarkPurple),
-                x if x == stringify!(DeepPurple).to_lowercase() => Some(Color::DeepPurple),
-                x if x == stringify!(MidnightPurple).to_lowercase() => Some(Color::MidnightPurple),
-                x if x == stringify!(PurpleMonster).to_lowercase() => Some(Color::PurpleMonster),
-                x if x == stringify!(Indigo).to_lowercase() => Some(Color::Indigo),
-                x if x == stringify!(BlueWhale).to_lowercase() => Some(Color::BlueWhale),
-                x if x == stringify!(RebeccaPurple).to_lowercase() => Some(Color::RebeccaPurple),
-                x if x == stringify!(PurpleJam).to_lowercase() => Some(Color::PurpleJam),
-                x if x == stringify!(DarkMagenta).to_lowercase() => Some(Color::DarkMagenta),
-                x if x == stringify!(Purple).to_lowercase() => Some(Color::Purple),
-                x if x == stringify!(FrenchLilac).to_lowercase() => Some(Color::FrenchLilac),
-                x if x == stringify!(DarkOrchid).to_lowercase() => Some(Color::DarkOrchid),
-                x if x == stringify!(DarkViolet).to_lowercase() => Some(Color::DarkViolet),
-                x if x == stringify!(PurpleViolet).to_lowercase() => Some(Color::PurpleViolet),
-                x if x == stringify!(JasminePurple).to_lowercase() => Some(Color::JasminePurple),
-                x if x == stringify!(PurpleDaffodil).to_lowercase() => Some(Color::PurpleDaffodil),
-                x if x == stringify!(ClematisViolet).to_lowercase() => Some(Color::ClematisViolet),
-                x if x == stringify!(BlueViolet).to_lowercase() => Some(Color::BlueViolet),
-                x if x == stringify!(PurpleSageBush).to_lowercase() => Some(Color::PurpleSageBush),
-                x if x == stringify!(LovelyPurple).to_lowercase() => Some(Color::LovelyPurple),
-                x if x == stringify!(NeonPurple).to_lowercase() => Some(Color::NeonPurple),
-                x if x == stringify!(PurplePlum).to_lowercase() => Some(Color::PurplePlum),
-                x if x == stringify!(AztechPurple).to_lowercase() => Some(Color::AztechPurple),
-                x if x == stringify!(MediumPurple).to_lowercase() => Some(Color::MediumPurple),
-                x if x == stringify!(LightPurple).to_lowercase() => Some(Color::LightPurple),
-                x if x == stringify!(CrocusPurple).to_lowercase() => Some(Color::CrocusPurple),
-                x if x == stringify!(PurpleMimosa).to_lowercase() => Some(Color::PurpleMimosa),
-                x if x == stringify!(PastelIndigo).to_lowercase() => Some(Color::PastelIndigo),
-                x if x == stringify!(LavenderPurple).to_lowercase() => Some(Color::LavenderPurple),
-                x if x == stringify!(RosePurple).to_lowercase() => Some(Color::RosePurple),
-                x if x == stringify!(Viola).to_lowercase() => Some(Color::Viola),
-                x if x == stringify!(Periwinkle).to_lowercase() => Some(Color::Periwinkle),
-                x if x == stringify!(PaleLilac).to_lowercase() => Some(Color::PaleLilac),
-                x if x == stringify!(Lilac).to_lowercase() => Some(Color::Lilac),
-                x if x == stringify!(Mauve).to_lowercase() => Some(Color::Mauve),
-                x if x == stringify!(BrightLilac).to_lowercase() => Some(Color::BrightLilac),
-                x if x == stringify!(PurpleDragon).to_lowercase() => Some(Color::PurpleDragon),
-                x if x == stringify!(Plum).to_lowercase() => Some(Color::Plum),
-                x if x == stringify!(BlushPink).to_lowercase() => Some(Color::BlushPink),
-                x if x == stringify!(PastelPurple).to_lowercase() => Some(Color::PastelPurple),
-                x if x == stringify!(BlossomPink).to_lowercase() => Some(Color::BlossomPink),
-                x if x == stringify!(WisteriaPurple).to_lowercase() => Some(Color::WisteriaPurple),
-                x if x == stringify!(PurpleThistle).to_lowercase() => Some(Color::PurpleThistle),
-                x if x == stringify!(Thistle).to_lowercase() => Some(Color::Thistle),
-                x if x == stringify!(PurpleWhite).to_lowercase() => Some(Color::PurpleWhite),
-                x if x == stringify!(PeriwinklePink).to_lowercase() => Some(Color::PeriwinklePink),
-                x if x == stringify!(CottonCandy).to_lowercase() => Some(Color::CottonCandy),
-                x if x == stringify!(LavenderPinocchio).to_lowercase() => {
+                } else if idx == 643usize {
+                    Some(Color::VeryPeri)
+                } else if idx == 644usize {
+                    Some(Color::BrightGrape)
+                } else if idx == 645usize {
+                    Some(Color::BrightPurple)
+                } else if idx == 646usize {
+                    Some(Color::PurpleAmethyst)
+                } else if idx == 647usize {
+                    Some(Color::BlueMagenta)
+                } else if idx == 648usize {
+                    Some(Color::DarkBlurple)
+                } else if idx == 649usize {
+                    Some(Color::DeepPeriwinkle)
+                } else if idx == 650usize {
+                    Some(Color::DarkSlateBlue)
+                } else if idx == 651usize {
+                    Some(Color::PurpleHaze)
+                } else if idx == 652usize {
+                    Some(Color::PurpleIris)
+                } else if idx == 653usize {
+                    Some(Color::DarkPurple)
+                } else if idx == 654usize {
+                    Some(Color::DeepPurple)
+                } else if idx == 655usize {
+                    Some(Color::MidnightPurple)
+                } else if idx == 656usize {
+                    Some(Color::PurpleMonster)
+                } else if idx == 657usize {
+                    Some(Color::Indigo)
+                } else if idx == 658usize {
+                    Some(Color::BlueWhale)
+                } else if idx == 659usize {
+                    Some(Color::RebeccaPurple)
+                } else if idx == 660usize {
+                    Some(Color::PurpleJam)
+                } else if idx == 661usize {
+                    Some(Color::DarkMagenta)
+                } else if idx == 662usize {
+                    Some(Color::Purple)
+                } else if idx == 663usize {
+                    Some(Color::FrenchLilac)
+                } else if idx == 664usize {
+                    Some(Color::DarkOrchid)
+                } else if idx == 665usize {
+                    Some(Color::DarkViolet)
+                } else if idx == 666usize {
+                    Some(Color::PurpleViolet)
+                } else if idx == 667usize {
+                    Some(Color::JasminePurple)
+                } else if idx == 668usize {
+                    Some(Color::PurpleDaffodil)
+                } else if idx == 669usize {
+                    Some(Color::ClematisViolet)
+                } else if idx == 670usize {
+                    Some(Color::BlueViolet)
+                } else if idx == 671usize {
+                    Some(Color::PurpleSageBush)
+                } else if idx == 672usize {
+                    Some(Color::LovelyPurple)
+                } else if idx == 673usize {
+                    Some(Color::NeonPurple)
+                } else if idx == 674usize {
+                    Some(Color::PurplePlum)
+                } else if idx == 675usize {
+                    Some(Color::AztechPurple)
+                } else if idx == 676usize {
+                    Some(Color::MediumPurple)
+                } else if idx == 677usize {
+                    Some(Color::LightPurple)
+                } else if idx == 678usize {
+                    Some(Color::CrocusPurple)
+                } else if idx == 679usize {
+                    Some(Color::PurpleMimosa)
+                } else if idx == 680usize {
+                    Some(Color::PastelIndigo)
+                } else if idx == 681usize {
+                    Some(Color::LavenderPurple)
+                } else if idx == 682usize {
+                    Some(Color::RosePurple)
+                } else if idx == 683usize {
+                    Some(Color::Viola)
+                } else if idx == 684usize {
+                    Some(Color::Periwinkle)
+                } else if idx == 685usize {
+                    Some(Color::PaleLilac)
+                } else if idx == 686usize {
+                    Some(Color::Lilac)
+                } else if idx == 687usize {
+                    Some(Color::Mauve)
+                } else if idx == 688usize {
+                    Some(Color::BrightLilac)
+                } else if idx == 689usize {
+                    Some(Color::PurpleDragon)
+                } else if idx == 690usize {
+                    Some(Color::Plum)
+                } else if idx == 691usize {
+                    Some(Color::BlushPink)
+                } else if idx == 692usize {
+                    Some(Color::PastelPurple)
+                } else if idx == 693usize {
+                    Some(Color::BlossomPink)
+                } else if idx == 694usize {
+                    Some(Color::WisteriaPurple)
+                } else if idx == 695usize {
+                    Some(Color::PurpleThistle)
+                } else if idx == 696usize {
+                    Some(Color::Thistle)
+                } else if idx == 697usize {
+                    Some(Color::PurpleWhite)
+                } else if idx == 698usize {
+                    Some(Color::PeriwinklePink)
+                } else if idx == 699usize {
+                    Some(Color::CottonCandy)
+                } else if idx == 700usize {
                     Some(Color::LavenderPinocchio)
+                } else if idx == 701usize {
+                    Some(Color::DarkWhite)
+                } else if idx == 702usize {
+                    Some(Color::AshWhite)
+                } else if idx == 703usize {
+                    Some(Color::WarmWhite)
+                } else if idx == 704usize {
+                    Some(Color::WhiteChocolate)
+                } else if idx == 705usize {
+                    Some(Color::CreamyWhite)
+                } else if idx == 706usize {
+                    Some(Color::OffWhite)
+                } else if idx == 707usize {
+                    Some(Color::SoftIvory)
+                } else if idx == 708usize {
+                    Some(Color::CosmicLatte)
+                } else if idx == 709usize {
+                    Some(Color::PearlWhite)
+                } else if idx == 710usize {
+                    Some(Color::RedWhite)
+                } else if idx == 711usize {
+                    Some(Color::LavenderBlush)
+                } else if idx == 712usize {
+                    Some(Color::Pearl)
+                } else if idx == 713usize {
+                    Some(Color::EggShell)
+                } else if idx == 714usize {
+                    Some(Color::OldLace)
+                } else if idx == 715usize {
+                    Some(Color::WhiteIce)
+                } else if idx == 716usize {
+                    Some(Color::Linen)
+                } else if idx == 717usize {
+                    Some(Color::SeaShell)
+                } else if idx == 718usize {
+                    Some(Color::BoneWhite)
+                } else if idx == 719usize {
+                    Some(Color::Rice)
+                } else if idx == 720usize {
+                    Some(Color::FloralWhite)
+                } else if idx == 721usize {
+                    Some(Color::Ivory)
+                } else if idx == 722usize {
+                    Some(Color::WhiteGold)
+                } else if idx == 723usize {
+                    Some(Color::LightWhite)
+                } else if idx == 724usize {
+                    Some(Color::Cotton)
+                } else if idx == 725usize {
+                    Some(Color::Snow)
+                } else if idx == 726usize {
+                    Some(Color::MilkWhite)
+                } else if idx == 727usize {
+                    Some(Color::HalfWhite)
+                } else if idx == 728usize {
+                    Some(Color::White)
+                } else {
+                    None
                 }
-                x if x == stringify!(DarkWhite).to_lowercase() => Some(Color::DarkWhite),
-                x if x == stringify!(AshWhite).to_lowercase() => Some(Color::AshWhite),
-                x if x == stringify!(WarmWhite).to_lowercase() => Some(Color::WarmWhite),
-                x if x == stringify!(WhiteChocolate).to_lowercase() => Some(Color::WhiteChocolate),
-                x if x == stringify!(CreamyWhite).to_lowercase() => Some(Color::CreamyWhite),
-                x if x == stringify!(OffWhite).to_lowercase() => Some(Color::OffWhite),
-                x if x == stringify!(SoftIvory).to_lowercase() => Some(Color::SoftIvory),
-                x if x == stringify!(CosmicLatte).to_lowercase() => Some(Color::CosmicLatte),
-                x if x == stringify!(PearlWhite).to_lowercase() => Some(Color::PearlWhite),
-                x if x == stringify!(RedWhite).to_lowercase() => Some(Color::RedWhite),
-                x if x == stringify!(LavenderBlush).to_lowercase() => Some(Color::LavenderBlush),
-                x if x == stringify!(Pearl).to_lowercase() => Some(Color::Pearl),
-                x if x == stringify!(EggShell).to_lowercase() => Some(Color::EggShell),
-                x if x == stringify!(OldLace).to_lowercase() => Some(Color::OldLace),
-                x if x == stringify!(WhiteIce).to_lowercase() => Some(Color::WhiteIce),
-                x if x == stringify!(Linen).to_lowercase() => Some(Color::Linen),
-                x if x == stringify!(SeaShell).to_lowercase() => Some(Color::SeaShell),
-                x if x == stringify!(BoneWhite).to_lowercase() => Some(Color::BoneWhite),
-                x if x == stringify!(Rice).to_lowercase() => Some(Color::Rice),
-                x if x == stringify!(FloralWhite).to_lowercase() => Some(Color::FloralWhite),
-                x if x == stringify!(Ivory).to_lowercase() => Some(Color::Ivory),
-                x if x == stringify!(WhiteGold).to_lowercase() => Some(Color::WhiteGold),
-                x if x == stringify!(LightWhite).to_lowercase() => Some(Color::LightWhite),
-                x if x == stringify!(Cotton).to_lowercase() => Some(Color::Cotton),
-                x if x == stringify!(Snow).to_lowercase() => Some(Color::Snow),
-                x if x == stringify!(MilkWhite).to_lowercase() => Some(Color::MilkWhite),
-                x if x == stringify!(HalfWhite).to_lowercase() => Some(Color::HalfWhite),
-                x if x == stringify!(White).to_lowercase() => Some(Color::White),
-                _ => None,
-            }
+            })
         }
     }
     #[doc = r" Get the RGB values of a color"]
