@@ -23,12 +23,12 @@ mod tests {
         assert_eq!(c.rgb_hex(), "#E4287C".to_string());
         assert_eq!(c.name(), "Pink Lemonade");
 
-        // // Hex codes matching named colors return that color
-        // assert_eq!(Color::convert_str("#E4287C").unwrap(), Color::PinkLemonade);
-        // // Case is normalized
-        // assert_eq!(Color::convert_str("#E4287c").unwrap(), Color::PinkLemonade);
-        // // Short hex codes are expanded
-        // assert_eq!(Color::convert_str("#fff").unwrap(), Color::White);
+        // Hex codes matching named colors return that color
+        assert_eq!(Color::convert_str("#E4287C").unwrap(), Color::PinkLemonade);
+        // Case is normalized
+        assert_eq!(Color::convert_str("#E4287c").unwrap(), Color::PinkLemonade);
+        // Short hex codes are expanded
+        assert_eq!(Color::convert_str("#fff").unwrap(), Color::White);
         Ok(())
     }
 }

@@ -1471,8 +1471,7 @@ static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
 });
 impl Color {
     pub fn convert_str(name: &str) -> Option<Self> {
-        if let Some(name) = name.strip_prefix('#') {
-            let hex = &name[1..];
+        if let Some(hex) = name.strip_prefix('#') {
             let (r, g, b) = match hex.len() {
                 6 => {
                     let r = u8::from_str_radix(&hex[0..2], 16).ok()?;

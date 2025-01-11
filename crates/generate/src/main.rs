@@ -115,7 +115,7 @@ fn main() {
             let enum_tokens = {
                 let color_data: Vec<_> = colors::COLORS.iter().collect();
 
-                let indices: Vec<_> = (0..color_data.len()).collect();
+                let color_indices: Vec<_> = (0..color_data.len()).collect();
                 let color_idents: Vec<_> = color_data
                     .iter()
                     .map(|(name, _hex)| {
@@ -123,9 +123,7 @@ fn main() {
                         quote::format_ident!("{}", ident)
                     })
                     .collect();
-
                 let color_hexes: Vec<_> = color_data.iter().map(|(_, hex)| hex).collect();
-                let color_indices: Vec<_> = indices.iter().collect();
 
                 quote::quote! {
                     use std::collections::HashMap;
@@ -151,9 +149,7 @@ fn main() {
 
                     impl Color {
                         pub fn convert_str(name: &str) -> Option<Self> {
-                            if let Some(name) = name.strip_prefix('#') {
-                                // Handle hex codes
-                                let hex = &name[1..];
+                            if let Some(hex) = name.strip_prefix('#') {
                                 let (r, g, b) = match hex.len() {
                                     6 => {
                                         let r = u8::from_str_radix(&hex[0..2], 16).ok()?;
