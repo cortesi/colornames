@@ -49,7 +49,7 @@ fn main() {
                         "https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/{}.png",
                         swatch_name
                     );
-                    println!("<td style='padding: 5px;'><img src=\"{}\" width=\"50\" height=\"20\"></td>", swatch_url);
+                    println!("<td style='padding: 5px;'><img src=\"{}\" width=\"50\" height=\"20\" style=\"max-width: 60px;\"></td>", swatch_url);
                     println!("<td style='padding: 5px;'>{}</td>", name);
                 }
                 println!("</tr>");
