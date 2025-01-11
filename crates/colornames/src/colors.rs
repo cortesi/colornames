@@ -1,12 +1,10 @@
 use crate::COLORS;
 use once_cell::sync::Lazy;
 use std::collections::HashMap;
-
 #[doc = r" Normalize a color name by lowercasing and removing whitespace"]
 fn norm_name(name: &str) -> String {
     name.replace(" ", "").to_lowercase()
 }
-
 #[doc = r" A list of named colors"]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Color {
@@ -749,6 +747,738 @@ static NAME_MAP: Lazy<HashMap<String, usize>> = Lazy::new(|| {
     }
     m
 });
+#[doc = r" Array of color variants matching the order of COLORS array"]
+pub static VARIANTS: &[Color] = &[
+    Color::Black,
+    Color::BlackBlue,
+    Color::Night,
+    Color::Charcoal,
+    Color::Oil,
+    Color::StormyGray,
+    Color::LightBlack,
+    Color::DarkSteampunk,
+    Color::BlackCat,
+    Color::Iridium,
+    Color::BlackEel,
+    Color::BlackCow,
+    Color::GrayWolf,
+    Color::VampireGray,
+    Color::IronGray,
+    Color::GrayDolphin,
+    Color::CarbonGray,
+    Color::AshGray,
+    Color::DimGray,
+    Color::DimGrey,
+    Color::NardoGray,
+    Color::CloudyGray,
+    Color::SmokeyGray,
+    Color::AlienGray,
+    Color::SonicSilver,
+    Color::PlatinumGray,
+    Color::Granite,
+    Color::Gray,
+    Color::Grey,
+    Color::BattleshipGray,
+    Color::SheetMetal,
+    Color::DarkGainsboro,
+    Color::GunmetalGray,
+    Color::ColdMetal,
+    Color::StainlessSteelGray,
+    Color::DarkGrey,
+    Color::DarkGray,
+    Color::ChromeAluminum,
+    Color::GrayCloud,
+    Color::Metal,
+    Color::Silver,
+    Color::Steampunk,
+    Color::PaleSilver,
+    Color::GearSteelGray,
+    Color::GrayGoose,
+    Color::PlatinumSilver,
+    Color::LightGrey,
+    Color::LightGray,
+    Color::SilverWhite,
+    Color::Gainsboro,
+    Color::LightSteelGray,
+    Color::WhiteSmoke,
+    Color::WhiteGray,
+    Color::Platinum,
+    Color::MetallicSilver,
+    Color::BlueGray,
+    Color::RomanSilver,
+    Color::LightSlateGrey,
+    Color::LightSlateGray,
+    Color::SlateGrey,
+    Color::SlateGray,
+    Color::RatGray,
+    Color::SlateGraniteGray,
+    Color::JetGray,
+    Color::MistBlue,
+    Color::SteelGray,
+    Color::MarbleBlue,
+    Color::SlateBlueGray,
+    Color::LightPurpleBlue,
+    Color::AzureBlue,
+    Color::EstorilBlue,
+    Color::BlueJay,
+    Color::CharcoalBlue,
+    Color::DarkBlueGray,
+    Color::DarkSlate,
+    Color::DeepSeaBlue,
+    Color::NightBlue,
+    Color::MidnightBlue,
+    Color::Navy,
+    Color::DenimDarkBlue,
+    Color::DarkBlue,
+    Color::LapisBlue,
+    Color::NewMidnightBlue,
+    Color::EarthBlue,
+    Color::CobaltBlue,
+    Color::MediumBlue,
+    Color::BlueberryBlue,
+    Color::CanaryBlue,
+    Color::Blue,
+    Color::SamcoBlue,
+    Color::BrightBlue,
+    Color::BlueOrchid,
+    Color::SapphireBlue,
+    Color::BlueEyes,
+    Color::BrightNavyBlue,
+    Color::BalloonBlue,
+    Color::RoyalBlue,
+    Color::OceanBlue,
+    Color::DarkSkyBlue,
+    Color::BlueRibbon,
+    Color::BlueDress,
+    Color::NeonBlue,
+    Color::DodgerBlue,
+    Color::GlacialBlueIce,
+    Color::SteelBlue,
+    Color::SilkBlue,
+    Color::WindowsBlue,
+    Color::BlueIvy,
+    Color::CyanBlue,
+    Color::BlueKoi,
+    Color::ColumbiaBlue,
+    Color::BabyBlue,
+    Color::CornflowerBlue,
+    Color::SkyBlueDress,
+    Color::Iceberg,
+    Color::ButterflyBlue,
+    Color::DeepSkyBlue,
+    Color::MiddayBlue,
+    Color::CrystalBlue,
+    Color::DenimBlue,
+    Color::DaySkyBlue,
+    Color::LightSkyBlue,
+    Color::SkyBlue,
+    Color::JeansBlue,
+    Color::BlueAngel,
+    Color::PastelBlue,
+    Color::LightDayBlue,
+    Color::SeaBlue,
+    Color::HeavenlyBlue,
+    Color::RobinEggBlue,
+    Color::PowderBlue,
+    Color::CoralBlue,
+    Color::LightBlue,
+    Color::LightSteelBlue,
+    Color::GulfBlue,
+    Color::PastelLightBlue,
+    Color::LavenderBlue,
+    Color::WhiteBlue,
+    Color::Lavender,
+    Color::Water,
+    Color::AliceBlue,
+    Color::GhostWhite,
+    Color::Azure,
+    Color::LightCyan,
+    Color::LightSlate,
+    Color::ElectricBlue,
+    Color::TronBlue,
+    Color::BlueZircon,
+    Color::Cyan,
+    Color::Aqua,
+    Color::BrightCyan,
+    Color::Celeste,
+    Color::BlueDiamond,
+    Color::BrightTurquoise,
+    Color::BlueLagoon,
+    Color::PaleTurquoise,
+    Color::PaleBlueLily,
+    Color::LightTeal,
+    Color::TiffanyBlue,
+    Color::BlueHosta,
+    Color::CyanOpaque,
+    Color::NorthernLightsBlue,
+    Color::BlueGreen,
+    Color::MediumAquaMarine,
+    Color::AquaSeafoamGreen,
+    Color::MagicMint,
+    Color::LightAquamarine,
+    Color::Aquamarine,
+    Color::BrightTeal,
+    Color::Turquoise,
+    Color::MediumTurquoise,
+    Color::DeepTurquoise,
+    Color::Jellyfish,
+    Color::BlueTurquoise,
+    Color::DarkTurquoise,
+    Color::MacawBlueGreen,
+    Color::LightSeaGreen,
+    Color::SeafoamGreen,
+    Color::CadetBlue,
+    Color::DeepSea,
+    Color::DarkCyan,
+    Color::TealGreen,
+    Color::Teal,
+    Color::TealBlue,
+    Color::MediumTeal,
+    Color::DarkTeal,
+    Color::DeepTeal,
+    Color::DarkSlateGray,
+    Color::DarkSlateGrey,
+    Color::Gunmetal,
+    Color::BlueMossGreen,
+    Color::BeetleGreen,
+    Color::GrayishTurquoise,
+    Color::GreenishBlue,
+    Color::AquamarineStone,
+    Color::SeaTurtleGreen,
+    Color::DullSeaGreen,
+    Color::DarkGreenBlue,
+    Color::DeepSeaGreen,
+    Color::BottleGreen,
+    Color::SeaGreen,
+    Color::ElfGreen,
+    Color::DarkMint,
+    Color::Jade,
+    Color::EarthGreen,
+    Color::ChromeGreen,
+    Color::Mint,
+    Color::Emerald,
+    Color::IsleOfManGreen,
+    Color::MediumSeaGreen,
+    Color::MetallicGreen,
+    Color::CamouflageGreen,
+    Color::SageGreen,
+    Color::HazelGreen,
+    Color::VenomGreen,
+    Color::OliveDrab,
+    Color::Olive,
+    Color::Ebony,
+    Color::DarkOliveGreen,
+    Color::MilitaryGreen,
+    Color::GreenLeaves,
+    Color::ArmyGreen,
+    Color::FernGreen,
+    Color::FallForestGreen,
+    Color::IrishGreen,
+    Color::PineGreen,
+    Color::MediumForestGreen,
+    Color::RacingGreen,
+    Color::JungleGreen,
+    Color::CactusGreen,
+    Color::ForestGreen,
+    Color::Green,
+    Color::DarkGreen,
+    Color::DeepGreen,
+    Color::DeepEmeraldGreen,
+    Color::HunterGreen,
+    Color::DarkForestGreen,
+    Color::LotusGreen,
+    Color::BroccoliGreen,
+    Color::SeaweedGreen,
+    Color::ShamrockGreen,
+    Color::GreenOnion,
+    Color::MossGreen,
+    Color::GrassGreen,
+    Color::GreenPepper,
+    Color::DarkLimeGreen,
+    Color::ParrotGreen,
+    Color::CloverGreen,
+    Color::DinosaurGreen,
+    Color::GreenSnake,
+    Color::AlienGreen,
+    Color::GreenApple,
+    Color::LimeGreen,
+    Color::PeaGreen,
+    Color::KellyGreen,
+    Color::ZombieGreen,
+    Color::GreenPeas,
+    Color::DollarBillGreen,
+    Color::FrogGreen,
+    Color::TurquoiseGreen,
+    Color::DarkSeaGreen,
+    Color::BasilGreen,
+    Color::GrayGreen,
+    Color::LightOliveGreen,
+    Color::IguanaGreen,
+    Color::CitronGreen,
+    Color::AcidGreen,
+    Color::AvocadoGreen,
+    Color::PistachioGreen,
+    Color::SaladGreen,
+    Color::YellowGreen,
+    Color::PastelGreen,
+    Color::HummingbirdGreen,
+    Color::NebulaGreen,
+    Color::StoplightGoGreen,
+    Color::NeonGreen,
+    Color::JadeGreen,
+    Color::SpringGreen,
+    Color::OceanGreen,
+    Color::LimeMintGreen,
+    Color::MediumSpringGreen,
+    Color::AquaGreen,
+    Color::EmeraldGreen,
+    Color::Lime,
+    Color::LawnGreen,
+    Color::BrightGreen,
+    Color::Chartreuse,
+    Color::YellowLawnGreen,
+    Color::AloeVeraGreen,
+    Color::DullGreenYellow,
+    Color::LemonGreen,
+    Color::GreenYellow,
+    Color::ChameleonGreen,
+    Color::NeonYellowGreen,
+    Color::YellowGreenGrosbeak,
+    Color::TeaGreen,
+    Color::SlimeGreen,
+    Color::AlgaeGreen,
+    Color::LightGreen,
+    Color::DragonGreen,
+    Color::PaleGreen,
+    Color::MintGreen,
+    Color::GreenThumb,
+    Color::OrganicBrown,
+    Color::LightJade,
+    Color::LightMintGreen,
+    Color::LightRoseGreen,
+    Color::ChromeWhite,
+    Color::HoneyDew,
+    Color::MintCream,
+    Color::LemonChiffon,
+    Color::Parchment,
+    Color::Cream,
+    Color::CreamWhite,
+    Color::LightGoldenRodYellow,
+    Color::LightYellow,
+    Color::Beige,
+    Color::WhiteYellow,
+    Color::Cornsilk,
+    Color::Blonde,
+    Color::AntiqueWhite,
+    Color::LightBeige,
+    Color::PapayaWhip,
+    Color::Champagne,
+    Color::BlanchedAlmond,
+    Color::Bisque,
+    Color::Wheat,
+    Color::Moccasin,
+    Color::Peach,
+    Color::LightOrange,
+    Color::PeachPuff,
+    Color::CoralPeach,
+    Color::NavajoWhite,
+    Color::GoldenBlonde,
+    Color::GoldenSilk,
+    Color::DarkBlonde,
+    Color::LightGold,
+    Color::Vanilla,
+    Color::TanBrown,
+    Color::DirtyWhite,
+    Color::PaleGoldenRod,
+    Color::Khaki,
+    Color::CardboardBrown,
+    Color::HarvestGold,
+    Color::SunYellow,
+    Color::CornYellow,
+    Color::PastelYellow,
+    Color::NeonYellow,
+    Color::Yellow,
+    Color::LemonYellow,
+    Color::CanaryYellow,
+    Color::BananaYellow,
+    Color::MustardYellow,
+    Color::GoldenYellow,
+    Color::BoldYellow,
+    Color::SafetyYellow,
+    Color::RubberDuckyYellow,
+    Color::Gold,
+    Color::BrightGold,
+    Color::ChromeGold,
+    Color::GoldenBrown,
+    Color::DeepYellow,
+    Color::MacaroniandCheese,
+    Color::Amber,
+    Color::Saffron,
+    Color::NeonGold,
+    Color::Beer,
+    Color::YellowOrange,
+    Color::OrangeYellow,
+    Color::Cantaloupe,
+    Color::CheeseOrange,
+    Color::Orange,
+    Color::BrownSand,
+    Color::SandyBrown,
+    Color::BrownSugar,
+    Color::CamelBrown,
+    Color::DeerBrown,
+    Color::BurlyWood,
+    Color::Tan,
+    Color::LightFrenchBeige,
+    Color::Sand,
+    Color::SoftHazel,
+    Color::Sage,
+    Color::FallLeafBrown,
+    Color::GingerBrown,
+    Color::BronzeGold,
+    Color::DarkKhaki,
+    Color::OliveGreen,
+    Color::Brass,
+    Color::CookieBrown,
+    Color::MetallicGold,
+    Color::Mustard,
+    Color::BeeYellow,
+    Color::SchoolBusYellow,
+    Color::GoldenRod,
+    Color::OrangeGold,
+    Color::Caramel,
+    Color::DarkGoldenRod,
+    Color::Cinnamon,
+    Color::Peru,
+    Color::Bronze,
+    Color::PumpkinPie,
+    Color::TigerOrange,
+    Color::Copper,
+    Color::DarkGold,
+    Color::MetallicBronze,
+    Color::DarkAlmond,
+    Color::Wood,
+    Color::KhakiBrown,
+    Color::OakBrown,
+    Color::AntiqueBronze,
+    Color::Hazel,
+    Color::DarkYellow,
+    Color::DarkMoccasin,
+    Color::KhakiGreen,
+    Color::MillenniumJade,
+    Color::DarkBeige,
+    Color::BulletShell,
+    Color::ArmyBrown,
+    Color::Sandstone,
+    Color::Taupe,
+    Color::DarkGrayishOlive,
+    Color::DarkHazelBrown,
+    Color::Mocha,
+    Color::MilkChocolate,
+    Color::GrayBrown,
+    Color::DarkCoffee,
+    Color::WesternCharcoal,
+    Color::OldBurgundy,
+    Color::RedBrown,
+    Color::BakersBrown,
+    Color::PullmanBrown,
+    Color::DarkBrown,
+    Color::SepiaBrown,
+    Color::DarkBronze,
+    Color::Coffee,
+    Color::BrownBear,
+    Color::RedDirt,
+    Color::Sepia,
+    Color::Sienna,
+    Color::SaddleBrown,
+    Color::DarkSienna,
+    Color::Sangria,
+    Color::BloodRed,
+    Color::Chestnut,
+    Color::CoralBrown,
+    Color::DeepAmber,
+    Color::ChestnutRed,
+    Color::GingerRed,
+    Color::Mahogany,
+    Color::RedGold,
+    Color::RedFox,
+    Color::DarkBisque,
+    Color::LightBrown,
+    Color::PetraGold,
+    Color::BrownRust,
+    Color::Rust,
+    Color::CopperRed,
+    Color::OrangeSalmon,
+    Color::Chocolate,
+    Color::Sedona,
+    Color::PapayaOrange,
+    Color::HalloweenOrange,
+    Color::NeonOrange,
+    Color::BrightOrange,
+    Color::FluroOrange,
+    Color::PumpkinOrange,
+    Color::SafetyOrange,
+    Color::CarrotOrange,
+    Color::DarkOrange,
+    Color::ConstructionConeOrange,
+    Color::IndianSaffron,
+    Color::SunriseOrange,
+    Color::MangoOrange,
+    Color::Coral,
+    Color::BasketBallOrange,
+    Color::LightSalmonRose,
+    Color::LightSalmon,
+    Color::PinkOrange,
+    Color::DarkSalmon,
+    Color::Tangerine,
+    Color::LightCopper,
+    Color::SalmonPink,
+    Color::Salmon,
+    Color::PeachPink,
+    Color::LightCoral,
+    Color::PastelRed,
+    Color::PinkCoral,
+    Color::BeanRed,
+    Color::ValentineRed,
+    Color::IndianRed,
+    Color::Tomato,
+    Color::ShockingOrange,
+    Color::OrangeRed,
+    Color::Red,
+    Color::NeonRed,
+    Color::ScarletRed,
+    Color::RubyRed,
+    Color::FerrariRed,
+    Color::FireEngineRed,
+    Color::LavaRed,
+    Color::LoveRed,
+    Color::Grapefruit,
+    Color::StrawberryRed,
+    Color::CherryRed,
+    Color::ChilliPepper,
+    Color::FireBrick,
+    Color::TomatoSauceRed,
+    Color::Brown,
+    Color::CarbonRed,
+    Color::Cranberry,
+    Color::SaffronRed,
+    Color::CrimsonRed,
+    Color::RedWine,
+    Color::WineRed,
+    Color::DarkRed,
+    Color::MaroonRed,
+    Color::Maroon,
+    Color::Burgundy,
+    Color::Vermilion,
+    Color::DeepRed,
+    Color::GarnetRed,
+    Color::RedBlood,
+    Color::BloodNight,
+    Color::DarkScarlet,
+    Color::ChocolateBrown,
+    Color::BlackBean,
+    Color::DarkMaroon,
+    Color::Midnight,
+    Color::PurpleLily,
+    Color::PurpleMaroon,
+    Color::PlumPie,
+    Color::PlumVelvet,
+    Color::DarkRaspberry,
+    Color::VelvetMaroon,
+    Color::RosyFinch,
+    Color::DullPurple,
+    Color::Puce,
+    Color::RoseDust,
+    Color::PastelBrown,
+    Color::RosyPink,
+    Color::RosyBrown,
+    Color::KhakiRose,
+    Color::LipstickPink,
+    Color::DuskyPink,
+    Color::PinkBrown,
+    Color::OldRose,
+    Color::DustyPink,
+    Color::PinkDaisy,
+    Color::Rose,
+    Color::DustyRose,
+    Color::SilverPink,
+    Color::GoldPink,
+    Color::RoseGold,
+    Color::DeepPeach,
+    Color::PastelOrange,
+    Color::DesertSand,
+    Color::UnbleachedSilk,
+    Color::PigPink,
+    Color::PalePink,
+    Color::Blush,
+    Color::MistyRose,
+    Color::PinkBubbleGum,
+    Color::LightRose,
+    Color::LightRed,
+    Color::RoseQuartz,
+    Color::WarmPink,
+    Color::DeepRose,
+    Color::Pink,
+    Color::LightPink,
+    Color::SoftPink,
+    Color::PowderPink,
+    Color::DonutPink,
+    Color::BabyPink,
+    Color::FlamingoPink,
+    Color::PastelPink,
+    Color::RosePink,
+    Color::CadillacPink,
+    Color::CarnationPink,
+    Color::PastelRose,
+    Color::BlushRed,
+    Color::PaleVioletRed,
+    Color::PurplePink,
+    Color::TulipPink,
+    Color::BashfulPink,
+    Color::DarkPink,
+    Color::DarkHotPink,
+    Color::HotPink,
+    Color::WatermelonPink,
+    Color::VioletRed,
+    Color::HotDeepPink,
+    Color::BrightPink,
+    Color::RedMagenta,
+    Color::DeepPink,
+    Color::NeonPink,
+    Color::ChromePink,
+    Color::NeonHotPink,
+    Color::PinkCupcake,
+    Color::RoyalPink,
+    Color::DimorphothecaMagenta,
+    Color::BarbiePink,
+    Color::PinkLemonade,
+    Color::RedPink,
+    Color::Raspberry,
+    Color::Crimson,
+    Color::BrightMaroon,
+    Color::RoseRed,
+    Color::RoguePink,
+    Color::BurntPink,
+    Color::PinkViolet,
+    Color::MagentaPink,
+    Color::MediumVioletRed,
+    Color::DarkCarnationPink,
+    Color::RaspberryPurple,
+    Color::PinkPlum,
+    Color::Orchid,
+    Color::DeepMauve,
+    Color::Violet,
+    Color::FuchsiaPink,
+    Color::BrightNeonPink,
+    Color::Magenta,
+    Color::Fuchsia,
+    Color::CrimsonPurple,
+    Color::HeliotropePurple,
+    Color::TyrianPurple,
+    Color::MediumOrchid,
+    Color::PurpleFlower,
+    Color::OrchidPurple,
+    Color::RichLilac,
+    Color::PastelViolet,
+    Color::Rosy,
+    Color::MauveTaupe,
+    Color::ViolaPurple,
+    Color::Eggplant,
+    Color::PlumPurple,
+    Color::Grape,
+    Color::PurpleNavy,
+    Color::SlateBlue,
+    Color::BlueLotus,
+    Color::Blurple,
+    Color::LightSlateBlue,
+    Color::MediumSlateBlue,
+    Color::PeriwinklePurple,
+    Color::VeryPeri,
+    Color::BrightGrape,
+    Color::BrightPurple,
+    Color::PurpleAmethyst,
+    Color::BlueMagenta,
+    Color::DarkBlurple,
+    Color::DeepPeriwinkle,
+    Color::DarkSlateBlue,
+    Color::PurpleHaze,
+    Color::PurpleIris,
+    Color::DarkPurple,
+    Color::DeepPurple,
+    Color::MidnightPurple,
+    Color::PurpleMonster,
+    Color::Indigo,
+    Color::BlueWhale,
+    Color::RebeccaPurple,
+    Color::PurpleJam,
+    Color::DarkMagenta,
+    Color::Purple,
+    Color::FrenchLilac,
+    Color::DarkOrchid,
+    Color::DarkViolet,
+    Color::PurpleViolet,
+    Color::JasminePurple,
+    Color::PurpleDaffodil,
+    Color::ClematisViolet,
+    Color::BlueViolet,
+    Color::PurpleSageBush,
+    Color::LovelyPurple,
+    Color::NeonPurple,
+    Color::PurplePlum,
+    Color::AztechPurple,
+    Color::MediumPurple,
+    Color::LightPurple,
+    Color::CrocusPurple,
+    Color::PurpleMimosa,
+    Color::PastelIndigo,
+    Color::LavenderPurple,
+    Color::RosePurple,
+    Color::Viola,
+    Color::Periwinkle,
+    Color::PaleLilac,
+    Color::Lilac,
+    Color::Mauve,
+    Color::BrightLilac,
+    Color::PurpleDragon,
+    Color::Plum,
+    Color::BlushPink,
+    Color::PastelPurple,
+    Color::BlossomPink,
+    Color::WisteriaPurple,
+    Color::PurpleThistle,
+    Color::Thistle,
+    Color::PurpleWhite,
+    Color::PeriwinklePink,
+    Color::CottonCandy,
+    Color::LavenderPinocchio,
+    Color::DarkWhite,
+    Color::AshWhite,
+    Color::WarmWhite,
+    Color::WhiteChocolate,
+    Color::CreamyWhite,
+    Color::OffWhite,
+    Color::SoftIvory,
+    Color::CosmicLatte,
+    Color::PearlWhite,
+    Color::RedWhite,
+    Color::LavenderBlush,
+    Color::Pearl,
+    Color::EggShell,
+    Color::OldLace,
+    Color::WhiteIce,
+    Color::Linen,
+    Color::SeaShell,
+    Color::BoneWhite,
+    Color::Rice,
+    Color::FloralWhite,
+    Color::Ivory,
+    Color::WhiteGold,
+    Color::LightWhite,
+    Color::Cotton,
+    Color::Snow,
+    Color::MilkWhite,
+    Color::HalfWhite,
+    Color::White,
+];
 #[doc = r" Convert a hex color string to a `Color` variant"]
 static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
     let mut m = HashMap::new();
@@ -1507,1469 +2237,7 @@ impl Color {
                 .copied()
                 .or(Some(Color::Rgb(r, g, b)))
         } else {
-            NAME_MAP.get(&norm_name(name)).and_then(|&idx| {
-                if idx == 0usize {
-                    Some(Color::Black)
-                } else if idx == 1usize {
-                    Some(Color::BlackBlue)
-                } else if idx == 2usize {
-                    Some(Color::Night)
-                } else if idx == 3usize {
-                    Some(Color::Charcoal)
-                } else if idx == 4usize {
-                    Some(Color::Oil)
-                } else if idx == 5usize {
-                    Some(Color::StormyGray)
-                } else if idx == 6usize {
-                    Some(Color::LightBlack)
-                } else if idx == 7usize {
-                    Some(Color::DarkSteampunk)
-                } else if idx == 8usize {
-                    Some(Color::BlackCat)
-                } else if idx == 9usize {
-                    Some(Color::Iridium)
-                } else if idx == 10usize {
-                    Some(Color::BlackEel)
-                } else if idx == 11usize {
-                    Some(Color::BlackCow)
-                } else if idx == 12usize {
-                    Some(Color::GrayWolf)
-                } else if idx == 13usize {
-                    Some(Color::VampireGray)
-                } else if idx == 14usize {
-                    Some(Color::IronGray)
-                } else if idx == 15usize {
-                    Some(Color::GrayDolphin)
-                } else if idx == 16usize {
-                    Some(Color::CarbonGray)
-                } else if idx == 17usize {
-                    Some(Color::AshGray)
-                } else if idx == 18usize {
-                    Some(Color::DimGray)
-                } else if idx == 19usize {
-                    Some(Color::DimGrey)
-                } else if idx == 20usize {
-                    Some(Color::NardoGray)
-                } else if idx == 21usize {
-                    Some(Color::CloudyGray)
-                } else if idx == 22usize {
-                    Some(Color::SmokeyGray)
-                } else if idx == 23usize {
-                    Some(Color::AlienGray)
-                } else if idx == 24usize {
-                    Some(Color::SonicSilver)
-                } else if idx == 25usize {
-                    Some(Color::PlatinumGray)
-                } else if idx == 26usize {
-                    Some(Color::Granite)
-                } else if idx == 27usize {
-                    Some(Color::Gray)
-                } else if idx == 28usize {
-                    Some(Color::Grey)
-                } else if idx == 29usize {
-                    Some(Color::BattleshipGray)
-                } else if idx == 30usize {
-                    Some(Color::SheetMetal)
-                } else if idx == 31usize {
-                    Some(Color::DarkGainsboro)
-                } else if idx == 32usize {
-                    Some(Color::GunmetalGray)
-                } else if idx == 33usize {
-                    Some(Color::ColdMetal)
-                } else if idx == 34usize {
-                    Some(Color::StainlessSteelGray)
-                } else if idx == 35usize {
-                    Some(Color::DarkGrey)
-                } else if idx == 36usize {
-                    Some(Color::DarkGray)
-                } else if idx == 37usize {
-                    Some(Color::ChromeAluminum)
-                } else if idx == 38usize {
-                    Some(Color::GrayCloud)
-                } else if idx == 39usize {
-                    Some(Color::Metal)
-                } else if idx == 40usize {
-                    Some(Color::Silver)
-                } else if idx == 41usize {
-                    Some(Color::Steampunk)
-                } else if idx == 42usize {
-                    Some(Color::PaleSilver)
-                } else if idx == 43usize {
-                    Some(Color::GearSteelGray)
-                } else if idx == 44usize {
-                    Some(Color::GrayGoose)
-                } else if idx == 45usize {
-                    Some(Color::PlatinumSilver)
-                } else if idx == 46usize {
-                    Some(Color::LightGrey)
-                } else if idx == 47usize {
-                    Some(Color::LightGray)
-                } else if idx == 48usize {
-                    Some(Color::SilverWhite)
-                } else if idx == 49usize {
-                    Some(Color::Gainsboro)
-                } else if idx == 50usize {
-                    Some(Color::LightSteelGray)
-                } else if idx == 51usize {
-                    Some(Color::WhiteSmoke)
-                } else if idx == 52usize {
-                    Some(Color::WhiteGray)
-                } else if idx == 53usize {
-                    Some(Color::Platinum)
-                } else if idx == 54usize {
-                    Some(Color::MetallicSilver)
-                } else if idx == 55usize {
-                    Some(Color::BlueGray)
-                } else if idx == 56usize {
-                    Some(Color::RomanSilver)
-                } else if idx == 57usize {
-                    Some(Color::LightSlateGrey)
-                } else if idx == 58usize {
-                    Some(Color::LightSlateGray)
-                } else if idx == 59usize {
-                    Some(Color::SlateGrey)
-                } else if idx == 60usize {
-                    Some(Color::SlateGray)
-                } else if idx == 61usize {
-                    Some(Color::RatGray)
-                } else if idx == 62usize {
-                    Some(Color::SlateGraniteGray)
-                } else if idx == 63usize {
-                    Some(Color::JetGray)
-                } else if idx == 64usize {
-                    Some(Color::MistBlue)
-                } else if idx == 65usize {
-                    Some(Color::SteelGray)
-                } else if idx == 66usize {
-                    Some(Color::MarbleBlue)
-                } else if idx == 67usize {
-                    Some(Color::SlateBlueGray)
-                } else if idx == 68usize {
-                    Some(Color::LightPurpleBlue)
-                } else if idx == 69usize {
-                    Some(Color::AzureBlue)
-                } else if idx == 70usize {
-                    Some(Color::EstorilBlue)
-                } else if idx == 71usize {
-                    Some(Color::BlueJay)
-                } else if idx == 72usize {
-                    Some(Color::CharcoalBlue)
-                } else if idx == 73usize {
-                    Some(Color::DarkBlueGray)
-                } else if idx == 74usize {
-                    Some(Color::DarkSlate)
-                } else if idx == 75usize {
-                    Some(Color::DeepSeaBlue)
-                } else if idx == 76usize {
-                    Some(Color::NightBlue)
-                } else if idx == 77usize {
-                    Some(Color::MidnightBlue)
-                } else if idx == 78usize {
-                    Some(Color::Navy)
-                } else if idx == 79usize {
-                    Some(Color::DenimDarkBlue)
-                } else if idx == 80usize {
-                    Some(Color::DarkBlue)
-                } else if idx == 81usize {
-                    Some(Color::LapisBlue)
-                } else if idx == 82usize {
-                    Some(Color::NewMidnightBlue)
-                } else if idx == 83usize {
-                    Some(Color::EarthBlue)
-                } else if idx == 84usize {
-                    Some(Color::CobaltBlue)
-                } else if idx == 85usize {
-                    Some(Color::MediumBlue)
-                } else if idx == 86usize {
-                    Some(Color::BlueberryBlue)
-                } else if idx == 87usize {
-                    Some(Color::CanaryBlue)
-                } else if idx == 88usize {
-                    Some(Color::Blue)
-                } else if idx == 89usize {
-                    Some(Color::SamcoBlue)
-                } else if idx == 90usize {
-                    Some(Color::BrightBlue)
-                } else if idx == 91usize {
-                    Some(Color::BlueOrchid)
-                } else if idx == 92usize {
-                    Some(Color::SapphireBlue)
-                } else if idx == 93usize {
-                    Some(Color::BlueEyes)
-                } else if idx == 94usize {
-                    Some(Color::BrightNavyBlue)
-                } else if idx == 95usize {
-                    Some(Color::BalloonBlue)
-                } else if idx == 96usize {
-                    Some(Color::RoyalBlue)
-                } else if idx == 97usize {
-                    Some(Color::OceanBlue)
-                } else if idx == 98usize {
-                    Some(Color::DarkSkyBlue)
-                } else if idx == 99usize {
-                    Some(Color::BlueRibbon)
-                } else if idx == 100usize {
-                    Some(Color::BlueDress)
-                } else if idx == 101usize {
-                    Some(Color::NeonBlue)
-                } else if idx == 102usize {
-                    Some(Color::DodgerBlue)
-                } else if idx == 103usize {
-                    Some(Color::GlacialBlueIce)
-                } else if idx == 104usize {
-                    Some(Color::SteelBlue)
-                } else if idx == 105usize {
-                    Some(Color::SilkBlue)
-                } else if idx == 106usize {
-                    Some(Color::WindowsBlue)
-                } else if idx == 107usize {
-                    Some(Color::BlueIvy)
-                } else if idx == 108usize {
-                    Some(Color::CyanBlue)
-                } else if idx == 109usize {
-                    Some(Color::BlueKoi)
-                } else if idx == 110usize {
-                    Some(Color::ColumbiaBlue)
-                } else if idx == 111usize {
-                    Some(Color::BabyBlue)
-                } else if idx == 112usize {
-                    Some(Color::CornflowerBlue)
-                } else if idx == 113usize {
-                    Some(Color::SkyBlueDress)
-                } else if idx == 114usize {
-                    Some(Color::Iceberg)
-                } else if idx == 115usize {
-                    Some(Color::ButterflyBlue)
-                } else if idx == 116usize {
-                    Some(Color::DeepSkyBlue)
-                } else if idx == 117usize {
-                    Some(Color::MiddayBlue)
-                } else if idx == 118usize {
-                    Some(Color::CrystalBlue)
-                } else if idx == 119usize {
-                    Some(Color::DenimBlue)
-                } else if idx == 120usize {
-                    Some(Color::DaySkyBlue)
-                } else if idx == 121usize {
-                    Some(Color::LightSkyBlue)
-                } else if idx == 122usize {
-                    Some(Color::SkyBlue)
-                } else if idx == 123usize {
-                    Some(Color::JeansBlue)
-                } else if idx == 124usize {
-                    Some(Color::BlueAngel)
-                } else if idx == 125usize {
-                    Some(Color::PastelBlue)
-                } else if idx == 126usize {
-                    Some(Color::LightDayBlue)
-                } else if idx == 127usize {
-                    Some(Color::SeaBlue)
-                } else if idx == 128usize {
-                    Some(Color::HeavenlyBlue)
-                } else if idx == 129usize {
-                    Some(Color::RobinEggBlue)
-                } else if idx == 130usize {
-                    Some(Color::PowderBlue)
-                } else if idx == 131usize {
-                    Some(Color::CoralBlue)
-                } else if idx == 132usize {
-                    Some(Color::LightBlue)
-                } else if idx == 133usize {
-                    Some(Color::LightSteelBlue)
-                } else if idx == 134usize {
-                    Some(Color::GulfBlue)
-                } else if idx == 135usize {
-                    Some(Color::PastelLightBlue)
-                } else if idx == 136usize {
-                    Some(Color::LavenderBlue)
-                } else if idx == 137usize {
-                    Some(Color::WhiteBlue)
-                } else if idx == 138usize {
-                    Some(Color::Lavender)
-                } else if idx == 139usize {
-                    Some(Color::Water)
-                } else if idx == 140usize {
-                    Some(Color::AliceBlue)
-                } else if idx == 141usize {
-                    Some(Color::GhostWhite)
-                } else if idx == 142usize {
-                    Some(Color::Azure)
-                } else if idx == 143usize {
-                    Some(Color::LightCyan)
-                } else if idx == 144usize {
-                    Some(Color::LightSlate)
-                } else if idx == 145usize {
-                    Some(Color::ElectricBlue)
-                } else if idx == 146usize {
-                    Some(Color::TronBlue)
-                } else if idx == 147usize {
-                    Some(Color::BlueZircon)
-                } else if idx == 148usize {
-                    Some(Color::Cyan)
-                } else if idx == 149usize {
-                    Some(Color::Aqua)
-                } else if idx == 150usize {
-                    Some(Color::BrightCyan)
-                } else if idx == 151usize {
-                    Some(Color::Celeste)
-                } else if idx == 152usize {
-                    Some(Color::BlueDiamond)
-                } else if idx == 153usize {
-                    Some(Color::BrightTurquoise)
-                } else if idx == 154usize {
-                    Some(Color::BlueLagoon)
-                } else if idx == 155usize {
-                    Some(Color::PaleTurquoise)
-                } else if idx == 156usize {
-                    Some(Color::PaleBlueLily)
-                } else if idx == 157usize {
-                    Some(Color::LightTeal)
-                } else if idx == 158usize {
-                    Some(Color::TiffanyBlue)
-                } else if idx == 159usize {
-                    Some(Color::BlueHosta)
-                } else if idx == 160usize {
-                    Some(Color::CyanOpaque)
-                } else if idx == 161usize {
-                    Some(Color::NorthernLightsBlue)
-                } else if idx == 162usize {
-                    Some(Color::BlueGreen)
-                } else if idx == 163usize {
-                    Some(Color::MediumAquaMarine)
-                } else if idx == 164usize {
-                    Some(Color::AquaSeafoamGreen)
-                } else if idx == 165usize {
-                    Some(Color::MagicMint)
-                } else if idx == 166usize {
-                    Some(Color::LightAquamarine)
-                } else if idx == 167usize {
-                    Some(Color::Aquamarine)
-                } else if idx == 168usize {
-                    Some(Color::BrightTeal)
-                } else if idx == 169usize {
-                    Some(Color::Turquoise)
-                } else if idx == 170usize {
-                    Some(Color::MediumTurquoise)
-                } else if idx == 171usize {
-                    Some(Color::DeepTurquoise)
-                } else if idx == 172usize {
-                    Some(Color::Jellyfish)
-                } else if idx == 173usize {
-                    Some(Color::BlueTurquoise)
-                } else if idx == 174usize {
-                    Some(Color::DarkTurquoise)
-                } else if idx == 175usize {
-                    Some(Color::MacawBlueGreen)
-                } else if idx == 176usize {
-                    Some(Color::LightSeaGreen)
-                } else if idx == 177usize {
-                    Some(Color::SeafoamGreen)
-                } else if idx == 178usize {
-                    Some(Color::CadetBlue)
-                } else if idx == 179usize {
-                    Some(Color::DeepSea)
-                } else if idx == 180usize {
-                    Some(Color::DarkCyan)
-                } else if idx == 181usize {
-                    Some(Color::TealGreen)
-                } else if idx == 182usize {
-                    Some(Color::Teal)
-                } else if idx == 183usize {
-                    Some(Color::TealBlue)
-                } else if idx == 184usize {
-                    Some(Color::MediumTeal)
-                } else if idx == 185usize {
-                    Some(Color::DarkTeal)
-                } else if idx == 186usize {
-                    Some(Color::DeepTeal)
-                } else if idx == 187usize {
-                    Some(Color::DarkSlateGray)
-                } else if idx == 188usize {
-                    Some(Color::DarkSlateGrey)
-                } else if idx == 189usize {
-                    Some(Color::Gunmetal)
-                } else if idx == 190usize {
-                    Some(Color::BlueMossGreen)
-                } else if idx == 191usize {
-                    Some(Color::BeetleGreen)
-                } else if idx == 192usize {
-                    Some(Color::GrayishTurquoise)
-                } else if idx == 193usize {
-                    Some(Color::GreenishBlue)
-                } else if idx == 194usize {
-                    Some(Color::AquamarineStone)
-                } else if idx == 195usize {
-                    Some(Color::SeaTurtleGreen)
-                } else if idx == 196usize {
-                    Some(Color::DullSeaGreen)
-                } else if idx == 197usize {
-                    Some(Color::DarkGreenBlue)
-                } else if idx == 198usize {
-                    Some(Color::DeepSeaGreen)
-                } else if idx == 199usize {
-                    Some(Color::BottleGreen)
-                } else if idx == 200usize {
-                    Some(Color::SeaGreen)
-                } else if idx == 201usize {
-                    Some(Color::ElfGreen)
-                } else if idx == 202usize {
-                    Some(Color::DarkMint)
-                } else if idx == 203usize {
-                    Some(Color::Jade)
-                } else if idx == 204usize {
-                    Some(Color::EarthGreen)
-                } else if idx == 205usize {
-                    Some(Color::ChromeGreen)
-                } else if idx == 206usize {
-                    Some(Color::Mint)
-                } else if idx == 207usize {
-                    Some(Color::Emerald)
-                } else if idx == 208usize {
-                    Some(Color::IsleOfManGreen)
-                } else if idx == 209usize {
-                    Some(Color::MediumSeaGreen)
-                } else if idx == 210usize {
-                    Some(Color::MetallicGreen)
-                } else if idx == 211usize {
-                    Some(Color::CamouflageGreen)
-                } else if idx == 212usize {
-                    Some(Color::SageGreen)
-                } else if idx == 213usize {
-                    Some(Color::HazelGreen)
-                } else if idx == 214usize {
-                    Some(Color::VenomGreen)
-                } else if idx == 215usize {
-                    Some(Color::OliveDrab)
-                } else if idx == 216usize {
-                    Some(Color::Olive)
-                } else if idx == 217usize {
-                    Some(Color::Ebony)
-                } else if idx == 218usize {
-                    Some(Color::DarkOliveGreen)
-                } else if idx == 219usize {
-                    Some(Color::MilitaryGreen)
-                } else if idx == 220usize {
-                    Some(Color::GreenLeaves)
-                } else if idx == 221usize {
-                    Some(Color::ArmyGreen)
-                } else if idx == 222usize {
-                    Some(Color::FernGreen)
-                } else if idx == 223usize {
-                    Some(Color::FallForestGreen)
-                } else if idx == 224usize {
-                    Some(Color::IrishGreen)
-                } else if idx == 225usize {
-                    Some(Color::PineGreen)
-                } else if idx == 226usize {
-                    Some(Color::MediumForestGreen)
-                } else if idx == 227usize {
-                    Some(Color::RacingGreen)
-                } else if idx == 228usize {
-                    Some(Color::JungleGreen)
-                } else if idx == 229usize {
-                    Some(Color::CactusGreen)
-                } else if idx == 230usize {
-                    Some(Color::ForestGreen)
-                } else if idx == 231usize {
-                    Some(Color::Green)
-                } else if idx == 232usize {
-                    Some(Color::DarkGreen)
-                } else if idx == 233usize {
-                    Some(Color::DeepGreen)
-                } else if idx == 234usize {
-                    Some(Color::DeepEmeraldGreen)
-                } else if idx == 235usize {
-                    Some(Color::HunterGreen)
-                } else if idx == 236usize {
-                    Some(Color::DarkForestGreen)
-                } else if idx == 237usize {
-                    Some(Color::LotusGreen)
-                } else if idx == 238usize {
-                    Some(Color::BroccoliGreen)
-                } else if idx == 239usize {
-                    Some(Color::SeaweedGreen)
-                } else if idx == 240usize {
-                    Some(Color::ShamrockGreen)
-                } else if idx == 241usize {
-                    Some(Color::GreenOnion)
-                } else if idx == 242usize {
-                    Some(Color::MossGreen)
-                } else if idx == 243usize {
-                    Some(Color::GrassGreen)
-                } else if idx == 244usize {
-                    Some(Color::GreenPepper)
-                } else if idx == 245usize {
-                    Some(Color::DarkLimeGreen)
-                } else if idx == 246usize {
-                    Some(Color::ParrotGreen)
-                } else if idx == 247usize {
-                    Some(Color::CloverGreen)
-                } else if idx == 248usize {
-                    Some(Color::DinosaurGreen)
-                } else if idx == 249usize {
-                    Some(Color::GreenSnake)
-                } else if idx == 250usize {
-                    Some(Color::AlienGreen)
-                } else if idx == 251usize {
-                    Some(Color::GreenApple)
-                } else if idx == 252usize {
-                    Some(Color::LimeGreen)
-                } else if idx == 253usize {
-                    Some(Color::PeaGreen)
-                } else if idx == 254usize {
-                    Some(Color::KellyGreen)
-                } else if idx == 255usize {
-                    Some(Color::ZombieGreen)
-                } else if idx == 256usize {
-                    Some(Color::GreenPeas)
-                } else if idx == 257usize {
-                    Some(Color::DollarBillGreen)
-                } else if idx == 258usize {
-                    Some(Color::FrogGreen)
-                } else if idx == 259usize {
-                    Some(Color::TurquoiseGreen)
-                } else if idx == 260usize {
-                    Some(Color::DarkSeaGreen)
-                } else if idx == 261usize {
-                    Some(Color::BasilGreen)
-                } else if idx == 262usize {
-                    Some(Color::GrayGreen)
-                } else if idx == 263usize {
-                    Some(Color::LightOliveGreen)
-                } else if idx == 264usize {
-                    Some(Color::IguanaGreen)
-                } else if idx == 265usize {
-                    Some(Color::CitronGreen)
-                } else if idx == 266usize {
-                    Some(Color::AcidGreen)
-                } else if idx == 267usize {
-                    Some(Color::AvocadoGreen)
-                } else if idx == 268usize {
-                    Some(Color::PistachioGreen)
-                } else if idx == 269usize {
-                    Some(Color::SaladGreen)
-                } else if idx == 270usize {
-                    Some(Color::YellowGreen)
-                } else if idx == 271usize {
-                    Some(Color::PastelGreen)
-                } else if idx == 272usize {
-                    Some(Color::HummingbirdGreen)
-                } else if idx == 273usize {
-                    Some(Color::NebulaGreen)
-                } else if idx == 274usize {
-                    Some(Color::StoplightGoGreen)
-                } else if idx == 275usize {
-                    Some(Color::NeonGreen)
-                } else if idx == 276usize {
-                    Some(Color::JadeGreen)
-                } else if idx == 277usize {
-                    Some(Color::SpringGreen)
-                } else if idx == 278usize {
-                    Some(Color::OceanGreen)
-                } else if idx == 279usize {
-                    Some(Color::LimeMintGreen)
-                } else if idx == 280usize {
-                    Some(Color::MediumSpringGreen)
-                } else if idx == 281usize {
-                    Some(Color::AquaGreen)
-                } else if idx == 282usize {
-                    Some(Color::EmeraldGreen)
-                } else if idx == 283usize {
-                    Some(Color::Lime)
-                } else if idx == 284usize {
-                    Some(Color::LawnGreen)
-                } else if idx == 285usize {
-                    Some(Color::BrightGreen)
-                } else if idx == 286usize {
-                    Some(Color::Chartreuse)
-                } else if idx == 287usize {
-                    Some(Color::YellowLawnGreen)
-                } else if idx == 288usize {
-                    Some(Color::AloeVeraGreen)
-                } else if idx == 289usize {
-                    Some(Color::DullGreenYellow)
-                } else if idx == 290usize {
-                    Some(Color::LemonGreen)
-                } else if idx == 291usize {
-                    Some(Color::GreenYellow)
-                } else if idx == 292usize {
-                    Some(Color::ChameleonGreen)
-                } else if idx == 293usize {
-                    Some(Color::NeonYellowGreen)
-                } else if idx == 294usize {
-                    Some(Color::YellowGreenGrosbeak)
-                } else if idx == 295usize {
-                    Some(Color::TeaGreen)
-                } else if idx == 296usize {
-                    Some(Color::SlimeGreen)
-                } else if idx == 297usize {
-                    Some(Color::AlgaeGreen)
-                } else if idx == 298usize {
-                    Some(Color::LightGreen)
-                } else if idx == 299usize {
-                    Some(Color::DragonGreen)
-                } else if idx == 300usize {
-                    Some(Color::PaleGreen)
-                } else if idx == 301usize {
-                    Some(Color::MintGreen)
-                } else if idx == 302usize {
-                    Some(Color::GreenThumb)
-                } else if idx == 303usize {
-                    Some(Color::OrganicBrown)
-                } else if idx == 304usize {
-                    Some(Color::LightJade)
-                } else if idx == 305usize {
-                    Some(Color::LightMintGreen)
-                } else if idx == 306usize {
-                    Some(Color::LightRoseGreen)
-                } else if idx == 307usize {
-                    Some(Color::ChromeWhite)
-                } else if idx == 308usize {
-                    Some(Color::HoneyDew)
-                } else if idx == 309usize {
-                    Some(Color::MintCream)
-                } else if idx == 310usize {
-                    Some(Color::LemonChiffon)
-                } else if idx == 311usize {
-                    Some(Color::Parchment)
-                } else if idx == 312usize {
-                    Some(Color::Cream)
-                } else if idx == 313usize {
-                    Some(Color::CreamWhite)
-                } else if idx == 314usize {
-                    Some(Color::LightGoldenRodYellow)
-                } else if idx == 315usize {
-                    Some(Color::LightYellow)
-                } else if idx == 316usize {
-                    Some(Color::Beige)
-                } else if idx == 317usize {
-                    Some(Color::WhiteYellow)
-                } else if idx == 318usize {
-                    Some(Color::Cornsilk)
-                } else if idx == 319usize {
-                    Some(Color::Blonde)
-                } else if idx == 320usize {
-                    Some(Color::AntiqueWhite)
-                } else if idx == 321usize {
-                    Some(Color::LightBeige)
-                } else if idx == 322usize {
-                    Some(Color::PapayaWhip)
-                } else if idx == 323usize {
-                    Some(Color::Champagne)
-                } else if idx == 324usize {
-                    Some(Color::BlanchedAlmond)
-                } else if idx == 325usize {
-                    Some(Color::Bisque)
-                } else if idx == 326usize {
-                    Some(Color::Wheat)
-                } else if idx == 327usize {
-                    Some(Color::Moccasin)
-                } else if idx == 328usize {
-                    Some(Color::Peach)
-                } else if idx == 329usize {
-                    Some(Color::LightOrange)
-                } else if idx == 330usize {
-                    Some(Color::PeachPuff)
-                } else if idx == 331usize {
-                    Some(Color::CoralPeach)
-                } else if idx == 332usize {
-                    Some(Color::NavajoWhite)
-                } else if idx == 333usize {
-                    Some(Color::GoldenBlonde)
-                } else if idx == 334usize {
-                    Some(Color::GoldenSilk)
-                } else if idx == 335usize {
-                    Some(Color::DarkBlonde)
-                } else if idx == 336usize {
-                    Some(Color::LightGold)
-                } else if idx == 337usize {
-                    Some(Color::Vanilla)
-                } else if idx == 338usize {
-                    Some(Color::TanBrown)
-                } else if idx == 339usize {
-                    Some(Color::DirtyWhite)
-                } else if idx == 340usize {
-                    Some(Color::PaleGoldenRod)
-                } else if idx == 341usize {
-                    Some(Color::Khaki)
-                } else if idx == 342usize {
-                    Some(Color::CardboardBrown)
-                } else if idx == 343usize {
-                    Some(Color::HarvestGold)
-                } else if idx == 344usize {
-                    Some(Color::SunYellow)
-                } else if idx == 345usize {
-                    Some(Color::CornYellow)
-                } else if idx == 346usize {
-                    Some(Color::PastelYellow)
-                } else if idx == 347usize {
-                    Some(Color::NeonYellow)
-                } else if idx == 348usize {
-                    Some(Color::Yellow)
-                } else if idx == 349usize {
-                    Some(Color::LemonYellow)
-                } else if idx == 350usize {
-                    Some(Color::CanaryYellow)
-                } else if idx == 351usize {
-                    Some(Color::BananaYellow)
-                } else if idx == 352usize {
-                    Some(Color::MustardYellow)
-                } else if idx == 353usize {
-                    Some(Color::GoldenYellow)
-                } else if idx == 354usize {
-                    Some(Color::BoldYellow)
-                } else if idx == 355usize {
-                    Some(Color::SafetyYellow)
-                } else if idx == 356usize {
-                    Some(Color::RubberDuckyYellow)
-                } else if idx == 357usize {
-                    Some(Color::Gold)
-                } else if idx == 358usize {
-                    Some(Color::BrightGold)
-                } else if idx == 359usize {
-                    Some(Color::ChromeGold)
-                } else if idx == 360usize {
-                    Some(Color::GoldenBrown)
-                } else if idx == 361usize {
-                    Some(Color::DeepYellow)
-                } else if idx == 362usize {
-                    Some(Color::MacaroniandCheese)
-                } else if idx == 363usize {
-                    Some(Color::Amber)
-                } else if idx == 364usize {
-                    Some(Color::Saffron)
-                } else if idx == 365usize {
-                    Some(Color::NeonGold)
-                } else if idx == 366usize {
-                    Some(Color::Beer)
-                } else if idx == 367usize {
-                    Some(Color::YellowOrange)
-                } else if idx == 368usize {
-                    Some(Color::OrangeYellow)
-                } else if idx == 369usize {
-                    Some(Color::Cantaloupe)
-                } else if idx == 370usize {
-                    Some(Color::CheeseOrange)
-                } else if idx == 371usize {
-                    Some(Color::Orange)
-                } else if idx == 372usize {
-                    Some(Color::BrownSand)
-                } else if idx == 373usize {
-                    Some(Color::SandyBrown)
-                } else if idx == 374usize {
-                    Some(Color::BrownSugar)
-                } else if idx == 375usize {
-                    Some(Color::CamelBrown)
-                } else if idx == 376usize {
-                    Some(Color::DeerBrown)
-                } else if idx == 377usize {
-                    Some(Color::BurlyWood)
-                } else if idx == 378usize {
-                    Some(Color::Tan)
-                } else if idx == 379usize {
-                    Some(Color::LightFrenchBeige)
-                } else if idx == 380usize {
-                    Some(Color::Sand)
-                } else if idx == 381usize {
-                    Some(Color::SoftHazel)
-                } else if idx == 382usize {
-                    Some(Color::Sage)
-                } else if idx == 383usize {
-                    Some(Color::FallLeafBrown)
-                } else if idx == 384usize {
-                    Some(Color::GingerBrown)
-                } else if idx == 385usize {
-                    Some(Color::BronzeGold)
-                } else if idx == 386usize {
-                    Some(Color::DarkKhaki)
-                } else if idx == 387usize {
-                    Some(Color::OliveGreen)
-                } else if idx == 388usize {
-                    Some(Color::Brass)
-                } else if idx == 389usize {
-                    Some(Color::CookieBrown)
-                } else if idx == 390usize {
-                    Some(Color::MetallicGold)
-                } else if idx == 391usize {
-                    Some(Color::Mustard)
-                } else if idx == 392usize {
-                    Some(Color::BeeYellow)
-                } else if idx == 393usize {
-                    Some(Color::SchoolBusYellow)
-                } else if idx == 394usize {
-                    Some(Color::GoldenRod)
-                } else if idx == 395usize {
-                    Some(Color::OrangeGold)
-                } else if idx == 396usize {
-                    Some(Color::Caramel)
-                } else if idx == 397usize {
-                    Some(Color::DarkGoldenRod)
-                } else if idx == 398usize {
-                    Some(Color::Cinnamon)
-                } else if idx == 399usize {
-                    Some(Color::Peru)
-                } else if idx == 400usize {
-                    Some(Color::Bronze)
-                } else if idx == 401usize {
-                    Some(Color::PumpkinPie)
-                } else if idx == 402usize {
-                    Some(Color::TigerOrange)
-                } else if idx == 403usize {
-                    Some(Color::Copper)
-                } else if idx == 404usize {
-                    Some(Color::DarkGold)
-                } else if idx == 405usize {
-                    Some(Color::MetallicBronze)
-                } else if idx == 406usize {
-                    Some(Color::DarkAlmond)
-                } else if idx == 407usize {
-                    Some(Color::Wood)
-                } else if idx == 408usize {
-                    Some(Color::KhakiBrown)
-                } else if idx == 409usize {
-                    Some(Color::OakBrown)
-                } else if idx == 410usize {
-                    Some(Color::AntiqueBronze)
-                } else if idx == 411usize {
-                    Some(Color::Hazel)
-                } else if idx == 412usize {
-                    Some(Color::DarkYellow)
-                } else if idx == 413usize {
-                    Some(Color::DarkMoccasin)
-                } else if idx == 414usize {
-                    Some(Color::KhakiGreen)
-                } else if idx == 415usize {
-                    Some(Color::MillenniumJade)
-                } else if idx == 416usize {
-                    Some(Color::DarkBeige)
-                } else if idx == 417usize {
-                    Some(Color::BulletShell)
-                } else if idx == 418usize {
-                    Some(Color::ArmyBrown)
-                } else if idx == 419usize {
-                    Some(Color::Sandstone)
-                } else if idx == 420usize {
-                    Some(Color::Taupe)
-                } else if idx == 421usize {
-                    Some(Color::DarkGrayishOlive)
-                } else if idx == 422usize {
-                    Some(Color::DarkHazelBrown)
-                } else if idx == 423usize {
-                    Some(Color::Mocha)
-                } else if idx == 424usize {
-                    Some(Color::MilkChocolate)
-                } else if idx == 425usize {
-                    Some(Color::GrayBrown)
-                } else if idx == 426usize {
-                    Some(Color::DarkCoffee)
-                } else if idx == 427usize {
-                    Some(Color::WesternCharcoal)
-                } else if idx == 428usize {
-                    Some(Color::OldBurgundy)
-                } else if idx == 429usize {
-                    Some(Color::RedBrown)
-                } else if idx == 430usize {
-                    Some(Color::BakersBrown)
-                } else if idx == 431usize {
-                    Some(Color::PullmanBrown)
-                } else if idx == 432usize {
-                    Some(Color::DarkBrown)
-                } else if idx == 433usize {
-                    Some(Color::SepiaBrown)
-                } else if idx == 434usize {
-                    Some(Color::DarkBronze)
-                } else if idx == 435usize {
-                    Some(Color::Coffee)
-                } else if idx == 436usize {
-                    Some(Color::BrownBear)
-                } else if idx == 437usize {
-                    Some(Color::RedDirt)
-                } else if idx == 438usize {
-                    Some(Color::Sepia)
-                } else if idx == 439usize {
-                    Some(Color::Sienna)
-                } else if idx == 440usize {
-                    Some(Color::SaddleBrown)
-                } else if idx == 441usize {
-                    Some(Color::DarkSienna)
-                } else if idx == 442usize {
-                    Some(Color::Sangria)
-                } else if idx == 443usize {
-                    Some(Color::BloodRed)
-                } else if idx == 444usize {
-                    Some(Color::Chestnut)
-                } else if idx == 445usize {
-                    Some(Color::CoralBrown)
-                } else if idx == 446usize {
-                    Some(Color::DeepAmber)
-                } else if idx == 447usize {
-                    Some(Color::ChestnutRed)
-                } else if idx == 448usize {
-                    Some(Color::GingerRed)
-                } else if idx == 449usize {
-                    Some(Color::Mahogany)
-                } else if idx == 450usize {
-                    Some(Color::RedGold)
-                } else if idx == 451usize {
-                    Some(Color::RedFox)
-                } else if idx == 452usize {
-                    Some(Color::DarkBisque)
-                } else if idx == 453usize {
-                    Some(Color::LightBrown)
-                } else if idx == 454usize {
-                    Some(Color::PetraGold)
-                } else if idx == 455usize {
-                    Some(Color::BrownRust)
-                } else if idx == 456usize {
-                    Some(Color::Rust)
-                } else if idx == 457usize {
-                    Some(Color::CopperRed)
-                } else if idx == 458usize {
-                    Some(Color::OrangeSalmon)
-                } else if idx == 459usize {
-                    Some(Color::Chocolate)
-                } else if idx == 460usize {
-                    Some(Color::Sedona)
-                } else if idx == 461usize {
-                    Some(Color::PapayaOrange)
-                } else if idx == 462usize {
-                    Some(Color::HalloweenOrange)
-                } else if idx == 463usize {
-                    Some(Color::NeonOrange)
-                } else if idx == 464usize {
-                    Some(Color::BrightOrange)
-                } else if idx == 465usize {
-                    Some(Color::FluroOrange)
-                } else if idx == 466usize {
-                    Some(Color::PumpkinOrange)
-                } else if idx == 467usize {
-                    Some(Color::SafetyOrange)
-                } else if idx == 468usize {
-                    Some(Color::CarrotOrange)
-                } else if idx == 469usize {
-                    Some(Color::DarkOrange)
-                } else if idx == 470usize {
-                    Some(Color::ConstructionConeOrange)
-                } else if idx == 471usize {
-                    Some(Color::IndianSaffron)
-                } else if idx == 472usize {
-                    Some(Color::SunriseOrange)
-                } else if idx == 473usize {
-                    Some(Color::MangoOrange)
-                } else if idx == 474usize {
-                    Some(Color::Coral)
-                } else if idx == 475usize {
-                    Some(Color::BasketBallOrange)
-                } else if idx == 476usize {
-                    Some(Color::LightSalmonRose)
-                } else if idx == 477usize {
-                    Some(Color::LightSalmon)
-                } else if idx == 478usize {
-                    Some(Color::PinkOrange)
-                } else if idx == 479usize {
-                    Some(Color::DarkSalmon)
-                } else if idx == 480usize {
-                    Some(Color::Tangerine)
-                } else if idx == 481usize {
-                    Some(Color::LightCopper)
-                } else if idx == 482usize {
-                    Some(Color::SalmonPink)
-                } else if idx == 483usize {
-                    Some(Color::Salmon)
-                } else if idx == 484usize {
-                    Some(Color::PeachPink)
-                } else if idx == 485usize {
-                    Some(Color::LightCoral)
-                } else if idx == 486usize {
-                    Some(Color::PastelRed)
-                } else if idx == 487usize {
-                    Some(Color::PinkCoral)
-                } else if idx == 488usize {
-                    Some(Color::BeanRed)
-                } else if idx == 489usize {
-                    Some(Color::ValentineRed)
-                } else if idx == 490usize {
-                    Some(Color::IndianRed)
-                } else if idx == 491usize {
-                    Some(Color::Tomato)
-                } else if idx == 492usize {
-                    Some(Color::ShockingOrange)
-                } else if idx == 493usize {
-                    Some(Color::OrangeRed)
-                } else if idx == 494usize {
-                    Some(Color::Red)
-                } else if idx == 495usize {
-                    Some(Color::NeonRed)
-                } else if idx == 496usize {
-                    Some(Color::ScarletRed)
-                } else if idx == 497usize {
-                    Some(Color::RubyRed)
-                } else if idx == 498usize {
-                    Some(Color::FerrariRed)
-                } else if idx == 499usize {
-                    Some(Color::FireEngineRed)
-                } else if idx == 500usize {
-                    Some(Color::LavaRed)
-                } else if idx == 501usize {
-                    Some(Color::LoveRed)
-                } else if idx == 502usize {
-                    Some(Color::Grapefruit)
-                } else if idx == 503usize {
-                    Some(Color::StrawberryRed)
-                } else if idx == 504usize {
-                    Some(Color::CherryRed)
-                } else if idx == 505usize {
-                    Some(Color::ChilliPepper)
-                } else if idx == 506usize {
-                    Some(Color::FireBrick)
-                } else if idx == 507usize {
-                    Some(Color::TomatoSauceRed)
-                } else if idx == 508usize {
-                    Some(Color::Brown)
-                } else if idx == 509usize {
-                    Some(Color::CarbonRed)
-                } else if idx == 510usize {
-                    Some(Color::Cranberry)
-                } else if idx == 511usize {
-                    Some(Color::SaffronRed)
-                } else if idx == 512usize {
-                    Some(Color::CrimsonRed)
-                } else if idx == 513usize {
-                    Some(Color::RedWine)
-                } else if idx == 514usize {
-                    Some(Color::WineRed)
-                } else if idx == 515usize {
-                    Some(Color::DarkRed)
-                } else if idx == 516usize {
-                    Some(Color::MaroonRed)
-                } else if idx == 517usize {
-                    Some(Color::Maroon)
-                } else if idx == 518usize {
-                    Some(Color::Burgundy)
-                } else if idx == 519usize {
-                    Some(Color::Vermilion)
-                } else if idx == 520usize {
-                    Some(Color::DeepRed)
-                } else if idx == 521usize {
-                    Some(Color::GarnetRed)
-                } else if idx == 522usize {
-                    Some(Color::RedBlood)
-                } else if idx == 523usize {
-                    Some(Color::BloodNight)
-                } else if idx == 524usize {
-                    Some(Color::DarkScarlet)
-                } else if idx == 525usize {
-                    Some(Color::ChocolateBrown)
-                } else if idx == 526usize {
-                    Some(Color::BlackBean)
-                } else if idx == 527usize {
-                    Some(Color::DarkMaroon)
-                } else if idx == 528usize {
-                    Some(Color::Midnight)
-                } else if idx == 529usize {
-                    Some(Color::PurpleLily)
-                } else if idx == 530usize {
-                    Some(Color::PurpleMaroon)
-                } else if idx == 531usize {
-                    Some(Color::PlumPie)
-                } else if idx == 532usize {
-                    Some(Color::PlumVelvet)
-                } else if idx == 533usize {
-                    Some(Color::DarkRaspberry)
-                } else if idx == 534usize {
-                    Some(Color::VelvetMaroon)
-                } else if idx == 535usize {
-                    Some(Color::RosyFinch)
-                } else if idx == 536usize {
-                    Some(Color::DullPurple)
-                } else if idx == 537usize {
-                    Some(Color::Puce)
-                } else if idx == 538usize {
-                    Some(Color::RoseDust)
-                } else if idx == 539usize {
-                    Some(Color::PastelBrown)
-                } else if idx == 540usize {
-                    Some(Color::RosyPink)
-                } else if idx == 541usize {
-                    Some(Color::RosyBrown)
-                } else if idx == 542usize {
-                    Some(Color::KhakiRose)
-                } else if idx == 543usize {
-                    Some(Color::LipstickPink)
-                } else if idx == 544usize {
-                    Some(Color::DuskyPink)
-                } else if idx == 545usize {
-                    Some(Color::PinkBrown)
-                } else if idx == 546usize {
-                    Some(Color::OldRose)
-                } else if idx == 547usize {
-                    Some(Color::DustyPink)
-                } else if idx == 548usize {
-                    Some(Color::PinkDaisy)
-                } else if idx == 549usize {
-                    Some(Color::Rose)
-                } else if idx == 550usize {
-                    Some(Color::DustyRose)
-                } else if idx == 551usize {
-                    Some(Color::SilverPink)
-                } else if idx == 552usize {
-                    Some(Color::GoldPink)
-                } else if idx == 553usize {
-                    Some(Color::RoseGold)
-                } else if idx == 554usize {
-                    Some(Color::DeepPeach)
-                } else if idx == 555usize {
-                    Some(Color::PastelOrange)
-                } else if idx == 556usize {
-                    Some(Color::DesertSand)
-                } else if idx == 557usize {
-                    Some(Color::UnbleachedSilk)
-                } else if idx == 558usize {
-                    Some(Color::PigPink)
-                } else if idx == 559usize {
-                    Some(Color::PalePink)
-                } else if idx == 560usize {
-                    Some(Color::Blush)
-                } else if idx == 561usize {
-                    Some(Color::MistyRose)
-                } else if idx == 562usize {
-                    Some(Color::PinkBubbleGum)
-                } else if idx == 563usize {
-                    Some(Color::LightRose)
-                } else if idx == 564usize {
-                    Some(Color::LightRed)
-                } else if idx == 565usize {
-                    Some(Color::RoseQuartz)
-                } else if idx == 566usize {
-                    Some(Color::WarmPink)
-                } else if idx == 567usize {
-                    Some(Color::DeepRose)
-                } else if idx == 568usize {
-                    Some(Color::Pink)
-                } else if idx == 569usize {
-                    Some(Color::LightPink)
-                } else if idx == 570usize {
-                    Some(Color::SoftPink)
-                } else if idx == 571usize {
-                    Some(Color::PowderPink)
-                } else if idx == 572usize {
-                    Some(Color::DonutPink)
-                } else if idx == 573usize {
-                    Some(Color::BabyPink)
-                } else if idx == 574usize {
-                    Some(Color::FlamingoPink)
-                } else if idx == 575usize {
-                    Some(Color::PastelPink)
-                } else if idx == 576usize {
-                    Some(Color::RosePink)
-                } else if idx == 577usize {
-                    Some(Color::CadillacPink)
-                } else if idx == 578usize {
-                    Some(Color::CarnationPink)
-                } else if idx == 579usize {
-                    Some(Color::PastelRose)
-                } else if idx == 580usize {
-                    Some(Color::BlushRed)
-                } else if idx == 581usize {
-                    Some(Color::PaleVioletRed)
-                } else if idx == 582usize {
-                    Some(Color::PurplePink)
-                } else if idx == 583usize {
-                    Some(Color::TulipPink)
-                } else if idx == 584usize {
-                    Some(Color::BashfulPink)
-                } else if idx == 585usize {
-                    Some(Color::DarkPink)
-                } else if idx == 586usize {
-                    Some(Color::DarkHotPink)
-                } else if idx == 587usize {
-                    Some(Color::HotPink)
-                } else if idx == 588usize {
-                    Some(Color::WatermelonPink)
-                } else if idx == 589usize {
-                    Some(Color::VioletRed)
-                } else if idx == 590usize {
-                    Some(Color::HotDeepPink)
-                } else if idx == 591usize {
-                    Some(Color::BrightPink)
-                } else if idx == 592usize {
-                    Some(Color::RedMagenta)
-                } else if idx == 593usize {
-                    Some(Color::DeepPink)
-                } else if idx == 594usize {
-                    Some(Color::NeonPink)
-                } else if idx == 595usize {
-                    Some(Color::ChromePink)
-                } else if idx == 596usize {
-                    Some(Color::NeonHotPink)
-                } else if idx == 597usize {
-                    Some(Color::PinkCupcake)
-                } else if idx == 598usize {
-                    Some(Color::RoyalPink)
-                } else if idx == 599usize {
-                    Some(Color::DimorphothecaMagenta)
-                } else if idx == 600usize {
-                    Some(Color::BarbiePink)
-                } else if idx == 601usize {
-                    Some(Color::PinkLemonade)
-                } else if idx == 602usize {
-                    Some(Color::RedPink)
-                } else if idx == 603usize {
-                    Some(Color::Raspberry)
-                } else if idx == 604usize {
-                    Some(Color::Crimson)
-                } else if idx == 605usize {
-                    Some(Color::BrightMaroon)
-                } else if idx == 606usize {
-                    Some(Color::RoseRed)
-                } else if idx == 607usize {
-                    Some(Color::RoguePink)
-                } else if idx == 608usize {
-                    Some(Color::BurntPink)
-                } else if idx == 609usize {
-                    Some(Color::PinkViolet)
-                } else if idx == 610usize {
-                    Some(Color::MagentaPink)
-                } else if idx == 611usize {
-                    Some(Color::MediumVioletRed)
-                } else if idx == 612usize {
-                    Some(Color::DarkCarnationPink)
-                } else if idx == 613usize {
-                    Some(Color::RaspberryPurple)
-                } else if idx == 614usize {
-                    Some(Color::PinkPlum)
-                } else if idx == 615usize {
-                    Some(Color::Orchid)
-                } else if idx == 616usize {
-                    Some(Color::DeepMauve)
-                } else if idx == 617usize {
-                    Some(Color::Violet)
-                } else if idx == 618usize {
-                    Some(Color::FuchsiaPink)
-                } else if idx == 619usize {
-                    Some(Color::BrightNeonPink)
-                } else if idx == 620usize {
-                    Some(Color::Magenta)
-                } else if idx == 621usize {
-                    Some(Color::Fuchsia)
-                } else if idx == 622usize {
-                    Some(Color::CrimsonPurple)
-                } else if idx == 623usize {
-                    Some(Color::HeliotropePurple)
-                } else if idx == 624usize {
-                    Some(Color::TyrianPurple)
-                } else if idx == 625usize {
-                    Some(Color::MediumOrchid)
-                } else if idx == 626usize {
-                    Some(Color::PurpleFlower)
-                } else if idx == 627usize {
-                    Some(Color::OrchidPurple)
-                } else if idx == 628usize {
-                    Some(Color::RichLilac)
-                } else if idx == 629usize {
-                    Some(Color::PastelViolet)
-                } else if idx == 630usize {
-                    Some(Color::Rosy)
-                } else if idx == 631usize {
-                    Some(Color::MauveTaupe)
-                } else if idx == 632usize {
-                    Some(Color::ViolaPurple)
-                } else if idx == 633usize {
-                    Some(Color::Eggplant)
-                } else if idx == 634usize {
-                    Some(Color::PlumPurple)
-                } else if idx == 635usize {
-                    Some(Color::Grape)
-                } else if idx == 636usize {
-                    Some(Color::PurpleNavy)
-                } else if idx == 637usize {
-                    Some(Color::SlateBlue)
-                } else if idx == 638usize {
-                    Some(Color::BlueLotus)
-                } else if idx == 639usize {
-                    Some(Color::Blurple)
-                } else if idx == 640usize {
-                    Some(Color::LightSlateBlue)
-                } else if idx == 641usize {
-                    Some(Color::MediumSlateBlue)
-                } else if idx == 642usize {
-                    Some(Color::PeriwinklePurple)
-                } else if idx == 643usize {
-                    Some(Color::VeryPeri)
-                } else if idx == 644usize {
-                    Some(Color::BrightGrape)
-                } else if idx == 645usize {
-                    Some(Color::BrightPurple)
-                } else if idx == 646usize {
-                    Some(Color::PurpleAmethyst)
-                } else if idx == 647usize {
-                    Some(Color::BlueMagenta)
-                } else if idx == 648usize {
-                    Some(Color::DarkBlurple)
-                } else if idx == 649usize {
-                    Some(Color::DeepPeriwinkle)
-                } else if idx == 650usize {
-                    Some(Color::DarkSlateBlue)
-                } else if idx == 651usize {
-                    Some(Color::PurpleHaze)
-                } else if idx == 652usize {
-                    Some(Color::PurpleIris)
-                } else if idx == 653usize {
-                    Some(Color::DarkPurple)
-                } else if idx == 654usize {
-                    Some(Color::DeepPurple)
-                } else if idx == 655usize {
-                    Some(Color::MidnightPurple)
-                } else if idx == 656usize {
-                    Some(Color::PurpleMonster)
-                } else if idx == 657usize {
-                    Some(Color::Indigo)
-                } else if idx == 658usize {
-                    Some(Color::BlueWhale)
-                } else if idx == 659usize {
-                    Some(Color::RebeccaPurple)
-                } else if idx == 660usize {
-                    Some(Color::PurpleJam)
-                } else if idx == 661usize {
-                    Some(Color::DarkMagenta)
-                } else if idx == 662usize {
-                    Some(Color::Purple)
-                } else if idx == 663usize {
-                    Some(Color::FrenchLilac)
-                } else if idx == 664usize {
-                    Some(Color::DarkOrchid)
-                } else if idx == 665usize {
-                    Some(Color::DarkViolet)
-                } else if idx == 666usize {
-                    Some(Color::PurpleViolet)
-                } else if idx == 667usize {
-                    Some(Color::JasminePurple)
-                } else if idx == 668usize {
-                    Some(Color::PurpleDaffodil)
-                } else if idx == 669usize {
-                    Some(Color::ClematisViolet)
-                } else if idx == 670usize {
-                    Some(Color::BlueViolet)
-                } else if idx == 671usize {
-                    Some(Color::PurpleSageBush)
-                } else if idx == 672usize {
-                    Some(Color::LovelyPurple)
-                } else if idx == 673usize {
-                    Some(Color::NeonPurple)
-                } else if idx == 674usize {
-                    Some(Color::PurplePlum)
-                } else if idx == 675usize {
-                    Some(Color::AztechPurple)
-                } else if idx == 676usize {
-                    Some(Color::MediumPurple)
-                } else if idx == 677usize {
-                    Some(Color::LightPurple)
-                } else if idx == 678usize {
-                    Some(Color::CrocusPurple)
-                } else if idx == 679usize {
-                    Some(Color::PurpleMimosa)
-                } else if idx == 680usize {
-                    Some(Color::PastelIndigo)
-                } else if idx == 681usize {
-                    Some(Color::LavenderPurple)
-                } else if idx == 682usize {
-                    Some(Color::RosePurple)
-                } else if idx == 683usize {
-                    Some(Color::Viola)
-                } else if idx == 684usize {
-                    Some(Color::Periwinkle)
-                } else if idx == 685usize {
-                    Some(Color::PaleLilac)
-                } else if idx == 686usize {
-                    Some(Color::Lilac)
-                } else if idx == 687usize {
-                    Some(Color::Mauve)
-                } else if idx == 688usize {
-                    Some(Color::BrightLilac)
-                } else if idx == 689usize {
-                    Some(Color::PurpleDragon)
-                } else if idx == 690usize {
-                    Some(Color::Plum)
-                } else if idx == 691usize {
-                    Some(Color::BlushPink)
-                } else if idx == 692usize {
-                    Some(Color::PastelPurple)
-                } else if idx == 693usize {
-                    Some(Color::BlossomPink)
-                } else if idx == 694usize {
-                    Some(Color::WisteriaPurple)
-                } else if idx == 695usize {
-                    Some(Color::PurpleThistle)
-                } else if idx == 696usize {
-                    Some(Color::Thistle)
-                } else if idx == 697usize {
-                    Some(Color::PurpleWhite)
-                } else if idx == 698usize {
-                    Some(Color::PeriwinklePink)
-                } else if idx == 699usize {
-                    Some(Color::CottonCandy)
-                } else if idx == 700usize {
-                    Some(Color::LavenderPinocchio)
-                } else if idx == 701usize {
-                    Some(Color::DarkWhite)
-                } else if idx == 702usize {
-                    Some(Color::AshWhite)
-                } else if idx == 703usize {
-                    Some(Color::WarmWhite)
-                } else if idx == 704usize {
-                    Some(Color::WhiteChocolate)
-                } else if idx == 705usize {
-                    Some(Color::CreamyWhite)
-                } else if idx == 706usize {
-                    Some(Color::OffWhite)
-                } else if idx == 707usize {
-                    Some(Color::SoftIvory)
-                } else if idx == 708usize {
-                    Some(Color::CosmicLatte)
-                } else if idx == 709usize {
-                    Some(Color::PearlWhite)
-                } else if idx == 710usize {
-                    Some(Color::RedWhite)
-                } else if idx == 711usize {
-                    Some(Color::LavenderBlush)
-                } else if idx == 712usize {
-                    Some(Color::Pearl)
-                } else if idx == 713usize {
-                    Some(Color::EggShell)
-                } else if idx == 714usize {
-                    Some(Color::OldLace)
-                } else if idx == 715usize {
-                    Some(Color::WhiteIce)
-                } else if idx == 716usize {
-                    Some(Color::Linen)
-                } else if idx == 717usize {
-                    Some(Color::SeaShell)
-                } else if idx == 718usize {
-                    Some(Color::BoneWhite)
-                } else if idx == 719usize {
-                    Some(Color::Rice)
-                } else if idx == 720usize {
-                    Some(Color::FloralWhite)
-                } else if idx == 721usize {
-                    Some(Color::Ivory)
-                } else if idx == 722usize {
-                    Some(Color::WhiteGold)
-                } else if idx == 723usize {
-                    Some(Color::LightWhite)
-                } else if idx == 724usize {
-                    Some(Color::Cotton)
-                } else if idx == 725usize {
-                    Some(Color::Snow)
-                } else if idx == 726usize {
-                    Some(Color::MilkWhite)
-                } else if idx == 727usize {
-                    Some(Color::HalfWhite)
-                } else if idx == 728usize {
-                    Some(Color::White)
-                } else {
-                    None
-                }
-            })
+            NAME_MAP.get(&norm_name(name)).map(|&idx| VARIANTS[idx])
         }
     }
     #[doc = r" Get the RGB values of a color"]

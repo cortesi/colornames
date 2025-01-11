@@ -114,6 +114,13 @@ fn main() {
         Commands::Generate => {
             let enum_tokens = {
                 let color_data: Vec<_> = colors::COLORS.iter().collect();
+                let variant_array: Vec<_> = color_data
+                    .iter()
+                    .map(|(name, _hex)| {
+                        let ident = name.replace(" ", "");
+                        quote::format_ident!("{}", ident)
+                    })
+                    .collect();
 
                 let color_indices: Vec<_> = (0..color_data.len()).collect();
                 let color_idents: Vec<_> = color_data
@@ -152,6 +159,11 @@ fn main() {
                         m
                     });
 
+                    /// Array of color variants matching the order of COLORS array
+                    pub static VARIANTS: &[Color] = &[
+                        #(Color::#variant_array),*
+                    ];
+
                     /// Convert a hex color string to a `Color` variant
                     static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
                         let mut m = HashMap::new();
@@ -183,9 +195,7 @@ fn main() {
                                 RGB_MAP.get(hex.as_str()).copied().or(Some(Color::Rgb(r, g, b)))
                             } else {
                                 // Handle color names
-                                NAME_MAP.get(&norm_name(name)).and_then(|&idx| {
-                                    #(if idx == #color_indices { Some(Color::#color_idents) } else)* { None }
-                                })
+                                NAME_MAP.get(&norm_name(name)).map(|&idx| VARIANTS[idx])
                             }
                         }
 
