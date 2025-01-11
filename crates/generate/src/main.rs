@@ -164,11 +164,11 @@ fn main() {
                         #(Color::#variant_array),*
                     ];
 
-                    /// Convert a hex color string to a `Color` variant
-                    static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
+                    /// Maps hex codes to array indices
+                    static RGB_MAP: Lazy<HashMap<&'static str, usize>> = Lazy::new(|| {
                         let mut m = HashMap::new();
                         #(
-                            m.insert(#color_hexes, Color::#color_idents);
+                            m.insert(#color_hexes, #color_indices);
                         )*
                         m
                     });
@@ -192,7 +192,7 @@ fn main() {
                                     _ => return None
                                 };
                                 let hex = format!("#{:02X}{:02X}{:02X}", r, g, b);
-                                RGB_MAP.get(hex.as_str()).copied().or(Some(Color::Rgb(r, g, b)))
+                                RGB_MAP.get(hex.as_str()).map(|&idx| VARIANTS[idx]).or(Some(Color::Rgb(r, g, b)))
                             } else {
                                 // Handle color names
                                 NAME_MAP.get(&norm_name(name)).map(|&idx| VARIANTS[idx])
