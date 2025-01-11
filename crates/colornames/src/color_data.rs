@@ -1,4 +1,4 @@
-#[allow(dead_code)]
+/// (name, hex) tuples for all supported colors
 pub static COLORS: &[(&str, &str)] = &[
     ("Black", "#000000"),
     ("Black Blue", "#040720"),

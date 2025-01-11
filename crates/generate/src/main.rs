@@ -39,7 +39,7 @@ fn main() {
     match cli.command {
         Commands::Readme => {
             println!("<table style='border-collapse: collapse;'>");
-            let color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
+            let color_data: Vec<_> = colors::COLORS.iter().collect();
 
             for chunk in color_data.chunks(COLUMNS) {
                 println!("<tr>");
@@ -59,7 +59,7 @@ fn main() {
         Commands::List { html } => {
             if html {
                 println!("<table style='border-collapse: collapse;'>");
-                let color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
+                let color_data: Vec<_> = colors::COLORS.iter().collect();
 
                 for chunk in color_data.chunks(COLUMNS) {
                     println!("<tr>");
@@ -72,7 +72,7 @@ fn main() {
                 println!("</table>");
             } else {
                 let mut stdout = StandardStream::stdout(ColorChoice::Always);
-                for (name, hex) in colors::COLOR_DATA {
+                for (name, hex) in colors::COLORS {
                     let r = u8::from_str_radix(&hex[1..3], 16).unwrap();
                     let g = u8::from_str_radix(&hex[3..5], 16).unwrap();
                     let b = u8::from_str_radix(&hex[5..7], 16).unwrap();
@@ -93,7 +93,7 @@ fn main() {
                 std::process::exit(1);
             }
 
-            for (name, hex) in colors::COLOR_DATA {
+            for (name, hex) in colors::COLORS {
                 let r = u8::from_str_radix(&hex[1..3], 16).unwrap();
                 let g = u8::from_str_radix(&hex[3..5], 16).unwrap();
                 let b = u8::from_str_radix(&hex[5..7], 16).unwrap();
@@ -113,9 +113,9 @@ fn main() {
         }
         Commands::Generate => {
             let enum_tokens = {
-                let mut color_data: Vec<_> = colors::COLOR_DATA.iter().collect();
-                color_data.sort_by_key(|(name, _)| *name);
+                let color_data: Vec<_> = colors::COLORS.iter().collect();
 
+                let indices: Vec<_> = (0..color_data.len()).collect();
                 let color_idents: Vec<_> = color_data
                     .iter()
                     .map(|(name, _hex)| {
@@ -125,10 +125,13 @@ fn main() {
                     .collect();
 
                 let color_hexes: Vec<_> = color_data.iter().map(|(_, hex)| hex).collect();
+                let color_indices: Vec<_> = indices.iter().collect();
 
                 quote::quote! {
                     use std::collections::HashMap;
                     use once_cell::sync::Lazy;
+
+                    use crate::COLORS;
 
                     /// A list of named colors
                     #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -191,17 +194,39 @@ fn main() {
                         /// Get the hex value of a color
                         pub fn rgb_hex(&self) -> String {
                             match self {
-                                #(Self::#color_idents => #color_hexes,)*
-                                Self::Rgb(r, g, b) => return format!("#{:02X}{:02X}{:02X}", r, g, b)
-                            }.to_string()
+                                Self::Rgb(r, g, b) => format!("#{:02X}{:02X}{:02X}", r, g, b),
+                                _ => {
+                                    if let Some(idx) = self.offset() {
+                                        COLORS[idx].1.to_string()
+                                    } else {
+                                        // This should never happen since offset() only returns None for Rgb
+                                        unreachable!()
+                                    }
+                                }
+                            }
                         }
 
                         /// Get the name of the color as a string
                         pub fn name(&self) -> String {
                             match self {
-                                #(Self::#color_idents => stringify!(#color_idents),)*
-                                Self::Rgb(r, g, b) => return format!("rgb({}, {}, {})", r, g, b)
-                            }.to_string()
+                                Self::Rgb(r, g, b) => format!("rgb({}, {}, {})", r, g, b),
+                                _ => {
+                                    if let Some(idx) = self.offset() {
+                                        COLORS[idx].0.to_string()
+                                    } else {
+                                        // This should never happen since offset() only returns None for Rgb
+                                        unreachable!()
+                                    }
+                                }
+                            }
+                        }
+
+                        /// Get the offset of this color in the COLORS array
+                        fn offset(&self) -> Option<usize> {
+                            match self {
+                                #(Self::#color_idents => Some(#color_indices),)*
+                                Self::Rgb(_, _, _) => None,
+                            }
                         }
                     }
 
