@@ -130,16 +130,37 @@ fn main() {
                     /// A list of named colors
                     #[derive(Debug, Clone, Copy, PartialEq, Eq)]
                     pub enum Color {
-                        #(#color_idents),*
+                        #(#color_idents),*,
+                        Rgb(u8, u8, u8)
                     }
 
                     impl Color {
-                        /// Convert a color name to a `Color` variant
-                        pub fn from_name(name: &str) -> Option<Self> {
-                            let normalized = name.replace(" ", "").to_lowercase();
-                            match normalized.as_str() {
-                                #(s if s == stringify!(#color_idents).to_lowercase() => Some(Color::#color_idents),)*
-                                _ => None
+                        /// Convert a color name to a `Color` variant or parse as RGB hex code
+                        pub fn from_str(name: &str) -> Option<Self> {
+                            if name.starts_with('#') {
+                                // Handle hex codes
+                                let hex = &name[1..];
+                                match hex.len() {
+                                    6 => {
+                                        let r = u8::from_str_radix(&hex[0..2], 16).ok()?;
+                                        let g = u8::from_str_radix(&hex[2..4], 16).ok()?;
+                                        let b = u8::from_str_radix(&hex[4..6], 16).ok()?;
+                                        Some(Color::Rgb(r, g, b))
+                                    }
+                                    3 => {
+                                        let r = u8::from_str_radix(&hex[0..1].repeat(2), 16).ok()?;
+                                        let g = u8::from_str_radix(&hex[1..2].repeat(2), 16).ok()?;
+                                        let b = u8::from_str_radix(&hex[2..3].repeat(2), 16).ok()?;
+                                        Some(Color::Rgb(r, g, b))
+                                    }
+                                    _ => None
+                                }
+                            } else {
+                                let normalized = name.replace(" ", "").to_lowercase();
+                                match normalized.as_str() {
+                                    #(s if s == stringify!(#color_idents).to_lowercase() => Some(Color::#color_idents),)*
+                                    _ => None
+                                }
                             }
                         }
 
@@ -157,14 +178,16 @@ fn main() {
                         /// Get the hex value of a color
                         pub fn rgb_hex(&self) -> String {
                             match self {
-                                #(Self::#color_idents => #color_hexes,)*
-                            }.to_string()
+                                #(Self::#color_idents => #color_hexes.to_string(),)*
+                                Self::Rgb(r, g, b) => format!("#{:02x}{:02x}{:02x}", r, g, b)
+                            }
                         }
 
                         /// Get the name of the color as a string
-                        pub fn name(&self) -> &'static str {
+                        pub fn name(&self) -> String {
                             match self {
-                                #(Self::#color_idents => stringify!(#color_idents),)*
+                                #(Self::#color_idents => stringify!(#color_idents).to_string(),)*
+                                Self::Rgb(r, g, b) => format!("rgb({}, {}, {})", r, g, b)
                             }
                         }
                     }
