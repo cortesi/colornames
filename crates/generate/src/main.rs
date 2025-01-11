@@ -136,7 +136,7 @@ fn main() {
 
                     impl Color {
                         /// Convert a color name to a `Color` variant or parse as RGB hex code
-                        pub fn from_str(name: &str) -> Option<Self> {
+                        pub fn convert_str(name: &str) -> Option<Self> {
                             if name.starts_with('#') {
                                 // Handle hex codes
                                 let hex = &name[1..];
@@ -157,7 +157,7 @@ fn main() {
                                 };
                                 let hex = format!("#{:02X}{:02X}{:02X}", r, g, b);
                                 match hex.as_str() {
-                                    #(x if x == #color_hexes => Some(Color::#color_idents),)*
+                                    #(#color_hexes => Some(Color::#color_idents),)*
                                     _ => Some(Color::Rgb(r, g, b))
                                 }
                             } else {
@@ -194,6 +194,30 @@ fn main() {
                                 #(Self::#color_idents => stringify!(#color_idents),)*
                                 Self::Rgb(r, g, b) => return format!("rgb({}, {}, {})", r, g, b)
                             }.to_string()
+                        }
+                    }
+
+                    impl TryFrom<&str> for Color {
+                        type Error = String;
+
+                        fn try_from(s: &str) -> Result<Self, Self::Error> {
+                            Self::convert_str(s).ok_or_else(|| format!("invalid color: {}", s))
+                        }
+                    }
+
+                    impl TryFrom<String> for Color {
+                        type Error = String;
+
+                        fn try_from(s: String) -> Result<Self, Self::Error> {
+                            Self::try_from(s.as_str())
+                        }
+                    }
+
+                    impl TryFrom<&String> for Color {
+                        type Error = String;
+
+                        fn try_from(s: &String) -> Result<Self, Self::Error> {
+                            Self::try_from(s.as_str())
                         }
                     }
                 }
