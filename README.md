@@ -41,1949 +41,1949 @@ assert_eq!(c.rgb(), (0, 0, 17));
 
 # Supported Colors
 
-<table style='border-collapse: collapse;'>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Black</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Black Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/night.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Night</td>
+<table>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black.png" width="50" height="20"></td>
+<td>Black</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_blue.png" width="50" height="20"></td>
+<td>Black Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/night.png" width="50" height="20"></td>
+<td>Night</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/charcoal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Charcoal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/oil.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Oil</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/stormy_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Stormy Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/charcoal.png" width="50" height="20"></td>
+<td>Charcoal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/oil.png" width="50" height="20"></td>
+<td>Oil</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/stormy_gray.png" width="50" height="20"></td>
+<td>Stormy Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_black.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Black</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_steampunk.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Steampunk</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_cat.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Black Cat</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_black.png" width="50" height="20"></td>
+<td>Light Black</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_steampunk.png" width="50" height="20"></td>
+<td>Dark Steampunk</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_cat.png" width="50" height="20"></td>
+<td>Black Cat</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iridium.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Iridium</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_eel.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Black Eel</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_cow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Black Cow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iridium.png" width="50" height="20"></td>
+<td>Iridium</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_eel.png" width="50" height="20"></td>
+<td>Black Eel</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_cow.png" width="50" height="20"></td>
+<td>Black Cow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_wolf.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gray Wolf</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/vampire_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Vampire Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iron_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Iron Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_wolf.png" width="50" height="20"></td>
+<td>Gray Wolf</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/vampire_gray.png" width="50" height="20"></td>
+<td>Vampire Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iron_gray.png" width="50" height="20"></td>
+<td>Iron Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_dolphin.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gray Dolphin</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carbon_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Carbon Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ash_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ash Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_dolphin.png" width="50" height="20"></td>
+<td>Gray Dolphin</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carbon_gray.png" width="50" height="20"></td>
+<td>Carbon Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ash_gray.png" width="50" height="20"></td>
+<td>Ash Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dimgray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DimGray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dimgrey.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DimGrey</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/nardo_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Nardo Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dimgray.png" width="50" height="20"></td>
+<td>DimGray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dimgrey.png" width="50" height="20"></td>
+<td>DimGrey</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/nardo_gray.png" width="50" height="20"></td>
+<td>Nardo Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cloudy_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cloudy Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/smokey_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Smokey Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/alien_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Alien Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cloudy_gray.png" width="50" height="20"></td>
+<td>Cloudy Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/smokey_gray.png" width="50" height="20"></td>
+<td>Smokey Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/alien_gray.png" width="50" height="20"></td>
+<td>Alien Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sonic_silver.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sonic Silver</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/platinum_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Platinum Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/granite.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Granite</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sonic_silver.png" width="50" height="20"></td>
+<td>Sonic Silver</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/platinum_gray.png" width="50" height="20"></td>
+<td>Platinum Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/granite.png" width="50" height="20"></td>
+<td>Granite</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grey.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Grey</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/battleship_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Battleship Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray.png" width="50" height="20"></td>
+<td>Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grey.png" width="50" height="20"></td>
+<td>Grey</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/battleship_gray.png" width="50" height="20"></td>
+<td>Battleship Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sheet_metal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sheet Metal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_gainsboro.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Gainsboro</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gunmetal_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gunmetal Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sheet_metal.png" width="50" height="20"></td>
+<td>Sheet Metal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_gainsboro.png" width="50" height="20"></td>
+<td>Dark Gainsboro</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gunmetal_gray.png" width="50" height="20"></td>
+<td>Gunmetal Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cold_metal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cold Metal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/stainless_steel_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Stainless Steel Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgrey.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkGrey</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cold_metal.png" width="50" height="20"></td>
+<td>Cold Metal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/stainless_steel_gray.png" width="50" height="20"></td>
+<td>Stainless Steel Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgrey.png" width="50" height="20"></td>
+<td>DarkGrey</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkGray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_aluminum.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chrome Aluminum</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_cloud.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gray Cloud</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgray.png" width="50" height="20"></td>
+<td>DarkGray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_aluminum.png" width="50" height="20"></td>
+<td>Chrome Aluminum</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_cloud.png" width="50" height="20"></td>
+<td>Gray Cloud</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Metal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silver.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Silver</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/steampunk.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Steampunk</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metal.png" width="50" height="20"></td>
+<td>Metal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silver.png" width="50" height="20"></td>
+<td>Silver</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/steampunk.png" width="50" height="20"></td>
+<td>Steampunk</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_silver.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pale Silver</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gear_steel_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gear Steel Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_goose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gray Goose</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_silver.png" width="50" height="20"></td>
+<td>Pale Silver</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gear_steel_gray.png" width="50" height="20"></td>
+<td>Gear Steel Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_goose.png" width="50" height="20"></td>
+<td>Gray Goose</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/platinum_silver.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Platinum Silver</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgrey.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightGrey</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightGray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/platinum_silver.png" width="50" height="20"></td>
+<td>Platinum Silver</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgrey.png" width="50" height="20"></td>
+<td>LightGrey</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgray.png" width="50" height="20"></td>
+<td>LightGray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silver_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Silver White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gainsboro.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gainsboro</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_steel_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Steel Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silver_white.png" width="50" height="20"></td>
+<td>Silver White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gainsboro.png" width="50" height="20"></td>
+<td>Gainsboro</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_steel_gray.png" width="50" height="20"></td>
+<td>Light Steel Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/whitesmoke.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>WhiteSmoke</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>White Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/platinum.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Platinum</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/whitesmoke.png" width="50" height="20"></td>
+<td>WhiteSmoke</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_gray.png" width="50" height="20"></td>
+<td>White Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/platinum.png" width="50" height="20"></td>
+<td>Platinum</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_silver.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Metallic Silver</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/roman_silver.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Roman Silver</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_silver.png" width="50" height="20"></td>
+<td>Metallic Silver</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_gray.png" width="50" height="20"></td>
+<td>Blue Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/roman_silver.png" width="50" height="20"></td>
+<td>Roman Silver</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightslategrey.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightSlateGrey</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightslategray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightSlateGray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slategrey.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SlateGrey</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightslategrey.png" width="50" height="20"></td>
+<td>LightSlateGrey</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightslategray.png" width="50" height="20"></td>
+<td>LightSlateGray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slategrey.png" width="50" height="20"></td>
+<td>SlateGrey</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slategray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SlateGray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rat_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rat Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slate_granite_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Slate Granite Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slategray.png" width="50" height="20"></td>
+<td>SlateGray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rat_gray.png" width="50" height="20"></td>
+<td>Rat Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slate_granite_gray.png" width="50" height="20"></td>
+<td>Slate Granite Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jet_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Jet Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mist_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mist Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/steel_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Steel Gray</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jet_gray.png" width="50" height="20"></td>
+<td>Jet Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mist_blue.png" width="50" height="20"></td>
+<td>Mist Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/steel_gray.png" width="50" height="20"></td>
+<td>Steel Gray</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/marble_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Marble Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slate_blue_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Slate Blue Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_purple_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Purple Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/marble_blue.png" width="50" height="20"></td>
+<td>Marble Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slate_blue_gray.png" width="50" height="20"></td>
+<td>Slate Blue Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_purple_blue.png" width="50" height="20"></td>
+<td>Light Purple Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/azure_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Azure Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/estoril_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Estoril Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_jay.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Jay</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/azure_blue.png" width="50" height="20"></td>
+<td>Azure Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/estoril_blue.png" width="50" height="20"></td>
+<td>Estoril Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_jay.png" width="50" height="20"></td>
+<td>Blue Jay</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/charcoal_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Charcoal Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_blue_gray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Blue Gray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_slate.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Slate</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/charcoal_blue.png" width="50" height="20"></td>
+<td>Charcoal Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_blue_gray.png" width="50" height="20"></td>
+<td>Dark Blue Gray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_slate.png" width="50" height="20"></td>
+<td>Dark Slate</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_sea_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Sea Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/night_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Night Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midnightblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MidnightBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_sea_blue.png" width="50" height="20"></td>
+<td>Deep Sea Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/night_blue.png" width="50" height="20"></td>
+<td>Night Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midnightblue.png" width="50" height="20"></td>
+<td>MidnightBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/navy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Navy</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/denim_dark_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Denim Dark Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/navy.png" width="50" height="20"></td>
+<td>Navy</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/denim_dark_blue.png" width="50" height="20"></td>
+<td>Denim Dark Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkblue.png" width="50" height="20"></td>
+<td>DarkBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lapis_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lapis Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/new_midnight_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>New Midnight Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/earth_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Earth Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lapis_blue.png" width="50" height="20"></td>
+<td>Lapis Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/new_midnight_blue.png" width="50" height="20"></td>
+<td>New Midnight Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/earth_blue.png" width="50" height="20"></td>
+<td>Earth Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cobalt_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cobalt Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blueberry_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blueberry Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cobalt_blue.png" width="50" height="20"></td>
+<td>Cobalt Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumblue.png" width="50" height="20"></td>
+<td>MediumBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blueberry_blue.png" width="50" height="20"></td>
+<td>Blueberry Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/canary_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Canary Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/samco_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Samco Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/canary_blue.png" width="50" height="20"></td>
+<td>Canary Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue.png" width="50" height="20"></td>
+<td>Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/samco_blue.png" width="50" height="20"></td>
+<td>Samco Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_orchid.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Orchid</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sapphire_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sapphire Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_blue.png" width="50" height="20"></td>
+<td>Bright Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_orchid.png" width="50" height="20"></td>
+<td>Blue Orchid</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sapphire_blue.png" width="50" height="20"></td>
+<td>Sapphire Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_eyes.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Eyes</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_navy_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Navy Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/balloon_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Balloon Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_eyes.png" width="50" height="20"></td>
+<td>Blue Eyes</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_navy_blue.png" width="50" height="20"></td>
+<td>Bright Navy Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/balloon_blue.png" width="50" height="20"></td>
+<td>Balloon Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/royalblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>RoyalBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ocean_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ocean Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_sky_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Sky Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/royalblue.png" width="50" height="20"></td>
+<td>RoyalBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ocean_blue.png" width="50" height="20"></td>
+<td>Ocean Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_sky_blue.png" width="50" height="20"></td>
+<td>Dark Sky Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_ribbon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Ribbon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_dress.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Dress</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_ribbon.png" width="50" height="20"></td>
+<td>Blue Ribbon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_dress.png" width="50" height="20"></td>
+<td>Blue Dress</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_blue.png" width="50" height="20"></td>
+<td>Neon Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dodgerblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DodgerBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/glacial_blue_ice.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Glacial Blue Ice</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/steelblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SteelBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dodgerblue.png" width="50" height="20"></td>
+<td>DodgerBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/glacial_blue_ice.png" width="50" height="20"></td>
+<td>Glacial Blue Ice</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/steelblue.png" width="50" height="20"></td>
+<td>SteelBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silk_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Silk Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/windows_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Windows Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_ivy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Ivy</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silk_blue.png" width="50" height="20"></td>
+<td>Silk Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/windows_blue.png" width="50" height="20"></td>
+<td>Windows Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_ivy.png" width="50" height="20"></td>
+<td>Blue Ivy</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cyan_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cyan Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_koi.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Koi</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/columbia_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Columbia Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cyan_blue.png" width="50" height="20"></td>
+<td>Cyan Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_koi.png" width="50" height="20"></td>
+<td>Blue Koi</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/columbia_blue.png" width="50" height="20"></td>
+<td>Columbia Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/baby_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Baby Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cornflowerblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>CornflowerBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sky_blue_dress.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sky Blue Dress</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/baby_blue.png" width="50" height="20"></td>
+<td>Baby Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cornflowerblue.png" width="50" height="20"></td>
+<td>CornflowerBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sky_blue_dress.png" width="50" height="20"></td>
+<td>Sky Blue Dress</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iceberg.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Iceberg</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/butterfly_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Butterfly Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deepskyblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DeepSkyBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iceberg.png" width="50" height="20"></td>
+<td>Iceberg</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/butterfly_blue.png" width="50" height="20"></td>
+<td>Butterfly Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deepskyblue.png" width="50" height="20"></td>
+<td>DeepSkyBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midday_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Midday Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crystal_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Crystal Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/denim_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Denim Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midday_blue.png" width="50" height="20"></td>
+<td>Midday Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crystal_blue.png" width="50" height="20"></td>
+<td>Crystal Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/denim_blue.png" width="50" height="20"></td>
+<td>Denim Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/day_sky_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Day Sky Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightskyblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightSkyBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/skyblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SkyBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/day_sky_blue.png" width="50" height="20"></td>
+<td>Day Sky Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightskyblue.png" width="50" height="20"></td>
+<td>LightSkyBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/skyblue.png" width="50" height="20"></td>
+<td>SkyBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jeans_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Jeans Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_angel.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Angel</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jeans_blue.png" width="50" height="20"></td>
+<td>Jeans Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_angel.png" width="50" height="20"></td>
+<td>Blue Angel</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_blue.png" width="50" height="20"></td>
+<td>Pastel Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_day_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Day Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sea_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sea Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/heavenly_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Heavenly Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_day_blue.png" width="50" height="20"></td>
+<td>Light Day Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sea_blue.png" width="50" height="20"></td>
+<td>Sea Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/heavenly_blue.png" width="50" height="20"></td>
+<td>Heavenly Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/robin_egg_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Robin Egg Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/powderblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>PowderBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Coral Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/robin_egg_blue.png" width="50" height="20"></td>
+<td>Robin Egg Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/powderblue.png" width="50" height="20"></td>
+<td>PowderBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral_blue.png" width="50" height="20"></td>
+<td>Coral Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightsteelblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightSteelBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gulf_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gulf Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightblue.png" width="50" height="20"></td>
+<td>LightBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightsteelblue.png" width="50" height="20"></td>
+<td>LightSteelBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gulf_blue.png" width="50" height="20"></td>
+<td>Gulf Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_light_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Light Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lavender Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>White Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_light_blue.png" width="50" height="20"></td>
+<td>Pastel Light Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender_blue.png" width="50" height="20"></td>
+<td>Lavender Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_blue.png" width="50" height="20"></td>
+<td>White Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lavender</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/water.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Water</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aliceblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>AliceBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender.png" width="50" height="20"></td>
+<td>Lavender</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/water.png" width="50" height="20"></td>
+<td>Water</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aliceblue.png" width="50" height="20"></td>
+<td>AliceBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ghostwhite.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>GhostWhite</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/azure.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Azure</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightcyan.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightCyan</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ghostwhite.png" width="50" height="20"></td>
+<td>GhostWhite</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/azure.png" width="50" height="20"></td>
+<td>Azure</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightcyan.png" width="50" height="20"></td>
+<td>LightCyan</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_slate.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Slate</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/electric_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Electric Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tron_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tron Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_slate.png" width="50" height="20"></td>
+<td>Light Slate</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/electric_blue.png" width="50" height="20"></td>
+<td>Electric Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tron_blue.png" width="50" height="20"></td>
+<td>Tron Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_zircon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Zircon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cyan.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cyan</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aqua.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Aqua</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_zircon.png" width="50" height="20"></td>
+<td>Blue Zircon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cyan.png" width="50" height="20"></td>
+<td>Cyan</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aqua.png" width="50" height="20"></td>
+<td>Aqua</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_cyan.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Cyan</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/celeste.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Celeste</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_diamond.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Diamond</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_cyan.png" width="50" height="20"></td>
+<td>Bright Cyan</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/celeste.png" width="50" height="20"></td>
+<td>Celeste</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_diamond.png" width="50" height="20"></td>
+<td>Blue Diamond</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_turquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Turquoise</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_lagoon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Lagoon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/paleturquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>PaleTurquoise</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_turquoise.png" width="50" height="20"></td>
+<td>Bright Turquoise</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_lagoon.png" width="50" height="20"></td>
+<td>Blue Lagoon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/paleturquoise.png" width="50" height="20"></td>
+<td>PaleTurquoise</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_blue_lily.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pale Blue Lily</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_teal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Teal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tiffany_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tiffany Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_blue_lily.png" width="50" height="20"></td>
+<td>Pale Blue Lily</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_teal.png" width="50" height="20"></td>
+<td>Light Teal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tiffany_blue.png" width="50" height="20"></td>
+<td>Tiffany Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_hosta.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Hosta</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cyan_opaque.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cyan Opaque</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/northern_lights_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Northern Lights Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_hosta.png" width="50" height="20"></td>
+<td>Blue Hosta</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cyan_opaque.png" width="50" height="20"></td>
+<td>Cyan Opaque</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/northern_lights_blue.png" width="50" height="20"></td>
+<td>Northern Lights Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumaquamarine.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumAquaMarine</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aqua_seafoam_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Aqua Seafoam Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_green.png" width="50" height="20"></td>
+<td>Blue Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumaquamarine.png" width="50" height="20"></td>
+<td>MediumAquaMarine</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aqua_seafoam_green.png" width="50" height="20"></td>
+<td>Aqua Seafoam Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/magic_mint.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Magic Mint</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_aquamarine.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Aquamarine</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aquamarine.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Aquamarine</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/magic_mint.png" width="50" height="20"></td>
+<td>Magic Mint</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_aquamarine.png" width="50" height="20"></td>
+<td>Light Aquamarine</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aquamarine.png" width="50" height="20"></td>
+<td>Aquamarine</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_teal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Teal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/turquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Turquoise</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumturquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumTurquoise</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_teal.png" width="50" height="20"></td>
+<td>Bright Teal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/turquoise.png" width="50" height="20"></td>
+<td>Turquoise</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumturquoise.png" width="50" height="20"></td>
+<td>MediumTurquoise</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_turquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Turquoise</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jellyfish.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Jellyfish</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_turquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Turquoise</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_turquoise.png" width="50" height="20"></td>
+<td>Deep Turquoise</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jellyfish.png" width="50" height="20"></td>
+<td>Jellyfish</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_turquoise.png" width="50" height="20"></td>
+<td>Blue Turquoise</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkturquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkTurquoise</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/macaw_blue_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Macaw Blue Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightseagreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightSeaGreen</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkturquoise.png" width="50" height="20"></td>
+<td>DarkTurquoise</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/macaw_blue_green.png" width="50" height="20"></td>
+<td>Macaw Blue Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightseagreen.png" width="50" height="20"></td>
+<td>LightSeaGreen</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seafoam_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Seafoam Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cadetblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>CadetBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_sea.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Sea</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seafoam_green.png" width="50" height="20"></td>
+<td>Seafoam Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cadetblue.png" width="50" height="20"></td>
+<td>CadetBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_sea.png" width="50" height="20"></td>
+<td>Deep Sea</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkcyan.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkCyan</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/teal_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Teal Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/teal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Teal</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkcyan.png" width="50" height="20"></td>
+<td>DarkCyan</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/teal_green.png" width="50" height="20"></td>
+<td>Teal Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/teal.png" width="50" height="20"></td>
+<td>Teal</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/teal_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Teal Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/medium_teal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Medium Teal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_teal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Teal</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/teal_blue.png" width="50" height="20"></td>
+<td>Teal Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/medium_teal.png" width="50" height="20"></td>
+<td>Medium Teal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_teal.png" width="50" height="20"></td>
+<td>Dark Teal</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_teal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Teal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkslategray.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkSlateGray</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkslategrey.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkSlateGrey</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_teal.png" width="50" height="20"></td>
+<td>Deep Teal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkslategray.png" width="50" height="20"></td>
+<td>DarkSlateGray</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkslategrey.png" width="50" height="20"></td>
+<td>DarkSlateGrey</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gunmetal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gunmetal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_moss_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Moss Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/beetle_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Beetle Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gunmetal.png" width="50" height="20"></td>
+<td>Gunmetal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_moss_green.png" width="50" height="20"></td>
+<td>Blue Moss Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/beetle_green.png" width="50" height="20"></td>
+<td>Beetle Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grayish_turquoise.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Grayish Turquoise</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/greenish_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Greenish Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aquamarine_stone.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Aquamarine Stone</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grayish_turquoise.png" width="50" height="20"></td>
+<td>Grayish Turquoise</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/greenish_blue.png" width="50" height="20"></td>
+<td>Greenish Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aquamarine_stone.png" width="50" height="20"></td>
+<td>Aquamarine Stone</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sea_turtle_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sea Turtle Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dull_sea_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dull Sea Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_green_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Green Blue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sea_turtle_green.png" width="50" height="20"></td>
+<td>Sea Turtle Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dull_sea_green.png" width="50" height="20"></td>
+<td>Dull Sea Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_green_blue.png" width="50" height="20"></td>
+<td>Dark Green Blue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_sea_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Sea Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bottle_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bottle Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seagreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SeaGreen</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_sea_green.png" width="50" height="20"></td>
+<td>Deep Sea Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bottle_green.png" width="50" height="20"></td>
+<td>Bottle Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seagreen.png" width="50" height="20"></td>
+<td>SeaGreen</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/elf_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Elf Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_mint.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Mint</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jade.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Jade</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/elf_green.png" width="50" height="20"></td>
+<td>Elf Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_mint.png" width="50" height="20"></td>
+<td>Dark Mint</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jade.png" width="50" height="20"></td>
+<td>Jade</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/earth_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Earth Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chrome Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mint.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mint</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/earth_green.png" width="50" height="20"></td>
+<td>Earth Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_green.png" width="50" height="20"></td>
+<td>Chrome Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mint.png" width="50" height="20"></td>
+<td>Mint</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/emerald.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Emerald</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/isle_of_man_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Isle Of Man Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumseagreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumSeaGreen</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/emerald.png" width="50" height="20"></td>
+<td>Emerald</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/isle_of_man_green.png" width="50" height="20"></td>
+<td>Isle Of Man Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumseagreen.png" width="50" height="20"></td>
+<td>MediumSeaGreen</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Metallic Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/camouflage_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Camouflage Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sage_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sage Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_green.png" width="50" height="20"></td>
+<td>Metallic Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/camouflage_green.png" width="50" height="20"></td>
+<td>Camouflage Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sage_green.png" width="50" height="20"></td>
+<td>Sage Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hazel_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Hazel Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/venom_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Venom Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/olivedrab.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>OliveDrab</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hazel_green.png" width="50" height="20"></td>
+<td>Hazel Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/venom_green.png" width="50" height="20"></td>
+<td>Venom Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/olivedrab.png" width="50" height="20"></td>
+<td>OliveDrab</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/olive.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Olive</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ebony.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ebony</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkolivegreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkOliveGreen</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/olive.png" width="50" height="20"></td>
+<td>Olive</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ebony.png" width="50" height="20"></td>
+<td>Ebony</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkolivegreen.png" width="50" height="20"></td>
+<td>DarkOliveGreen</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/military_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Military Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_leaves.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green Leaves</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/army_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Army Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/military_green.png" width="50" height="20"></td>
+<td>Military Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_leaves.png" width="50" height="20"></td>
+<td>Green Leaves</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/army_green.png" width="50" height="20"></td>
+<td>Army Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fern_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Fern Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fall_forest_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Fall Forest Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/irish_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Irish Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fern_green.png" width="50" height="20"></td>
+<td>Fern Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fall_forest_green.png" width="50" height="20"></td>
+<td>Fall Forest Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/irish_green.png" width="50" height="20"></td>
+<td>Irish Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pine_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pine Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/medium_forest_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Medium Forest Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/racing_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Racing Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pine_green.png" width="50" height="20"></td>
+<td>Pine Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/medium_forest_green.png" width="50" height="20"></td>
+<td>Medium Forest Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/racing_green.png" width="50" height="20"></td>
+<td>Racing Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jungle_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Jungle Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cactus_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cactus Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/forestgreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>ForestGreen</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jungle_green.png" width="50" height="20"></td>
+<td>Jungle Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cactus_green.png" width="50" height="20"></td>
+<td>Cactus Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/forestgreen.png" width="50" height="20"></td>
+<td>ForestGreen</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkGreen</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green.png" width="50" height="20"></td>
+<td>Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgreen.png" width="50" height="20"></td>
+<td>DarkGreen</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_green.png" width="50" height="20"></td>
+<td>Deep Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_emerald_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Emerald Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hunter_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Hunter Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_forest_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Forest Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_emerald_green.png" width="50" height="20"></td>
+<td>Deep Emerald Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hunter_green.png" width="50" height="20"></td>
+<td>Hunter Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_forest_green.png" width="50" height="20"></td>
+<td>Dark Forest Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lotus_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lotus Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/broccoli_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Broccoli Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seaweed_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Seaweed Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lotus_green.png" width="50" height="20"></td>
+<td>Lotus Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/broccoli_green.png" width="50" height="20"></td>
+<td>Broccoli Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seaweed_green.png" width="50" height="20"></td>
+<td>Seaweed Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/shamrock_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Shamrock Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_onion.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green Onion</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/moss_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Moss Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/shamrock_green.png" width="50" height="20"></td>
+<td>Shamrock Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_onion.png" width="50" height="20"></td>
+<td>Green Onion</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/moss_green.png" width="50" height="20"></td>
+<td>Moss Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grass_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Grass Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_pepper.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green Pepper</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_lime_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Lime Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grass_green.png" width="50" height="20"></td>
+<td>Grass Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_pepper.png" width="50" height="20"></td>
+<td>Green Pepper</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_lime_green.png" width="50" height="20"></td>
+<td>Dark Lime Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/parrot_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Parrot Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/clover_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Clover Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dinosaur_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dinosaur Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/parrot_green.png" width="50" height="20"></td>
+<td>Parrot Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/clover_green.png" width="50" height="20"></td>
+<td>Clover Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dinosaur_green.png" width="50" height="20"></td>
+<td>Dinosaur Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_snake.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green Snake</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/alien_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Alien Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_apple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green Apple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_snake.png" width="50" height="20"></td>
+<td>Green Snake</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/alien_green.png" width="50" height="20"></td>
+<td>Alien Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_apple.png" width="50" height="20"></td>
+<td>Green Apple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/limegreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LimeGreen</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pea_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pea Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/kelly_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Kelly Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/limegreen.png" width="50" height="20"></td>
+<td>LimeGreen</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pea_green.png" width="50" height="20"></td>
+<td>Pea Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/kelly_green.png" width="50" height="20"></td>
+<td>Kelly Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/zombie_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Zombie Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_peas.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green Peas</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dollar_bill_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dollar Bill Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/zombie_green.png" width="50" height="20"></td>
+<td>Zombie Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_peas.png" width="50" height="20"></td>
+<td>Green Peas</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dollar_bill_green.png" width="50" height="20"></td>
+<td>Dollar Bill Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/frog_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Frog Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/turquoise_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Turquoise Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkseagreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkSeaGreen</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/frog_green.png" width="50" height="20"></td>
+<td>Frog Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/turquoise_green.png" width="50" height="20"></td>
+<td>Turquoise Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkseagreen.png" width="50" height="20"></td>
+<td>DarkSeaGreen</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/basil_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Basil Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gray Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_olive_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Olive Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/basil_green.png" width="50" height="20"></td>
+<td>Basil Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_green.png" width="50" height="20"></td>
+<td>Gray Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_olive_green.png" width="50" height="20"></td>
+<td>Light Olive Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iguana_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Iguana Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/citron_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Citron Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/acid_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Acid Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/iguana_green.png" width="50" height="20"></td>
+<td>Iguana Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/citron_green.png" width="50" height="20"></td>
+<td>Citron Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/acid_green.png" width="50" height="20"></td>
+<td>Acid Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/avocado_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Avocado Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pistachio_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pistachio Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/salad_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Salad Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/avocado_green.png" width="50" height="20"></td>
+<td>Avocado Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pistachio_green.png" width="50" height="20"></td>
+<td>Pistachio Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/salad_green.png" width="50" height="20"></td>
+<td>Salad Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellowgreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>YellowGreen</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hummingbird_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Hummingbird Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellowgreen.png" width="50" height="20"></td>
+<td>YellowGreen</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_green.png" width="50" height="20"></td>
+<td>Pastel Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hummingbird_green.png" width="50" height="20"></td>
+<td>Hummingbird Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/nebula_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Nebula Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/stoplight_go_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Stoplight Go Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/nebula_green.png" width="50" height="20"></td>
+<td>Nebula Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/stoplight_go_green.png" width="50" height="20"></td>
+<td>Stoplight Go Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_green.png" width="50" height="20"></td>
+<td>Neon Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jade_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Jade Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/springgreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SpringGreen</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ocean_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ocean Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jade_green.png" width="50" height="20"></td>
+<td>Jade Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/springgreen.png" width="50" height="20"></td>
+<td>SpringGreen</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ocean_green.png" width="50" height="20"></td>
+<td>Ocean Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lime_mint_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lime Mint Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumspringgreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumSpringGreen</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aqua_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Aqua Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lime_mint_green.png" width="50" height="20"></td>
+<td>Lime Mint Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumspringgreen.png" width="50" height="20"></td>
+<td>MediumSpringGreen</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aqua_green.png" width="50" height="20"></td>
+<td>Aqua Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/emerald_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Emerald Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lime.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lime</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lawngreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LawnGreen</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/emerald_green.png" width="50" height="20"></td>
+<td>Emerald Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lime.png" width="50" height="20"></td>
+<td>Lime</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lawngreen.png" width="50" height="20"></td>
+<td>LawnGreen</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chartreuse.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chartreuse</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow_lawn_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Yellow Lawn Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_green.png" width="50" height="20"></td>
+<td>Bright Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chartreuse.png" width="50" height="20"></td>
+<td>Chartreuse</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow_lawn_green.png" width="50" height="20"></td>
+<td>Yellow Lawn Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aloe_vera_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Aloe Vera Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dull_green_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dull Green Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lemon_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lemon Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aloe_vera_green.png" width="50" height="20"></td>
+<td>Aloe Vera Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dull_green_yellow.png" width="50" height="20"></td>
+<td>Dull Green Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lemon_green.png" width="50" height="20"></td>
+<td>Lemon Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/greenyellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>GreenYellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chameleon_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chameleon Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_yellow_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Yellow Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/greenyellow.png" width="50" height="20"></td>
+<td>GreenYellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chameleon_green.png" width="50" height="20"></td>
+<td>Chameleon Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_yellow_green.png" width="50" height="20"></td>
+<td>Neon Yellow Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow_green_grosbeak.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Yellow Green Grosbeak</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tea_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tea Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slime_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Slime Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow_green_grosbeak.png" width="50" height="20"></td>
+<td>Yellow Green Grosbeak</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tea_green.png" width="50" height="20"></td>
+<td>Tea Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slime_green.png" width="50" height="20"></td>
+<td>Slime Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/algae_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Algae Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightGreen</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dragon_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dragon Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/algae_green.png" width="50" height="20"></td>
+<td>Algae Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgreen.png" width="50" height="20"></td>
+<td>LightGreen</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dragon_green.png" width="50" height="20"></td>
+<td>Dragon Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/palegreen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>PaleGreen</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mint_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mint Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_thumb.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Green Thumb</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/palegreen.png" width="50" height="20"></td>
+<td>PaleGreen</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mint_green.png" width="50" height="20"></td>
+<td>Mint Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/green_thumb.png" width="50" height="20"></td>
+<td>Green Thumb</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/organic_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Organic Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_jade.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Jade</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_mint_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Mint Green</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/organic_brown.png" width="50" height="20"></td>
+<td>Organic Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_jade.png" width="50" height="20"></td>
+<td>Light Jade</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_mint_green.png" width="50" height="20"></td>
+<td>Light Mint Green</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_rose_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Rose Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chrome White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/honeydew.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>HoneyDew</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_rose_green.png" width="50" height="20"></td>
+<td>Light Rose Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_white.png" width="50" height="20"></td>
+<td>Chrome White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/honeydew.png" width="50" height="20"></td>
+<td>HoneyDew</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mintcream.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MintCream</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lemonchiffon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LemonChiffon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/parchment.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Parchment</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mintcream.png" width="50" height="20"></td>
+<td>MintCream</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lemonchiffon.png" width="50" height="20"></td>
+<td>LemonChiffon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/parchment.png" width="50" height="20"></td>
+<td>Parchment</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cream.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cream</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cream_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cream White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgoldenrodyellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightGoldenRodYellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cream.png" width="50" height="20"></td>
+<td>Cream</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cream_white.png" width="50" height="20"></td>
+<td>Cream White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightgoldenrodyellow.png" width="50" height="20"></td>
+<td>LightGoldenRodYellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightyellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightYellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/beige.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Beige</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>White Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightyellow.png" width="50" height="20"></td>
+<td>LightYellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/beige.png" width="50" height="20"></td>
+<td>Beige</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_yellow.png" width="50" height="20"></td>
+<td>White Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cornsilk.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cornsilk</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blonde.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blonde</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/antiquewhite.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>AntiqueWhite</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cornsilk.png" width="50" height="20"></td>
+<td>Cornsilk</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blonde.png" width="50" height="20"></td>
+<td>Blonde</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/antiquewhite.png" width="50" height="20"></td>
+<td>AntiqueWhite</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_beige.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Beige</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/papayawhip.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>PapayaWhip</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/champagne.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Champagne</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_beige.png" width="50" height="20"></td>
+<td>Light Beige</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/papayawhip.png" width="50" height="20"></td>
+<td>PapayaWhip</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/champagne.png" width="50" height="20"></td>
+<td>Champagne</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blanchedalmond.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>BlanchedAlmond</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bisque.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bisque</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wheat.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Wheat</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blanchedalmond.png" width="50" height="20"></td>
+<td>BlanchedAlmond</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bisque.png" width="50" height="20"></td>
+<td>Bisque</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wheat.png" width="50" height="20"></td>
+<td>Wheat</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/moccasin.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Moccasin</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peach.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Peach</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Orange</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/moccasin.png" width="50" height="20"></td>
+<td>Moccasin</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peach.png" width="50" height="20"></td>
+<td>Peach</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_orange.png" width="50" height="20"></td>
+<td>Light Orange</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peachpuff.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>PeachPuff</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral_peach.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Coral Peach</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/navajowhite.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>NavajoWhite</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peachpuff.png" width="50" height="20"></td>
+<td>PeachPuff</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral_peach.png" width="50" height="20"></td>
+<td>Coral Peach</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/navajowhite.png" width="50" height="20"></td>
+<td>NavajoWhite</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_blonde.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Golden Blonde</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_silk.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Golden Silk</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_blonde.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Blonde</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_blonde.png" width="50" height="20"></td>
+<td>Golden Blonde</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_silk.png" width="50" height="20"></td>
+<td>Golden Silk</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_blonde.png" width="50" height="20"></td>
+<td>Dark Blonde</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/vanilla.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Vanilla</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tan_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tan Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_gold.png" width="50" height="20"></td>
+<td>Light Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/vanilla.png" width="50" height="20"></td>
+<td>Vanilla</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tan_brown.png" width="50" height="20"></td>
+<td>Tan Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dirty_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dirty White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/palegoldenrod.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>PaleGoldenRod</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Khaki</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dirty_white.png" width="50" height="20"></td>
+<td>Dirty White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/palegoldenrod.png" width="50" height="20"></td>
+<td>PaleGoldenRod</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki.png" width="50" height="20"></td>
+<td>Khaki</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cardboard_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cardboard Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/harvest_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Harvest Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sun_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sun Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cardboard_brown.png" width="50" height="20"></td>
+<td>Cardboard Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/harvest_gold.png" width="50" height="20"></td>
+<td>Harvest Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sun_yellow.png" width="50" height="20"></td>
+<td>Sun Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/corn_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Corn Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/corn_yellow.png" width="50" height="20"></td>
+<td>Corn Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_yellow.png" width="50" height="20"></td>
+<td>Pastel Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_yellow.png" width="50" height="20"></td>
+<td>Neon Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lemon_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lemon Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/canary_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Canary Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow.png" width="50" height="20"></td>
+<td>Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lemon_yellow.png" width="50" height="20"></td>
+<td>Lemon Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/canary_yellow.png" width="50" height="20"></td>
+<td>Canary Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/banana_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Banana Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mustard_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mustard Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Golden Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/banana_yellow.png" width="50" height="20"></td>
+<td>Banana Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mustard_yellow.png" width="50" height="20"></td>
+<td>Mustard Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_yellow.png" width="50" height="20"></td>
+<td>Golden Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bold_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bold Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/safety_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Safety Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rubber_ducky_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rubber Ducky Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bold_yellow.png" width="50" height="20"></td>
+<td>Bold Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/safety_yellow.png" width="50" height="20"></td>
+<td>Safety Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rubber_ducky_yellow.png" width="50" height="20"></td>
+<td>Rubber Ducky Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chrome Gold</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gold.png" width="50" height="20"></td>
+<td>Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_gold.png" width="50" height="20"></td>
+<td>Bright Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_gold.png" width="50" height="20"></td>
+<td>Chrome Gold</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Golden Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/macaroni_and_cheese.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Macaroni and Cheese</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/golden_brown.png" width="50" height="20"></td>
+<td>Golden Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_yellow.png" width="50" height="20"></td>
+<td>Deep Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/macaroni_and_cheese.png" width="50" height="20"></td>
+<td>Macaroni and Cheese</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/amber.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Amber</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/saffron.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Saffron</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Gold</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/amber.png" width="50" height="20"></td>
+<td>Amber</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/saffron.png" width="50" height="20"></td>
+<td>Saffron</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_gold.png" width="50" height="20"></td>
+<td>Neon Gold</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/beer.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Beer</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Yellow Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Orange Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/beer.png" width="50" height="20"></td>
+<td>Beer</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/yellow_orange.png" width="50" height="20"></td>
+<td>Yellow Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange_yellow.png" width="50" height="20"></td>
+<td>Orange Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cantaloupe.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cantaloupe</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cheese_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cheese Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Orange</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cantaloupe.png" width="50" height="20"></td>
+<td>Cantaloupe</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cheese_orange.png" width="50" height="20"></td>
+<td>Cheese Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange.png" width="50" height="20"></td>
+<td>Orange</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_sand.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Brown Sand</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sandybrown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SandyBrown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_sugar.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Brown Sugar</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_sand.png" width="50" height="20"></td>
+<td>Brown Sand</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sandybrown.png" width="50" height="20"></td>
+<td>SandyBrown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_sugar.png" width="50" height="20"></td>
+<td>Brown Sugar</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/camel_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Camel Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deer_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deer Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/burlywood.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>BurlyWood</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/camel_brown.png" width="50" height="20"></td>
+<td>Camel Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deer_brown.png" width="50" height="20"></td>
+<td>Deer Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/burlywood.png" width="50" height="20"></td>
+<td>BurlyWood</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tan.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tan</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_french_beige.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light French Beige</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sand.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sand</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tan.png" width="50" height="20"></td>
+<td>Tan</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_french_beige.png" width="50" height="20"></td>
+<td>Light French Beige</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sand.png" width="50" height="20"></td>
+<td>Sand</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/soft_hazel.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Soft Hazel</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sage.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sage</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fall_leaf_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Fall Leaf Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/soft_hazel.png" width="50" height="20"></td>
+<td>Soft Hazel</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sage.png" width="50" height="20"></td>
+<td>Sage</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fall_leaf_brown.png" width="50" height="20"></td>
+<td>Fall Leaf Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ginger_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ginger Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bronze_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bronze Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkkhaki.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkKhaki</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ginger_brown.png" width="50" height="20"></td>
+<td>Ginger Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bronze_gold.png" width="50" height="20"></td>
+<td>Bronze Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkkhaki.png" width="50" height="20"></td>
+<td>DarkKhaki</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/olive_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Olive Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brass.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Brass</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cookie_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cookie Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/olive_green.png" width="50" height="20"></td>
+<td>Olive Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brass.png" width="50" height="20"></td>
+<td>Brass</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cookie_brown.png" width="50" height="20"></td>
+<td>Cookie Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Metallic Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mustard.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mustard</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bee_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bee Yellow</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_gold.png" width="50" height="20"></td>
+<td>Metallic Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mustard.png" width="50" height="20"></td>
+<td>Mustard</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bee_yellow.png" width="50" height="20"></td>
+<td>Bee Yellow</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/school_bus_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>School Bus Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/goldenrod.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>GoldenRod</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Orange Gold</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/school_bus_yellow.png" width="50" height="20"></td>
+<td>School Bus Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/goldenrod.png" width="50" height="20"></td>
+<td>GoldenRod</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange_gold.png" width="50" height="20"></td>
+<td>Orange Gold</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/caramel.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Caramel</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgoldenrod.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkGoldenRod</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cinnamon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cinnamon</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/caramel.png" width="50" height="20"></td>
+<td>Caramel</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkgoldenrod.png" width="50" height="20"></td>
+<td>DarkGoldenRod</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cinnamon.png" width="50" height="20"></td>
+<td>Cinnamon</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peru.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Peru</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bronze.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bronze</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pumpkin_pie.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pumpkin Pie</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peru.png" width="50" height="20"></td>
+<td>Peru</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bronze.png" width="50" height="20"></td>
+<td>Bronze</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pumpkin_pie.png" width="50" height="20"></td>
+<td>Pumpkin Pie</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tiger_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tiger Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/copper.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Copper</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Gold</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tiger_orange.png" width="50" height="20"></td>
+<td>Tiger Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/copper.png" width="50" height="20"></td>
+<td>Copper</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_gold.png" width="50" height="20"></td>
+<td>Dark Gold</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_bronze.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Metallic Bronze</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_almond.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Almond</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wood.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Wood</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/metallic_bronze.png" width="50" height="20"></td>
+<td>Metallic Bronze</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_almond.png" width="50" height="20"></td>
+<td>Dark Almond</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wood.png" width="50" height="20"></td>
+<td>Wood</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Khaki Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/oak_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Oak Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/antique_bronze.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Antique Bronze</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki_brown.png" width="50" height="20"></td>
+<td>Khaki Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/oak_brown.png" width="50" height="20"></td>
+<td>Oak Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/antique_bronze.png" width="50" height="20"></td>
+<td>Antique Bronze</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hazel.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Hazel</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_yellow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Yellow</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_moccasin.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Moccasin</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hazel.png" width="50" height="20"></td>
+<td>Hazel</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_yellow.png" width="50" height="20"></td>
+<td>Dark Yellow</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_moccasin.png" width="50" height="20"></td>
+<td>Dark Moccasin</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki_green.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Khaki Green</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/millennium_jade.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Millennium Jade</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_beige.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Beige</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki_green.png" width="50" height="20"></td>
+<td>Khaki Green</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/millennium_jade.png" width="50" height="20"></td>
+<td>Millennium Jade</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_beige.png" width="50" height="20"></td>
+<td>Dark Beige</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bullet_shell.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bullet Shell</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/army_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Army Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sandstone.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sandstone</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bullet_shell.png" width="50" height="20"></td>
+<td>Bullet Shell</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/army_brown.png" width="50" height="20"></td>
+<td>Army Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sandstone.png" width="50" height="20"></td>
+<td>Sandstone</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/taupe.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Taupe</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_grayish_olive.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Grayish Olive</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_hazel_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Hazel Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/taupe.png" width="50" height="20"></td>
+<td>Taupe</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_grayish_olive.png" width="50" height="20"></td>
+<td>Dark Grayish Olive</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_hazel_brown.png" width="50" height="20"></td>
+<td>Dark Hazel Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mocha.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mocha</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/milk_chocolate.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Milk Chocolate</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gray Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mocha.png" width="50" height="20"></td>
+<td>Mocha</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/milk_chocolate.png" width="50" height="20"></td>
+<td>Milk Chocolate</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gray_brown.png" width="50" height="20"></td>
+<td>Gray Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_coffee.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Coffee</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/western_charcoal.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Western Charcoal</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/old_burgundy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Old Burgundy</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_coffee.png" width="50" height="20"></td>
+<td>Dark Coffee</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/western_charcoal.png" width="50" height="20"></td>
+<td>Western Charcoal</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/old_burgundy.png" width="50" height="20"></td>
+<td>Old Burgundy</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bakers_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bakers Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pullman_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pullman Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_brown.png" width="50" height="20"></td>
+<td>Red Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bakers_brown.png" width="50" height="20"></td>
+<td>Bakers Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pullman_brown.png" width="50" height="20"></td>
+<td>Pullman Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sepia_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sepia Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_bronze.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Bronze</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_brown.png" width="50" height="20"></td>
+<td>Dark Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sepia_brown.png" width="50" height="20"></td>
+<td>Sepia Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_bronze.png" width="50" height="20"></td>
+<td>Dark Bronze</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coffee.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Coffee</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_bear.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Brown Bear</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_dirt.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Dirt</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coffee.png" width="50" height="20"></td>
+<td>Coffee</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_bear.png" width="50" height="20"></td>
+<td>Brown Bear</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_dirt.png" width="50" height="20"></td>
+<td>Red Dirt</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sepia.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sepia</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sienna.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sienna</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/saddlebrown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SaddleBrown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sepia.png" width="50" height="20"></td>
+<td>Sepia</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sienna.png" width="50" height="20"></td>
+<td>Sienna</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/saddlebrown.png" width="50" height="20"></td>
+<td>SaddleBrown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_sienna.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Sienna</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sangria.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sangria</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blood_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blood Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_sienna.png" width="50" height="20"></td>
+<td>Dark Sienna</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sangria.png" width="50" height="20"></td>
+<td>Sangria</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blood_red.png" width="50" height="20"></td>
+<td>Blood Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chestnut.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chestnut</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Coral Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_amber.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Amber</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chestnut.png" width="50" height="20"></td>
+<td>Chestnut</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral_brown.png" width="50" height="20"></td>
+<td>Coral Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_amber.png" width="50" height="20"></td>
+<td>Deep Amber</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chestnut_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chestnut Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ginger_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ginger Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mahogany.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mahogany</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chestnut_red.png" width="50" height="20"></td>
+<td>Chestnut Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ginger_red.png" width="50" height="20"></td>
+<td>Ginger Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mahogany.png" width="50" height="20"></td>
+<td>Mahogany</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_fox.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Fox</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_bisque.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Bisque</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_gold.png" width="50" height="20"></td>
+<td>Red Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_fox.png" width="50" height="20"></td>
+<td>Red Fox</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_bisque.png" width="50" height="20"></td>
+<td>Dark Bisque</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/petra_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Petra Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_rust.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Brown Rust</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_brown.png" width="50" height="20"></td>
+<td>Light Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/petra_gold.png" width="50" height="20"></td>
+<td>Petra Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown_rust.png" width="50" height="20"></td>
+<td>Brown Rust</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rust.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rust</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/copper_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Copper Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange_salmon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Orange Salmon</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rust.png" width="50" height="20"></td>
+<td>Rust</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/copper_red.png" width="50" height="20"></td>
+<td>Copper Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orange_salmon.png" width="50" height="20"></td>
+<td>Orange Salmon</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chocolate.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chocolate</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sedona.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sedona</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/papaya_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Papaya Orange</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chocolate.png" width="50" height="20"></td>
+<td>Chocolate</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sedona.png" width="50" height="20"></td>
+<td>Sedona</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/papaya_orange.png" width="50" height="20"></td>
+<td>Papaya Orange</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/halloween_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Halloween Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Orange</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/halloween_orange.png" width="50" height="20"></td>
+<td>Halloween Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_orange.png" width="50" height="20"></td>
+<td>Neon Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_orange.png" width="50" height="20"></td>
+<td>Bright Orange</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fluro_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Fluro Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pumpkin_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pumpkin Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/safety_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Safety Orange</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fluro_orange.png" width="50" height="20"></td>
+<td>Fluro Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pumpkin_orange.png" width="50" height="20"></td>
+<td>Pumpkin Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/safety_orange.png" width="50" height="20"></td>
+<td>Safety Orange</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carrot_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Carrot Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkorange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkOrange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/construction_cone_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Construction Cone Orange</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carrot_orange.png" width="50" height="20"></td>
+<td>Carrot Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkorange.png" width="50" height="20"></td>
+<td>DarkOrange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/construction_cone_orange.png" width="50" height="20"></td>
+<td>Construction Cone Orange</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/indian_saffron.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Indian Saffron</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sunrise_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Sunrise Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mango_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mango Orange</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/indian_saffron.png" width="50" height="20"></td>
+<td>Indian Saffron</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/sunrise_orange.png" width="50" height="20"></td>
+<td>Sunrise Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mango_orange.png" width="50" height="20"></td>
+<td>Mango Orange</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Coral</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/basket_ball_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Basket Ball Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_salmon_rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Salmon Rose</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/coral.png" width="50" height="20"></td>
+<td>Coral</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/basket_ball_orange.png" width="50" height="20"></td>
+<td>Basket Ball Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_salmon_rose.png" width="50" height="20"></td>
+<td>Light Salmon Rose</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightsalmon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightSalmon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darksalmon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkSalmon</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightsalmon.png" width="50" height="20"></td>
+<td>LightSalmon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_orange.png" width="50" height="20"></td>
+<td>Pink Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darksalmon.png" width="50" height="20"></td>
+<td>DarkSalmon</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tangerine.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tangerine</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_copper.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Copper</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/salmon_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Salmon Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tangerine.png" width="50" height="20"></td>
+<td>Tangerine</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_copper.png" width="50" height="20"></td>
+<td>Light Copper</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/salmon_pink.png" width="50" height="20"></td>
+<td>Salmon Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/salmon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Salmon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peach_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Peach Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightcoral.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightCoral</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/salmon.png" width="50" height="20"></td>
+<td>Salmon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/peach_pink.png" width="50" height="20"></td>
+<td>Peach Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightcoral.png" width="50" height="20"></td>
+<td>LightCoral</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_coral.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Coral</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bean_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bean Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_red.png" width="50" height="20"></td>
+<td>Pastel Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_coral.png" width="50" height="20"></td>
+<td>Pink Coral</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bean_red.png" width="50" height="20"></td>
+<td>Bean Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/valentine_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Valentine Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/indianred.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>IndianRed</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tomato.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tomato</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/valentine_red.png" width="50" height="20"></td>
+<td>Valentine Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/indianred.png" width="50" height="20"></td>
+<td>IndianRed</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tomato.png" width="50" height="20"></td>
+<td>Tomato</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/shocking_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Shocking Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orangered.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>OrangeRed</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/shocking_orange.png" width="50" height="20"></td>
+<td>Shocking Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orangered.png" width="50" height="20"></td>
+<td>OrangeRed</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red.png" width="50" height="20"></td>
+<td>Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/scarlet_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Scarlet Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ruby_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ruby Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_red.png" width="50" height="20"></td>
+<td>Neon Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/scarlet_red.png" width="50" height="20"></td>
+<td>Scarlet Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ruby_red.png" width="50" height="20"></td>
+<td>Ruby Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ferrari_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ferrari Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fire_engine_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Fire Engine Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lava_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lava Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ferrari_red.png" width="50" height="20"></td>
+<td>Ferrari Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fire_engine_red.png" width="50" height="20"></td>
+<td>Fire Engine Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lava_red.png" width="50" height="20"></td>
+<td>Lava Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/love_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Love Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grapefruit.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Grapefruit</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/strawberry_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Strawberry Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/love_red.png" width="50" height="20"></td>
+<td>Love Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grapefruit.png" width="50" height="20"></td>
+<td>Grapefruit</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/strawberry_red.png" width="50" height="20"></td>
+<td>Strawberry Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cherry_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cherry Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chilli_pepper.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chilli Pepper</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/firebrick.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>FireBrick</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cherry_red.png" width="50" height="20"></td>
+<td>Cherry Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chilli_pepper.png" width="50" height="20"></td>
+<td>Chilli Pepper</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/firebrick.png" width="50" height="20"></td>
+<td>FireBrick</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tomato_sauce_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tomato Sauce Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carbon_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Carbon Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tomato_sauce_red.png" width="50" height="20"></td>
+<td>Tomato Sauce Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/brown.png" width="50" height="20"></td>
+<td>Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carbon_red.png" width="50" height="20"></td>
+<td>Carbon Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cranberry.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cranberry</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/saffron_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Saffron Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crimson_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Crimson Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cranberry.png" width="50" height="20"></td>
+<td>Cranberry</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/saffron_red.png" width="50" height="20"></td>
+<td>Saffron Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crimson_red.png" width="50" height="20"></td>
+<td>Crimson Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_wine.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Wine</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wine_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Wine Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkred.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkRed</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_wine.png" width="50" height="20"></td>
+<td>Red Wine</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wine_red.png" width="50" height="20"></td>
+<td>Wine Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkred.png" width="50" height="20"></td>
+<td>DarkRed</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/maroon_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Maroon Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/maroon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Maroon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/burgundy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Burgundy</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/maroon_red.png" width="50" height="20"></td>
+<td>Maroon Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/maroon.png" width="50" height="20"></td>
+<td>Maroon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/burgundy.png" width="50" height="20"></td>
+<td>Burgundy</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/vermilion.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Vermilion</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/garnet_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Garnet Red</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/vermilion.png" width="50" height="20"></td>
+<td>Vermilion</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_red.png" width="50" height="20"></td>
+<td>Deep Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/garnet_red.png" width="50" height="20"></td>
+<td>Garnet Red</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_blood.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Blood</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blood_night.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blood Night</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_scarlet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Scarlet</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_blood.png" width="50" height="20"></td>
+<td>Red Blood</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blood_night.png" width="50" height="20"></td>
+<td>Blood Night</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_scarlet.png" width="50" height="20"></td>
+<td>Dark Scarlet</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chocolate_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chocolate Brown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_bean.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Black Bean</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_maroon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Maroon</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chocolate_brown.png" width="50" height="20"></td>
+<td>Chocolate Brown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/black_bean.png" width="50" height="20"></td>
+<td>Black Bean</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_maroon.png" width="50" height="20"></td>
+<td>Dark Maroon</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midnight.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Midnight</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_lily.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Lily</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_maroon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Maroon</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midnight.png" width="50" height="20"></td>
+<td>Midnight</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_lily.png" width="50" height="20"></td>
+<td>Purple Lily</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_maroon.png" width="50" height="20"></td>
+<td>Purple Maroon</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum_pie.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Plum Pie</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum_velvet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Plum Velvet</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_raspberry.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Raspberry</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum_pie.png" width="50" height="20"></td>
+<td>Plum Pie</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum_velvet.png" width="50" height="20"></td>
+<td>Plum Velvet</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_raspberry.png" width="50" height="20"></td>
+<td>Dark Raspberry</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/velvet_maroon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Velvet Maroon</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosy_finch.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rosy Finch</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dull_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dull Purple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/velvet_maroon.png" width="50" height="20"></td>
+<td>Velvet Maroon</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosy_finch.png" width="50" height="20"></td>
+<td>Rosy Finch</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dull_purple.png" width="50" height="20"></td>
+<td>Dull Purple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/puce.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Puce</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_dust.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rose Dust</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/puce.png" width="50" height="20"></td>
+<td>Puce</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_dust.png" width="50" height="20"></td>
+<td>Rose Dust</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_brown.png" width="50" height="20"></td>
+<td>Pastel Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosy_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rosy Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosybrown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>RosyBrown</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki_rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Khaki Rose</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosy_pink.png" width="50" height="20"></td>
+<td>Rosy Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosybrown.png" width="50" height="20"></td>
+<td>RosyBrown</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/khaki_rose.png" width="50" height="20"></td>
+<td>Khaki Rose</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lipstick_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lipstick Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dusky_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dusky Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_brown.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Brown</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lipstick_pink.png" width="50" height="20"></td>
+<td>Lipstick Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dusky_pink.png" width="50" height="20"></td>
+<td>Dusky Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_brown.png" width="50" height="20"></td>
+<td>Pink Brown</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/old_rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Old Rose</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dusty_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dusty Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_daisy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Daisy</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/old_rose.png" width="50" height="20"></td>
+<td>Old Rose</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dusty_pink.png" width="50" height="20"></td>
+<td>Dusty Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_daisy.png" width="50" height="20"></td>
+<td>Pink Daisy</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rose</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dusty_rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dusty Rose</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silver_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Silver Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose.png" width="50" height="20"></td>
+<td>Rose</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dusty_rose.png" width="50" height="20"></td>
+<td>Dusty Rose</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/silver_pink.png" width="50" height="20"></td>
+<td>Silver Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gold_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Gold Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rose Gold</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_peach.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Peach</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/gold_pink.png" width="50" height="20"></td>
+<td>Gold Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_gold.png" width="50" height="20"></td>
+<td>Rose Gold</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_peach.png" width="50" height="20"></td>
+<td>Deep Peach</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_orange.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Orange</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/desert_sand.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Desert Sand</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/unbleached_silk.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Unbleached Silk</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_orange.png" width="50" height="20"></td>
+<td>Pastel Orange</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/desert_sand.png" width="50" height="20"></td>
+<td>Desert Sand</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/unbleached_silk.png" width="50" height="20"></td>
+<td>Unbleached Silk</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pig_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pig Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pale Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blush.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blush</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pig_pink.png" width="50" height="20"></td>
+<td>Pig Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_pink.png" width="50" height="20"></td>
+<td>Pale Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blush.png" width="50" height="20"></td>
+<td>Blush</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mistyrose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MistyRose</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_bubble_gum.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Bubble Gum</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Rose</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mistyrose.png" width="50" height="20"></td>
+<td>MistyRose</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_bubble_gum.png" width="50" height="20"></td>
+<td>Pink Bubble Gum</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_rose.png" width="50" height="20"></td>
+<td>Light Rose</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_quartz.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rose Quartz</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/warm_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Warm Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_red.png" width="50" height="20"></td>
+<td>Light Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_quartz.png" width="50" height="20"></td>
+<td>Rose Quartz</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/warm_pink.png" width="50" height="20"></td>
+<td>Warm Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Rose</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightpink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LightPink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_rose.png" width="50" height="20"></td>
+<td>Deep Rose</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink.png" width="50" height="20"></td>
+<td>Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lightpink.png" width="50" height="20"></td>
+<td>LightPink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/soft_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Soft Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/powder_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Powder Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/donut_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Donut Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/soft_pink.png" width="50" height="20"></td>
+<td>Soft Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/powder_pink.png" width="50" height="20"></td>
+<td>Powder Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/donut_pink.png" width="50" height="20"></td>
+<td>Donut Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/baby_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Baby Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/flamingo_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Flamingo Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/baby_pink.png" width="50" height="20"></td>
+<td>Baby Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/flamingo_pink.png" width="50" height="20"></td>
+<td>Flamingo Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_pink.png" width="50" height="20"></td>
+<td>Pastel Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rose Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cadillac_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cadillac Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carnation_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Carnation Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_pink.png" width="50" height="20"></td>
+<td>Rose Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cadillac_pink.png" width="50" height="20"></td>
+<td>Cadillac Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/carnation_pink.png" width="50" height="20"></td>
+<td>Carnation Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_rose.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Rose</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blush_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blush Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/palevioletred.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>PaleVioletRed</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_rose.png" width="50" height="20"></td>
+<td>Pastel Rose</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blush_red.png" width="50" height="20"></td>
+<td>Blush Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/palevioletred.png" width="50" height="20"></td>
+<td>PaleVioletRed</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tulip_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tulip Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bashful_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bashful Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_pink.png" width="50" height="20"></td>
+<td>Purple Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tulip_pink.png" width="50" height="20"></td>
+<td>Tulip Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bashful_pink.png" width="50" height="20"></td>
+<td>Bashful Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_hot_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Hot Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hotpink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>HotPink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_pink.png" width="50" height="20"></td>
+<td>Dark Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_hot_pink.png" width="50" height="20"></td>
+<td>Dark Hot Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hotpink.png" width="50" height="20"></td>
+<td>HotPink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/watermelon_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Watermelon Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/violet_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Violet Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hot_deep_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Hot Deep Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/watermelon_pink.png" width="50" height="20"></td>
+<td>Watermelon Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/violet_red.png" width="50" height="20"></td>
+<td>Violet Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/hot_deep_pink.png" width="50" height="20"></td>
+<td>Hot Deep Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_magenta.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Magenta</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deeppink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DeepPink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_pink.png" width="50" height="20"></td>
+<td>Bright Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_magenta.png" width="50" height="20"></td>
+<td>Red Magenta</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deeppink.png" width="50" height="20"></td>
+<td>DeepPink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Chrome Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_hot_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Hot Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_pink.png" width="50" height="20"></td>
+<td>Neon Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/chrome_pink.png" width="50" height="20"></td>
+<td>Chrome Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_hot_pink.png" width="50" height="20"></td>
+<td>Neon Hot Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_cupcake.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Cupcake</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/royal_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Royal Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dimorphotheca_magenta.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dimorphotheca Magenta</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_cupcake.png" width="50" height="20"></td>
+<td>Pink Cupcake</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/royal_pink.png" width="50" height="20"></td>
+<td>Royal Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dimorphotheca_magenta.png" width="50" height="20"></td>
+<td>Dimorphotheca Magenta</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/barbie_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Barbie Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_lemonade.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Lemonade</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/barbie_pink.png" width="50" height="20"></td>
+<td>Barbie Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_lemonade.png" width="50" height="20"></td>
+<td>Pink Lemonade</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_pink.png" width="50" height="20"></td>
+<td>Red Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/raspberry.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Raspberry</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crimson.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Crimson</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_maroon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Maroon</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/raspberry.png" width="50" height="20"></td>
+<td>Raspberry</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crimson.png" width="50" height="20"></td>
+<td>Crimson</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_maroon.png" width="50" height="20"></td>
+<td>Bright Maroon</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_red.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rose Red</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rogue_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rogue Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/burnt_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Burnt Pink</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_red.png" width="50" height="20"></td>
+<td>Rose Red</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rogue_pink.png" width="50" height="20"></td>
+<td>Rogue Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/burnt_pink.png" width="50" height="20"></td>
+<td>Burnt Pink</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_violet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Violet</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/magenta_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Magenta Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumvioletred.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumVioletRed</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_violet.png" width="50" height="20"></td>
+<td>Pink Violet</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/magenta_pink.png" width="50" height="20"></td>
+<td>Magenta Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumvioletred.png" width="50" height="20"></td>
+<td>MediumVioletRed</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_carnation_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Carnation Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/raspberry_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Raspberry Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_plum.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pink Plum</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_carnation_pink.png" width="50" height="20"></td>
+<td>Dark Carnation Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/raspberry_purple.png" width="50" height="20"></td>
+<td>Raspberry Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pink_plum.png" width="50" height="20"></td>
+<td>Pink Plum</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orchid.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Orchid</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_mauve.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Mauve</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/violet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Violet</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orchid.png" width="50" height="20"></td>
+<td>Orchid</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_mauve.png" width="50" height="20"></td>
+<td>Deep Mauve</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/violet.png" width="50" height="20"></td>
+<td>Violet</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fuchsia_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Fuchsia Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_neon_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Neon Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/magenta.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Magenta</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fuchsia_pink.png" width="50" height="20"></td>
+<td>Fuchsia Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_neon_pink.png" width="50" height="20"></td>
+<td>Bright Neon Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/magenta.png" width="50" height="20"></td>
+<td>Magenta</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fuchsia.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Fuchsia</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crimson_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Crimson Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/heliotrope_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Heliotrope Purple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/fuchsia.png" width="50" height="20"></td>
+<td>Fuchsia</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crimson_purple.png" width="50" height="20"></td>
+<td>Crimson Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/heliotrope_purple.png" width="50" height="20"></td>
+<td>Heliotrope Purple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tyrian_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Tyrian Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumorchid.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumOrchid</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_flower.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Flower</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/tyrian_purple.png" width="50" height="20"></td>
+<td>Tyrian Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumorchid.png" width="50" height="20"></td>
+<td>MediumOrchid</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_flower.png" width="50" height="20"></td>
+<td>Purple Flower</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orchid_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Orchid Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rich_lilac.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rich Lilac</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_violet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Violet</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/orchid_purple.png" width="50" height="20"></td>
+<td>Orchid Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rich_lilac.png" width="50" height="20"></td>
+<td>Rich Lilac</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_violet.png" width="50" height="20"></td>
+<td>Pastel Violet</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rosy</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mauve_taupe.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mauve Taupe</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/viola_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Viola Purple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rosy.png" width="50" height="20"></td>
+<td>Rosy</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mauve_taupe.png" width="50" height="20"></td>
+<td>Mauve Taupe</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/viola_purple.png" width="50" height="20"></td>
+<td>Viola Purple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/eggplant.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Eggplant</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Plum Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grape.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Grape</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/eggplant.png" width="50" height="20"></td>
+<td>Eggplant</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum_purple.png" width="50" height="20"></td>
+<td>Plum Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/grape.png" width="50" height="20"></td>
+<td>Grape</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_navy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Navy</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slateblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SlateBlue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_lotus.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Lotus</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_navy.png" width="50" height="20"></td>
+<td>Purple Navy</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/slateblue.png" width="50" height="20"></td>
+<td>SlateBlue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_lotus.png" width="50" height="20"></td>
+<td>Blue Lotus</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blurple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blurple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_slate_blue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Slate Blue</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumslateblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumSlateBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blurple.png" width="50" height="20"></td>
+<td>Blurple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_slate_blue.png" width="50" height="20"></td>
+<td>Light Slate Blue</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumslateblue.png" width="50" height="20"></td>
+<td>MediumSlateBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/periwinkle_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Periwinkle Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/very_peri.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Very Peri</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_grape.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Grape</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/periwinkle_purple.png" width="50" height="20"></td>
+<td>Periwinkle Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/very_peri.png" width="50" height="20"></td>
+<td>Very Peri</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_grape.png" width="50" height="20"></td>
+<td>Bright Grape</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_amethyst.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Amethyst</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_magenta.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Magenta</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_purple.png" width="50" height="20"></td>
+<td>Bright Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_amethyst.png" width="50" height="20"></td>
+<td>Purple Amethyst</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_magenta.png" width="50" height="20"></td>
+<td>Blue Magenta</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_blurple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Blurple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_periwinkle.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Periwinkle</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkslateblue.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkSlateBlue</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_blurple.png" width="50" height="20"></td>
+<td>Dark Blurple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_periwinkle.png" width="50" height="20"></td>
+<td>Deep Periwinkle</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkslateblue.png" width="50" height="20"></td>
+<td>DarkSlateBlue</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_haze.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Haze</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_iris.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Iris</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark Purple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_haze.png" width="50" height="20"></td>
+<td>Purple Haze</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_iris.png" width="50" height="20"></td>
+<td>Purple Iris</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_purple.png" width="50" height="20"></td>
+<td>Dark Purple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Deep Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midnight_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Midnight Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_monster.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Monster</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/deep_purple.png" width="50" height="20"></td>
+<td>Deep Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/midnight_purple.png" width="50" height="20"></td>
+<td>Midnight Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_monster.png" width="50" height="20"></td>
+<td>Purple Monster</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/indigo.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Indigo</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_whale.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blue Whale</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rebeccapurple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>RebeccaPurple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/indigo.png" width="50" height="20"></td>
+<td>Indigo</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blue_whale.png" width="50" height="20"></td>
+<td>Blue Whale</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rebeccapurple.png" width="50" height="20"></td>
+<td>RebeccaPurple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_jam.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Jam</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkmagenta.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkMagenta</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_jam.png" width="50" height="20"></td>
+<td>Purple Jam</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkmagenta.png" width="50" height="20"></td>
+<td>DarkMagenta</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple.png" width="50" height="20"></td>
+<td>Purple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/french_lilac.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>French Lilac</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkorchid.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkOrchid</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkviolet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>DarkViolet</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/french_lilac.png" width="50" height="20"></td>
+<td>French Lilac</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkorchid.png" width="50" height="20"></td>
+<td>DarkOrchid</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/darkviolet.png" width="50" height="20"></td>
+<td>DarkViolet</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_violet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Violet</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jasmine_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Jasmine Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_daffodil.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Daffodil</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_violet.png" width="50" height="20"></td>
+<td>Purple Violet</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/jasmine_purple.png" width="50" height="20"></td>
+<td>Jasmine Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_daffodil.png" width="50" height="20"></td>
+<td>Purple Daffodil</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/clematis_violet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Clematis Violet</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blueviolet.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>BlueViolet</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_sage_bush.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Sage Bush</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/clematis_violet.png" width="50" height="20"></td>
+<td>Clematis Violet</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blueviolet.png" width="50" height="20"></td>
+<td>BlueViolet</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_sage_bush.png" width="50" height="20"></td>
+<td>Purple Sage Bush</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lovely_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lovely Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Neon Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_plum.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Plum</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lovely_purple.png" width="50" height="20"></td>
+<td>Lovely Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/neon_purple.png" width="50" height="20"></td>
+<td>Neon Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_plum.png" width="50" height="20"></td>
+<td>Purple Plum</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aztech_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Aztech Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumpurple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>MediumPurple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light Purple</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/aztech_purple.png" width="50" height="20"></td>
+<td>Aztech Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mediumpurple.png" width="50" height="20"></td>
+<td>MediumPurple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_purple.png" width="50" height="20"></td>
+<td>Light Purple</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crocus_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Crocus Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_mimosa.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Mimosa</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_indigo.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Indigo</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/crocus_purple.png" width="50" height="20"></td>
+<td>Crocus Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_mimosa.png" width="50" height="20"></td>
+<td>Purple Mimosa</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_indigo.png" width="50" height="20"></td>
+<td>Pastel Indigo</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lavender Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rose Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/viola.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Viola</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender_purple.png" width="50" height="20"></td>
+<td>Lavender Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rose_purple.png" width="50" height="20"></td>
+<td>Rose Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/viola.png" width="50" height="20"></td>
+<td>Viola</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/periwinkle.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Periwinkle</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_lilac.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pale Lilac</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lilac.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lilac</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/periwinkle.png" width="50" height="20"></td>
+<td>Periwinkle</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pale_lilac.png" width="50" height="20"></td>
+<td>Pale Lilac</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lilac.png" width="50" height="20"></td>
+<td>Lilac</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mauve.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Mauve</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_lilac.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bright Lilac</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_dragon.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Dragon</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/mauve.png" width="50" height="20"></td>
+<td>Mauve</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bright_lilac.png" width="50" height="20"></td>
+<td>Bright Lilac</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_dragon.png" width="50" height="20"></td>
+<td>Purple Dragon</td>
 </tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Plum</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blush_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blush Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pastel Purple</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blossom_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Blossom Pink</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wisteria_purple.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Wisteria Purple</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_thistle.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple Thistle</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/thistle.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Thistle</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Purple White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/periwinkle_pink.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Periwinkle Pink</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cotton_candy.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cotton Candy</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender_pinocchio.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Lavender Pinocchio</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Dark White</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ash_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ash White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/warm_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Warm White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_chocolate.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>White Chocolate</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/creamy_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Creamy White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/off_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Off White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/soft_ivory.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Soft Ivory</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cosmic_latte.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cosmic Latte</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pearl_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pearl White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Red White</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavenderblush.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>LavenderBlush</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pearl.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Pearl</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/egg_shell.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Egg Shell</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/oldlace.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>OldLace</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_ice.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>White Ice</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/linen.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Linen</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seashell.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>SeaShell</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bone_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Bone White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rice.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Rice</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/floralwhite.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>FloralWhite</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ivory.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Ivory</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_gold.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>White Gold</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Light White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cotton.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Cotton</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/snow.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Snow</td>
-</tr>
-<tr>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/milk_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Milk White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/half_white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>Half White</td>
-<td style='padding: 5px;'><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white.png" width="50" height="20" style="max-width: 60px;"></td>
-<td style='padding: 5px;'>White</td>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/plum.png" width="50" height="20"></td>
+<td>Plum</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blush_pink.png" width="50" height="20"></td>
+<td>Blush Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pastel_purple.png" width="50" height="20"></td>
+<td>Pastel Purple</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/blossom_pink.png" width="50" height="20"></td>
+<td>Blossom Pink</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/wisteria_purple.png" width="50" height="20"></td>
+<td>Wisteria Purple</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_thistle.png" width="50" height="20"></td>
+<td>Purple Thistle</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/thistle.png" width="50" height="20"></td>
+<td>Thistle</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/purple_white.png" width="50" height="20"></td>
+<td>Purple White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/periwinkle_pink.png" width="50" height="20"></td>
+<td>Periwinkle Pink</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cotton_candy.png" width="50" height="20"></td>
+<td>Cotton Candy</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavender_pinocchio.png" width="50" height="20"></td>
+<td>Lavender Pinocchio</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/dark_white.png" width="50" height="20"></td>
+<td>Dark White</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ash_white.png" width="50" height="20"></td>
+<td>Ash White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/warm_white.png" width="50" height="20"></td>
+<td>Warm White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_chocolate.png" width="50" height="20"></td>
+<td>White Chocolate</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/creamy_white.png" width="50" height="20"></td>
+<td>Creamy White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/off_white.png" width="50" height="20"></td>
+<td>Off White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/soft_ivory.png" width="50" height="20"></td>
+<td>Soft Ivory</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cosmic_latte.png" width="50" height="20"></td>
+<td>Cosmic Latte</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pearl_white.png" width="50" height="20"></td>
+<td>Pearl White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/red_white.png" width="50" height="20"></td>
+<td>Red White</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/lavenderblush.png" width="50" height="20"></td>
+<td>LavenderBlush</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/pearl.png" width="50" height="20"></td>
+<td>Pearl</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/egg_shell.png" width="50" height="20"></td>
+<td>Egg Shell</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/oldlace.png" width="50" height="20"></td>
+<td>OldLace</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_ice.png" width="50" height="20"></td>
+<td>White Ice</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/linen.png" width="50" height="20"></td>
+<td>Linen</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/seashell.png" width="50" height="20"></td>
+<td>SeaShell</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/bone_white.png" width="50" height="20"></td>
+<td>Bone White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/rice.png" width="50" height="20"></td>
+<td>Rice</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/floralwhite.png" width="50" height="20"></td>
+<td>FloralWhite</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/ivory.png" width="50" height="20"></td>
+<td>Ivory</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white_gold.png" width="50" height="20"></td>
+<td>White Gold</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/light_white.png" width="50" height="20"></td>
+<td>Light White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/cotton.png" width="50" height="20"></td>
+<td>Cotton</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/snow.png" width="50" height="20"></td>
+<td>Snow</td>
+</tr>
+<tr>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/milk_white.png" width="50" height="20"></td>
+<td>Milk White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/half_white.png" width="50" height="20"></td>
+<td>Half White</td>
+<td width="50"><img src="https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/white.png" width="50" height="20"></td>
+<td>White</td>
 </tr>
 </table>

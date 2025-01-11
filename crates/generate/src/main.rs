@@ -38,7 +38,9 @@ fn main() {
 
     match cli.command {
         Commands::Readme => {
-            println!("<table style='border-collapse: collapse;'>");
+            // We can't use style attributes in markdown, so we try to generate HTML that will
+            // display correctly on Github and crates.io.
+            println!("<table>");
             let color_data: Vec<_> = colors::COLORS.iter().collect();
 
             for chunk in color_data.chunks(COLUMNS) {
@@ -49,8 +51,11 @@ fn main() {
                         "https://raw.githubusercontent.com/cortesi/colornames/refs/heads/main/swatches/{}.png",
                         swatch_name
                     );
-                    println!("<td style='padding: 5px;'><img src=\"{}\" width=\"50\" height=\"20\" style=\"max-width: 60px;\"></td>", swatch_url);
-                    println!("<td style='padding: 5px;'>{}</td>", name);
+                    println!(
+                        "<td width=\"50\"><img src=\"{}\" width=\"50\" height=\"20\"></td>",
+                        swatch_url
+                    );
+                    println!("<td>{}</td>", name);
                 }
                 println!("</tr>");
             }
