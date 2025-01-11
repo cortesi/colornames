@@ -737,20 +737,9500 @@ impl Color {
     pub fn from_str(name: &str) -> Option<Self> {
         if name.starts_with('#') {
             let hex = &name[1..];
-            match hex.len() {
+            let (r, g, b) = match hex.len() {
                 6 => {
                     let r = u8::from_str_radix(&hex[0..2], 16).ok()?;
                     let g = u8::from_str_radix(&hex[2..4], 16).ok()?;
                     let b = u8::from_str_radix(&hex[4..6], 16).ok()?;
-                    Some(Color::Rgb(r, g, b))
+                    (r, g, b)
                 }
                 3 => {
                     let r = u8::from_str_radix(&hex[0..1].repeat(2), 16).ok()?;
                     let g = u8::from_str_radix(&hex[1..2].repeat(2), 16).ok()?;
                     let b = u8::from_str_radix(&hex[2..3].repeat(2), 16).ok()?;
-                    Some(Color::Rgb(r, g, b))
+                    (r, g, b)
                 }
-                _ => None,
+                _ => return None,
+            };
+            match (r, g, b) {
+                (r, g, b)
+                    if ("#B0BF1A", r, g, b) == {
+                        let hex = "#B0BF1A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AcidGreen)
+                }
+                (r, g, b)
+                    if ("#64E986", r, g, b) == {
+                        let hex = "#64E986";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AlgaeGreen)
+                }
+                (r, g, b)
+                    if ("#F0F8FF", r, g, b) == {
+                        let hex = "#F0F8FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AliceBlue)
+                }
+                (r, g, b)
+                    if ("#736F6E", r, g, b) == {
+                        let hex = "#736F6E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AlienGray)
+                }
+                (r, g, b)
+                    if ("#6CC417", r, g, b) == {
+                        let hex = "#6CC417";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AlienGreen)
+                }
+                (r, g, b)
+                    if ("#98F516", r, g, b) == {
+                        let hex = "#98F516";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AloeVeraGreen)
+                }
+                (r, g, b)
+                    if ("#FFBF00", r, g, b) == {
+                        let hex = "#FFBF00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Amber)
+                }
+                (r, g, b)
+                    if ("#665D1E", r, g, b) == {
+                        let hex = "#665D1E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AntiqueBronze)
+                }
+                (r, g, b)
+                    if ("#FAEBD7", r, g, b) == {
+                        let hex = "#FAEBD7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AntiqueWhite)
+                }
+                (r, g, b)
+                    if ("#00FFFF", r, g, b) == {
+                        let hex = "#00FFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Aqua)
+                }
+                (r, g, b)
+                    if ("#12E193", r, g, b) == {
+                        let hex = "#12E193";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AquaGreen)
+                }
+                (r, g, b)
+                    if ("#93E9BE", r, g, b) == {
+                        let hex = "#93E9BE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AquaSeafoamGreen)
+                }
+                (r, g, b)
+                    if ("#7FFFD4", r, g, b) == {
+                        let hex = "#7FFFD4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Aquamarine)
+                }
+                (r, g, b)
+                    if ("#348781", r, g, b) == {
+                        let hex = "#348781";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AquamarineStone)
+                }
+                (r, g, b)
+                    if ("#827B60", r, g, b) == {
+                        let hex = "#827B60";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ArmyBrown)
+                }
+                (r, g, b)
+                    if ("#4B5320", r, g, b) == {
+                        let hex = "#4B5320";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ArmyGreen)
+                }
+                (r, g, b)
+                    if ("#666362", r, g, b) == {
+                        let hex = "#666362";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AshGray)
+                }
+                (r, g, b)
+                    if ("#E9E4D4", r, g, b) == {
+                        let hex = "#E9E4D4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AshWhite)
+                }
+                (r, g, b)
+                    if ("#B2C248", r, g, b) == {
+                        let hex = "#B2C248";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AvocadoGreen)
+                }
+                (r, g, b)
+                    if ("#893BFF", r, g, b) == {
+                        let hex = "#893BFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AztechPurple)
+                }
+                (r, g, b)
+                    if ("#F0FFFF", r, g, b) == {
+                        let hex = "#F0FFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Azure)
+                }
+                (r, g, b)
+                    if ("#4863A0", r, g, b) == {
+                        let hex = "#4863A0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::AzureBlue)
+                }
+                (r, g, b)
+                    if ("#95B9C7", r, g, b) == {
+                        let hex = "#95B9C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BabyBlue)
+                }
+                (r, g, b)
+                    if ("#FAAFBA", r, g, b) == {
+                        let hex = "#FAAFBA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BabyPink)
+                }
+                (r, g, b)
+                    if ("#5C3317", r, g, b) == {
+                        let hex = "#5C3317";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BakersBrown)
+                }
+                (r, g, b)
+                    if ("#2B60DE", r, g, b) == {
+                        let hex = "#2B60DE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BalloonBlue)
+                }
+                (r, g, b)
+                    if ("#F5E216", r, g, b) == {
+                        let hex = "#F5E216";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BananaYellow)
+                }
+                (r, g, b)
+                    if ("#DA1884", r, g, b) == {
+                        let hex = "#DA1884";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BarbiePink)
+                }
+                (r, g, b)
+                    if ("#C25283", r, g, b) == {
+                        let hex = "#C25283";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BashfulPink)
+                }
+                (r, g, b)
+                    if ("#829F82", r, g, b) == {
+                        let hex = "#829F82";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BasilGreen)
+                }
+                (r, g, b)
+                    if ("#F88158", r, g, b) == {
+                        let hex = "#F88158";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BasketBallOrange)
+                }
+                (r, g, b)
+                    if ("#848482", r, g, b) == {
+                        let hex = "#848482";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BattleshipGray)
+                }
+                (r, g, b)
+                    if ("#F75D59", r, g, b) == {
+                        let hex = "#F75D59";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BeanRed)
+                }
+                (r, g, b)
+                    if ("#E9AB17", r, g, b) == {
+                        let hex = "#E9AB17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BeeYellow)
+                }
+                (r, g, b)
+                    if ("#FBB117", r, g, b) == {
+                        let hex = "#FBB117";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Beer)
+                }
+                (r, g, b)
+                    if ("#4C787E", r, g, b) == {
+                        let hex = "#4C787E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BeetleGreen)
+                }
+                (r, g, b)
+                    if ("#F5F5DC", r, g, b) == {
+                        let hex = "#F5F5DC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Beige)
+                }
+                (r, g, b)
+                    if ("#FFE4C4", r, g, b) == {
+                        let hex = "#FFE4C4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Bisque)
+                }
+                (r, g, b)
+                    if ("#000000", r, g, b) == {
+                        let hex = "#000000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Black)
+                }
+                (r, g, b)
+                    if ("#3D0C02", r, g, b) == {
+                        let hex = "#3D0C02";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlackBean)
+                }
+                (r, g, b)
+                    if ("#040720", r, g, b) == {
+                        let hex = "#040720";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlackBlue)
+                }
+                (r, g, b)
+                    if ("#413839", r, g, b) == {
+                        let hex = "#413839";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlackCat)
+                }
+                (r, g, b)
+                    if ("#4C4646", r, g, b) == {
+                        let hex = "#4C4646";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlackCow)
+                }
+                (r, g, b)
+                    if ("#463E3F", r, g, b) == {
+                        let hex = "#463E3F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlackEel)
+                }
+                (r, g, b)
+                    if ("#FFEBCD", r, g, b) == {
+                        let hex = "#FFEBCD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlanchedAlmond)
+                }
+                (r, g, b)
+                    if ("#FBF6D9", r, g, b) == {
+                        let hex = "#FBF6D9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Blonde)
+                }
+                (r, g, b)
+                    if ("#551606", r, g, b) == {
+                        let hex = "#551606";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BloodNight)
+                }
+                (r, g, b)
+                    if ("#7E3517", r, g, b) == {
+                        let hex = "#7E3517";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BloodRed)
+                }
+                (r, g, b)
+                    if ("#F9B7FF", r, g, b) == {
+                        let hex = "#F9B7FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlossomPink)
+                }
+                (r, g, b)
+                    if ("#0000FF", r, g, b) == {
+                        let hex = "#0000FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Blue)
+                }
+                (r, g, b)
+                    if ("#B7CEEC", r, g, b) == {
+                        let hex = "#B7CEEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueAngel)
+                }
+                (r, g, b)
+                    if ("#4EE2EC", r, g, b) == {
+                        let hex = "#4EE2EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueDiamond)
+                }
+                (r, g, b)
+                    if ("#157DEC", r, g, b) == {
+                        let hex = "#157DEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueDress)
+                }
+                (r, g, b)
+                    if ("#1569C7", r, g, b) == {
+                        let hex = "#1569C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueEyes)
+                }
+                (r, g, b)
+                    if ("#98AFC7", r, g, b) == {
+                        let hex = "#98AFC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueGray)
+                }
+                (r, g, b)
+                    if ("#7BCCB5", r, g, b) == {
+                        let hex = "#7BCCB5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueGreen)
+                }
+                (r, g, b)
+                    if ("#77BFC7", r, g, b) == {
+                        let hex = "#77BFC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueHosta)
+                }
+                (r, g, b)
+                    if ("#3090C7", r, g, b) == {
+                        let hex = "#3090C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueIvy)
+                }
+                (r, g, b)
+                    if ("#2B547E", r, g, b) == {
+                        let hex = "#2B547E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueJay)
+                }
+                (r, g, b)
+                    if ("#659EC7", r, g, b) == {
+                        let hex = "#659EC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueKoi)
+                }
+                (r, g, b)
+                    if ("#8EEBEC", r, g, b) == {
+                        let hex = "#8EEBEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueLagoon)
+                }
+                (r, g, b)
+                    if ("#6960EC", r, g, b) == {
+                        let hex = "#6960EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueLotus)
+                }
+                (r, g, b)
+                    if ("#822EFF", r, g, b) == {
+                        let hex = "#822EFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueMagenta)
+                }
+                (r, g, b)
+                    if ("#3C565B", r, g, b) == {
+                        let hex = "#3C565B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueMossGreen)
+                }
+                (r, g, b)
+                    if ("#1F45FC", r, g, b) == {
+                        let hex = "#1F45FC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueOrchid)
+                }
+                (r, g, b)
+                    if ("#306EFF", r, g, b) == {
+                        let hex = "#306EFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueRibbon)
+                }
+                (r, g, b)
+                    if ("#43C6DB", r, g, b) == {
+                        let hex = "#43C6DB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueTurquoise)
+                }
+                (r, g, b)
+                    if ("#342D7E", r, g, b) == {
+                        let hex = "#342D7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueWhale)
+                }
+                (r, g, b)
+                    if ("#57FEFF", r, g, b) == {
+                        let hex = "#57FEFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueZircon)
+                }
+                (r, g, b)
+                    if ("#8A2BE2", r, g, b) == {
+                        let hex = "#8A2BE2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueViolet)
+                }
+                (r, g, b)
+                    if ("#0041C2", r, g, b) == {
+                        let hex = "#0041C2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlueberryBlue)
+                }
+                (r, g, b)
+                    if ("#5865F2", r, g, b) == {
+                        let hex = "#5865F2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Blurple)
+                }
+                (r, g, b)
+                    if ("#FFE6E8", r, g, b) == {
+                        let hex = "#FFE6E8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Blush)
+                }
+                (r, g, b)
+                    if ("#E6A9EC", r, g, b) == {
+                        let hex = "#E6A9EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlushPink)
+                }
+                (r, g, b)
+                    if ("#E56E94", r, g, b) == {
+                        let hex = "#E56E94";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BlushRed)
+                }
+                (r, g, b)
+                    if ("#F9DB24", r, g, b) == {
+                        let hex = "#F9DB24";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BoldYellow)
+                }
+                (r, g, b)
+                    if ("#F9F6EE", r, g, b) == {
+                        let hex = "#F9F6EE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BoneWhite)
+                }
+                (r, g, b)
+                    if ("#006A4E", r, g, b) == {
+                        let hex = "#006A4E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BottleGreen)
+                }
+                (r, g, b)
+                    if ("#B5A642", r, g, b) == {
+                        let hex = "#B5A642";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Brass)
+                }
+                (r, g, b)
+                    if ("#0909FF", r, g, b) == {
+                        let hex = "#0909FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightBlue)
+                }
+                (r, g, b)
+                    if ("#0AFFFF", r, g, b) == {
+                        let hex = "#0AFFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightCyan)
+                }
+                (r, g, b)
+                    if ("#FDD017", r, g, b) == {
+                        let hex = "#FDD017";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightGold)
+                }
+                (r, g, b)
+                    if ("#6F2DA8", r, g, b) == {
+                        let hex = "#6F2DA8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightGrape)
+                }
+                (r, g, b)
+                    if ("#66FF00", r, g, b) == {
+                        let hex = "#66FF00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightGreen)
+                }
+                (r, g, b)
+                    if ("#D891EF", r, g, b) == {
+                        let hex = "#D891EF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightLilac)
+                }
+                (r, g, b)
+                    if ("#C32148", r, g, b) == {
+                        let hex = "#C32148";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightMaroon)
+                }
+                (r, g, b)
+                    if ("#1974D2", r, g, b) == {
+                        let hex = "#1974D2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightNavyBlue)
+                }
+                (r, g, b)
+                    if ("#F433FF", r, g, b) == {
+                        let hex = "#F433FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightNeonPink)
+                }
+                (r, g, b)
+                    if ("#FF5F1F", r, g, b) == {
+                        let hex = "#FF5F1F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightOrange)
+                }
+                (r, g, b)
+                    if ("#FF007F", r, g, b) == {
+                        let hex = "#FF007F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightPink)
+                }
+                (r, g, b)
+                    if ("#6A0DAD", r, g, b) == {
+                        let hex = "#6A0DAD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightPurple)
+                }
+                (r, g, b)
+                    if ("#01F9C6", r, g, b) == {
+                        let hex = "#01F9C6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightTeal)
+                }
+                (r, g, b)
+                    if ("#16E2F5", r, g, b) == {
+                        let hex = "#16E2F5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrightTurquoise)
+                }
+                (r, g, b)
+                    if ("#026C3D", r, g, b) == {
+                        let hex = "#026C3D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BroccoliGreen)
+                }
+                (r, g, b)
+                    if ("#CD7F32", r, g, b) == {
+                        let hex = "#CD7F32";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Bronze)
+                }
+                (r, g, b)
+                    if ("#C9AE5D", r, g, b) == {
+                        let hex = "#C9AE5D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BronzeGold)
+                }
+                (r, g, b)
+                    if ("#A52A2A", r, g, b) == {
+                        let hex = "#A52A2A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Brown)
+                }
+                (r, g, b)
+                    if ("#835C3B", r, g, b) == {
+                        let hex = "#835C3B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrownBear)
+                }
+                (r, g, b)
+                    if ("#A55D35", r, g, b) == {
+                        let hex = "#A55D35";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrownRust)
+                }
+                (r, g, b)
+                    if ("#EE9A4D", r, g, b) == {
+                        let hex = "#EE9A4D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrownSand)
+                }
+                (r, g, b)
+                    if ("#E2A76F", r, g, b) == {
+                        let hex = "#E2A76F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BrownSugar)
+                }
+                (r, g, b)
+                    if ("#AF9B60", r, g, b) == {
+                        let hex = "#AF9B60";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BulletShell)
+                }
+                (r, g, b)
+                    if ("#8C001A", r, g, b) == {
+                        let hex = "#8C001A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Burgundy)
+                }
+                (r, g, b)
+                    if ("#DEB887", r, g, b) == {
+                        let hex = "#DEB887";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BurlyWood)
+                }
+                (r, g, b)
+                    if ("#C12267", r, g, b) == {
+                        let hex = "#C12267";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::BurntPink)
+                }
+                (r, g, b)
+                    if ("#38ACEC", r, g, b) == {
+                        let hex = "#38ACEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ButterflyBlue)
+                }
+                (r, g, b)
+                    if ("#227442", r, g, b) == {
+                        let hex = "#227442";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CactusGreen)
+                }
+                (r, g, b)
+                    if ("#5F9EA0", r, g, b) == {
+                        let hex = "#5F9EA0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CadetBlue)
+                }
+                (r, g, b)
+                    if ("#E38AAE", r, g, b) == {
+                        let hex = "#E38AAE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CadillacPink)
+                }
+                (r, g, b)
+                    if ("#C19A6B", r, g, b) == {
+                        let hex = "#C19A6B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CamelBrown)
+                }
+                (r, g, b)
+                    if ("#78866B", r, g, b) == {
+                        let hex = "#78866B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CamouflageGreen)
+                }
+                (r, g, b)
+                    if ("#2916F5", r, g, b) == {
+                        let hex = "#2916F5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CanaryBlue)
+                }
+                (r, g, b)
+                    if ("#FFEF00", r, g, b) == {
+                        let hex = "#FFEF00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CanaryYellow)
+                }
+                (r, g, b)
+                    if ("#FFA62F", r, g, b) == {
+                        let hex = "#FFA62F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Cantaloupe)
+                }
+                (r, g, b)
+                    if ("#C68E17", r, g, b) == {
+                        let hex = "#C68E17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Caramel)
+                }
+                (r, g, b)
+                    if ("#625D5D", r, g, b) == {
+                        let hex = "#625D5D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CarbonGray)
+                }
+                (r, g, b)
+                    if ("#A70D2A", r, g, b) == {
+                        let hex = "#A70D2A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CarbonRed)
+                }
+                (r, g, b)
+                    if ("#EDDA74", r, g, b) == {
+                        let hex = "#EDDA74";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CardboardBrown)
+                }
+                (r, g, b)
+                    if ("#F778A1", r, g, b) == {
+                        let hex = "#F778A1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CarnationPink)
+                }
+                (r, g, b)
+                    if ("#F88017", r, g, b) == {
+                        let hex = "#F88017";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CarrotOrange)
+                }
+                (r, g, b)
+                    if ("#50EBEC", r, g, b) == {
+                        let hex = "#50EBEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Celeste)
+                }
+                (r, g, b)
+                    if ("#BDF516", r, g, b) == {
+                        let hex = "#BDF516";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChameleonGreen)
+                }
+                (r, g, b)
+                    if ("#F7E7CE", r, g, b) == {
+                        let hex = "#F7E7CE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Champagne)
+                }
+                (r, g, b)
+                    if ("#34282C", r, g, b) == {
+                        let hex = "#34282C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Charcoal)
+                }
+                (r, g, b)
+                    if ("#36454F", r, g, b) == {
+                        let hex = "#36454F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CharcoalBlue)
+                }
+                (r, g, b)
+                    if ("#7FFF00", r, g, b) == {
+                        let hex = "#7FFF00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Chartreuse)
+                }
+                (r, g, b)
+                    if ("#FFA600", r, g, b) == {
+                        let hex = "#FFA600";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CheeseOrange)
+                }
+                (r, g, b)
+                    if ("#C24641", r, g, b) == {
+                        let hex = "#C24641";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CherryRed)
+                }
+                (r, g, b)
+                    if ("#954535", r, g, b) == {
+                        let hex = "#954535";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Chestnut)
+                }
+                (r, g, b)
+                    if ("#C34A2C", r, g, b) == {
+                        let hex = "#C34A2C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChestnutRed)
+                }
+                (r, g, b)
+                    if ("#C11B17", r, g, b) == {
+                        let hex = "#C11B17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChilliPepper)
+                }
+                (r, g, b)
+                    if ("#D2691E", r, g, b) == {
+                        let hex = "#D2691E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Chocolate)
+                }
+                (r, g, b)
+                    if ("#3F000F", r, g, b) == {
+                        let hex = "#3F000F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChocolateBrown)
+                }
+                (r, g, b)
+                    if ("#A8A9AD", r, g, b) == {
+                        let hex = "#A8A9AD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChromeAluminum)
+                }
+                (r, g, b)
+                    if ("#FFCE44", r, g, b) == {
+                        let hex = "#FFCE44";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChromeGold)
+                }
+                (r, g, b)
+                    if ("#1AA260", r, g, b) == {
+                        let hex = "#1AA260";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChromeGreen)
+                }
+                (r, g, b)
+                    if ("#FF33AA", r, g, b) == {
+                        let hex = "#FF33AA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChromePink)
+                }
+                (r, g, b)
+                    if ("#E8F1D4", r, g, b) == {
+                        let hex = "#E8F1D4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ChromeWhite)
+                }
+                (r, g, b)
+                    if ("#C58917", r, g, b) == {
+                        let hex = "#C58917";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Cinnamon)
+                }
+                (r, g, b)
+                    if ("#8FB31D", r, g, b) == {
+                        let hex = "#8FB31D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CitronGreen)
+                }
+                (r, g, b)
+                    if ("#842DCE", r, g, b) == {
+                        let hex = "#842DCE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ClematisViolet)
+                }
+                (r, g, b)
+                    if ("#6D6968", r, g, b) == {
+                        let hex = "#6D6968";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CloudyGray)
+                }
+                (r, g, b)
+                    if ("#3EA055", r, g, b) == {
+                        let hex = "#3EA055";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CloverGreen)
+                }
+                (r, g, b)
+                    if ("#0020C2", r, g, b) == {
+                        let hex = "#0020C2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CobaltBlue)
+                }
+                (r, g, b)
+                    if ("#6F4E37", r, g, b) == {
+                        let hex = "#6F4E37";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Coffee)
+                }
+                (r, g, b)
+                    if ("#9B9A96", r, g, b) == {
+                        let hex = "#9B9A96";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ColdMetal)
+                }
+                (r, g, b)
+                    if ("#87AFC7", r, g, b) == {
+                        let hex = "#87AFC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ColumbiaBlue)
+                }
+                (r, g, b)
+                    if ("#F87431", r, g, b) == {
+                        let hex = "#F87431";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ConstructionConeOrange)
+                }
+                (r, g, b)
+                    if ("#C7A317", r, g, b) == {
+                        let hex = "#C7A317";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CookieBrown)
+                }
+                (r, g, b)
+                    if ("#B87333", r, g, b) == {
+                        let hex = "#B87333";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Copper)
+                }
+                (r, g, b)
+                    if ("#CB6D51", r, g, b) == {
+                        let hex = "#CB6D51";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CopperRed)
+                }
+                (r, g, b)
+                    if ("#FF7F50", r, g, b) == {
+                        let hex = "#FF7F50";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Coral)
+                }
+                (r, g, b)
+                    if ("#AFDCEC", r, g, b) == {
+                        let hex = "#AFDCEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CoralBlue)
+                }
+                (r, g, b)
+                    if ("#9E4638", r, g, b) == {
+                        let hex = "#9E4638";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CoralBrown)
+                }
+                (r, g, b)
+                    if ("#FBD5AB", r, g, b) == {
+                        let hex = "#FBD5AB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CoralPeach)
+                }
+                (r, g, b)
+                    if ("#FFF380", r, g, b) == {
+                        let hex = "#FFF380";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CornYellow)
+                }
+                (r, g, b)
+                    if ("#6495ED", r, g, b) == {
+                        let hex = "#6495ED";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CornflowerBlue)
+                }
+                (r, g, b)
+                    if ("#FFF8DC", r, g, b) == {
+                        let hex = "#FFF8DC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Cornsilk)
+                }
+                (r, g, b)
+                    if ("#FFF8E7", r, g, b) == {
+                        let hex = "#FFF8E7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CosmicLatte)
+                }
+                (r, g, b)
+                    if ("#FBFBF9", r, g, b) == {
+                        let hex = "#FBFBF9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Cotton)
+                }
+                (r, g, b)
+                    if ("#FCDFFF", r, g, b) == {
+                        let hex = "#FCDFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CottonCandy)
+                }
+                (r, g, b)
+                    if ("#9F000F", r, g, b) == {
+                        let hex = "#9F000F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Cranberry)
+                }
+                (r, g, b)
+                    if ("#FFFFCC", r, g, b) == {
+                        let hex = "#FFFFCC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Cream)
+                }
+                (r, g, b)
+                    if ("#FFFDD0", r, g, b) == {
+                        let hex = "#FFFDD0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CreamWhite)
+                }
+                (r, g, b)
+                    if ("#F0E9D6", r, g, b) == {
+                        let hex = "#F0E9D6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CreamyWhite)
+                }
+                (r, g, b)
+                    if ("#DC143C", r, g, b) == {
+                        let hex = "#DC143C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Crimson)
+                }
+                (r, g, b)
+                    if ("#E238EC", r, g, b) == {
+                        let hex = "#E238EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CrimsonPurple)
+                }
+                (r, g, b)
+                    if ("#990000", r, g, b) == {
+                        let hex = "#990000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CrimsonRed)
+                }
+                (r, g, b)
+                    if ("#9172EC", r, g, b) == {
+                        let hex = "#9172EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CrocusPurple)
+                }
+                (r, g, b)
+                    if ("#5CB3FF", r, g, b) == {
+                        let hex = "#5CB3FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CrystalBlue)
+                }
+                (r, g, b)
+                    if ("#00FFFF", r, g, b) == {
+                        let hex = "#00FFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Cyan)
+                }
+                (r, g, b)
+                    if ("#14A3C7", r, g, b) == {
+                        let hex = "#14A3C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CyanBlue)
+                }
+                (r, g, b)
+                    if ("#92C7C7", r, g, b) == {
+                        let hex = "#92C7C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::CyanOpaque)
+                }
+                (r, g, b)
+                    if ("#AB784E", r, g, b) == {
+                        let hex = "#AB784E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkAlmond)
+                }
+                (r, g, b)
+                    if ("#9F8C76", r, g, b) == {
+                        let hex = "#9F8C76";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBeige)
+                }
+                (r, g, b)
+                    if ("#B86500", r, g, b) == {
+                        let hex = "#B86500";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBisque)
+                }
+                (r, g, b)
+                    if ("#F0E2B6", r, g, b) == {
+                        let hex = "#F0E2B6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBlonde)
+                }
+                (r, g, b)
+                    if ("#29465B", r, g, b) == {
+                        let hex = "#29465B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBlueGray)
+                }
+                (r, g, b)
+                    if ("#5539CC", r, g, b) == {
+                        let hex = "#5539CC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBlurple)
+                }
+                (r, g, b)
+                    if ("#804A00", r, g, b) == {
+                        let hex = "#804A00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBronze)
+                }
+                (r, g, b)
+                    if ("#654321", r, g, b) == {
+                        let hex = "#654321";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBrown)
+                }
+                (r, g, b)
+                    if ("#C12283", r, g, b) == {
+                        let hex = "#C12283";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkCarnationPink)
+                }
+                (r, g, b)
+                    if ("#3B2F2F", r, g, b) == {
+                        let hex = "#3B2F2F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkCoffee)
+                }
+                (r, g, b)
+                    if ("#254117", r, g, b) == {
+                        let hex = "#254117";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkForestGreen)
+                }
+                (r, g, b)
+                    if ("#8C8C8C", r, g, b) == {
+                        let hex = "#8C8C8C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGainsboro)
+                }
+                (r, g, b)
+                    if ("#AA6C39", r, g, b) == {
+                        let hex = "#AA6C39";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGold)
+                }
+                (r, g, b)
+                    if ("#4A412A", r, g, b) == {
+                        let hex = "#4A412A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGrayishOlive)
+                }
+                (r, g, b)
+                    if ("#1F6357", r, g, b) == {
+                        let hex = "#1F6357";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGreenBlue)
+                }
+                (r, g, b)
+                    if ("#473810", r, g, b) == {
+                        let hex = "#473810";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkHazelBrown)
+                }
+                (r, g, b)
+                    if ("#F660AB", r, g, b) == {
+                        let hex = "#F660AB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkHotPink)
+                }
+                (r, g, b)
+                    if ("#41A317", r, g, b) == {
+                        let hex = "#41A317";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkLimeGreen)
+                }
+                (r, g, b)
+                    if ("#2F0909", r, g, b) == {
+                        let hex = "#2F0909";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkMaroon)
+                }
+                (r, g, b)
+                    if ("#31906E", r, g, b) == {
+                        let hex = "#31906E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkMint)
+                }
+                (r, g, b)
+                    if ("#827839", r, g, b) == {
+                        let hex = "#827839";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkMoccasin)
+                }
+                (r, g, b)
+                    if ("#E75480", r, g, b) == {
+                        let hex = "#E75480";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkPink)
+                }
+                (r, g, b)
+                    if ("#4B0150", r, g, b) == {
+                        let hex = "#4B0150";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkPurple)
+                }
+                (r, g, b)
+                    if ("#872657", r, g, b) == {
+                        let hex = "#872657";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkRaspberry)
+                }
+                (r, g, b)
+                    if ("#560319", r, g, b) == {
+                        let hex = "#560319";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkScarlet)
+                }
+                (r, g, b)
+                    if ("#8A4117", r, g, b) == {
+                        let hex = "#8A4117";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSienna)
+                }
+                (r, g, b)
+                    if ("#0059FF", r, g, b) == {
+                        let hex = "#0059FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSkyBlue)
+                }
+                (r, g, b)
+                    if ("#2B3856", r, g, b) == {
+                        let hex = "#2B3856";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSlate)
+                }
+                (r, g, b)
+                    if ("#4D4D4F", r, g, b) == {
+                        let hex = "#4D4D4F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSteampunk)
+                }
+                (r, g, b)
+                    if ("#045D5D", r, g, b) == {
+                        let hex = "#045D5D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkTeal)
+                }
+                (r, g, b)
+                    if ("#E1D9D1", r, g, b) == {
+                        let hex = "#E1D9D1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkWhite)
+                }
+                (r, g, b)
+                    if ("#8B8000", r, g, b) == {
+                        let hex = "#8B8000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkYellow)
+                }
+                (r, g, b)
+                    if ("#00008B", r, g, b) == {
+                        let hex = "#00008B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkBlue)
+                }
+                (r, g, b)
+                    if ("#008B8B", r, g, b) == {
+                        let hex = "#008B8B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkCyan)
+                }
+                (r, g, b)
+                    if ("#B8860B", r, g, b) == {
+                        let hex = "#B8860B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGoldenRod)
+                }
+                (r, g, b)
+                    if ("#A9A9A9", r, g, b) == {
+                        let hex = "#A9A9A9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGray)
+                }
+                (r, g, b)
+                    if ("#006400", r, g, b) == {
+                        let hex = "#006400";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGreen)
+                }
+                (r, g, b)
+                    if ("#A9A9A9", r, g, b) == {
+                        let hex = "#A9A9A9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkGrey)
+                }
+                (r, g, b)
+                    if ("#BDB76B", r, g, b) == {
+                        let hex = "#BDB76B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkKhaki)
+                }
+                (r, g, b)
+                    if ("#8B008B", r, g, b) == {
+                        let hex = "#8B008B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkMagenta)
+                }
+                (r, g, b)
+                    if ("#556B2F", r, g, b) == {
+                        let hex = "#556B2F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkOliveGreen)
+                }
+                (r, g, b)
+                    if ("#FF8C00", r, g, b) == {
+                        let hex = "#FF8C00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkOrange)
+                }
+                (r, g, b)
+                    if ("#9932CC", r, g, b) == {
+                        let hex = "#9932CC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkOrchid)
+                }
+                (r, g, b)
+                    if ("#8B0000", r, g, b) == {
+                        let hex = "#8B0000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkRed)
+                }
+                (r, g, b)
+                    if ("#E9967A", r, g, b) == {
+                        let hex = "#E9967A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSalmon)
+                }
+                (r, g, b)
+                    if ("#8FBC8F", r, g, b) == {
+                        let hex = "#8FBC8F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSeaGreen)
+                }
+                (r, g, b)
+                    if ("#483D8B", r, g, b) == {
+                        let hex = "#483D8B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSlateBlue)
+                }
+                (r, g, b)
+                    if ("#25383C", r, g, b) == {
+                        let hex = "#25383C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSlateGray)
+                }
+                (r, g, b)
+                    if ("#25383C", r, g, b) == {
+                        let hex = "#25383C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkSlateGrey)
+                }
+                (r, g, b)
+                    if ("#00CED1", r, g, b) == {
+                        let hex = "#00CED1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkTurquoise)
+                }
+                (r, g, b)
+                    if ("#9400D3", r, g, b) == {
+                        let hex = "#9400D3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DarkViolet)
+                }
+                (r, g, b)
+                    if ("#82CAFF", r, g, b) == {
+                        let hex = "#82CAFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DaySkyBlue)
+                }
+                (r, g, b)
+                    if ("#A05544", r, g, b) == {
+                        let hex = "#A05544";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepAmber)
+                }
+                (r, g, b)
+                    if ("#046307", r, g, b) == {
+                        let hex = "#046307";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepEmeraldGreen)
+                }
+                (r, g, b)
+                    if ("#056608", r, g, b) == {
+                        let hex = "#056608";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepGreen)
+                }
+                (r, g, b)
+                    if ("#DF73D4", r, g, b) == {
+                        let hex = "#DF73D4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepMauve)
+                }
+                (r, g, b)
+                    if ("#FFCBA4", r, g, b) == {
+                        let hex = "#FFCBA4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepPeach)
+                }
+                (r, g, b)
+                    if ("#5453A6", r, g, b) == {
+                        let hex = "#5453A6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepPeriwinkle)
+                }
+                (r, g, b)
+                    if ("#36013F", r, g, b) == {
+                        let hex = "#36013F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepPurple)
+                }
+                (r, g, b)
+                    if ("#800517", r, g, b) == {
+                        let hex = "#800517";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepRed)
+                }
+                (r, g, b)
+                    if ("#FBBBB9", r, g, b) == {
+                        let hex = "#FBBBB9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepRose)
+                }
+                (r, g, b)
+                    if ("#3B9C9C", r, g, b) == {
+                        let hex = "#3B9C9C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepSea)
+                }
+                (r, g, b)
+                    if ("#123456", r, g, b) == {
+                        let hex = "#123456";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepSeaBlue)
+                }
+                (r, g, b)
+                    if ("#306754", r, g, b) == {
+                        let hex = "#306754";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepSeaGreen)
+                }
+                (r, g, b)
+                    if ("#033E3E", r, g, b) == {
+                        let hex = "#033E3E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepTeal)
+                }
+                (r, g, b)
+                    if ("#48CCCD", r, g, b) == {
+                        let hex = "#48CCCD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepTurquoise)
+                }
+                (r, g, b)
+                    if ("#F6BE00", r, g, b) == {
+                        let hex = "#F6BE00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepYellow)
+                }
+                (r, g, b)
+                    if ("#FF1493", r, g, b) == {
+                        let hex = "#FF1493";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepPink)
+                }
+                (r, g, b)
+                    if ("#00BFFF", r, g, b) == {
+                        let hex = "#00BFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeepSkyBlue)
+                }
+                (r, g, b)
+                    if ("#E6BF83", r, g, b) == {
+                        let hex = "#E6BF83";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DeerBrown)
+                }
+                (r, g, b)
+                    if ("#79BAEC", r, g, b) == {
+                        let hex = "#79BAEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DenimBlue)
+                }
+                (r, g, b)
+                    if ("#151B8D", r, g, b) == {
+                        let hex = "#151B8D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DenimDarkBlue)
+                }
+                (r, g, b)
+                    if ("#EDC9AF", r, g, b) == {
+                        let hex = "#EDC9AF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DesertSand)
+                }
+                (r, g, b)
+                    if ("#696969", r, g, b) == {
+                        let hex = "#696969";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DimGray)
+                }
+                (r, g, b)
+                    if ("#696969", r, g, b) == {
+                        let hex = "#696969";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DimGrey)
+                }
+                (r, g, b)
+                    if ("#E3319D", r, g, b) == {
+                        let hex = "#E3319D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DimorphothecaMagenta)
+                }
+                (r, g, b)
+                    if ("#73A16C", r, g, b) == {
+                        let hex = "#73A16C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DinosaurGreen)
+                }
+                (r, g, b)
+                    if ("#E8E4C9", r, g, b) == {
+                        let hex = "#E8E4C9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DirtyWhite)
+                }
+                (r, g, b)
+                    if ("#1E90FF", r, g, b) == {
+                        let hex = "#1E90FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DodgerBlue)
+                }
+                (r, g, b)
+                    if ("#85BB65", r, g, b) == {
+                        let hex = "#85BB65";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DollarBillGreen)
+                }
+                (r, g, b)
+                    if ("#FAAFBE", r, g, b) == {
+                        let hex = "#FAAFBE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DonutPink)
+                }
+                (r, g, b)
+                    if ("#6AFB92", r, g, b) == {
+                        let hex = "#6AFB92";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DragonGreen)
+                }
+                (r, g, b)
+                    if ("#B1FB17", r, g, b) == {
+                        let hex = "#B1FB17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DullGreenYellow)
+                }
+                (r, g, b)
+                    if ("#7F525D", r, g, b) == {
+                        let hex = "#7F525D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DullPurple)
+                }
+                (r, g, b)
+                    if ("#4E8975", r, g, b) == {
+                        let hex = "#4E8975";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DullSeaGreen)
+                }
+                (r, g, b)
+                    if ("#CC7A8B", r, g, b) == {
+                        let hex = "#CC7A8B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DuskyPink)
+                }
+                (r, g, b)
+                    if ("#D58A94", r, g, b) == {
+                        let hex = "#D58A94";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DustyPink)
+                }
+                (r, g, b)
+                    if ("#C9A9A6", r, g, b) == {
+                        let hex = "#C9A9A6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::DustyRose)
+                }
+                (r, g, b)
+                    if ("#0000A5", r, g, b) == {
+                        let hex = "#0000A5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::EarthBlue)
+                }
+                (r, g, b)
+                    if ("#34A56F", r, g, b) == {
+                        let hex = "#34A56F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::EarthGreen)
+                }
+                (r, g, b)
+                    if ("#555D50", r, g, b) == {
+                        let hex = "#555D50";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Ebony)
+                }
+                (r, g, b)
+                    if ("#FFF9E3", r, g, b) == {
+                        let hex = "#FFF9E3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::EggShell)
+                }
+                (r, g, b)
+                    if ("#614051", r, g, b) == {
+                        let hex = "#614051";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Eggplant)
+                }
+                (r, g, b)
+                    if ("#9AFEFF", r, g, b) == {
+                        let hex = "#9AFEFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ElectricBlue)
+                }
+                (r, g, b)
+                    if ("#1B8A6B", r, g, b) == {
+                        let hex = "#1B8A6B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ElfGreen)
+                }
+                (r, g, b)
+                    if ("#50C878", r, g, b) == {
+                        let hex = "#50C878";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Emerald)
+                }
+                (r, g, b)
+                    if ("#5FFB17", r, g, b) == {
+                        let hex = "#5FFB17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::EmeraldGreen)
+                }
+                (r, g, b)
+                    if ("#2F539B", r, g, b) == {
+                        let hex = "#2F539B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::EstorilBlue)
+                }
+                (r, g, b)
+                    if ("#4E9258", r, g, b) == {
+                        let hex = "#4E9258";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FallForestGreen)
+                }
+                (r, g, b)
+                    if ("#C8B560", r, g, b) == {
+                        let hex = "#C8B560";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FallLeafBrown)
+                }
+                (r, g, b)
+                    if ("#667C26", r, g, b) == {
+                        let hex = "#667C26";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FernGreen)
+                }
+                (r, g, b)
+                    if ("#F70D1A", r, g, b) == {
+                        let hex = "#F70D1A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FerrariRed)
+                }
+                (r, g, b)
+                    if ("#F62817", r, g, b) == {
+                        let hex = "#F62817";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FireEngineRed)
+                }
+                (r, g, b)
+                    if ("#B22222", r, g, b) == {
+                        let hex = "#B22222";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FireBrick)
+                }
+                (r, g, b)
+                    if ("#F9A7B0", r, g, b) == {
+                        let hex = "#F9A7B0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FlamingoPink)
+                }
+                (r, g, b)
+                    if ("#FFFAF0", r, g, b) == {
+                        let hex = "#FFFAF0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FloralWhite)
+                }
+                (r, g, b)
+                    if ("#FE632A", r, g, b) == {
+                        let hex = "#FE632A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FluroOrange)
+                }
+                (r, g, b)
+                    if ("#228B22", r, g, b) == {
+                        let hex = "#228B22";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ForestGreen)
+                }
+                (r, g, b)
+                    if ("#86608E", r, g, b) == {
+                        let hex = "#86608E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FrenchLilac)
+                }
+                (r, g, b)
+                    if ("#99C68E", r, g, b) == {
+                        let hex = "#99C68E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FrogGreen)
+                }
+                (r, g, b)
+                    if ("#FF00FF", r, g, b) == {
+                        let hex = "#FF00FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Fuchsia)
+                }
+                (r, g, b)
+                    if ("#FF77FF", r, g, b) == {
+                        let hex = "#FF77FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::FuchsiaPink)
+                }
+                (r, g, b)
+                    if ("#DCDCDC", r, g, b) == {
+                        let hex = "#DCDCDC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Gainsboro)
+                }
+                (r, g, b)
+                    if ("#733635", r, g, b) == {
+                        let hex = "#733635";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GarnetRed)
+                }
+                (r, g, b)
+                    if ("#C0C6C7", r, g, b) == {
+                        let hex = "#C0C6C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GearSteelGray)
+                }
+                (r, g, b)
+                    if ("#F8F8FF", r, g, b) == {
+                        let hex = "#F8F8FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GhostWhite)
+                }
+                (r, g, b)
+                    if ("#C9BE62", r, g, b) == {
+                        let hex = "#C9BE62";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GingerBrown)
+                }
+                (r, g, b)
+                    if ("#B83C08", r, g, b) == {
+                        let hex = "#B83C08";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GingerRed)
+                }
+                (r, g, b)
+                    if ("#368BC1", r, g, b) == {
+                        let hex = "#368BC1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GlacialBlueIce)
+                }
+                (r, g, b)
+                    if ("#FFD700", r, g, b) == {
+                        let hex = "#FFD700";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Gold)
+                }
+                (r, g, b)
+                    if ("#E6C7C2", r, g, b) == {
+                        let hex = "#E6C7C2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GoldPink)
+                }
+                (r, g, b)
+                    if ("#FBE7A1", r, g, b) == {
+                        let hex = "#FBE7A1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GoldenBlonde)
+                }
+                (r, g, b)
+                    if ("#EAC117", r, g, b) == {
+                        let hex = "#EAC117";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GoldenBrown)
+                }
+                (r, g, b)
+                    if ("#F3E3C3", r, g, b) == {
+                        let hex = "#F3E3C3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GoldenSilk)
+                }
+                (r, g, b)
+                    if ("#FFDF00", r, g, b) == {
+                        let hex = "#FFDF00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GoldenYellow)
+                }
+                (r, g, b)
+                    if ("#DAA520", r, g, b) == {
+                        let hex = "#DAA520";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GoldenRod)
+                }
+                (r, g, b)
+                    if ("#837E7C", r, g, b) == {
+                        let hex = "#837E7C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Granite)
+                }
+                (r, g, b)
+                    if ("#5E5A80", r, g, b) == {
+                        let hex = "#5E5A80";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Grape)
+                }
+                (r, g, b)
+                    if ("#DC381F", r, g, b) == {
+                        let hex = "#DC381F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Grapefruit)
+                }
+                (r, g, b)
+                    if ("#3F9B0B", r, g, b) == {
+                        let hex = "#3F9B0B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrassGreen)
+                }
+                (r, g, b)
+                    if ("#808080", r, g, b) == {
+                        let hex = "#808080";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Gray)
+                }
+                (r, g, b)
+                    if ("#3D3635", r, g, b) == {
+                        let hex = "#3D3635";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrayBrown)
+                }
+                (r, g, b)
+                    if ("#B6B6B4", r, g, b) == {
+                        let hex = "#B6B6B4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrayCloud)
+                }
+                (r, g, b)
+                    if ("#5C5858", r, g, b) == {
+                        let hex = "#5C5858";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrayDolphin)
+                }
+                (r, g, b)
+                    if ("#D1D0CE", r, g, b) == {
+                        let hex = "#D1D0CE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrayGoose)
+                }
+                (r, g, b)
+                    if ("#A2AD9C", r, g, b) == {
+                        let hex = "#A2AD9C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrayGreen)
+                }
+                (r, g, b)
+                    if ("#504A4B", r, g, b) == {
+                        let hex = "#504A4B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrayWolf)
+                }
+                (r, g, b)
+                    if ("#5E7D7E", r, g, b) == {
+                        let hex = "#5E7D7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GrayishTurquoise)
+                }
+                (r, g, b)
+                    if ("#008000", r, g, b) == {
+                        let hex = "#008000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Green)
+                }
+                (r, g, b)
+                    if ("#4CC417", r, g, b) == {
+                        let hex = "#4CC417";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenApple)
+                }
+                (r, g, b)
+                    if ("#3A5F0B", r, g, b) == {
+                        let hex = "#3A5F0B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenLeaves)
+                }
+                (r, g, b)
+                    if ("#6AA121", r, g, b) == {
+                        let hex = "#6AA121";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenOnion)
+                }
+                (r, g, b)
+                    if ("#89C35C", r, g, b) == {
+                        let hex = "#89C35C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenPeas)
+                }
+                (r, g, b)
+                    if ("#4AA02C", r, g, b) == {
+                        let hex = "#4AA02C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenPepper)
+                }
+                (r, g, b)
+                    if ("#6CBB3C", r, g, b) == {
+                        let hex = "#6CBB3C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenSnake)
+                }
+                (r, g, b)
+                    if ("#B5EAAA", r, g, b) == {
+                        let hex = "#B5EAAA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenThumb)
+                }
+                (r, g, b)
+                    if ("#ADFF2F", r, g, b) == {
+                        let hex = "#ADFF2F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenYellow)
+                }
+                (r, g, b)
+                    if ("#307D7E", r, g, b) == {
+                        let hex = "#307D7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GreenishBlue)
+                }
+                (r, g, b)
+                    if ("#808080", r, g, b) == {
+                        let hex = "#808080";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Grey)
+                }
+                (r, g, b)
+                    if ("#C9DFEC", r, g, b) == {
+                        let hex = "#C9DFEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GulfBlue)
+                }
+                (r, g, b)
+                    if ("#2C3539", r, g, b) == {
+                        let hex = "#2C3539";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Gunmetal)
+                }
+                (r, g, b)
+                    if ("#8D918D", r, g, b) == {
+                        let hex = "#8D918D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::GunmetalGray)
+                }
+                (r, g, b)
+                    if ("#FFFEFA", r, g, b) == {
+                        let hex = "#FFFEFA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HalfWhite)
+                }
+                (r, g, b)
+                    if ("#E66C2C", r, g, b) == {
+                        let hex = "#E66C2C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HalloweenOrange)
+                }
+                (r, g, b)
+                    if ("#EDE275", r, g, b) == {
+                        let hex = "#EDE275";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HarvestGold)
+                }
+                (r, g, b)
+                    if ("#8E7618", r, g, b) == {
+                        let hex = "#8E7618";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Hazel)
+                }
+                (r, g, b)
+                    if ("#617C58", r, g, b) == {
+                        let hex = "#617C58";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HazelGreen)
+                }
+                (r, g, b)
+                    if ("#C6DEFF", r, g, b) == {
+                        let hex = "#C6DEFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HeavenlyBlue)
+                }
+                (r, g, b)
+                    if ("#D462FF", r, g, b) == {
+                        let hex = "#D462FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HeliotropePurple)
+                }
+                (r, g, b)
+                    if ("#F0FFF0", r, g, b) == {
+                        let hex = "#F0FFF0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HoneyDew)
+                }
+                (r, g, b)
+                    if ("#F52887", r, g, b) == {
+                        let hex = "#F52887";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HotDeepPink)
+                }
+                (r, g, b)
+                    if ("#FF69B4", r, g, b) == {
+                        let hex = "#FF69B4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HotPink)
+                }
+                (r, g, b)
+                    if ("#7FE817", r, g, b) == {
+                        let hex = "#7FE817";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HummingbirdGreen)
+                }
+                (r, g, b)
+                    if ("#355E3B", r, g, b) == {
+                        let hex = "#355E3B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::HunterGreen)
+                }
+                (r, g, b)
+                    if ("#56A5EC", r, g, b) == {
+                        let hex = "#56A5EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Iceberg)
+                }
+                (r, g, b)
+                    if ("#9CB071", r, g, b) == {
+                        let hex = "#9CB071";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::IguanaGreen)
+                }
+                (r, g, b)
+                    if ("#FF7722", r, g, b) == {
+                        let hex = "#FF7722";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::IndianSaffron)
+                }
+                (r, g, b)
+                    if ("#CD5C5C", r, g, b) == {
+                        let hex = "#CD5C5C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::IndianRed)
+                }
+                (r, g, b)
+                    if ("#4B0082", r, g, b) == {
+                        let hex = "#4B0082";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Indigo)
+                }
+                (r, g, b)
+                    if ("#3D3C3A", r, g, b) == {
+                        let hex = "#3D3C3A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Iridium)
+                }
+                (r, g, b)
+                    if ("#08A04B", r, g, b) == {
+                        let hex = "#08A04B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::IrishGreen)
+                }
+                (r, g, b)
+                    if ("#52595D", r, g, b) == {
+                        let hex = "#52595D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::IronGray)
+                }
+                (r, g, b)
+                    if ("#22CE83", r, g, b) == {
+                        let hex = "#22CE83";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::IsleOfManGreen)
+                }
+                (r, g, b)
+                    if ("#FFFFF0", r, g, b) == {
+                        let hex = "#FFFFF0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Ivory)
+                }
+                (r, g, b)
+                    if ("#00A36C", r, g, b) == {
+                        let hex = "#00A36C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Jade)
+                }
+                (r, g, b)
+                    if ("#5EFB6E", r, g, b) == {
+                        let hex = "#5EFB6E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::JadeGreen)
+                }
+                (r, g, b)
+                    if ("#A23BEC", r, g, b) == {
+                        let hex = "#A23BEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::JasminePurple)
+                }
+                (r, g, b)
+                    if ("#A0CFEC", r, g, b) == {
+                        let hex = "#A0CFEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::JeansBlue)
+                }
+                (r, g, b)
+                    if ("#46C7C7", r, g, b) == {
+                        let hex = "#46C7C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Jellyfish)
+                }
+                (r, g, b)
+                    if ("#616D7E", r, g, b) == {
+                        let hex = "#616D7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::JetGray)
+                }
+                (r, g, b)
+                    if ("#347C2C", r, g, b) == {
+                        let hex = "#347C2C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::JungleGreen)
+                }
+                (r, g, b)
+                    if ("#4CC552", r, g, b) == {
+                        let hex = "#4CC552";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::KellyGreen)
+                }
+                (r, g, b)
+                    if ("#F0E68C", r, g, b) == {
+                        let hex = "#F0E68C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Khaki)
+                }
+                (r, g, b)
+                    if ("#906E3E", r, g, b) == {
+                        let hex = "#906E3E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::KhakiBrown)
+                }
+                (r, g, b)
+                    if ("#8A865D", r, g, b) == {
+                        let hex = "#8A865D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::KhakiGreen)
+                }
+                (r, g, b)
+                    if ("#C5908E", r, g, b) == {
+                        let hex = "#C5908E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::KhakiRose)
+                }
+                (r, g, b)
+                    if ("#15317E", r, g, b) == {
+                        let hex = "#15317E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LapisBlue)
+                }
+                (r, g, b)
+                    if ("#E42217", r, g, b) == {
+                        let hex = "#E42217";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LavaRed)
+                }
+                (r, g, b)
+                    if ("#E6E6FA", r, g, b) == {
+                        let hex = "#E6E6FA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Lavender)
+                }
+                (r, g, b)
+                    if ("#E3E4FA", r, g, b) == {
+                        let hex = "#E3E4FA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LavenderBlue)
+                }
+                (r, g, b)
+                    if ("#EBDDE2", r, g, b) == {
+                        let hex = "#EBDDE2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LavenderPinocchio)
+                }
+                (r, g, b)
+                    if ("#967BB6", r, g, b) == {
+                        let hex = "#967BB6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LavenderPurple)
+                }
+                (r, g, b)
+                    if ("#FFF0F5", r, g, b) == {
+                        let hex = "#FFF0F5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LavenderBlush)
+                }
+                (r, g, b)
+                    if ("#7CFC00", r, g, b) == {
+                        let hex = "#7CFC00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LawnGreen)
+                }
+                (r, g, b)
+                    if ("#ADF802", r, g, b) == {
+                        let hex = "#ADF802";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LemonGreen)
+                }
+                (r, g, b)
+                    if ("#FEF250", r, g, b) == {
+                        let hex = "#FEF250";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LemonYellow)
+                }
+                (r, g, b)
+                    if ("#FFFACD", r, g, b) == {
+                        let hex = "#FFFACD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LemonChiffon)
+                }
+                (r, g, b)
+                    if ("#93FFE8", r, g, b) == {
+                        let hex = "#93FFE8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightAquamarine)
+                }
+                (r, g, b)
+                    if ("#FFF0DB", r, g, b) == {
+                        let hex = "#FFF0DB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightBeige)
+                }
+                (r, g, b)
+                    if ("#454545", r, g, b) == {
+                        let hex = "#454545";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightBlack)
+                }
+                (r, g, b)
+                    if ("#B5651D", r, g, b) == {
+                        let hex = "#B5651D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightBrown)
+                }
+                (r, g, b)
+                    if ("#DA8A67", r, g, b) == {
+                        let hex = "#DA8A67";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightCopper)
+                }
+                (r, g, b)
+                    if ("#ADDFFF", r, g, b) == {
+                        let hex = "#ADDFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightDayBlue)
+                }
+                (r, g, b)
+                    if ("#C8AD7F", r, g, b) == {
+                        let hex = "#C8AD7F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightFrenchBeige)
+                }
+                (r, g, b)
+                    if ("#F1E5AC", r, g, b) == {
+                        let hex = "#F1E5AC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightGold)
+                }
+                (r, g, b)
+                    if ("#C3FDB8", r, g, b) == {
+                        let hex = "#C3FDB8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightJade)
+                }
+                (r, g, b)
+                    if ("#C2E5D3", r, g, b) == {
+                        let hex = "#C2E5D3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightMintGreen)
+                }
+                (r, g, b)
+                    if ("#B8BC86", r, g, b) == {
+                        let hex = "#B8BC86";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightOliveGreen)
+                }
+                (r, g, b)
+                    if ("#FED8B1", r, g, b) == {
+                        let hex = "#FED8B1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightOrange)
+                }
+                (r, g, b)
+                    if ("#8467D7", r, g, b) == {
+                        let hex = "#8467D7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightPurple)
+                }
+                (r, g, b)
+                    if ("#728FCE", r, g, b) == {
+                        let hex = "#728FCE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightPurpleBlue)
+                }
+                (r, g, b)
+                    if ("#FFCCCB", r, g, b) == {
+                        let hex = "#FFCCCB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightRed)
+                }
+                (r, g, b)
+                    if ("#FBCFCD", r, g, b) == {
+                        let hex = "#FBCFCD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightRose)
+                }
+                (r, g, b)
+                    if ("#DBF9DB", r, g, b) == {
+                        let hex = "#DBF9DB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightRoseGreen)
+                }
+                (r, g, b)
+                    if ("#F9966B", r, g, b) == {
+                        let hex = "#F9966B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSalmonRose)
+                }
+                (r, g, b)
+                    if ("#CCFFFF", r, g, b) == {
+                        let hex = "#CCFFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSlate)
+                }
+                (r, g, b)
+                    if ("#736AFF", r, g, b) == {
+                        let hex = "#736AFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSlateBlue)
+                }
+                (r, g, b)
+                    if ("#E0E5E5", r, g, b) == {
+                        let hex = "#E0E5E5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSteelGray)
+                }
+                (r, g, b)
+                    if ("#B3D9D9", r, g, b) == {
+                        let hex = "#B3D9D9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightTeal)
+                }
+                (r, g, b)
+                    if ("#FFFFF7", r, g, b) == {
+                        let hex = "#FFFFF7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightWhite)
+                }
+                (r, g, b)
+                    if ("#ADD8E6", r, g, b) == {
+                        let hex = "#ADD8E6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightBlue)
+                }
+                (r, g, b)
+                    if ("#F08080", r, g, b) == {
+                        let hex = "#F08080";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightCoral)
+                }
+                (r, g, b)
+                    if ("#E0FFFF", r, g, b) == {
+                        let hex = "#E0FFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightCyan)
+                }
+                (r, g, b)
+                    if ("#FAFAD2", r, g, b) == {
+                        let hex = "#FAFAD2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightGoldenRodYellow)
+                }
+                (r, g, b)
+                    if ("#D3D3D3", r, g, b) == {
+                        let hex = "#D3D3D3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightGray)
+                }
+                (r, g, b)
+                    if ("#90EE90", r, g, b) == {
+                        let hex = "#90EE90";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightGreen)
+                }
+                (r, g, b)
+                    if ("#D3D3D3", r, g, b) == {
+                        let hex = "#D3D3D3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightGrey)
+                }
+                (r, g, b)
+                    if ("#FFB6C1", r, g, b) == {
+                        let hex = "#FFB6C1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightPink)
+                }
+                (r, g, b)
+                    if ("#FFA07A", r, g, b) == {
+                        let hex = "#FFA07A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSalmon)
+                }
+                (r, g, b)
+                    if ("#20B2AA", r, g, b) == {
+                        let hex = "#20B2AA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSeaGreen)
+                }
+                (r, g, b)
+                    if ("#87CEFA", r, g, b) == {
+                        let hex = "#87CEFA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSkyBlue)
+                }
+                (r, g, b)
+                    if ("#778899", r, g, b) == {
+                        let hex = "#778899";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSlateGray)
+                }
+                (r, g, b)
+                    if ("#778899", r, g, b) == {
+                        let hex = "#778899";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSlateGrey)
+                }
+                (r, g, b)
+                    if ("#B0CFDE", r, g, b) == {
+                        let hex = "#B0CFDE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightSteelBlue)
+                }
+                (r, g, b)
+                    if ("#FFFFE0", r, g, b) == {
+                        let hex = "#FFFFE0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LightYellow)
+                }
+                (r, g, b)
+                    if ("#C8A2C8", r, g, b) == {
+                        let hex = "#C8A2C8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Lilac)
+                }
+                (r, g, b)
+                    if ("#00FF00", r, g, b) == {
+                        let hex = "#00FF00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Lime)
+                }
+                (r, g, b)
+                    if ("#36F57F", r, g, b) == {
+                        let hex = "#36F57F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LimeMintGreen)
+                }
+                (r, g, b)
+                    if ("#32CD32", r, g, b) == {
+                        let hex = "#32CD32";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LimeGreen)
+                }
+                (r, g, b)
+                    if ("#FAF0E6", r, g, b) == {
+                        let hex = "#FAF0E6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Linen)
+                }
+                (r, g, b)
+                    if ("#C48793", r, g, b) == {
+                        let hex = "#C48793";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LipstickPink)
+                }
+                (r, g, b)
+                    if ("#004225", r, g, b) == {
+                        let hex = "#004225";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LotusGreen)
+                }
+                (r, g, b)
+                    if ("#E41B17", r, g, b) == {
+                        let hex = "#E41B17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LoveRed)
+                }
+                (r, g, b)
+                    if ("#7F38EC", r, g, b) == {
+                        let hex = "#7F38EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::LovelyPurple)
+                }
+                (r, g, b)
+                    if ("#F2BB66", r, g, b) == {
+                        let hex = "#F2BB66";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MacaroniandCheese)
+                }
+                (r, g, b)
+                    if ("#43BFC7", r, g, b) == {
+                        let hex = "#43BFC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MacawBlueGreen)
+                }
+                (r, g, b)
+                    if ("#FF00FF", r, g, b) == {
+                        let hex = "#FF00FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Magenta)
+                }
+                (r, g, b)
+                    if ("#CC338B", r, g, b) == {
+                        let hex = "#CC338B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MagentaPink)
+                }
+                (r, g, b)
+                    if ("#AAF0D1", r, g, b) == {
+                        let hex = "#AAF0D1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MagicMint)
+                }
+                (r, g, b)
+                    if ("#C04000", r, g, b) == {
+                        let hex = "#C04000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Mahogany)
+                }
+                (r, g, b)
+                    if ("#FF8040", r, g, b) == {
+                        let hex = "#FF8040";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MangoOrange)
+                }
+                (r, g, b)
+                    if ("#566D7E", r, g, b) == {
+                        let hex = "#566D7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MarbleBlue)
+                }
+                (r, g, b)
+                    if ("#800000", r, g, b) == {
+                        let hex = "#800000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Maroon)
+                }
+                (r, g, b)
+                    if ("#8F0B0B", r, g, b) == {
+                        let hex = "#8F0B0B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MaroonRed)
+                }
+                (r, g, b)
+                    if ("#E0B0FF", r, g, b) == {
+                        let hex = "#E0B0FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Mauve)
+                }
+                (r, g, b)
+                    if ("#915F6D", r, g, b) == {
+                        let hex = "#915F6D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MauveTaupe)
+                }
+                (r, g, b)
+                    if ("#347235", r, g, b) == {
+                        let hex = "#347235";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumForestGreen)
+                }
+                (r, g, b)
+                    if ("#045F5F", r, g, b) == {
+                        let hex = "#045F5F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumTeal)
+                }
+                (r, g, b)
+                    if ("#66CDAA", r, g, b) == {
+                        let hex = "#66CDAA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumAquaMarine)
+                }
+                (r, g, b)
+                    if ("#0000CD", r, g, b) == {
+                        let hex = "#0000CD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumBlue)
+                }
+                (r, g, b)
+                    if ("#BA55D3", r, g, b) == {
+                        let hex = "#BA55D3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumOrchid)
+                }
+                (r, g, b)
+                    if ("#9370DB", r, g, b) == {
+                        let hex = "#9370DB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumPurple)
+                }
+                (r, g, b)
+                    if ("#3CB371", r, g, b) == {
+                        let hex = "#3CB371";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumSeaGreen)
+                }
+                (r, g, b)
+                    if ("#7B68EE", r, g, b) == {
+                        let hex = "#7B68EE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumSlateBlue)
+                }
+                (r, g, b)
+                    if ("#00FA9A", r, g, b) == {
+                        let hex = "#00FA9A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumSpringGreen)
+                }
+                (r, g, b)
+                    if ("#48D1CC", r, g, b) == {
+                        let hex = "#48D1CC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumTurquoise)
+                }
+                (r, g, b)
+                    if ("#C71585", r, g, b) == {
+                        let hex = "#C71585";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MediumVioletRed)
+                }
+                (r, g, b)
+                    if ("#B6B6B6", r, g, b) == {
+                        let hex = "#B6B6B6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Metal)
+                }
+                (r, g, b)
+                    if ("#A97142", r, g, b) == {
+                        let hex = "#A97142";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MetallicBronze)
+                }
+                (r, g, b)
+                    if ("#D4AF37", r, g, b) == {
+                        let hex = "#D4AF37";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MetallicGold)
+                }
+                (r, g, b)
+                    if ("#7C9D8E", r, g, b) == {
+                        let hex = "#7C9D8E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MetallicGreen)
+                }
+                (r, g, b)
+                    if ("#BCC6CC", r, g, b) == {
+                        let hex = "#BCC6CC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MetallicSilver)
+                }
+                (r, g, b)
+                    if ("#3BB9FF", r, g, b) == {
+                        let hex = "#3BB9FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MiddayBlue)
+                }
+                (r, g, b)
+                    if ("#2B1B17", r, g, b) == {
+                        let hex = "#2B1B17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Midnight)
+                }
+                (r, g, b)
+                    if ("#2E1A47", r, g, b) == {
+                        let hex = "#2E1A47";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MidnightPurple)
+                }
+                (r, g, b)
+                    if ("#191970", r, g, b) == {
+                        let hex = "#191970";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MidnightBlue)
+                }
+                (r, g, b)
+                    if ("#4E5B31", r, g, b) == {
+                        let hex = "#4E5B31";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MilitaryGreen)
+                }
+                (r, g, b)
+                    if ("#513B1C", r, g, b) == {
+                        let hex = "#513B1C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MilkChocolate)
+                }
+                (r, g, b)
+                    if ("#FEFCFF", r, g, b) == {
+                        let hex = "#FEFCFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MilkWhite)
+                }
+                (r, g, b)
+                    if ("#93917C", r, g, b) == {
+                        let hex = "#93917C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MillenniumJade)
+                }
+                (r, g, b)
+                    if ("#3EB489", r, g, b) == {
+                        let hex = "#3EB489";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Mint)
+                }
+                (r, g, b)
+                    if ("#98FF98", r, g, b) == {
+                        let hex = "#98FF98";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MintGreen)
+                }
+                (r, g, b)
+                    if ("#F5FFFA", r, g, b) == {
+                        let hex = "#F5FFFA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MintCream)
+                }
+                (r, g, b)
+                    if ("#646D7E", r, g, b) == {
+                        let hex = "#646D7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MistBlue)
+                }
+                (r, g, b)
+                    if ("#FFE4E1", r, g, b) == {
+                        let hex = "#FFE4E1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MistyRose)
+                }
+                (r, g, b)
+                    if ("#FFE4B5", r, g, b) == {
+                        let hex = "#FFE4B5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Moccasin)
+                }
+                (r, g, b)
+                    if ("#493D26", r, g, b) == {
+                        let hex = "#493D26";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Mocha)
+                }
+                (r, g, b)
+                    if ("#8A9A5B", r, g, b) == {
+                        let hex = "#8A9A5B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MossGreen)
+                }
+                (r, g, b)
+                    if ("#E1AD01", r, g, b) == {
+                        let hex = "#E1AD01";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Mustard)
+                }
+                (r, g, b)
+                    if ("#FFDB58", r, g, b) == {
+                        let hex = "#FFDB58";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::MustardYellow)
+                }
+                (r, g, b)
+                    if ("#686A6C", r, g, b) == {
+                        let hex = "#686A6C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NardoGray)
+                }
+                (r, g, b)
+                    if ("#FFDEAD", r, g, b) == {
+                        let hex = "#FFDEAD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NavajoWhite)
+                }
+                (r, g, b)
+                    if ("#000080", r, g, b) == {
+                        let hex = "#000080";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Navy)
+                }
+                (r, g, b)
+                    if ("#59E817", r, g, b) == {
+                        let hex = "#59E817";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NebulaGreen)
+                }
+                (r, g, b)
+                    if ("#1589FF", r, g, b) == {
+                        let hex = "#1589FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonBlue)
+                }
+                (r, g, b)
+                    if ("#FDBD01", r, g, b) == {
+                        let hex = "#FDBD01";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonGold)
+                }
+                (r, g, b)
+                    if ("#16F529", r, g, b) == {
+                        let hex = "#16F529";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonGreen)
+                }
+                (r, g, b)
+                    if ("#FD349C", r, g, b) == {
+                        let hex = "#FD349C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonHotPink)
+                }
+                (r, g, b)
+                    if ("#FF6700", r, g, b) == {
+                        let hex = "#FF6700";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonOrange)
+                }
+                (r, g, b)
+                    if ("#F535AA", r, g, b) == {
+                        let hex = "#F535AA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonPink)
+                }
+                (r, g, b)
+                    if ("#9D00FF", r, g, b) == {
+                        let hex = "#9D00FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonPurple)
+                }
+                (r, g, b)
+                    if ("#FD1C03", r, g, b) == {
+                        let hex = "#FD1C03";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonRed)
+                }
+                (r, g, b)
+                    if ("#FFFF33", r, g, b) == {
+                        let hex = "#FFFF33";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonYellow)
+                }
+                (r, g, b)
+                    if ("#DAEE01", r, g, b) == {
+                        let hex = "#DAEE01";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NeonYellowGreen)
+                }
+                (r, g, b)
+                    if ("#0000A0", r, g, b) == {
+                        let hex = "#0000A0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NewMidnightBlue)
+                }
+                (r, g, b)
+                    if ("#0C090A", r, g, b) == {
+                        let hex = "#0C090A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Night)
+                }
+                (r, g, b)
+                    if ("#151B54", r, g, b) == {
+                        let hex = "#151B54";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NightBlue)
+                }
+                (r, g, b)
+                    if ("#78C7C7", r, g, b) == {
+                        let hex = "#78C7C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::NorthernLightsBlue)
+                }
+                (r, g, b)
+                    if ("#806517", r, g, b) == {
+                        let hex = "#806517";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OakBrown)
+                }
+                (r, g, b)
+                    if ("#2B65EC", r, g, b) == {
+                        let hex = "#2B65EC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OceanBlue)
+                }
+                (r, g, b)
+                    if ("#00FF80", r, g, b) == {
+                        let hex = "#00FF80";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OceanGreen)
+                }
+                (r, g, b)
+                    if ("#F8F0E3", r, g, b) == {
+                        let hex = "#F8F0E3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OffWhite)
+                }
+                (r, g, b)
+                    if ("#3B3131", r, g, b) == {
+                        let hex = "#3B3131";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Oil)
+                }
+                (r, g, b)
+                    if ("#43302E", r, g, b) == {
+                        let hex = "#43302E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OldBurgundy)
+                }
+                (r, g, b)
+                    if ("#C08081", r, g, b) == {
+                        let hex = "#C08081";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OldRose)
+                }
+                (r, g, b)
+                    if ("#FEF0E3", r, g, b) == {
+                        let hex = "#FEF0E3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OldLace)
+                }
+                (r, g, b)
+                    if ("#808000", r, g, b) == {
+                        let hex = "#808000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Olive)
+                }
+                (r, g, b)
+                    if ("#BAB86C", r, g, b) == {
+                        let hex = "#BAB86C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OliveGreen)
+                }
+                (r, g, b)
+                    if ("#6B8E23", r, g, b) == {
+                        let hex = "#6B8E23";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OliveDrab)
+                }
+                (r, g, b)
+                    if ("#FFA500", r, g, b) == {
+                        let hex = "#FFA500";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Orange)
+                }
+                (r, g, b)
+                    if ("#D4A017", r, g, b) == {
+                        let hex = "#D4A017";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OrangeGold)
+                }
+                (r, g, b)
+                    if ("#C47451", r, g, b) == {
+                        let hex = "#C47451";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OrangeSalmon)
+                }
+                (r, g, b)
+                    if ("#FFAE42", r, g, b) == {
+                        let hex = "#FFAE42";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OrangeYellow)
+                }
+                (r, g, b)
+                    if ("#FF4500", r, g, b) == {
+                        let hex = "#FF4500";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OrangeRed)
+                }
+                (r, g, b)
+                    if ("#DA70D6", r, g, b) == {
+                        let hex = "#DA70D6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Orchid)
+                }
+                (r, g, b)
+                    if ("#B048B5", r, g, b) == {
+                        let hex = "#B048B5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OrchidPurple)
+                }
+                (r, g, b)
+                    if ("#E3F9A6", r, g, b) == {
+                        let hex = "#E3F9A6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::OrganicBrown)
+                }
+                (r, g, b)
+                    if ("#CFECEC", r, g, b) == {
+                        let hex = "#CFECEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PaleBlueLily)
+                }
+                (r, g, b)
+                    if ("#DCD0FF", r, g, b) == {
+                        let hex = "#DCD0FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PaleLilac)
+                }
+                (r, g, b)
+                    if ("#F2D4D7", r, g, b) == {
+                        let hex = "#F2D4D7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PalePink)
+                }
+                (r, g, b)
+                    if ("#C9C0BB", r, g, b) == {
+                        let hex = "#C9C0BB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PaleSilver)
+                }
+                (r, g, b)
+                    if ("#EEE8AA", r, g, b) == {
+                        let hex = "#EEE8AA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PaleGoldenRod)
+                }
+                (r, g, b)
+                    if ("#98FB98", r, g, b) == {
+                        let hex = "#98FB98";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PaleGreen)
+                }
+                (r, g, b)
+                    if ("#AFEEEE", r, g, b) == {
+                        let hex = "#AFEEEE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PaleTurquoise)
+                }
+                (r, g, b)
+                    if ("#DB7093", r, g, b) == {
+                        let hex = "#DB7093";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PaleVioletRed)
+                }
+                (r, g, b)
+                    if ("#E56717", r, g, b) == {
+                        let hex = "#E56717";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PapayaOrange)
+                }
+                (r, g, b)
+                    if ("#FFEFD5", r, g, b) == {
+                        let hex = "#FFEFD5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PapayaWhip)
+                }
+                (r, g, b)
+                    if ("#FFFFC2", r, g, b) == {
+                        let hex = "#FFFFC2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Parchment)
+                }
+                (r, g, b)
+                    if ("#12AD2B", r, g, b) == {
+                        let hex = "#12AD2B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ParrotGreen)
+                }
+                (r, g, b)
+                    if ("#B4CFEC", r, g, b) == {
+                        let hex = "#B4CFEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelBlue)
+                }
+                (r, g, b)
+                    if ("#B1907F", r, g, b) == {
+                        let hex = "#B1907F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelBrown)
+                }
+                (r, g, b)
+                    if ("#77DD77", r, g, b) == {
+                        let hex = "#77DD77";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelGreen)
+                }
+                (r, g, b)
+                    if ("#8686AF", r, g, b) == {
+                        let hex = "#8686AF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelIndigo)
+                }
+                (r, g, b)
+                    if ("#D5D6EA", r, g, b) == {
+                        let hex = "#D5D6EA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelLightBlue)
+                }
+                (r, g, b)
+                    if ("#F8B88B", r, g, b) == {
+                        let hex = "#F8B88B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelOrange)
+                }
+                (r, g, b)
+                    if ("#FEA3AA", r, g, b) == {
+                        let hex = "#FEA3AA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelPink)
+                }
+                (r, g, b)
+                    if ("#F2A2E8", r, g, b) == {
+                        let hex = "#F2A2E8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelPurple)
+                }
+                (r, g, b)
+                    if ("#F67280", r, g, b) == {
+                        let hex = "#F67280";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelRed)
+                }
+                (r, g, b)
+                    if ("#E5788F", r, g, b) == {
+                        let hex = "#E5788F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelRose)
+                }
+                (r, g, b)
+                    if ("#D291BC", r, g, b) == {
+                        let hex = "#D291BC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelViolet)
+                }
+                (r, g, b)
+                    if ("#FAF884", r, g, b) == {
+                        let hex = "#FAF884";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PastelYellow)
+                }
+                (r, g, b)
+                    if ("#52D017", r, g, b) == {
+                        let hex = "#52D017";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PeaGreen)
+                }
+                (r, g, b)
+                    if ("#FFE5B4", r, g, b) == {
+                        let hex = "#FFE5B4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Peach)
+                }
+                (r, g, b)
+                    if ("#F98B88", r, g, b) == {
+                        let hex = "#F98B88";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PeachPink)
+                }
+                (r, g, b)
+                    if ("#FFDAB9", r, g, b) == {
+                        let hex = "#FFDAB9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PeachPuff)
+                }
+                (r, g, b)
+                    if ("#FDEEF4", r, g, b) == {
+                        let hex = "#FDEEF4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Pearl)
+                }
+                (r, g, b)
+                    if ("#F8F6F0", r, g, b) == {
+                        let hex = "#F8F6F0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PearlWhite)
+                }
+                (r, g, b)
+                    if ("#CCCCFF", r, g, b) == {
+                        let hex = "#CCCCFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Periwinkle)
+                }
+                (r, g, b)
+                    if ("#E9CFEC", r, g, b) == {
+                        let hex = "#E9CFEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PeriwinklePink)
+                }
+                (r, g, b)
+                    if ("#7575CF", r, g, b) == {
+                        let hex = "#7575CF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PeriwinklePurple)
+                }
+                (r, g, b)
+                    if ("#CD853F", r, g, b) == {
+                        let hex = "#CD853F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Peru)
+                }
+                (r, g, b)
+                    if ("#B76734", r, g, b) == {
+                        let hex = "#B76734";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PetraGold)
+                }
+                (r, g, b)
+                    if ("#FDD7E4", r, g, b) == {
+                        let hex = "#FDD7E4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PigPink)
+                }
+                (r, g, b)
+                    if ("#387C44", r, g, b) == {
+                        let hex = "#387C44";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PineGreen)
+                }
+                (r, g, b)
+                    if ("#FFC0CB", r, g, b) == {
+                        let hex = "#FFC0CB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Pink)
+                }
+                (r, g, b)
+                    if ("#C48189", r, g, b) == {
+                        let hex = "#C48189";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkBrown)
+                }
+                (r, g, b)
+                    if ("#FFDFDD", r, g, b) == {
+                        let hex = "#FFDFDD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkBubbleGum)
+                }
+                (r, g, b)
+                    if ("#E77471", r, g, b) == {
+                        let hex = "#E77471";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkCoral)
+                }
+                (r, g, b)
+                    if ("#E45E9D", r, g, b) == {
+                        let hex = "#E45E9D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkCupcake)
+                }
+                (r, g, b)
+                    if ("#E799A3", r, g, b) == {
+                        let hex = "#E799A3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkDaisy)
+                }
+                (r, g, b)
+                    if ("#E4287C", r, g, b) == {
+                        let hex = "#E4287C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkLemonade)
+                }
+                (r, g, b)
+                    if ("#F89880", r, g, b) == {
+                        let hex = "#F89880";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkOrange)
+                }
+                (r, g, b)
+                    if ("#B93B8F", r, g, b) == {
+                        let hex = "#B93B8F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkPlum)
+                }
+                (r, g, b)
+                    if ("#CA226B", r, g, b) == {
+                        let hex = "#CA226B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PinkViolet)
+                }
+                (r, g, b)
+                    if ("#9DC209", r, g, b) == {
+                        let hex = "#9DC209";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PistachioGreen)
+                }
+                (r, g, b)
+                    if ("#E5E4E2", r, g, b) == {
+                        let hex = "#E5E4E2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Platinum)
+                }
+                (r, g, b)
+                    if ("#797979", r, g, b) == {
+                        let hex = "#797979";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PlatinumGray)
+                }
+                (r, g, b)
+                    if ("#CECECE", r, g, b) == {
+                        let hex = "#CECECE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PlatinumSilver)
+                }
+                (r, g, b)
+                    if ("#DDA0DD", r, g, b) == {
+                        let hex = "#DDA0DD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Plum)
+                }
+                (r, g, b)
+                    if ("#7D0541", r, g, b) == {
+                        let hex = "#7D0541";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PlumPie)
+                }
+                (r, g, b)
+                    if ("#583759", r, g, b) == {
+                        let hex = "#583759";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PlumPurple)
+                }
+                (r, g, b)
+                    if ("#7D0552", r, g, b) == {
+                        let hex = "#7D0552";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PlumVelvet)
+                }
+                (r, g, b)
+                    if ("#FFB2D0", r, g, b) == {
+                        let hex = "#FFB2D0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PowderPink)
+                }
+                (r, g, b)
+                    if ("#B0E0E6", r, g, b) == {
+                        let hex = "#B0E0E6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PowderBlue)
+                }
+                (r, g, b)
+                    if ("#7F5A58", r, g, b) == {
+                        let hex = "#7F5A58";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Puce)
+                }
+                (r, g, b)
+                    if ("#644117", r, g, b) == {
+                        let hex = "#644117";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PullmanBrown)
+                }
+                (r, g, b)
+                    if ("#F87217", r, g, b) == {
+                        let hex = "#F87217";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PumpkinOrange)
+                }
+                (r, g, b)
+                    if ("#CA762B", r, g, b) == {
+                        let hex = "#CA762B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PumpkinPie)
+                }
+                (r, g, b)
+                    if ("#800080", r, g, b) == {
+                        let hex = "#800080";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Purple)
+                }
+                (r, g, b)
+                    if ("#6C2DC7", r, g, b) == {
+                        let hex = "#6C2DC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleAmethyst)
+                }
+                (r, g, b)
+                    if ("#B041FF", r, g, b) == {
+                        let hex = "#B041FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleDaffodil)
+                }
+                (r, g, b)
+                    if ("#C38EC7", r, g, b) == {
+                        let hex = "#C38EC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleDragon)
+                }
+                (r, g, b)
+                    if ("#A74AC7", r, g, b) == {
+                        let hex = "#A74AC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleFlower)
+                }
+                (r, g, b)
+                    if ("#4E387E", r, g, b) == {
+                        let hex = "#4E387E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleHaze)
+                }
+                (r, g, b)
+                    if ("#571B7E", r, g, b) == {
+                        let hex = "#571B7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleIris)
+                }
+                (r, g, b)
+                    if ("#6A287E", r, g, b) == {
+                        let hex = "#6A287E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleJam)
+                }
+                (r, g, b)
+                    if ("#550A35", r, g, b) == {
+                        let hex = "#550A35";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleLily)
+                }
+                (r, g, b)
+                    if ("#810541", r, g, b) == {
+                        let hex = "#810541";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleMaroon)
+                }
+                (r, g, b)
+                    if ("#9E7BFF", r, g, b) == {
+                        let hex = "#9E7BFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleMimosa)
+                }
+                (r, g, b)
+                    if ("#461B7E", r, g, b) == {
+                        let hex = "#461B7E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleMonster)
+                }
+                (r, g, b)
+                    if ("#4E5180", r, g, b) == {
+                        let hex = "#4E5180";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleNavy)
+                }
+                (r, g, b)
+                    if ("#D16587", r, g, b) == {
+                        let hex = "#D16587";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurplePink)
+                }
+                (r, g, b)
+                    if ("#8E35EF", r, g, b) == {
+                        let hex = "#8E35EF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurplePlum)
+                }
+                (r, g, b)
+                    if ("#7A5DC7", r, g, b) == {
+                        let hex = "#7A5DC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleSageBush)
+                }
+                (r, g, b)
+                    if ("#D2B9D3", r, g, b) == {
+                        let hex = "#D2B9D3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleThistle)
+                }
+                (r, g, b)
+                    if ("#8D38C9", r, g, b) == {
+                        let hex = "#8D38C9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleViolet)
+                }
+                (r, g, b)
+                    if ("#DFD3E3", r, g, b) == {
+                        let hex = "#DFD3E3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::PurpleWhite)
+                }
+                (r, g, b)
+                    if ("#27742C", r, g, b) == {
+                        let hex = "#27742C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RacingGreen)
+                }
+                (r, g, b)
+                    if ("#E30B5D", r, g, b) == {
+                        let hex = "#E30B5D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Raspberry)
+                }
+                (r, g, b)
+                    if ("#B3446C", r, g, b) == {
+                        let hex = "#B3446C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RaspberryPurple)
+                }
+                (r, g, b)
+                    if ("#6D7B8D", r, g, b) == {
+                        let hex = "#6D7B8D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RatGray)
+                }
+                (r, g, b)
+                    if ("#663399", r, g, b) == {
+                        let hex = "#663399";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RebeccaPurple)
+                }
+                (r, g, b)
+                    if ("#FF0000", r, g, b) == {
+                        let hex = "#FF0000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Red)
+                }
+                (r, g, b)
+                    if ("#660000", r, g, b) == {
+                        let hex = "#660000";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedBlood)
+                }
+                (r, g, b)
+                    if ("#622F22", r, g, b) == {
+                        let hex = "#622F22";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedBrown)
+                }
+                (r, g, b)
+                    if ("#7F5217", r, g, b) == {
+                        let hex = "#7F5217";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedDirt)
+                }
+                (r, g, b)
+                    if ("#C35817", r, g, b) == {
+                        let hex = "#C35817";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedFox)
+                }
+                (r, g, b)
+                    if ("#EB5406", r, g, b) == {
+                        let hex = "#EB5406";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedGold)
+                }
+                (r, g, b)
+                    if ("#FF0080", r, g, b) == {
+                        let hex = "#FF0080";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedMagenta)
+                }
+                (r, g, b)
+                    if ("#FA2A55", r, g, b) == {
+                        let hex = "#FA2A55";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedPink)
+                }
+                (r, g, b)
+                    if ("#F3E8EA", r, g, b) == {
+                        let hex = "#F3E8EA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedWhite)
+                }
+                (r, g, b)
+                    if ("#990012", r, g, b) == {
+                        let hex = "#990012";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RedWine)
+                }
+                (r, g, b)
+                    if ("#FAF5EF", r, g, b) == {
+                        let hex = "#FAF5EF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Rice)
+                }
+                (r, g, b)
+                    if ("#B666D2", r, g, b) == {
+                        let hex = "#B666D2";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RichLilac)
+                }
+                (r, g, b)
+                    if ("#BDEDFF", r, g, b) == {
+                        let hex = "#BDEDFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RobinEggBlue)
+                }
+                (r, g, b)
+                    if ("#C12869", r, g, b) == {
+                        let hex = "#C12869";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RoguePink)
+                }
+                (r, g, b)
+                    if ("#838996", r, g, b) == {
+                        let hex = "#838996";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RomanSilver)
+                }
+                (r, g, b)
+                    if ("#E8ADAA", r, g, b) == {
+                        let hex = "#E8ADAA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Rose)
+                }
+                (r, g, b)
+                    if ("#997070", r, g, b) == {
+                        let hex = "#997070";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RoseDust)
+                }
+                (r, g, b)
+                    if ("#ECC5C0", r, g, b) == {
+                        let hex = "#ECC5C0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RoseGold)
+                }
+                (r, g, b)
+                    if ("#E7A1B0", r, g, b) == {
+                        let hex = "#E7A1B0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RosePink)
+                }
+                (r, g, b)
+                    if ("#B09FCA", r, g, b) == {
+                        let hex = "#B09FCA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RosePurple)
+                }
+                (r, g, b)
+                    if ("#F7CAC9", r, g, b) == {
+                        let hex = "#F7CAC9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RoseQuartz)
+                }
+                (r, g, b)
+                    if ("#C21E56", r, g, b) == {
+                        let hex = "#C21E56";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RoseRed)
+                }
+                (r, g, b)
+                    if ("#A17188", r, g, b) == {
+                        let hex = "#A17188";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Rosy)
+                }
+                (r, g, b)
+                    if ("#7F4E52", r, g, b) == {
+                        let hex = "#7F4E52";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RosyFinch)
+                }
+                (r, g, b)
+                    if ("#B38481", r, g, b) == {
+                        let hex = "#B38481";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RosyPink)
+                }
+                (r, g, b)
+                    if ("#BC8F8F", r, g, b) == {
+                        let hex = "#BC8F8F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RosyBrown)
+                }
+                (r, g, b)
+                    if ("#E759AC", r, g, b) == {
+                        let hex = "#E759AC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RoyalPink)
+                }
+                (r, g, b)
+                    if ("#4169E1", r, g, b) == {
+                        let hex = "#4169E1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RoyalBlue)
+                }
+                (r, g, b)
+                    if ("#FFD801", r, g, b) == {
+                        let hex = "#FFD801";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RubberDuckyYellow)
+                }
+                (r, g, b)
+                    if ("#F62217", r, g, b) == {
+                        let hex = "#F62217";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::RubyRed)
+                }
+                (r, g, b)
+                    if ("#C36241", r, g, b) == {
+                        let hex = "#C36241";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Rust)
+                }
+                (r, g, b)
+                    if ("#8B4513", r, g, b) == {
+                        let hex = "#8B4513";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SaddleBrown)
+                }
+                (r, g, b)
+                    if ("#FF7900", r, g, b) == {
+                        let hex = "#FF7900";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SafetyOrange)
+                }
+                (r, g, b)
+                    if ("#EED202", r, g, b) == {
+                        let hex = "#EED202";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SafetyYellow)
+                }
+                (r, g, b)
+                    if ("#FBB917", r, g, b) == {
+                        let hex = "#FBB917";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Saffron)
+                }
+                (r, g, b)
+                    if ("#931314", r, g, b) == {
+                        let hex = "#931314";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SaffronRed)
+                }
+                (r, g, b)
+                    if ("#BCB88A", r, g, b) == {
+                        let hex = "#BCB88A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Sage)
+                }
+                (r, g, b)
+                    if ("#848B79", r, g, b) == {
+                        let hex = "#848B79";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SageGreen)
+                }
+                (r, g, b)
+                    if ("#A1C935", r, g, b) == {
+                        let hex = "#A1C935";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SaladGreen)
+                }
+                (r, g, b)
+                    if ("#FA8072", r, g, b) == {
+                        let hex = "#FA8072";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Salmon)
+                }
+                (r, g, b)
+                    if ("#FF8674", r, g, b) == {
+                        let hex = "#FF8674";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SalmonPink)
+                }
+                (r, g, b)
+                    if ("#0002FF", r, g, b) == {
+                        let hex = "#0002FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SamcoBlue)
+                }
+                (r, g, b)
+                    if ("#C2B280", r, g, b) == {
+                        let hex = "#C2B280";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Sand)
+                }
+                (r, g, b)
+                    if ("#786D5F", r, g, b) == {
+                        let hex = "#786D5F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Sandstone)
+                }
+                (r, g, b)
+                    if ("#F4A460", r, g, b) == {
+                        let hex = "#F4A460";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SandyBrown)
+                }
+                (r, g, b)
+                    if ("#7E3817", r, g, b) == {
+                        let hex = "#7E3817";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Sangria)
+                }
+                (r, g, b)
+                    if ("#2554C7", r, g, b) == {
+                        let hex = "#2554C7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SapphireBlue)
+                }
+                (r, g, b)
+                    if ("#FF2400", r, g, b) == {
+                        let hex = "#FF2400";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ScarletRed)
+                }
+                (r, g, b)
+                    if ("#E8A317", r, g, b) == {
+                        let hex = "#E8A317";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SchoolBusYellow)
+                }
+                (r, g, b)
+                    if ("#C2DFFF", r, g, b) == {
+                        let hex = "#C2DFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SeaBlue)
+                }
+                (r, g, b)
+                    if ("#438D80", r, g, b) == {
+                        let hex = "#438D80";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SeaTurtleGreen)
+                }
+                (r, g, b)
+                    if ("#2E8B57", r, g, b) == {
+                        let hex = "#2E8B57";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SeaGreen)
+                }
+                (r, g, b)
+                    if ("#FFF5EE", r, g, b) == {
+                        let hex = "#FFF5EE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SeaShell)
+                }
+                (r, g, b)
+                    if ("#3EA99F", r, g, b) == {
+                        let hex = "#3EA99F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SeafoamGreen)
+                }
+                (r, g, b)
+                    if ("#437C17", r, g, b) == {
+                        let hex = "#437C17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SeaweedGreen)
+                }
+                (r, g, b)
+                    if ("#CC6600", r, g, b) == {
+                        let hex = "#CC6600";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Sedona)
+                }
+                (r, g, b)
+                    if ("#7F462C", r, g, b) == {
+                        let hex = "#7F462C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Sepia)
+                }
+                (r, g, b)
+                    if ("#704214", r, g, b) == {
+                        let hex = "#704214";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SepiaBrown)
+                }
+                (r, g, b)
+                    if ("#347C17", r, g, b) == {
+                        let hex = "#347C17";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ShamrockGreen)
+                }
+                (r, g, b)
+                    if ("#888B90", r, g, b) == {
+                        let hex = "#888B90";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SheetMetal)
+                }
+                (r, g, b)
+                    if ("#E55B3C", r, g, b) == {
+                        let hex = "#E55B3C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ShockingOrange)
+                }
+                (r, g, b)
+                    if ("#A0522D", r, g, b) == {
+                        let hex = "#A0522D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Sienna)
+                }
+                (r, g, b)
+                    if ("#488AC7", r, g, b) == {
+                        let hex = "#488AC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SilkBlue)
+                }
+                (r, g, b)
+                    if ("#C0C0C0", r, g, b) == {
+                        let hex = "#C0C0C0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Silver)
+                }
+                (r, g, b)
+                    if ("#C4AEAD", r, g, b) == {
+                        let hex = "#C4AEAD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SilverPink)
+                }
+                (r, g, b)
+                    if ("#DADBDD", r, g, b) == {
+                        let hex = "#DADBDD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SilverWhite)
+                }
+                (r, g, b)
+                    if ("#6698FF", r, g, b) == {
+                        let hex = "#6698FF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SkyBlueDress)
+                }
+                (r, g, b)
+                    if ("#87CEEB", r, g, b) == {
+                        let hex = "#87CEEB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SkyBlue)
+                }
+                (r, g, b)
+                    if ("#737CA1", r, g, b) == {
+                        let hex = "#737CA1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SlateBlueGray)
+                }
+                (r, g, b)
+                    if ("#657383", r, g, b) == {
+                        let hex = "#657383";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SlateGraniteGray)
+                }
+                (r, g, b)
+                    if ("#6A5ACD", r, g, b) == {
+                        let hex = "#6A5ACD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SlateBlue)
+                }
+                (r, g, b)
+                    if ("#708090", r, g, b) == {
+                        let hex = "#708090";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SlateGray)
+                }
+                (r, g, b)
+                    if ("#708090", r, g, b) == {
+                        let hex = "#708090";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SlateGrey)
+                }
+                (r, g, b)
+                    if ("#BCE954", r, g, b) == {
+                        let hex = "#BCE954";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SlimeGreen)
+                }
+                (r, g, b)
+                    if ("#726E6D", r, g, b) == {
+                        let hex = "#726E6D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SmokeyGray)
+                }
+                (r, g, b)
+                    if ("#FFFAFA", r, g, b) == {
+                        let hex = "#FFFAFA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Snow)
+                }
+                (r, g, b)
+                    if ("#C6BA8B", r, g, b) == {
+                        let hex = "#C6BA8B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SoftHazel)
+                }
+                (r, g, b)
+                    if ("#FAF0DD", r, g, b) == {
+                        let hex = "#FAF0DD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SoftIvory)
+                }
+                (r, g, b)
+                    if ("#FFB8BF", r, g, b) == {
+                        let hex = "#FFB8BF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SoftPink)
+                }
+                (r, g, b)
+                    if ("#757575", r, g, b) == {
+                        let hex = "#757575";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SonicSilver)
+                }
+                (r, g, b)
+                    if ("#00FF7F", r, g, b) == {
+                        let hex = "#00FF7F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SpringGreen)
+                }
+                (r, g, b)
+                    if ("#99A3A3", r, g, b) == {
+                        let hex = "#99A3A3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::StainlessSteelGray)
+                }
+                (r, g, b)
+                    if ("#C9C1C1", r, g, b) == {
+                        let hex = "#C9C1C1";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Steampunk)
+                }
+                (r, g, b)
+                    if ("#71797E", r, g, b) == {
+                        let hex = "#71797E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SteelGray)
+                }
+                (r, g, b)
+                    if ("#4682B4", r, g, b) == {
+                        let hex = "#4682B4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SteelBlue)
+                }
+                (r, g, b)
+                    if ("#57E964", r, g, b) == {
+                        let hex = "#57E964";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::StoplightGoGreen)
+                }
+                (r, g, b)
+                    if ("#3A3B3C", r, g, b) == {
+                        let hex = "#3A3B3C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::StormyGray)
+                }
+                (r, g, b)
+                    if ("#C83F49", r, g, b) == {
+                        let hex = "#C83F49";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::StrawberryRed)
+                }
+                (r, g, b)
+                    if ("#FFE87C", r, g, b) == {
+                        let hex = "#FFE87C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SunYellow)
+                }
+                (r, g, b)
+                    if ("#E67451", r, g, b) == {
+                        let hex = "#E67451";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::SunriseOrange)
+                }
+                (r, g, b)
+                    if ("#D2B48C", r, g, b) == {
+                        let hex = "#D2B48C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Tan)
+                }
+                (r, g, b)
+                    if ("#ECE5B6", r, g, b) == {
+                        let hex = "#ECE5B6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TanBrown)
+                }
+                (r, g, b)
+                    if ("#E78A61", r, g, b) == {
+                        let hex = "#E78A61";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Tangerine)
+                }
+                (r, g, b)
+                    if ("#483C32", r, g, b) == {
+                        let hex = "#483C32";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Taupe)
+                }
+                (r, g, b)
+                    if ("#CCFB5D", r, g, b) == {
+                        let hex = "#CCFB5D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TeaGreen)
+                }
+                (r, g, b)
+                    if ("#008080", r, g, b) == {
+                        let hex = "#008080";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Teal)
+                }
+                (r, g, b)
+                    if ("#007C80", r, g, b) == {
+                        let hex = "#007C80";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TealBlue)
+                }
+                (r, g, b)
+                    if ("#00827F", r, g, b) == {
+                        let hex = "#00827F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TealGreen)
+                }
+                (r, g, b)
+                    if ("#D8BFD8", r, g, b) == {
+                        let hex = "#D8BFD8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Thistle)
+                }
+                (r, g, b)
+                    if ("#81D8D0", r, g, b) == {
+                        let hex = "#81D8D0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TiffanyBlue)
+                }
+                (r, g, b)
+                    if ("#C88141", r, g, b) == {
+                        let hex = "#C88141";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TigerOrange)
+                }
+                (r, g, b)
+                    if ("#FF6347", r, g, b) == {
+                        let hex = "#FF6347";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Tomato)
+                }
+                (r, g, b)
+                    if ("#B21807", r, g, b) == {
+                        let hex = "#B21807";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TomatoSauceRed)
+                }
+                (r, g, b)
+                    if ("#7DFDFE", r, g, b) == {
+                        let hex = "#7DFDFE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TronBlue)
+                }
+                (r, g, b)
+                    if ("#C25A7C", r, g, b) == {
+                        let hex = "#C25A7C";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TulipPink)
+                }
+                (r, g, b)
+                    if ("#40E0D0", r, g, b) == {
+                        let hex = "#40E0D0";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Turquoise)
+                }
+                (r, g, b)
+                    if ("#A0D6B4", r, g, b) == {
+                        let hex = "#A0D6B4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TurquoiseGreen)
+                }
+                (r, g, b)
+                    if ("#C45AEC", r, g, b) == {
+                        let hex = "#C45AEC";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::TyrianPurple)
+                }
+                (r, g, b)
+                    if ("#FFDDCA", r, g, b) == {
+                        let hex = "#FFDDCA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::UnbleachedSilk)
+                }
+                (r, g, b)
+                    if ("#E55451", r, g, b) == {
+                        let hex = "#E55451";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ValentineRed)
+                }
+                (r, g, b)
+                    if ("#565051", r, g, b) == {
+                        let hex = "#565051";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::VampireGray)
+                }
+                (r, g, b)
+                    if ("#F3E5AB", r, g, b) == {
+                        let hex = "#F3E5AB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Vanilla)
+                }
+                (r, g, b)
+                    if ("#7E354D", r, g, b) == {
+                        let hex = "#7E354D";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::VelvetMaroon)
+                }
+                (r, g, b)
+                    if ("#728C00", r, g, b) == {
+                        let hex = "#728C00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::VenomGreen)
+                }
+                (r, g, b)
+                    if ("#7E191B", r, g, b) == {
+                        let hex = "#7E191B";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Vermilion)
+                }
+                (r, g, b)
+                    if ("#6667AB", r, g, b) == {
+                        let hex = "#6667AB";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::VeryPeri)
+                }
+                (r, g, b)
+                    if ("#C8C4DF", r, g, b) == {
+                        let hex = "#C8C4DF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Viola)
+                }
+                (r, g, b)
+                    if ("#7E587E", r, g, b) == {
+                        let hex = "#7E587E";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ViolaPurple)
+                }
+                (r, g, b)
+                    if ("#EE82EE", r, g, b) == {
+                        let hex = "#EE82EE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Violet)
+                }
+                (r, g, b)
+                    if ("#F6358A", r, g, b) == {
+                        let hex = "#F6358A";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::VioletRed)
+                }
+                (r, g, b)
+                    if ("#F6C6BD", r, g, b) == {
+                        let hex = "#F6C6BD";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WarmPink)
+                }
+                (r, g, b)
+                    if ("#EFEBD8", r, g, b) == {
+                        let hex = "#EFEBD8";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WarmWhite)
+                }
+                (r, g, b)
+                    if ("#EBF4FA", r, g, b) == {
+                        let hex = "#EBF4FA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Water)
+                }
+                (r, g, b)
+                    if ("#FC6C85", r, g, b) == {
+                        let hex = "#FC6C85";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WatermelonPink)
+                }
+                (r, g, b)
+                    if ("#49413F", r, g, b) == {
+                        let hex = "#49413F";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WesternCharcoal)
+                }
+                (r, g, b)
+                    if ("#F5DEB3", r, g, b) == {
+                        let hex = "#F5DEB3";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Wheat)
+                }
+                (r, g, b)
+                    if ("#FFFFFF", r, g, b) == {
+                        let hex = "#FFFFFF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::White)
+                }
+                (r, g, b)
+                    if ("#DBE9FA", r, g, b) == {
+                        let hex = "#DBE9FA";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WhiteBlue)
+                }
+                (r, g, b)
+                    if ("#EDE6D6", r, g, b) == {
+                        let hex = "#EDE6D6";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WhiteChocolate)
+                }
+                (r, g, b)
+                    if ("#FFFFF4", r, g, b) == {
+                        let hex = "#FFFFF4";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WhiteGold)
+                }
+                (r, g, b)
+                    if ("#EEEEEE", r, g, b) == {
+                        let hex = "#EEEEEE";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WhiteGray)
+                }
+                (r, g, b)
+                    if ("#EAEEE9", r, g, b) == {
+                        let hex = "#EAEEE9";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WhiteIce)
+                }
+                (r, g, b)
+                    if ("#F2F0DF", r, g, b) == {
+                        let hex = "#F2F0DF";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WhiteYellow)
+                }
+                (r, g, b)
+                    if ("#F5F5F5", r, g, b) == {
+                        let hex = "#F5F5F5";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WhiteSmoke)
+                }
+                (r, g, b)
+                    if ("#357EC7", r, g, b) == {
+                        let hex = "#357EC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WindowsBlue)
+                }
+                (r, g, b)
+                    if ("#990012", r, g, b) == {
+                        let hex = "#990012";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WineRed)
+                }
+                (r, g, b)
+                    if ("#C6AEC7", r, g, b) == {
+                        let hex = "#C6AEC7";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::WisteriaPurple)
+                }
+                (r, g, b)
+                    if ("#966F33", r, g, b) == {
+                        let hex = "#966F33";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Wood)
+                }
+                (r, g, b)
+                    if ("#FFFF00", r, g, b) == {
+                        let hex = "#FFFF00";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::Yellow)
+                }
+                (r, g, b)
+                    if ("#E2F516", r, g, b) == {
+                        let hex = "#E2F516";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::YellowGreenGrosbeak)
+                }
+                (r, g, b)
+                    if ("#87F717", r, g, b) == {
+                        let hex = "#87F717";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::YellowLawnGreen)
+                }
+                (r, g, b)
+                    if ("#FFAE42", r, g, b) == {
+                        let hex = "#FFAE42";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::YellowOrange)
+                }
+                (r, g, b)
+                    if ("#9ACD32", r, g, b) == {
+                        let hex = "#9ACD32";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::YellowGreen)
+                }
+                (r, g, b)
+                    if ("#54C571", r, g, b) == {
+                        let hex = "#54C571";
+                        (
+                            hex,
+                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                            u8::from_str_radix(&hex[5..7], 16).unwrap(),
+                        )
+                    } =>
+                {
+                    Some(Color::ZombieGreen)
+                }
+                _ => Some(Color::Rgb(r, g, b)),
             }
         } else {
             let normalized = name.replace(" ", "").to_lowercase();

@@ -140,20 +140,33 @@ fn main() {
                             if name.starts_with('#') {
                                 // Handle hex codes
                                 let hex = &name[1..];
-                                match hex.len() {
+                                let (r, g, b) = match hex.len() {
                                     6 => {
                                         let r = u8::from_str_radix(&hex[0..2], 16).ok()?;
                                         let g = u8::from_str_radix(&hex[2..4], 16).ok()?;
                                         let b = u8::from_str_radix(&hex[4..6], 16).ok()?;
-                                        Some(Color::Rgb(r, g, b))
+                                        (r, g, b)
                                     }
                                     3 => {
                                         let r = u8::from_str_radix(&hex[0..1].repeat(2), 16).ok()?;
                                         let g = u8::from_str_radix(&hex[1..2].repeat(2), 16).ok()?;
                                         let b = u8::from_str_radix(&hex[2..3].repeat(2), 16).ok()?;
-                                        Some(Color::Rgb(r, g, b))
+                                        (r, g, b)
                                     }
-                                    _ => None
+                                    _ => return None
+                                };
+                                // Check if this RGB value matches any named color
+                                match (r, g, b) {
+                                    #((r, g, b) if (#color_hexes, r, g, b) == {
+                                        let hex = #color_hexes;
+                                        (
+                                            hex,
+                                            u8::from_str_radix(&hex[1..3], 16).unwrap(),
+                                            u8::from_str_radix(&hex[3..5], 16).unwrap(),
+                                            u8::from_str_radix(&hex[5..7], 16).unwrap()
+                                        )
+                                    } => Some(Color::#color_idents),)*
+                                    _ => Some(Color::Rgb(r, g, b))
                                 }
                             } else {
                                 let normalized = name.replace(" ", "").to_lowercase();

@@ -20,5 +20,8 @@ mod tests {
         assert_eq!(c.rgb(), (228, 40, 124));
         assert_eq!(c.rgb_hex(), "#E4287C".to_string());
         assert_eq!(c.name(), "PinkLemonade");
+
+        assert_eq!(Color::from_str("#E4287c").unwrap(), Color::PinkLemonade);
+        assert_eq!(Color::from_str("#fff").unwrap(), Color::White);
     }
 }
