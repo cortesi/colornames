@@ -1,3 +1,5 @@
+use once_cell::sync::Lazy;
+use std::collections::HashMap;
 #[doc = r" A list of named colors"]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum Color {
@@ -732,8 +734,741 @@ pub enum Color {
     ZombieGreen,
     Rgb(u8, u8, u8),
 }
+#[doc = r" Convert a hex color string to a `Color` variant"]
+static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
+    let mut m = HashMap::new();
+    m.insert("#B0BF1A", Color::AcidGreen);
+    m.insert("#64E986", Color::AlgaeGreen);
+    m.insert("#F0F8FF", Color::AliceBlue);
+    m.insert("#736F6E", Color::AlienGray);
+    m.insert("#6CC417", Color::AlienGreen);
+    m.insert("#98F516", Color::AloeVeraGreen);
+    m.insert("#FFBF00", Color::Amber);
+    m.insert("#665D1E", Color::AntiqueBronze);
+    m.insert("#FAEBD7", Color::AntiqueWhite);
+    m.insert("#00FFFF", Color::Aqua);
+    m.insert("#12E193", Color::AquaGreen);
+    m.insert("#93E9BE", Color::AquaSeafoamGreen);
+    m.insert("#7FFFD4", Color::Aquamarine);
+    m.insert("#348781", Color::AquamarineStone);
+    m.insert("#827B60", Color::ArmyBrown);
+    m.insert("#4B5320", Color::ArmyGreen);
+    m.insert("#666362", Color::AshGray);
+    m.insert("#E9E4D4", Color::AshWhite);
+    m.insert("#B2C248", Color::AvocadoGreen);
+    m.insert("#893BFF", Color::AztechPurple);
+    m.insert("#F0FFFF", Color::Azure);
+    m.insert("#4863A0", Color::AzureBlue);
+    m.insert("#95B9C7", Color::BabyBlue);
+    m.insert("#FAAFBA", Color::BabyPink);
+    m.insert("#5C3317", Color::BakersBrown);
+    m.insert("#2B60DE", Color::BalloonBlue);
+    m.insert("#F5E216", Color::BananaYellow);
+    m.insert("#DA1884", Color::BarbiePink);
+    m.insert("#C25283", Color::BashfulPink);
+    m.insert("#829F82", Color::BasilGreen);
+    m.insert("#F88158", Color::BasketBallOrange);
+    m.insert("#848482", Color::BattleshipGray);
+    m.insert("#F75D59", Color::BeanRed);
+    m.insert("#E9AB17", Color::BeeYellow);
+    m.insert("#FBB117", Color::Beer);
+    m.insert("#4C787E", Color::BeetleGreen);
+    m.insert("#F5F5DC", Color::Beige);
+    m.insert("#FFE4C4", Color::Bisque);
+    m.insert("#000000", Color::Black);
+    m.insert("#3D0C02", Color::BlackBean);
+    m.insert("#040720", Color::BlackBlue);
+    m.insert("#413839", Color::BlackCat);
+    m.insert("#4C4646", Color::BlackCow);
+    m.insert("#463E3F", Color::BlackEel);
+    m.insert("#FFEBCD", Color::BlanchedAlmond);
+    m.insert("#FBF6D9", Color::Blonde);
+    m.insert("#551606", Color::BloodNight);
+    m.insert("#7E3517", Color::BloodRed);
+    m.insert("#F9B7FF", Color::BlossomPink);
+    m.insert("#0000FF", Color::Blue);
+    m.insert("#B7CEEC", Color::BlueAngel);
+    m.insert("#4EE2EC", Color::BlueDiamond);
+    m.insert("#157DEC", Color::BlueDress);
+    m.insert("#1569C7", Color::BlueEyes);
+    m.insert("#98AFC7", Color::BlueGray);
+    m.insert("#7BCCB5", Color::BlueGreen);
+    m.insert("#77BFC7", Color::BlueHosta);
+    m.insert("#3090C7", Color::BlueIvy);
+    m.insert("#2B547E", Color::BlueJay);
+    m.insert("#659EC7", Color::BlueKoi);
+    m.insert("#8EEBEC", Color::BlueLagoon);
+    m.insert("#6960EC", Color::BlueLotus);
+    m.insert("#822EFF", Color::BlueMagenta);
+    m.insert("#3C565B", Color::BlueMossGreen);
+    m.insert("#1F45FC", Color::BlueOrchid);
+    m.insert("#306EFF", Color::BlueRibbon);
+    m.insert("#43C6DB", Color::BlueTurquoise);
+    m.insert("#342D7E", Color::BlueWhale);
+    m.insert("#57FEFF", Color::BlueZircon);
+    m.insert("#8A2BE2", Color::BlueViolet);
+    m.insert("#0041C2", Color::BlueberryBlue);
+    m.insert("#5865F2", Color::Blurple);
+    m.insert("#FFE6E8", Color::Blush);
+    m.insert("#E6A9EC", Color::BlushPink);
+    m.insert("#E56E94", Color::BlushRed);
+    m.insert("#F9DB24", Color::BoldYellow);
+    m.insert("#F9F6EE", Color::BoneWhite);
+    m.insert("#006A4E", Color::BottleGreen);
+    m.insert("#B5A642", Color::Brass);
+    m.insert("#0909FF", Color::BrightBlue);
+    m.insert("#0AFFFF", Color::BrightCyan);
+    m.insert("#FDD017", Color::BrightGold);
+    m.insert("#6F2DA8", Color::BrightGrape);
+    m.insert("#66FF00", Color::BrightGreen);
+    m.insert("#D891EF", Color::BrightLilac);
+    m.insert("#C32148", Color::BrightMaroon);
+    m.insert("#1974D2", Color::BrightNavyBlue);
+    m.insert("#F433FF", Color::BrightNeonPink);
+    m.insert("#FF5F1F", Color::BrightOrange);
+    m.insert("#FF007F", Color::BrightPink);
+    m.insert("#6A0DAD", Color::BrightPurple);
+    m.insert("#01F9C6", Color::BrightTeal);
+    m.insert("#16E2F5", Color::BrightTurquoise);
+    m.insert("#026C3D", Color::BroccoliGreen);
+    m.insert("#CD7F32", Color::Bronze);
+    m.insert("#C9AE5D", Color::BronzeGold);
+    m.insert("#A52A2A", Color::Brown);
+    m.insert("#835C3B", Color::BrownBear);
+    m.insert("#A55D35", Color::BrownRust);
+    m.insert("#EE9A4D", Color::BrownSand);
+    m.insert("#E2A76F", Color::BrownSugar);
+    m.insert("#AF9B60", Color::BulletShell);
+    m.insert("#8C001A", Color::Burgundy);
+    m.insert("#DEB887", Color::BurlyWood);
+    m.insert("#C12267", Color::BurntPink);
+    m.insert("#38ACEC", Color::ButterflyBlue);
+    m.insert("#227442", Color::CactusGreen);
+    m.insert("#5F9EA0", Color::CadetBlue);
+    m.insert("#E38AAE", Color::CadillacPink);
+    m.insert("#C19A6B", Color::CamelBrown);
+    m.insert("#78866B", Color::CamouflageGreen);
+    m.insert("#2916F5", Color::CanaryBlue);
+    m.insert("#FFEF00", Color::CanaryYellow);
+    m.insert("#FFA62F", Color::Cantaloupe);
+    m.insert("#C68E17", Color::Caramel);
+    m.insert("#625D5D", Color::CarbonGray);
+    m.insert("#A70D2A", Color::CarbonRed);
+    m.insert("#EDDA74", Color::CardboardBrown);
+    m.insert("#F778A1", Color::CarnationPink);
+    m.insert("#F88017", Color::CarrotOrange);
+    m.insert("#50EBEC", Color::Celeste);
+    m.insert("#BDF516", Color::ChameleonGreen);
+    m.insert("#F7E7CE", Color::Champagne);
+    m.insert("#34282C", Color::Charcoal);
+    m.insert("#36454F", Color::CharcoalBlue);
+    m.insert("#7FFF00", Color::Chartreuse);
+    m.insert("#FFA600", Color::CheeseOrange);
+    m.insert("#C24641", Color::CherryRed);
+    m.insert("#954535", Color::Chestnut);
+    m.insert("#C34A2C", Color::ChestnutRed);
+    m.insert("#C11B17", Color::ChilliPepper);
+    m.insert("#D2691E", Color::Chocolate);
+    m.insert("#3F000F", Color::ChocolateBrown);
+    m.insert("#A8A9AD", Color::ChromeAluminum);
+    m.insert("#FFCE44", Color::ChromeGold);
+    m.insert("#1AA260", Color::ChromeGreen);
+    m.insert("#FF33AA", Color::ChromePink);
+    m.insert("#E8F1D4", Color::ChromeWhite);
+    m.insert("#C58917", Color::Cinnamon);
+    m.insert("#8FB31D", Color::CitronGreen);
+    m.insert("#842DCE", Color::ClematisViolet);
+    m.insert("#6D6968", Color::CloudyGray);
+    m.insert("#3EA055", Color::CloverGreen);
+    m.insert("#0020C2", Color::CobaltBlue);
+    m.insert("#6F4E37", Color::Coffee);
+    m.insert("#9B9A96", Color::ColdMetal);
+    m.insert("#87AFC7", Color::ColumbiaBlue);
+    m.insert("#F87431", Color::ConstructionConeOrange);
+    m.insert("#C7A317", Color::CookieBrown);
+    m.insert("#B87333", Color::Copper);
+    m.insert("#CB6D51", Color::CopperRed);
+    m.insert("#FF7F50", Color::Coral);
+    m.insert("#AFDCEC", Color::CoralBlue);
+    m.insert("#9E4638", Color::CoralBrown);
+    m.insert("#FBD5AB", Color::CoralPeach);
+    m.insert("#FFF380", Color::CornYellow);
+    m.insert("#6495ED", Color::CornflowerBlue);
+    m.insert("#FFF8DC", Color::Cornsilk);
+    m.insert("#FFF8E7", Color::CosmicLatte);
+    m.insert("#FBFBF9", Color::Cotton);
+    m.insert("#FCDFFF", Color::CottonCandy);
+    m.insert("#9F000F", Color::Cranberry);
+    m.insert("#FFFFCC", Color::Cream);
+    m.insert("#FFFDD0", Color::CreamWhite);
+    m.insert("#F0E9D6", Color::CreamyWhite);
+    m.insert("#DC143C", Color::Crimson);
+    m.insert("#E238EC", Color::CrimsonPurple);
+    m.insert("#990000", Color::CrimsonRed);
+    m.insert("#9172EC", Color::CrocusPurple);
+    m.insert("#5CB3FF", Color::CrystalBlue);
+    m.insert("#00FFFF", Color::Cyan);
+    m.insert("#14A3C7", Color::CyanBlue);
+    m.insert("#92C7C7", Color::CyanOpaque);
+    m.insert("#AB784E", Color::DarkAlmond);
+    m.insert("#9F8C76", Color::DarkBeige);
+    m.insert("#B86500", Color::DarkBisque);
+    m.insert("#F0E2B6", Color::DarkBlonde);
+    m.insert("#29465B", Color::DarkBlueGray);
+    m.insert("#5539CC", Color::DarkBlurple);
+    m.insert("#804A00", Color::DarkBronze);
+    m.insert("#654321", Color::DarkBrown);
+    m.insert("#C12283", Color::DarkCarnationPink);
+    m.insert("#3B2F2F", Color::DarkCoffee);
+    m.insert("#254117", Color::DarkForestGreen);
+    m.insert("#8C8C8C", Color::DarkGainsboro);
+    m.insert("#AA6C39", Color::DarkGold);
+    m.insert("#4A412A", Color::DarkGrayishOlive);
+    m.insert("#1F6357", Color::DarkGreenBlue);
+    m.insert("#473810", Color::DarkHazelBrown);
+    m.insert("#F660AB", Color::DarkHotPink);
+    m.insert("#41A317", Color::DarkLimeGreen);
+    m.insert("#2F0909", Color::DarkMaroon);
+    m.insert("#31906E", Color::DarkMint);
+    m.insert("#827839", Color::DarkMoccasin);
+    m.insert("#E75480", Color::DarkPink);
+    m.insert("#4B0150", Color::DarkPurple);
+    m.insert("#872657", Color::DarkRaspberry);
+    m.insert("#560319", Color::DarkScarlet);
+    m.insert("#8A4117", Color::DarkSienna);
+    m.insert("#0059FF", Color::DarkSkyBlue);
+    m.insert("#2B3856", Color::DarkSlate);
+    m.insert("#4D4D4F", Color::DarkSteampunk);
+    m.insert("#045D5D", Color::DarkTeal);
+    m.insert("#E1D9D1", Color::DarkWhite);
+    m.insert("#8B8000", Color::DarkYellow);
+    m.insert("#00008B", Color::DarkBlue);
+    m.insert("#008B8B", Color::DarkCyan);
+    m.insert("#B8860B", Color::DarkGoldenRod);
+    m.insert("#A9A9A9", Color::DarkGray);
+    m.insert("#006400", Color::DarkGreen);
+    m.insert("#A9A9A9", Color::DarkGrey);
+    m.insert("#BDB76B", Color::DarkKhaki);
+    m.insert("#8B008B", Color::DarkMagenta);
+    m.insert("#556B2F", Color::DarkOliveGreen);
+    m.insert("#FF8C00", Color::DarkOrange);
+    m.insert("#9932CC", Color::DarkOrchid);
+    m.insert("#8B0000", Color::DarkRed);
+    m.insert("#E9967A", Color::DarkSalmon);
+    m.insert("#8FBC8F", Color::DarkSeaGreen);
+    m.insert("#483D8B", Color::DarkSlateBlue);
+    m.insert("#25383C", Color::DarkSlateGray);
+    m.insert("#25383C", Color::DarkSlateGrey);
+    m.insert("#00CED1", Color::DarkTurquoise);
+    m.insert("#9400D3", Color::DarkViolet);
+    m.insert("#82CAFF", Color::DaySkyBlue);
+    m.insert("#A05544", Color::DeepAmber);
+    m.insert("#046307", Color::DeepEmeraldGreen);
+    m.insert("#056608", Color::DeepGreen);
+    m.insert("#DF73D4", Color::DeepMauve);
+    m.insert("#FFCBA4", Color::DeepPeach);
+    m.insert("#5453A6", Color::DeepPeriwinkle);
+    m.insert("#36013F", Color::DeepPurple);
+    m.insert("#800517", Color::DeepRed);
+    m.insert("#FBBBB9", Color::DeepRose);
+    m.insert("#3B9C9C", Color::DeepSea);
+    m.insert("#123456", Color::DeepSeaBlue);
+    m.insert("#306754", Color::DeepSeaGreen);
+    m.insert("#033E3E", Color::DeepTeal);
+    m.insert("#48CCCD", Color::DeepTurquoise);
+    m.insert("#F6BE00", Color::DeepYellow);
+    m.insert("#FF1493", Color::DeepPink);
+    m.insert("#00BFFF", Color::DeepSkyBlue);
+    m.insert("#E6BF83", Color::DeerBrown);
+    m.insert("#79BAEC", Color::DenimBlue);
+    m.insert("#151B8D", Color::DenimDarkBlue);
+    m.insert("#EDC9AF", Color::DesertSand);
+    m.insert("#696969", Color::DimGray);
+    m.insert("#696969", Color::DimGrey);
+    m.insert("#E3319D", Color::DimorphothecaMagenta);
+    m.insert("#73A16C", Color::DinosaurGreen);
+    m.insert("#E8E4C9", Color::DirtyWhite);
+    m.insert("#1E90FF", Color::DodgerBlue);
+    m.insert("#85BB65", Color::DollarBillGreen);
+    m.insert("#FAAFBE", Color::DonutPink);
+    m.insert("#6AFB92", Color::DragonGreen);
+    m.insert("#B1FB17", Color::DullGreenYellow);
+    m.insert("#7F525D", Color::DullPurple);
+    m.insert("#4E8975", Color::DullSeaGreen);
+    m.insert("#CC7A8B", Color::DuskyPink);
+    m.insert("#D58A94", Color::DustyPink);
+    m.insert("#C9A9A6", Color::DustyRose);
+    m.insert("#0000A5", Color::EarthBlue);
+    m.insert("#34A56F", Color::EarthGreen);
+    m.insert("#555D50", Color::Ebony);
+    m.insert("#FFF9E3", Color::EggShell);
+    m.insert("#614051", Color::Eggplant);
+    m.insert("#9AFEFF", Color::ElectricBlue);
+    m.insert("#1B8A6B", Color::ElfGreen);
+    m.insert("#50C878", Color::Emerald);
+    m.insert("#5FFB17", Color::EmeraldGreen);
+    m.insert("#2F539B", Color::EstorilBlue);
+    m.insert("#4E9258", Color::FallForestGreen);
+    m.insert("#C8B560", Color::FallLeafBrown);
+    m.insert("#667C26", Color::FernGreen);
+    m.insert("#F70D1A", Color::FerrariRed);
+    m.insert("#F62817", Color::FireEngineRed);
+    m.insert("#B22222", Color::FireBrick);
+    m.insert("#F9A7B0", Color::FlamingoPink);
+    m.insert("#FFFAF0", Color::FloralWhite);
+    m.insert("#FE632A", Color::FluroOrange);
+    m.insert("#228B22", Color::ForestGreen);
+    m.insert("#86608E", Color::FrenchLilac);
+    m.insert("#99C68E", Color::FrogGreen);
+    m.insert("#FF00FF", Color::Fuchsia);
+    m.insert("#FF77FF", Color::FuchsiaPink);
+    m.insert("#DCDCDC", Color::Gainsboro);
+    m.insert("#733635", Color::GarnetRed);
+    m.insert("#C0C6C7", Color::GearSteelGray);
+    m.insert("#F8F8FF", Color::GhostWhite);
+    m.insert("#C9BE62", Color::GingerBrown);
+    m.insert("#B83C08", Color::GingerRed);
+    m.insert("#368BC1", Color::GlacialBlueIce);
+    m.insert("#FFD700", Color::Gold);
+    m.insert("#E6C7C2", Color::GoldPink);
+    m.insert("#FBE7A1", Color::GoldenBlonde);
+    m.insert("#EAC117", Color::GoldenBrown);
+    m.insert("#F3E3C3", Color::GoldenSilk);
+    m.insert("#FFDF00", Color::GoldenYellow);
+    m.insert("#DAA520", Color::GoldenRod);
+    m.insert("#837E7C", Color::Granite);
+    m.insert("#5E5A80", Color::Grape);
+    m.insert("#DC381F", Color::Grapefruit);
+    m.insert("#3F9B0B", Color::GrassGreen);
+    m.insert("#808080", Color::Gray);
+    m.insert("#3D3635", Color::GrayBrown);
+    m.insert("#B6B6B4", Color::GrayCloud);
+    m.insert("#5C5858", Color::GrayDolphin);
+    m.insert("#D1D0CE", Color::GrayGoose);
+    m.insert("#A2AD9C", Color::GrayGreen);
+    m.insert("#504A4B", Color::GrayWolf);
+    m.insert("#5E7D7E", Color::GrayishTurquoise);
+    m.insert("#008000", Color::Green);
+    m.insert("#4CC417", Color::GreenApple);
+    m.insert("#3A5F0B", Color::GreenLeaves);
+    m.insert("#6AA121", Color::GreenOnion);
+    m.insert("#89C35C", Color::GreenPeas);
+    m.insert("#4AA02C", Color::GreenPepper);
+    m.insert("#6CBB3C", Color::GreenSnake);
+    m.insert("#B5EAAA", Color::GreenThumb);
+    m.insert("#ADFF2F", Color::GreenYellow);
+    m.insert("#307D7E", Color::GreenishBlue);
+    m.insert("#808080", Color::Grey);
+    m.insert("#C9DFEC", Color::GulfBlue);
+    m.insert("#2C3539", Color::Gunmetal);
+    m.insert("#8D918D", Color::GunmetalGray);
+    m.insert("#FFFEFA", Color::HalfWhite);
+    m.insert("#E66C2C", Color::HalloweenOrange);
+    m.insert("#EDE275", Color::HarvestGold);
+    m.insert("#8E7618", Color::Hazel);
+    m.insert("#617C58", Color::HazelGreen);
+    m.insert("#C6DEFF", Color::HeavenlyBlue);
+    m.insert("#D462FF", Color::HeliotropePurple);
+    m.insert("#F0FFF0", Color::HoneyDew);
+    m.insert("#F52887", Color::HotDeepPink);
+    m.insert("#FF69B4", Color::HotPink);
+    m.insert("#7FE817", Color::HummingbirdGreen);
+    m.insert("#355E3B", Color::HunterGreen);
+    m.insert("#56A5EC", Color::Iceberg);
+    m.insert("#9CB071", Color::IguanaGreen);
+    m.insert("#FF7722", Color::IndianSaffron);
+    m.insert("#CD5C5C", Color::IndianRed);
+    m.insert("#4B0082", Color::Indigo);
+    m.insert("#3D3C3A", Color::Iridium);
+    m.insert("#08A04B", Color::IrishGreen);
+    m.insert("#52595D", Color::IronGray);
+    m.insert("#22CE83", Color::IsleOfManGreen);
+    m.insert("#FFFFF0", Color::Ivory);
+    m.insert("#00A36C", Color::Jade);
+    m.insert("#5EFB6E", Color::JadeGreen);
+    m.insert("#A23BEC", Color::JasminePurple);
+    m.insert("#A0CFEC", Color::JeansBlue);
+    m.insert("#46C7C7", Color::Jellyfish);
+    m.insert("#616D7E", Color::JetGray);
+    m.insert("#347C2C", Color::JungleGreen);
+    m.insert("#4CC552", Color::KellyGreen);
+    m.insert("#F0E68C", Color::Khaki);
+    m.insert("#906E3E", Color::KhakiBrown);
+    m.insert("#8A865D", Color::KhakiGreen);
+    m.insert("#C5908E", Color::KhakiRose);
+    m.insert("#15317E", Color::LapisBlue);
+    m.insert("#E42217", Color::LavaRed);
+    m.insert("#E6E6FA", Color::Lavender);
+    m.insert("#E3E4FA", Color::LavenderBlue);
+    m.insert("#EBDDE2", Color::LavenderPinocchio);
+    m.insert("#967BB6", Color::LavenderPurple);
+    m.insert("#FFF0F5", Color::LavenderBlush);
+    m.insert("#7CFC00", Color::LawnGreen);
+    m.insert("#ADF802", Color::LemonGreen);
+    m.insert("#FEF250", Color::LemonYellow);
+    m.insert("#FFFACD", Color::LemonChiffon);
+    m.insert("#93FFE8", Color::LightAquamarine);
+    m.insert("#FFF0DB", Color::LightBeige);
+    m.insert("#454545", Color::LightBlack);
+    m.insert("#B5651D", Color::LightBrown);
+    m.insert("#DA8A67", Color::LightCopper);
+    m.insert("#ADDFFF", Color::LightDayBlue);
+    m.insert("#C8AD7F", Color::LightFrenchBeige);
+    m.insert("#F1E5AC", Color::LightGold);
+    m.insert("#C3FDB8", Color::LightJade);
+    m.insert("#C2E5D3", Color::LightMintGreen);
+    m.insert("#B8BC86", Color::LightOliveGreen);
+    m.insert("#FED8B1", Color::LightOrange);
+    m.insert("#8467D7", Color::LightPurple);
+    m.insert("#728FCE", Color::LightPurpleBlue);
+    m.insert("#FFCCCB", Color::LightRed);
+    m.insert("#FBCFCD", Color::LightRose);
+    m.insert("#DBF9DB", Color::LightRoseGreen);
+    m.insert("#F9966B", Color::LightSalmonRose);
+    m.insert("#CCFFFF", Color::LightSlate);
+    m.insert("#736AFF", Color::LightSlateBlue);
+    m.insert("#E0E5E5", Color::LightSteelGray);
+    m.insert("#B3D9D9", Color::LightTeal);
+    m.insert("#FFFFF7", Color::LightWhite);
+    m.insert("#ADD8E6", Color::LightBlue);
+    m.insert("#F08080", Color::LightCoral);
+    m.insert("#E0FFFF", Color::LightCyan);
+    m.insert("#FAFAD2", Color::LightGoldenRodYellow);
+    m.insert("#D3D3D3", Color::LightGray);
+    m.insert("#90EE90", Color::LightGreen);
+    m.insert("#D3D3D3", Color::LightGrey);
+    m.insert("#FFB6C1", Color::LightPink);
+    m.insert("#FFA07A", Color::LightSalmon);
+    m.insert("#20B2AA", Color::LightSeaGreen);
+    m.insert("#87CEFA", Color::LightSkyBlue);
+    m.insert("#778899", Color::LightSlateGray);
+    m.insert("#778899", Color::LightSlateGrey);
+    m.insert("#B0CFDE", Color::LightSteelBlue);
+    m.insert("#FFFFE0", Color::LightYellow);
+    m.insert("#C8A2C8", Color::Lilac);
+    m.insert("#00FF00", Color::Lime);
+    m.insert("#36F57F", Color::LimeMintGreen);
+    m.insert("#32CD32", Color::LimeGreen);
+    m.insert("#FAF0E6", Color::Linen);
+    m.insert("#C48793", Color::LipstickPink);
+    m.insert("#004225", Color::LotusGreen);
+    m.insert("#E41B17", Color::LoveRed);
+    m.insert("#7F38EC", Color::LovelyPurple);
+    m.insert("#F2BB66", Color::MacaroniandCheese);
+    m.insert("#43BFC7", Color::MacawBlueGreen);
+    m.insert("#FF00FF", Color::Magenta);
+    m.insert("#CC338B", Color::MagentaPink);
+    m.insert("#AAF0D1", Color::MagicMint);
+    m.insert("#C04000", Color::Mahogany);
+    m.insert("#FF8040", Color::MangoOrange);
+    m.insert("#566D7E", Color::MarbleBlue);
+    m.insert("#800000", Color::Maroon);
+    m.insert("#8F0B0B", Color::MaroonRed);
+    m.insert("#E0B0FF", Color::Mauve);
+    m.insert("#915F6D", Color::MauveTaupe);
+    m.insert("#347235", Color::MediumForestGreen);
+    m.insert("#045F5F", Color::MediumTeal);
+    m.insert("#66CDAA", Color::MediumAquaMarine);
+    m.insert("#0000CD", Color::MediumBlue);
+    m.insert("#BA55D3", Color::MediumOrchid);
+    m.insert("#9370DB", Color::MediumPurple);
+    m.insert("#3CB371", Color::MediumSeaGreen);
+    m.insert("#7B68EE", Color::MediumSlateBlue);
+    m.insert("#00FA9A", Color::MediumSpringGreen);
+    m.insert("#48D1CC", Color::MediumTurquoise);
+    m.insert("#C71585", Color::MediumVioletRed);
+    m.insert("#B6B6B6", Color::Metal);
+    m.insert("#A97142", Color::MetallicBronze);
+    m.insert("#D4AF37", Color::MetallicGold);
+    m.insert("#7C9D8E", Color::MetallicGreen);
+    m.insert("#BCC6CC", Color::MetallicSilver);
+    m.insert("#3BB9FF", Color::MiddayBlue);
+    m.insert("#2B1B17", Color::Midnight);
+    m.insert("#2E1A47", Color::MidnightPurple);
+    m.insert("#191970", Color::MidnightBlue);
+    m.insert("#4E5B31", Color::MilitaryGreen);
+    m.insert("#513B1C", Color::MilkChocolate);
+    m.insert("#FEFCFF", Color::MilkWhite);
+    m.insert("#93917C", Color::MillenniumJade);
+    m.insert("#3EB489", Color::Mint);
+    m.insert("#98FF98", Color::MintGreen);
+    m.insert("#F5FFFA", Color::MintCream);
+    m.insert("#646D7E", Color::MistBlue);
+    m.insert("#FFE4E1", Color::MistyRose);
+    m.insert("#FFE4B5", Color::Moccasin);
+    m.insert("#493D26", Color::Mocha);
+    m.insert("#8A9A5B", Color::MossGreen);
+    m.insert("#E1AD01", Color::Mustard);
+    m.insert("#FFDB58", Color::MustardYellow);
+    m.insert("#686A6C", Color::NardoGray);
+    m.insert("#FFDEAD", Color::NavajoWhite);
+    m.insert("#000080", Color::Navy);
+    m.insert("#59E817", Color::NebulaGreen);
+    m.insert("#1589FF", Color::NeonBlue);
+    m.insert("#FDBD01", Color::NeonGold);
+    m.insert("#16F529", Color::NeonGreen);
+    m.insert("#FD349C", Color::NeonHotPink);
+    m.insert("#FF6700", Color::NeonOrange);
+    m.insert("#F535AA", Color::NeonPink);
+    m.insert("#9D00FF", Color::NeonPurple);
+    m.insert("#FD1C03", Color::NeonRed);
+    m.insert("#FFFF33", Color::NeonYellow);
+    m.insert("#DAEE01", Color::NeonYellowGreen);
+    m.insert("#0000A0", Color::NewMidnightBlue);
+    m.insert("#0C090A", Color::Night);
+    m.insert("#151B54", Color::NightBlue);
+    m.insert("#78C7C7", Color::NorthernLightsBlue);
+    m.insert("#806517", Color::OakBrown);
+    m.insert("#2B65EC", Color::OceanBlue);
+    m.insert("#00FF80", Color::OceanGreen);
+    m.insert("#F8F0E3", Color::OffWhite);
+    m.insert("#3B3131", Color::Oil);
+    m.insert("#43302E", Color::OldBurgundy);
+    m.insert("#C08081", Color::OldRose);
+    m.insert("#FEF0E3", Color::OldLace);
+    m.insert("#808000", Color::Olive);
+    m.insert("#BAB86C", Color::OliveGreen);
+    m.insert("#6B8E23", Color::OliveDrab);
+    m.insert("#FFA500", Color::Orange);
+    m.insert("#D4A017", Color::OrangeGold);
+    m.insert("#C47451", Color::OrangeSalmon);
+    m.insert("#FFAE42", Color::OrangeYellow);
+    m.insert("#FF4500", Color::OrangeRed);
+    m.insert("#DA70D6", Color::Orchid);
+    m.insert("#B048B5", Color::OrchidPurple);
+    m.insert("#E3F9A6", Color::OrganicBrown);
+    m.insert("#CFECEC", Color::PaleBlueLily);
+    m.insert("#DCD0FF", Color::PaleLilac);
+    m.insert("#F2D4D7", Color::PalePink);
+    m.insert("#C9C0BB", Color::PaleSilver);
+    m.insert("#EEE8AA", Color::PaleGoldenRod);
+    m.insert("#98FB98", Color::PaleGreen);
+    m.insert("#AFEEEE", Color::PaleTurquoise);
+    m.insert("#DB7093", Color::PaleVioletRed);
+    m.insert("#E56717", Color::PapayaOrange);
+    m.insert("#FFEFD5", Color::PapayaWhip);
+    m.insert("#FFFFC2", Color::Parchment);
+    m.insert("#12AD2B", Color::ParrotGreen);
+    m.insert("#B4CFEC", Color::PastelBlue);
+    m.insert("#B1907F", Color::PastelBrown);
+    m.insert("#77DD77", Color::PastelGreen);
+    m.insert("#8686AF", Color::PastelIndigo);
+    m.insert("#D5D6EA", Color::PastelLightBlue);
+    m.insert("#F8B88B", Color::PastelOrange);
+    m.insert("#FEA3AA", Color::PastelPink);
+    m.insert("#F2A2E8", Color::PastelPurple);
+    m.insert("#F67280", Color::PastelRed);
+    m.insert("#E5788F", Color::PastelRose);
+    m.insert("#D291BC", Color::PastelViolet);
+    m.insert("#FAF884", Color::PastelYellow);
+    m.insert("#52D017", Color::PeaGreen);
+    m.insert("#FFE5B4", Color::Peach);
+    m.insert("#F98B88", Color::PeachPink);
+    m.insert("#FFDAB9", Color::PeachPuff);
+    m.insert("#FDEEF4", Color::Pearl);
+    m.insert("#F8F6F0", Color::PearlWhite);
+    m.insert("#CCCCFF", Color::Periwinkle);
+    m.insert("#E9CFEC", Color::PeriwinklePink);
+    m.insert("#7575CF", Color::PeriwinklePurple);
+    m.insert("#CD853F", Color::Peru);
+    m.insert("#B76734", Color::PetraGold);
+    m.insert("#FDD7E4", Color::PigPink);
+    m.insert("#387C44", Color::PineGreen);
+    m.insert("#FFC0CB", Color::Pink);
+    m.insert("#C48189", Color::PinkBrown);
+    m.insert("#FFDFDD", Color::PinkBubbleGum);
+    m.insert("#E77471", Color::PinkCoral);
+    m.insert("#E45E9D", Color::PinkCupcake);
+    m.insert("#E799A3", Color::PinkDaisy);
+    m.insert("#E4287C", Color::PinkLemonade);
+    m.insert("#F89880", Color::PinkOrange);
+    m.insert("#B93B8F", Color::PinkPlum);
+    m.insert("#CA226B", Color::PinkViolet);
+    m.insert("#9DC209", Color::PistachioGreen);
+    m.insert("#E5E4E2", Color::Platinum);
+    m.insert("#797979", Color::PlatinumGray);
+    m.insert("#CECECE", Color::PlatinumSilver);
+    m.insert("#DDA0DD", Color::Plum);
+    m.insert("#7D0541", Color::PlumPie);
+    m.insert("#583759", Color::PlumPurple);
+    m.insert("#7D0552", Color::PlumVelvet);
+    m.insert("#FFB2D0", Color::PowderPink);
+    m.insert("#B0E0E6", Color::PowderBlue);
+    m.insert("#7F5A58", Color::Puce);
+    m.insert("#644117", Color::PullmanBrown);
+    m.insert("#F87217", Color::PumpkinOrange);
+    m.insert("#CA762B", Color::PumpkinPie);
+    m.insert("#800080", Color::Purple);
+    m.insert("#6C2DC7", Color::PurpleAmethyst);
+    m.insert("#B041FF", Color::PurpleDaffodil);
+    m.insert("#C38EC7", Color::PurpleDragon);
+    m.insert("#A74AC7", Color::PurpleFlower);
+    m.insert("#4E387E", Color::PurpleHaze);
+    m.insert("#571B7E", Color::PurpleIris);
+    m.insert("#6A287E", Color::PurpleJam);
+    m.insert("#550A35", Color::PurpleLily);
+    m.insert("#810541", Color::PurpleMaroon);
+    m.insert("#9E7BFF", Color::PurpleMimosa);
+    m.insert("#461B7E", Color::PurpleMonster);
+    m.insert("#4E5180", Color::PurpleNavy);
+    m.insert("#D16587", Color::PurplePink);
+    m.insert("#8E35EF", Color::PurplePlum);
+    m.insert("#7A5DC7", Color::PurpleSageBush);
+    m.insert("#D2B9D3", Color::PurpleThistle);
+    m.insert("#8D38C9", Color::PurpleViolet);
+    m.insert("#DFD3E3", Color::PurpleWhite);
+    m.insert("#27742C", Color::RacingGreen);
+    m.insert("#E30B5D", Color::Raspberry);
+    m.insert("#B3446C", Color::RaspberryPurple);
+    m.insert("#6D7B8D", Color::RatGray);
+    m.insert("#663399", Color::RebeccaPurple);
+    m.insert("#FF0000", Color::Red);
+    m.insert("#660000", Color::RedBlood);
+    m.insert("#622F22", Color::RedBrown);
+    m.insert("#7F5217", Color::RedDirt);
+    m.insert("#C35817", Color::RedFox);
+    m.insert("#EB5406", Color::RedGold);
+    m.insert("#FF0080", Color::RedMagenta);
+    m.insert("#FA2A55", Color::RedPink);
+    m.insert("#F3E8EA", Color::RedWhite);
+    m.insert("#990012", Color::RedWine);
+    m.insert("#FAF5EF", Color::Rice);
+    m.insert("#B666D2", Color::RichLilac);
+    m.insert("#BDEDFF", Color::RobinEggBlue);
+    m.insert("#C12869", Color::RoguePink);
+    m.insert("#838996", Color::RomanSilver);
+    m.insert("#E8ADAA", Color::Rose);
+    m.insert("#997070", Color::RoseDust);
+    m.insert("#ECC5C0", Color::RoseGold);
+    m.insert("#E7A1B0", Color::RosePink);
+    m.insert("#B09FCA", Color::RosePurple);
+    m.insert("#F7CAC9", Color::RoseQuartz);
+    m.insert("#C21E56", Color::RoseRed);
+    m.insert("#A17188", Color::Rosy);
+    m.insert("#7F4E52", Color::RosyFinch);
+    m.insert("#B38481", Color::RosyPink);
+    m.insert("#BC8F8F", Color::RosyBrown);
+    m.insert("#E759AC", Color::RoyalPink);
+    m.insert("#4169E1", Color::RoyalBlue);
+    m.insert("#FFD801", Color::RubberDuckyYellow);
+    m.insert("#F62217", Color::RubyRed);
+    m.insert("#C36241", Color::Rust);
+    m.insert("#8B4513", Color::SaddleBrown);
+    m.insert("#FF7900", Color::SafetyOrange);
+    m.insert("#EED202", Color::SafetyYellow);
+    m.insert("#FBB917", Color::Saffron);
+    m.insert("#931314", Color::SaffronRed);
+    m.insert("#BCB88A", Color::Sage);
+    m.insert("#848B79", Color::SageGreen);
+    m.insert("#A1C935", Color::SaladGreen);
+    m.insert("#FA8072", Color::Salmon);
+    m.insert("#FF8674", Color::SalmonPink);
+    m.insert("#0002FF", Color::SamcoBlue);
+    m.insert("#C2B280", Color::Sand);
+    m.insert("#786D5F", Color::Sandstone);
+    m.insert("#F4A460", Color::SandyBrown);
+    m.insert("#7E3817", Color::Sangria);
+    m.insert("#2554C7", Color::SapphireBlue);
+    m.insert("#FF2400", Color::ScarletRed);
+    m.insert("#E8A317", Color::SchoolBusYellow);
+    m.insert("#C2DFFF", Color::SeaBlue);
+    m.insert("#438D80", Color::SeaTurtleGreen);
+    m.insert("#2E8B57", Color::SeaGreen);
+    m.insert("#FFF5EE", Color::SeaShell);
+    m.insert("#3EA99F", Color::SeafoamGreen);
+    m.insert("#437C17", Color::SeaweedGreen);
+    m.insert("#CC6600", Color::Sedona);
+    m.insert("#7F462C", Color::Sepia);
+    m.insert("#704214", Color::SepiaBrown);
+    m.insert("#347C17", Color::ShamrockGreen);
+    m.insert("#888B90", Color::SheetMetal);
+    m.insert("#E55B3C", Color::ShockingOrange);
+    m.insert("#A0522D", Color::Sienna);
+    m.insert("#488AC7", Color::SilkBlue);
+    m.insert("#C0C0C0", Color::Silver);
+    m.insert("#C4AEAD", Color::SilverPink);
+    m.insert("#DADBDD", Color::SilverWhite);
+    m.insert("#6698FF", Color::SkyBlueDress);
+    m.insert("#87CEEB", Color::SkyBlue);
+    m.insert("#737CA1", Color::SlateBlueGray);
+    m.insert("#657383", Color::SlateGraniteGray);
+    m.insert("#6A5ACD", Color::SlateBlue);
+    m.insert("#708090", Color::SlateGray);
+    m.insert("#708090", Color::SlateGrey);
+    m.insert("#BCE954", Color::SlimeGreen);
+    m.insert("#726E6D", Color::SmokeyGray);
+    m.insert("#FFFAFA", Color::Snow);
+    m.insert("#C6BA8B", Color::SoftHazel);
+    m.insert("#FAF0DD", Color::SoftIvory);
+    m.insert("#FFB8BF", Color::SoftPink);
+    m.insert("#757575", Color::SonicSilver);
+    m.insert("#00FF7F", Color::SpringGreen);
+    m.insert("#99A3A3", Color::StainlessSteelGray);
+    m.insert("#C9C1C1", Color::Steampunk);
+    m.insert("#71797E", Color::SteelGray);
+    m.insert("#4682B4", Color::SteelBlue);
+    m.insert("#57E964", Color::StoplightGoGreen);
+    m.insert("#3A3B3C", Color::StormyGray);
+    m.insert("#C83F49", Color::StrawberryRed);
+    m.insert("#FFE87C", Color::SunYellow);
+    m.insert("#E67451", Color::SunriseOrange);
+    m.insert("#D2B48C", Color::Tan);
+    m.insert("#ECE5B6", Color::TanBrown);
+    m.insert("#E78A61", Color::Tangerine);
+    m.insert("#483C32", Color::Taupe);
+    m.insert("#CCFB5D", Color::TeaGreen);
+    m.insert("#008080", Color::Teal);
+    m.insert("#007C80", Color::TealBlue);
+    m.insert("#00827F", Color::TealGreen);
+    m.insert("#D8BFD8", Color::Thistle);
+    m.insert("#81D8D0", Color::TiffanyBlue);
+    m.insert("#C88141", Color::TigerOrange);
+    m.insert("#FF6347", Color::Tomato);
+    m.insert("#B21807", Color::TomatoSauceRed);
+    m.insert("#7DFDFE", Color::TronBlue);
+    m.insert("#C25A7C", Color::TulipPink);
+    m.insert("#40E0D0", Color::Turquoise);
+    m.insert("#A0D6B4", Color::TurquoiseGreen);
+    m.insert("#C45AEC", Color::TyrianPurple);
+    m.insert("#FFDDCA", Color::UnbleachedSilk);
+    m.insert("#E55451", Color::ValentineRed);
+    m.insert("#565051", Color::VampireGray);
+    m.insert("#F3E5AB", Color::Vanilla);
+    m.insert("#7E354D", Color::VelvetMaroon);
+    m.insert("#728C00", Color::VenomGreen);
+    m.insert("#7E191B", Color::Vermilion);
+    m.insert("#6667AB", Color::VeryPeri);
+    m.insert("#C8C4DF", Color::Viola);
+    m.insert("#7E587E", Color::ViolaPurple);
+    m.insert("#EE82EE", Color::Violet);
+    m.insert("#F6358A", Color::VioletRed);
+    m.insert("#F6C6BD", Color::WarmPink);
+    m.insert("#EFEBD8", Color::WarmWhite);
+    m.insert("#EBF4FA", Color::Water);
+    m.insert("#FC6C85", Color::WatermelonPink);
+    m.insert("#49413F", Color::WesternCharcoal);
+    m.insert("#F5DEB3", Color::Wheat);
+    m.insert("#FFFFFF", Color::White);
+    m.insert("#DBE9FA", Color::WhiteBlue);
+    m.insert("#EDE6D6", Color::WhiteChocolate);
+    m.insert("#FFFFF4", Color::WhiteGold);
+    m.insert("#EEEEEE", Color::WhiteGray);
+    m.insert("#EAEEE9", Color::WhiteIce);
+    m.insert("#F2F0DF", Color::WhiteYellow);
+    m.insert("#F5F5F5", Color::WhiteSmoke);
+    m.insert("#357EC7", Color::WindowsBlue);
+    m.insert("#990012", Color::WineRed);
+    m.insert("#C6AEC7", Color::WisteriaPurple);
+    m.insert("#966F33", Color::Wood);
+    m.insert("#FFFF00", Color::Yellow);
+    m.insert("#E2F516", Color::YellowGreenGrosbeak);
+    m.insert("#87F717", Color::YellowLawnGreen);
+    m.insert("#FFAE42", Color::YellowOrange);
+    m.insert("#9ACD32", Color::YellowGreen);
+    m.insert("#54C571", Color::ZombieGreen);
+    m
+});
 impl Color {
-    #[doc = r" Convert a color name to a `Color` variant or parse as RGB hex code"]
     pub fn convert_str(name: &str) -> Option<Self> {
         if name.starts_with('#') {
             let hex = &name[1..];
@@ -753,738 +1488,10 @@ impl Color {
                 _ => return None,
             };
             let hex = format!("#{:02X}{:02X}{:02X}", r, g, b);
-            match hex.as_str() {
-                "#B0BF1A" => Some(Color::AcidGreen),
-                "#64E986" => Some(Color::AlgaeGreen),
-                "#F0F8FF" => Some(Color::AliceBlue),
-                "#736F6E" => Some(Color::AlienGray),
-                "#6CC417" => Some(Color::AlienGreen),
-                "#98F516" => Some(Color::AloeVeraGreen),
-                "#FFBF00" => Some(Color::Amber),
-                "#665D1E" => Some(Color::AntiqueBronze),
-                "#FAEBD7" => Some(Color::AntiqueWhite),
-                "#00FFFF" => Some(Color::Aqua),
-                "#12E193" => Some(Color::AquaGreen),
-                "#93E9BE" => Some(Color::AquaSeafoamGreen),
-                "#7FFFD4" => Some(Color::Aquamarine),
-                "#348781" => Some(Color::AquamarineStone),
-                "#827B60" => Some(Color::ArmyBrown),
-                "#4B5320" => Some(Color::ArmyGreen),
-                "#666362" => Some(Color::AshGray),
-                "#E9E4D4" => Some(Color::AshWhite),
-                "#B2C248" => Some(Color::AvocadoGreen),
-                "#893BFF" => Some(Color::AztechPurple),
-                "#F0FFFF" => Some(Color::Azure),
-                "#4863A0" => Some(Color::AzureBlue),
-                "#95B9C7" => Some(Color::BabyBlue),
-                "#FAAFBA" => Some(Color::BabyPink),
-                "#5C3317" => Some(Color::BakersBrown),
-                "#2B60DE" => Some(Color::BalloonBlue),
-                "#F5E216" => Some(Color::BananaYellow),
-                "#DA1884" => Some(Color::BarbiePink),
-                "#C25283" => Some(Color::BashfulPink),
-                "#829F82" => Some(Color::BasilGreen),
-                "#F88158" => Some(Color::BasketBallOrange),
-                "#848482" => Some(Color::BattleshipGray),
-                "#F75D59" => Some(Color::BeanRed),
-                "#E9AB17" => Some(Color::BeeYellow),
-                "#FBB117" => Some(Color::Beer),
-                "#4C787E" => Some(Color::BeetleGreen),
-                "#F5F5DC" => Some(Color::Beige),
-                "#FFE4C4" => Some(Color::Bisque),
-                "#000000" => Some(Color::Black),
-                "#3D0C02" => Some(Color::BlackBean),
-                "#040720" => Some(Color::BlackBlue),
-                "#413839" => Some(Color::BlackCat),
-                "#4C4646" => Some(Color::BlackCow),
-                "#463E3F" => Some(Color::BlackEel),
-                "#FFEBCD" => Some(Color::BlanchedAlmond),
-                "#FBF6D9" => Some(Color::Blonde),
-                "#551606" => Some(Color::BloodNight),
-                "#7E3517" => Some(Color::BloodRed),
-                "#F9B7FF" => Some(Color::BlossomPink),
-                "#0000FF" => Some(Color::Blue),
-                "#B7CEEC" => Some(Color::BlueAngel),
-                "#4EE2EC" => Some(Color::BlueDiamond),
-                "#157DEC" => Some(Color::BlueDress),
-                "#1569C7" => Some(Color::BlueEyes),
-                "#98AFC7" => Some(Color::BlueGray),
-                "#7BCCB5" => Some(Color::BlueGreen),
-                "#77BFC7" => Some(Color::BlueHosta),
-                "#3090C7" => Some(Color::BlueIvy),
-                "#2B547E" => Some(Color::BlueJay),
-                "#659EC7" => Some(Color::BlueKoi),
-                "#8EEBEC" => Some(Color::BlueLagoon),
-                "#6960EC" => Some(Color::BlueLotus),
-                "#822EFF" => Some(Color::BlueMagenta),
-                "#3C565B" => Some(Color::BlueMossGreen),
-                "#1F45FC" => Some(Color::BlueOrchid),
-                "#306EFF" => Some(Color::BlueRibbon),
-                "#43C6DB" => Some(Color::BlueTurquoise),
-                "#342D7E" => Some(Color::BlueWhale),
-                "#57FEFF" => Some(Color::BlueZircon),
-                "#8A2BE2" => Some(Color::BlueViolet),
-                "#0041C2" => Some(Color::BlueberryBlue),
-                "#5865F2" => Some(Color::Blurple),
-                "#FFE6E8" => Some(Color::Blush),
-                "#E6A9EC" => Some(Color::BlushPink),
-                "#E56E94" => Some(Color::BlushRed),
-                "#F9DB24" => Some(Color::BoldYellow),
-                "#F9F6EE" => Some(Color::BoneWhite),
-                "#006A4E" => Some(Color::BottleGreen),
-                "#B5A642" => Some(Color::Brass),
-                "#0909FF" => Some(Color::BrightBlue),
-                "#0AFFFF" => Some(Color::BrightCyan),
-                "#FDD017" => Some(Color::BrightGold),
-                "#6F2DA8" => Some(Color::BrightGrape),
-                "#66FF00" => Some(Color::BrightGreen),
-                "#D891EF" => Some(Color::BrightLilac),
-                "#C32148" => Some(Color::BrightMaroon),
-                "#1974D2" => Some(Color::BrightNavyBlue),
-                "#F433FF" => Some(Color::BrightNeonPink),
-                "#FF5F1F" => Some(Color::BrightOrange),
-                "#FF007F" => Some(Color::BrightPink),
-                "#6A0DAD" => Some(Color::BrightPurple),
-                "#01F9C6" => Some(Color::BrightTeal),
-                "#16E2F5" => Some(Color::BrightTurquoise),
-                "#026C3D" => Some(Color::BroccoliGreen),
-                "#CD7F32" => Some(Color::Bronze),
-                "#C9AE5D" => Some(Color::BronzeGold),
-                "#A52A2A" => Some(Color::Brown),
-                "#835C3B" => Some(Color::BrownBear),
-                "#A55D35" => Some(Color::BrownRust),
-                "#EE9A4D" => Some(Color::BrownSand),
-                "#E2A76F" => Some(Color::BrownSugar),
-                "#AF9B60" => Some(Color::BulletShell),
-                "#8C001A" => Some(Color::Burgundy),
-                "#DEB887" => Some(Color::BurlyWood),
-                "#C12267" => Some(Color::BurntPink),
-                "#38ACEC" => Some(Color::ButterflyBlue),
-                "#227442" => Some(Color::CactusGreen),
-                "#5F9EA0" => Some(Color::CadetBlue),
-                "#E38AAE" => Some(Color::CadillacPink),
-                "#C19A6B" => Some(Color::CamelBrown),
-                "#78866B" => Some(Color::CamouflageGreen),
-                "#2916F5" => Some(Color::CanaryBlue),
-                "#FFEF00" => Some(Color::CanaryYellow),
-                "#FFA62F" => Some(Color::Cantaloupe),
-                "#C68E17" => Some(Color::Caramel),
-                "#625D5D" => Some(Color::CarbonGray),
-                "#A70D2A" => Some(Color::CarbonRed),
-                "#EDDA74" => Some(Color::CardboardBrown),
-                "#F778A1" => Some(Color::CarnationPink),
-                "#F88017" => Some(Color::CarrotOrange),
-                "#50EBEC" => Some(Color::Celeste),
-                "#BDF516" => Some(Color::ChameleonGreen),
-                "#F7E7CE" => Some(Color::Champagne),
-                "#34282C" => Some(Color::Charcoal),
-                "#36454F" => Some(Color::CharcoalBlue),
-                "#7FFF00" => Some(Color::Chartreuse),
-                "#FFA600" => Some(Color::CheeseOrange),
-                "#C24641" => Some(Color::CherryRed),
-                "#954535" => Some(Color::Chestnut),
-                "#C34A2C" => Some(Color::ChestnutRed),
-                "#C11B17" => Some(Color::ChilliPepper),
-                "#D2691E" => Some(Color::Chocolate),
-                "#3F000F" => Some(Color::ChocolateBrown),
-                "#A8A9AD" => Some(Color::ChromeAluminum),
-                "#FFCE44" => Some(Color::ChromeGold),
-                "#1AA260" => Some(Color::ChromeGreen),
-                "#FF33AA" => Some(Color::ChromePink),
-                "#E8F1D4" => Some(Color::ChromeWhite),
-                "#C58917" => Some(Color::Cinnamon),
-                "#8FB31D" => Some(Color::CitronGreen),
-                "#842DCE" => Some(Color::ClematisViolet),
-                "#6D6968" => Some(Color::CloudyGray),
-                "#3EA055" => Some(Color::CloverGreen),
-                "#0020C2" => Some(Color::CobaltBlue),
-                "#6F4E37" => Some(Color::Coffee),
-                "#9B9A96" => Some(Color::ColdMetal),
-                "#87AFC7" => Some(Color::ColumbiaBlue),
-                "#F87431" => Some(Color::ConstructionConeOrange),
-                "#C7A317" => Some(Color::CookieBrown),
-                "#B87333" => Some(Color::Copper),
-                "#CB6D51" => Some(Color::CopperRed),
-                "#FF7F50" => Some(Color::Coral),
-                "#AFDCEC" => Some(Color::CoralBlue),
-                "#9E4638" => Some(Color::CoralBrown),
-                "#FBD5AB" => Some(Color::CoralPeach),
-                "#FFF380" => Some(Color::CornYellow),
-                "#6495ED" => Some(Color::CornflowerBlue),
-                "#FFF8DC" => Some(Color::Cornsilk),
-                "#FFF8E7" => Some(Color::CosmicLatte),
-                "#FBFBF9" => Some(Color::Cotton),
-                "#FCDFFF" => Some(Color::CottonCandy),
-                "#9F000F" => Some(Color::Cranberry),
-                "#FFFFCC" => Some(Color::Cream),
-                "#FFFDD0" => Some(Color::CreamWhite),
-                "#F0E9D6" => Some(Color::CreamyWhite),
-                "#DC143C" => Some(Color::Crimson),
-                "#E238EC" => Some(Color::CrimsonPurple),
-                "#990000" => Some(Color::CrimsonRed),
-                "#9172EC" => Some(Color::CrocusPurple),
-                "#5CB3FF" => Some(Color::CrystalBlue),
-                "#00FFFF" => Some(Color::Cyan),
-                "#14A3C7" => Some(Color::CyanBlue),
-                "#92C7C7" => Some(Color::CyanOpaque),
-                "#AB784E" => Some(Color::DarkAlmond),
-                "#9F8C76" => Some(Color::DarkBeige),
-                "#B86500" => Some(Color::DarkBisque),
-                "#F0E2B6" => Some(Color::DarkBlonde),
-                "#29465B" => Some(Color::DarkBlueGray),
-                "#5539CC" => Some(Color::DarkBlurple),
-                "#804A00" => Some(Color::DarkBronze),
-                "#654321" => Some(Color::DarkBrown),
-                "#C12283" => Some(Color::DarkCarnationPink),
-                "#3B2F2F" => Some(Color::DarkCoffee),
-                "#254117" => Some(Color::DarkForestGreen),
-                "#8C8C8C" => Some(Color::DarkGainsboro),
-                "#AA6C39" => Some(Color::DarkGold),
-                "#4A412A" => Some(Color::DarkGrayishOlive),
-                "#1F6357" => Some(Color::DarkGreenBlue),
-                "#473810" => Some(Color::DarkHazelBrown),
-                "#F660AB" => Some(Color::DarkHotPink),
-                "#41A317" => Some(Color::DarkLimeGreen),
-                "#2F0909" => Some(Color::DarkMaroon),
-                "#31906E" => Some(Color::DarkMint),
-                "#827839" => Some(Color::DarkMoccasin),
-                "#E75480" => Some(Color::DarkPink),
-                "#4B0150" => Some(Color::DarkPurple),
-                "#872657" => Some(Color::DarkRaspberry),
-                "#560319" => Some(Color::DarkScarlet),
-                "#8A4117" => Some(Color::DarkSienna),
-                "#0059FF" => Some(Color::DarkSkyBlue),
-                "#2B3856" => Some(Color::DarkSlate),
-                "#4D4D4F" => Some(Color::DarkSteampunk),
-                "#045D5D" => Some(Color::DarkTeal),
-                "#E1D9D1" => Some(Color::DarkWhite),
-                "#8B8000" => Some(Color::DarkYellow),
-                "#00008B" => Some(Color::DarkBlue),
-                "#008B8B" => Some(Color::DarkCyan),
-                "#B8860B" => Some(Color::DarkGoldenRod),
-                "#A9A9A9" => Some(Color::DarkGray),
-                "#006400" => Some(Color::DarkGreen),
-                "#A9A9A9" => Some(Color::DarkGrey),
-                "#BDB76B" => Some(Color::DarkKhaki),
-                "#8B008B" => Some(Color::DarkMagenta),
-                "#556B2F" => Some(Color::DarkOliveGreen),
-                "#FF8C00" => Some(Color::DarkOrange),
-                "#9932CC" => Some(Color::DarkOrchid),
-                "#8B0000" => Some(Color::DarkRed),
-                "#E9967A" => Some(Color::DarkSalmon),
-                "#8FBC8F" => Some(Color::DarkSeaGreen),
-                "#483D8B" => Some(Color::DarkSlateBlue),
-                "#25383C" => Some(Color::DarkSlateGray),
-                "#25383C" => Some(Color::DarkSlateGrey),
-                "#00CED1" => Some(Color::DarkTurquoise),
-                "#9400D3" => Some(Color::DarkViolet),
-                "#82CAFF" => Some(Color::DaySkyBlue),
-                "#A05544" => Some(Color::DeepAmber),
-                "#046307" => Some(Color::DeepEmeraldGreen),
-                "#056608" => Some(Color::DeepGreen),
-                "#DF73D4" => Some(Color::DeepMauve),
-                "#FFCBA4" => Some(Color::DeepPeach),
-                "#5453A6" => Some(Color::DeepPeriwinkle),
-                "#36013F" => Some(Color::DeepPurple),
-                "#800517" => Some(Color::DeepRed),
-                "#FBBBB9" => Some(Color::DeepRose),
-                "#3B9C9C" => Some(Color::DeepSea),
-                "#123456" => Some(Color::DeepSeaBlue),
-                "#306754" => Some(Color::DeepSeaGreen),
-                "#033E3E" => Some(Color::DeepTeal),
-                "#48CCCD" => Some(Color::DeepTurquoise),
-                "#F6BE00" => Some(Color::DeepYellow),
-                "#FF1493" => Some(Color::DeepPink),
-                "#00BFFF" => Some(Color::DeepSkyBlue),
-                "#E6BF83" => Some(Color::DeerBrown),
-                "#79BAEC" => Some(Color::DenimBlue),
-                "#151B8D" => Some(Color::DenimDarkBlue),
-                "#EDC9AF" => Some(Color::DesertSand),
-                "#696969" => Some(Color::DimGray),
-                "#696969" => Some(Color::DimGrey),
-                "#E3319D" => Some(Color::DimorphothecaMagenta),
-                "#73A16C" => Some(Color::DinosaurGreen),
-                "#E8E4C9" => Some(Color::DirtyWhite),
-                "#1E90FF" => Some(Color::DodgerBlue),
-                "#85BB65" => Some(Color::DollarBillGreen),
-                "#FAAFBE" => Some(Color::DonutPink),
-                "#6AFB92" => Some(Color::DragonGreen),
-                "#B1FB17" => Some(Color::DullGreenYellow),
-                "#7F525D" => Some(Color::DullPurple),
-                "#4E8975" => Some(Color::DullSeaGreen),
-                "#CC7A8B" => Some(Color::DuskyPink),
-                "#D58A94" => Some(Color::DustyPink),
-                "#C9A9A6" => Some(Color::DustyRose),
-                "#0000A5" => Some(Color::EarthBlue),
-                "#34A56F" => Some(Color::EarthGreen),
-                "#555D50" => Some(Color::Ebony),
-                "#FFF9E3" => Some(Color::EggShell),
-                "#614051" => Some(Color::Eggplant),
-                "#9AFEFF" => Some(Color::ElectricBlue),
-                "#1B8A6B" => Some(Color::ElfGreen),
-                "#50C878" => Some(Color::Emerald),
-                "#5FFB17" => Some(Color::EmeraldGreen),
-                "#2F539B" => Some(Color::EstorilBlue),
-                "#4E9258" => Some(Color::FallForestGreen),
-                "#C8B560" => Some(Color::FallLeafBrown),
-                "#667C26" => Some(Color::FernGreen),
-                "#F70D1A" => Some(Color::FerrariRed),
-                "#F62817" => Some(Color::FireEngineRed),
-                "#B22222" => Some(Color::FireBrick),
-                "#F9A7B0" => Some(Color::FlamingoPink),
-                "#FFFAF0" => Some(Color::FloralWhite),
-                "#FE632A" => Some(Color::FluroOrange),
-                "#228B22" => Some(Color::ForestGreen),
-                "#86608E" => Some(Color::FrenchLilac),
-                "#99C68E" => Some(Color::FrogGreen),
-                "#FF00FF" => Some(Color::Fuchsia),
-                "#FF77FF" => Some(Color::FuchsiaPink),
-                "#DCDCDC" => Some(Color::Gainsboro),
-                "#733635" => Some(Color::GarnetRed),
-                "#C0C6C7" => Some(Color::GearSteelGray),
-                "#F8F8FF" => Some(Color::GhostWhite),
-                "#C9BE62" => Some(Color::GingerBrown),
-                "#B83C08" => Some(Color::GingerRed),
-                "#368BC1" => Some(Color::GlacialBlueIce),
-                "#FFD700" => Some(Color::Gold),
-                "#E6C7C2" => Some(Color::GoldPink),
-                "#FBE7A1" => Some(Color::GoldenBlonde),
-                "#EAC117" => Some(Color::GoldenBrown),
-                "#F3E3C3" => Some(Color::GoldenSilk),
-                "#FFDF00" => Some(Color::GoldenYellow),
-                "#DAA520" => Some(Color::GoldenRod),
-                "#837E7C" => Some(Color::Granite),
-                "#5E5A80" => Some(Color::Grape),
-                "#DC381F" => Some(Color::Grapefruit),
-                "#3F9B0B" => Some(Color::GrassGreen),
-                "#808080" => Some(Color::Gray),
-                "#3D3635" => Some(Color::GrayBrown),
-                "#B6B6B4" => Some(Color::GrayCloud),
-                "#5C5858" => Some(Color::GrayDolphin),
-                "#D1D0CE" => Some(Color::GrayGoose),
-                "#A2AD9C" => Some(Color::GrayGreen),
-                "#504A4B" => Some(Color::GrayWolf),
-                "#5E7D7E" => Some(Color::GrayishTurquoise),
-                "#008000" => Some(Color::Green),
-                "#4CC417" => Some(Color::GreenApple),
-                "#3A5F0B" => Some(Color::GreenLeaves),
-                "#6AA121" => Some(Color::GreenOnion),
-                "#89C35C" => Some(Color::GreenPeas),
-                "#4AA02C" => Some(Color::GreenPepper),
-                "#6CBB3C" => Some(Color::GreenSnake),
-                "#B5EAAA" => Some(Color::GreenThumb),
-                "#ADFF2F" => Some(Color::GreenYellow),
-                "#307D7E" => Some(Color::GreenishBlue),
-                "#808080" => Some(Color::Grey),
-                "#C9DFEC" => Some(Color::GulfBlue),
-                "#2C3539" => Some(Color::Gunmetal),
-                "#8D918D" => Some(Color::GunmetalGray),
-                "#FFFEFA" => Some(Color::HalfWhite),
-                "#E66C2C" => Some(Color::HalloweenOrange),
-                "#EDE275" => Some(Color::HarvestGold),
-                "#8E7618" => Some(Color::Hazel),
-                "#617C58" => Some(Color::HazelGreen),
-                "#C6DEFF" => Some(Color::HeavenlyBlue),
-                "#D462FF" => Some(Color::HeliotropePurple),
-                "#F0FFF0" => Some(Color::HoneyDew),
-                "#F52887" => Some(Color::HotDeepPink),
-                "#FF69B4" => Some(Color::HotPink),
-                "#7FE817" => Some(Color::HummingbirdGreen),
-                "#355E3B" => Some(Color::HunterGreen),
-                "#56A5EC" => Some(Color::Iceberg),
-                "#9CB071" => Some(Color::IguanaGreen),
-                "#FF7722" => Some(Color::IndianSaffron),
-                "#CD5C5C" => Some(Color::IndianRed),
-                "#4B0082" => Some(Color::Indigo),
-                "#3D3C3A" => Some(Color::Iridium),
-                "#08A04B" => Some(Color::IrishGreen),
-                "#52595D" => Some(Color::IronGray),
-                "#22CE83" => Some(Color::IsleOfManGreen),
-                "#FFFFF0" => Some(Color::Ivory),
-                "#00A36C" => Some(Color::Jade),
-                "#5EFB6E" => Some(Color::JadeGreen),
-                "#A23BEC" => Some(Color::JasminePurple),
-                "#A0CFEC" => Some(Color::JeansBlue),
-                "#46C7C7" => Some(Color::Jellyfish),
-                "#616D7E" => Some(Color::JetGray),
-                "#347C2C" => Some(Color::JungleGreen),
-                "#4CC552" => Some(Color::KellyGreen),
-                "#F0E68C" => Some(Color::Khaki),
-                "#906E3E" => Some(Color::KhakiBrown),
-                "#8A865D" => Some(Color::KhakiGreen),
-                "#C5908E" => Some(Color::KhakiRose),
-                "#15317E" => Some(Color::LapisBlue),
-                "#E42217" => Some(Color::LavaRed),
-                "#E6E6FA" => Some(Color::Lavender),
-                "#E3E4FA" => Some(Color::LavenderBlue),
-                "#EBDDE2" => Some(Color::LavenderPinocchio),
-                "#967BB6" => Some(Color::LavenderPurple),
-                "#FFF0F5" => Some(Color::LavenderBlush),
-                "#7CFC00" => Some(Color::LawnGreen),
-                "#ADF802" => Some(Color::LemonGreen),
-                "#FEF250" => Some(Color::LemonYellow),
-                "#FFFACD" => Some(Color::LemonChiffon),
-                "#93FFE8" => Some(Color::LightAquamarine),
-                "#FFF0DB" => Some(Color::LightBeige),
-                "#454545" => Some(Color::LightBlack),
-                "#B5651D" => Some(Color::LightBrown),
-                "#DA8A67" => Some(Color::LightCopper),
-                "#ADDFFF" => Some(Color::LightDayBlue),
-                "#C8AD7F" => Some(Color::LightFrenchBeige),
-                "#F1E5AC" => Some(Color::LightGold),
-                "#C3FDB8" => Some(Color::LightJade),
-                "#C2E5D3" => Some(Color::LightMintGreen),
-                "#B8BC86" => Some(Color::LightOliveGreen),
-                "#FED8B1" => Some(Color::LightOrange),
-                "#8467D7" => Some(Color::LightPurple),
-                "#728FCE" => Some(Color::LightPurpleBlue),
-                "#FFCCCB" => Some(Color::LightRed),
-                "#FBCFCD" => Some(Color::LightRose),
-                "#DBF9DB" => Some(Color::LightRoseGreen),
-                "#F9966B" => Some(Color::LightSalmonRose),
-                "#CCFFFF" => Some(Color::LightSlate),
-                "#736AFF" => Some(Color::LightSlateBlue),
-                "#E0E5E5" => Some(Color::LightSteelGray),
-                "#B3D9D9" => Some(Color::LightTeal),
-                "#FFFFF7" => Some(Color::LightWhite),
-                "#ADD8E6" => Some(Color::LightBlue),
-                "#F08080" => Some(Color::LightCoral),
-                "#E0FFFF" => Some(Color::LightCyan),
-                "#FAFAD2" => Some(Color::LightGoldenRodYellow),
-                "#D3D3D3" => Some(Color::LightGray),
-                "#90EE90" => Some(Color::LightGreen),
-                "#D3D3D3" => Some(Color::LightGrey),
-                "#FFB6C1" => Some(Color::LightPink),
-                "#FFA07A" => Some(Color::LightSalmon),
-                "#20B2AA" => Some(Color::LightSeaGreen),
-                "#87CEFA" => Some(Color::LightSkyBlue),
-                "#778899" => Some(Color::LightSlateGray),
-                "#778899" => Some(Color::LightSlateGrey),
-                "#B0CFDE" => Some(Color::LightSteelBlue),
-                "#FFFFE0" => Some(Color::LightYellow),
-                "#C8A2C8" => Some(Color::Lilac),
-                "#00FF00" => Some(Color::Lime),
-                "#36F57F" => Some(Color::LimeMintGreen),
-                "#32CD32" => Some(Color::LimeGreen),
-                "#FAF0E6" => Some(Color::Linen),
-                "#C48793" => Some(Color::LipstickPink),
-                "#004225" => Some(Color::LotusGreen),
-                "#E41B17" => Some(Color::LoveRed),
-                "#7F38EC" => Some(Color::LovelyPurple),
-                "#F2BB66" => Some(Color::MacaroniandCheese),
-                "#43BFC7" => Some(Color::MacawBlueGreen),
-                "#FF00FF" => Some(Color::Magenta),
-                "#CC338B" => Some(Color::MagentaPink),
-                "#AAF0D1" => Some(Color::MagicMint),
-                "#C04000" => Some(Color::Mahogany),
-                "#FF8040" => Some(Color::MangoOrange),
-                "#566D7E" => Some(Color::MarbleBlue),
-                "#800000" => Some(Color::Maroon),
-                "#8F0B0B" => Some(Color::MaroonRed),
-                "#E0B0FF" => Some(Color::Mauve),
-                "#915F6D" => Some(Color::MauveTaupe),
-                "#347235" => Some(Color::MediumForestGreen),
-                "#045F5F" => Some(Color::MediumTeal),
-                "#66CDAA" => Some(Color::MediumAquaMarine),
-                "#0000CD" => Some(Color::MediumBlue),
-                "#BA55D3" => Some(Color::MediumOrchid),
-                "#9370DB" => Some(Color::MediumPurple),
-                "#3CB371" => Some(Color::MediumSeaGreen),
-                "#7B68EE" => Some(Color::MediumSlateBlue),
-                "#00FA9A" => Some(Color::MediumSpringGreen),
-                "#48D1CC" => Some(Color::MediumTurquoise),
-                "#C71585" => Some(Color::MediumVioletRed),
-                "#B6B6B6" => Some(Color::Metal),
-                "#A97142" => Some(Color::MetallicBronze),
-                "#D4AF37" => Some(Color::MetallicGold),
-                "#7C9D8E" => Some(Color::MetallicGreen),
-                "#BCC6CC" => Some(Color::MetallicSilver),
-                "#3BB9FF" => Some(Color::MiddayBlue),
-                "#2B1B17" => Some(Color::Midnight),
-                "#2E1A47" => Some(Color::MidnightPurple),
-                "#191970" => Some(Color::MidnightBlue),
-                "#4E5B31" => Some(Color::MilitaryGreen),
-                "#513B1C" => Some(Color::MilkChocolate),
-                "#FEFCFF" => Some(Color::MilkWhite),
-                "#93917C" => Some(Color::MillenniumJade),
-                "#3EB489" => Some(Color::Mint),
-                "#98FF98" => Some(Color::MintGreen),
-                "#F5FFFA" => Some(Color::MintCream),
-                "#646D7E" => Some(Color::MistBlue),
-                "#FFE4E1" => Some(Color::MistyRose),
-                "#FFE4B5" => Some(Color::Moccasin),
-                "#493D26" => Some(Color::Mocha),
-                "#8A9A5B" => Some(Color::MossGreen),
-                "#E1AD01" => Some(Color::Mustard),
-                "#FFDB58" => Some(Color::MustardYellow),
-                "#686A6C" => Some(Color::NardoGray),
-                "#FFDEAD" => Some(Color::NavajoWhite),
-                "#000080" => Some(Color::Navy),
-                "#59E817" => Some(Color::NebulaGreen),
-                "#1589FF" => Some(Color::NeonBlue),
-                "#FDBD01" => Some(Color::NeonGold),
-                "#16F529" => Some(Color::NeonGreen),
-                "#FD349C" => Some(Color::NeonHotPink),
-                "#FF6700" => Some(Color::NeonOrange),
-                "#F535AA" => Some(Color::NeonPink),
-                "#9D00FF" => Some(Color::NeonPurple),
-                "#FD1C03" => Some(Color::NeonRed),
-                "#FFFF33" => Some(Color::NeonYellow),
-                "#DAEE01" => Some(Color::NeonYellowGreen),
-                "#0000A0" => Some(Color::NewMidnightBlue),
-                "#0C090A" => Some(Color::Night),
-                "#151B54" => Some(Color::NightBlue),
-                "#78C7C7" => Some(Color::NorthernLightsBlue),
-                "#806517" => Some(Color::OakBrown),
-                "#2B65EC" => Some(Color::OceanBlue),
-                "#00FF80" => Some(Color::OceanGreen),
-                "#F8F0E3" => Some(Color::OffWhite),
-                "#3B3131" => Some(Color::Oil),
-                "#43302E" => Some(Color::OldBurgundy),
-                "#C08081" => Some(Color::OldRose),
-                "#FEF0E3" => Some(Color::OldLace),
-                "#808000" => Some(Color::Olive),
-                "#BAB86C" => Some(Color::OliveGreen),
-                "#6B8E23" => Some(Color::OliveDrab),
-                "#FFA500" => Some(Color::Orange),
-                "#D4A017" => Some(Color::OrangeGold),
-                "#C47451" => Some(Color::OrangeSalmon),
-                "#FFAE42" => Some(Color::OrangeYellow),
-                "#FF4500" => Some(Color::OrangeRed),
-                "#DA70D6" => Some(Color::Orchid),
-                "#B048B5" => Some(Color::OrchidPurple),
-                "#E3F9A6" => Some(Color::OrganicBrown),
-                "#CFECEC" => Some(Color::PaleBlueLily),
-                "#DCD0FF" => Some(Color::PaleLilac),
-                "#F2D4D7" => Some(Color::PalePink),
-                "#C9C0BB" => Some(Color::PaleSilver),
-                "#EEE8AA" => Some(Color::PaleGoldenRod),
-                "#98FB98" => Some(Color::PaleGreen),
-                "#AFEEEE" => Some(Color::PaleTurquoise),
-                "#DB7093" => Some(Color::PaleVioletRed),
-                "#E56717" => Some(Color::PapayaOrange),
-                "#FFEFD5" => Some(Color::PapayaWhip),
-                "#FFFFC2" => Some(Color::Parchment),
-                "#12AD2B" => Some(Color::ParrotGreen),
-                "#B4CFEC" => Some(Color::PastelBlue),
-                "#B1907F" => Some(Color::PastelBrown),
-                "#77DD77" => Some(Color::PastelGreen),
-                "#8686AF" => Some(Color::PastelIndigo),
-                "#D5D6EA" => Some(Color::PastelLightBlue),
-                "#F8B88B" => Some(Color::PastelOrange),
-                "#FEA3AA" => Some(Color::PastelPink),
-                "#F2A2E8" => Some(Color::PastelPurple),
-                "#F67280" => Some(Color::PastelRed),
-                "#E5788F" => Some(Color::PastelRose),
-                "#D291BC" => Some(Color::PastelViolet),
-                "#FAF884" => Some(Color::PastelYellow),
-                "#52D017" => Some(Color::PeaGreen),
-                "#FFE5B4" => Some(Color::Peach),
-                "#F98B88" => Some(Color::PeachPink),
-                "#FFDAB9" => Some(Color::PeachPuff),
-                "#FDEEF4" => Some(Color::Pearl),
-                "#F8F6F0" => Some(Color::PearlWhite),
-                "#CCCCFF" => Some(Color::Periwinkle),
-                "#E9CFEC" => Some(Color::PeriwinklePink),
-                "#7575CF" => Some(Color::PeriwinklePurple),
-                "#CD853F" => Some(Color::Peru),
-                "#B76734" => Some(Color::PetraGold),
-                "#FDD7E4" => Some(Color::PigPink),
-                "#387C44" => Some(Color::PineGreen),
-                "#FFC0CB" => Some(Color::Pink),
-                "#C48189" => Some(Color::PinkBrown),
-                "#FFDFDD" => Some(Color::PinkBubbleGum),
-                "#E77471" => Some(Color::PinkCoral),
-                "#E45E9D" => Some(Color::PinkCupcake),
-                "#E799A3" => Some(Color::PinkDaisy),
-                "#E4287C" => Some(Color::PinkLemonade),
-                "#F89880" => Some(Color::PinkOrange),
-                "#B93B8F" => Some(Color::PinkPlum),
-                "#CA226B" => Some(Color::PinkViolet),
-                "#9DC209" => Some(Color::PistachioGreen),
-                "#E5E4E2" => Some(Color::Platinum),
-                "#797979" => Some(Color::PlatinumGray),
-                "#CECECE" => Some(Color::PlatinumSilver),
-                "#DDA0DD" => Some(Color::Plum),
-                "#7D0541" => Some(Color::PlumPie),
-                "#583759" => Some(Color::PlumPurple),
-                "#7D0552" => Some(Color::PlumVelvet),
-                "#FFB2D0" => Some(Color::PowderPink),
-                "#B0E0E6" => Some(Color::PowderBlue),
-                "#7F5A58" => Some(Color::Puce),
-                "#644117" => Some(Color::PullmanBrown),
-                "#F87217" => Some(Color::PumpkinOrange),
-                "#CA762B" => Some(Color::PumpkinPie),
-                "#800080" => Some(Color::Purple),
-                "#6C2DC7" => Some(Color::PurpleAmethyst),
-                "#B041FF" => Some(Color::PurpleDaffodil),
-                "#C38EC7" => Some(Color::PurpleDragon),
-                "#A74AC7" => Some(Color::PurpleFlower),
-                "#4E387E" => Some(Color::PurpleHaze),
-                "#571B7E" => Some(Color::PurpleIris),
-                "#6A287E" => Some(Color::PurpleJam),
-                "#550A35" => Some(Color::PurpleLily),
-                "#810541" => Some(Color::PurpleMaroon),
-                "#9E7BFF" => Some(Color::PurpleMimosa),
-                "#461B7E" => Some(Color::PurpleMonster),
-                "#4E5180" => Some(Color::PurpleNavy),
-                "#D16587" => Some(Color::PurplePink),
-                "#8E35EF" => Some(Color::PurplePlum),
-                "#7A5DC7" => Some(Color::PurpleSageBush),
-                "#D2B9D3" => Some(Color::PurpleThistle),
-                "#8D38C9" => Some(Color::PurpleViolet),
-                "#DFD3E3" => Some(Color::PurpleWhite),
-                "#27742C" => Some(Color::RacingGreen),
-                "#E30B5D" => Some(Color::Raspberry),
-                "#B3446C" => Some(Color::RaspberryPurple),
-                "#6D7B8D" => Some(Color::RatGray),
-                "#663399" => Some(Color::RebeccaPurple),
-                "#FF0000" => Some(Color::Red),
-                "#660000" => Some(Color::RedBlood),
-                "#622F22" => Some(Color::RedBrown),
-                "#7F5217" => Some(Color::RedDirt),
-                "#C35817" => Some(Color::RedFox),
-                "#EB5406" => Some(Color::RedGold),
-                "#FF0080" => Some(Color::RedMagenta),
-                "#FA2A55" => Some(Color::RedPink),
-                "#F3E8EA" => Some(Color::RedWhite),
-                "#990012" => Some(Color::RedWine),
-                "#FAF5EF" => Some(Color::Rice),
-                "#B666D2" => Some(Color::RichLilac),
-                "#BDEDFF" => Some(Color::RobinEggBlue),
-                "#C12869" => Some(Color::RoguePink),
-                "#838996" => Some(Color::RomanSilver),
-                "#E8ADAA" => Some(Color::Rose),
-                "#997070" => Some(Color::RoseDust),
-                "#ECC5C0" => Some(Color::RoseGold),
-                "#E7A1B0" => Some(Color::RosePink),
-                "#B09FCA" => Some(Color::RosePurple),
-                "#F7CAC9" => Some(Color::RoseQuartz),
-                "#C21E56" => Some(Color::RoseRed),
-                "#A17188" => Some(Color::Rosy),
-                "#7F4E52" => Some(Color::RosyFinch),
-                "#B38481" => Some(Color::RosyPink),
-                "#BC8F8F" => Some(Color::RosyBrown),
-                "#E759AC" => Some(Color::RoyalPink),
-                "#4169E1" => Some(Color::RoyalBlue),
-                "#FFD801" => Some(Color::RubberDuckyYellow),
-                "#F62217" => Some(Color::RubyRed),
-                "#C36241" => Some(Color::Rust),
-                "#8B4513" => Some(Color::SaddleBrown),
-                "#FF7900" => Some(Color::SafetyOrange),
-                "#EED202" => Some(Color::SafetyYellow),
-                "#FBB917" => Some(Color::Saffron),
-                "#931314" => Some(Color::SaffronRed),
-                "#BCB88A" => Some(Color::Sage),
-                "#848B79" => Some(Color::SageGreen),
-                "#A1C935" => Some(Color::SaladGreen),
-                "#FA8072" => Some(Color::Salmon),
-                "#FF8674" => Some(Color::SalmonPink),
-                "#0002FF" => Some(Color::SamcoBlue),
-                "#C2B280" => Some(Color::Sand),
-                "#786D5F" => Some(Color::Sandstone),
-                "#F4A460" => Some(Color::SandyBrown),
-                "#7E3817" => Some(Color::Sangria),
-                "#2554C7" => Some(Color::SapphireBlue),
-                "#FF2400" => Some(Color::ScarletRed),
-                "#E8A317" => Some(Color::SchoolBusYellow),
-                "#C2DFFF" => Some(Color::SeaBlue),
-                "#438D80" => Some(Color::SeaTurtleGreen),
-                "#2E8B57" => Some(Color::SeaGreen),
-                "#FFF5EE" => Some(Color::SeaShell),
-                "#3EA99F" => Some(Color::SeafoamGreen),
-                "#437C17" => Some(Color::SeaweedGreen),
-                "#CC6600" => Some(Color::Sedona),
-                "#7F462C" => Some(Color::Sepia),
-                "#704214" => Some(Color::SepiaBrown),
-                "#347C17" => Some(Color::ShamrockGreen),
-                "#888B90" => Some(Color::SheetMetal),
-                "#E55B3C" => Some(Color::ShockingOrange),
-                "#A0522D" => Some(Color::Sienna),
-                "#488AC7" => Some(Color::SilkBlue),
-                "#C0C0C0" => Some(Color::Silver),
-                "#C4AEAD" => Some(Color::SilverPink),
-                "#DADBDD" => Some(Color::SilverWhite),
-                "#6698FF" => Some(Color::SkyBlueDress),
-                "#87CEEB" => Some(Color::SkyBlue),
-                "#737CA1" => Some(Color::SlateBlueGray),
-                "#657383" => Some(Color::SlateGraniteGray),
-                "#6A5ACD" => Some(Color::SlateBlue),
-                "#708090" => Some(Color::SlateGray),
-                "#708090" => Some(Color::SlateGrey),
-                "#BCE954" => Some(Color::SlimeGreen),
-                "#726E6D" => Some(Color::SmokeyGray),
-                "#FFFAFA" => Some(Color::Snow),
-                "#C6BA8B" => Some(Color::SoftHazel),
-                "#FAF0DD" => Some(Color::SoftIvory),
-                "#FFB8BF" => Some(Color::SoftPink),
-                "#757575" => Some(Color::SonicSilver),
-                "#00FF7F" => Some(Color::SpringGreen),
-                "#99A3A3" => Some(Color::StainlessSteelGray),
-                "#C9C1C1" => Some(Color::Steampunk),
-                "#71797E" => Some(Color::SteelGray),
-                "#4682B4" => Some(Color::SteelBlue),
-                "#57E964" => Some(Color::StoplightGoGreen),
-                "#3A3B3C" => Some(Color::StormyGray),
-                "#C83F49" => Some(Color::StrawberryRed),
-                "#FFE87C" => Some(Color::SunYellow),
-                "#E67451" => Some(Color::SunriseOrange),
-                "#D2B48C" => Some(Color::Tan),
-                "#ECE5B6" => Some(Color::TanBrown),
-                "#E78A61" => Some(Color::Tangerine),
-                "#483C32" => Some(Color::Taupe),
-                "#CCFB5D" => Some(Color::TeaGreen),
-                "#008080" => Some(Color::Teal),
-                "#007C80" => Some(Color::TealBlue),
-                "#00827F" => Some(Color::TealGreen),
-                "#D8BFD8" => Some(Color::Thistle),
-                "#81D8D0" => Some(Color::TiffanyBlue),
-                "#C88141" => Some(Color::TigerOrange),
-                "#FF6347" => Some(Color::Tomato),
-                "#B21807" => Some(Color::TomatoSauceRed),
-                "#7DFDFE" => Some(Color::TronBlue),
-                "#C25A7C" => Some(Color::TulipPink),
-                "#40E0D0" => Some(Color::Turquoise),
-                "#A0D6B4" => Some(Color::TurquoiseGreen),
-                "#C45AEC" => Some(Color::TyrianPurple),
-                "#FFDDCA" => Some(Color::UnbleachedSilk),
-                "#E55451" => Some(Color::ValentineRed),
-                "#565051" => Some(Color::VampireGray),
-                "#F3E5AB" => Some(Color::Vanilla),
-                "#7E354D" => Some(Color::VelvetMaroon),
-                "#728C00" => Some(Color::VenomGreen),
-                "#7E191B" => Some(Color::Vermilion),
-                "#6667AB" => Some(Color::VeryPeri),
-                "#C8C4DF" => Some(Color::Viola),
-                "#7E587E" => Some(Color::ViolaPurple),
-                "#EE82EE" => Some(Color::Violet),
-                "#F6358A" => Some(Color::VioletRed),
-                "#F6C6BD" => Some(Color::WarmPink),
-                "#EFEBD8" => Some(Color::WarmWhite),
-                "#EBF4FA" => Some(Color::Water),
-                "#FC6C85" => Some(Color::WatermelonPink),
-                "#49413F" => Some(Color::WesternCharcoal),
-                "#F5DEB3" => Some(Color::Wheat),
-                "#FFFFFF" => Some(Color::White),
-                "#DBE9FA" => Some(Color::WhiteBlue),
-                "#EDE6D6" => Some(Color::WhiteChocolate),
-                "#FFFFF4" => Some(Color::WhiteGold),
-                "#EEEEEE" => Some(Color::WhiteGray),
-                "#EAEEE9" => Some(Color::WhiteIce),
-                "#F2F0DF" => Some(Color::WhiteYellow),
-                "#F5F5F5" => Some(Color::WhiteSmoke),
-                "#357EC7" => Some(Color::WindowsBlue),
-                "#990012" => Some(Color::WineRed),
-                "#C6AEC7" => Some(Color::WisteriaPurple),
-                "#966F33" => Some(Color::Wood),
-                "#FFFF00" => Some(Color::Yellow),
-                "#E2F516" => Some(Color::YellowGreenGrosbeak),
-                "#87F717" => Some(Color::YellowLawnGreen),
-                "#FFAE42" => Some(Color::YellowOrange),
-                "#9ACD32" => Some(Color::YellowGreen),
-                "#54C571" => Some(Color::ZombieGreen),
-                _ => Some(Color::Rgb(r, g, b)),
-            }
+            RGB_MAP
+                .get(hex.as_str())
+                .copied()
+                .or(Some(Color::Rgb(r, g, b)))
         } else {
             match name.replace(" ", "").to_lowercase() {
                 x if x == stringify!(AcidGreen).to_lowercase() => Some(Color::AcidGreen),

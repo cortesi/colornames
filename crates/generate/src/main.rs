@@ -1,7 +1,7 @@
 use clap::{Parser, Subcommand};
 use image_builder::{Image, Rect};
 use std::{io::Write, path::Path};
-use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
+use termcolor::{ColorChoice, ColorSpec, StandardStream, WriteColor};
 
 mod colors;
 
@@ -78,7 +78,7 @@ fn main() {
                     let b = u8::from_str_radix(&hex[5..7], 16).unwrap();
 
                     stdout
-                        .set_color(ColorSpec::new().set_bg(Some(Color::Rgb(r, g, b))))
+                        .set_color(ColorSpec::new().set_bg(Some(termcolor::Color::Rgb(r, g, b))))
                         .unwrap();
                     write!(&mut stdout, "       ").unwrap();
                     stdout.reset().unwrap();
@@ -127,6 +127,9 @@ fn main() {
                 let color_hexes: Vec<_> = color_data.iter().map(|(_, hex)| hex).collect();
 
                 quote::quote! {
+                    use std::collections::HashMap;
+                    use once_cell::sync::Lazy;
+
                     /// A list of named colors
                     #[derive(Debug, Clone, Copy, PartialEq, Eq)]
                     pub enum Color {
@@ -134,10 +137,18 @@ fn main() {
                         Rgb(u8, u8, u8)
                     }
 
+                    /// Convert a hex color string to a `Color` variant
+                    static RGB_MAP: Lazy<HashMap<&'static str, Color>> = Lazy::new(|| {
+                        let mut m = HashMap::new();
+                        #(
+                            m.insert(#color_hexes, Color::#color_idents);
+                        )*
+                        m
+                    });
+
                     impl Color {
-                        /// Convert a color name to a `Color` variant or parse as RGB hex code
                         pub fn convert_str(name: &str) -> Option<Self> {
-                            if name.starts_with('#') {
+                            if let Some(name) = name.strip_prefix('#') {
                                 // Handle hex codes
                                 let hex = &name[1..];
                                 let (r, g, b) = match hex.len() {
@@ -156,10 +167,7 @@ fn main() {
                                     _ => return None
                                 };
                                 let hex = format!("#{:02X}{:02X}{:02X}", r, g, b);
-                                match hex.as_str() {
-                                    #(#color_hexes => Some(Color::#color_idents),)*
-                                    _ => Some(Color::Rgb(r, g, b))
-                                }
+                                RGB_MAP.get(hex.as_str()).copied().or(Some(Color::Rgb(r, g, b)))
                             } else {
                                 // Handle color names
                                 match name.replace(" ", "").to_lowercase() {
