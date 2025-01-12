@@ -31,7 +31,7 @@ enum Commands {
     Readme,
 }
 
-const COLUMNS: usize = 3;
+const COLUMNS: usize = 2;
 
 fn main() {
     let cli = Cli::parse();
