@@ -1,6 +1,8 @@
-use crate::COLORS;
-use once_cell::sync::Lazy;
 use std::collections::HashMap;
+
+use once_cell::sync::Lazy;
+
+use crate::COLORS;
 #[doc = r" Normalize a color name by lowercasing and removing whitespace"]
 fn norm_name(name: &str) -> String {
     name.replace(" ", "").to_lowercase()

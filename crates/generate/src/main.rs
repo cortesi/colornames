@@ -1,6 +1,7 @@
+use std::{io::Write, path::Path};
+
 use clap::{Parser, Subcommand};
 use image_builder::{Image, Rect};
-use std::{io::Write, path::Path};
 use termcolor::{ColorChoice, ColorSpec, StandardStream, WriteColor};
 
 mod colors;
@@ -38,8 +39,8 @@ fn main() {
 
     match cli.command {
         Commands::Readme => {
-            // We can't use style attributes in markdown, so we try to generate HTML that will
-            // display correctly on Github and crates.io.
+            // We can't use style attributes in markdown, so we try to generate HTML that
+            // will display correctly on Github and crates.io.
             println!("<table>");
             let color_data: Vec<_> = colors::COLORS.iter().collect();
 
@@ -69,7 +70,10 @@ fn main() {
                 for chunk in color_data.chunks(COLUMNS) {
                     println!("<tr>");
                     for (name, hex) in chunk {
-                        println!("<td style='padding: 5px;'><div style='width: 50px; height: 20px; background-color: {}'></div></td>", hex);
+                        println!(
+                            "<td style='padding: 5px;'><div style='width: 50px; height: 20px; background-color: {}'></div></td>",
+                            hex
+                        );
                         println!("<td style='padding: 5px;'>{}</td>", name);
                     }
                     println!("</tr>");
